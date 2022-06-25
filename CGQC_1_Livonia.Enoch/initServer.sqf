@@ -32,5 +32,3 @@
 	["CamoNet_BLUFOR_open_F", 1],
 	["CamoNet_BLUFOR_F", 1]
 ]] call acex_fortify_fnc_registerObjects;
-
-// --------------------------------------------------------------------------------------------------------

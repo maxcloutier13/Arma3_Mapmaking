@@ -1,3 +1,70 @@
+// move to laptop 
+_action = ["start_presentation", "Start Presentation", "", {
+	start_presentation = true;
+	stop_presentation = false;
+	, true
+}] call ace_interact_menu_fnc_createAction;
+[laptop_briefing, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+this addAction ["Lights:Start presentation", {
+	start_presentation = true;
+	stop_presentation = false;
+}];
+this addAction ["Lights:Stop presentation", {
+	stop_presentation = true;
+	start_presentation = false;
+}];
+this addAction ["Lights:Parachute", {
+	parachute_light = true;
+}];
+this addAction ["Insertion", {
+	start_boarding = true;
+}];
+
+// v2  
+this removeWeapon (primaryWeapon this);
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["Lights:Start presentation", {
+	start_presentation = true;
+	stop_presentation = false;
+}];
+this addAction ["Lights:Stop presentation", {
+	stop_presentation = true;
+	start_presentation = false;
+}];
+this addAction ["Lights:Parachute", {
+	parachute_light = true;
+}];
+this addAction ["Insertion", {
+	start_boarding = true;
+}];
+
+// Zeus menu 
+this removeWeapon (primaryWeapon this);
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["Lights:Start presentation", {
+	turn_lights_off = true;
+}];
+this addAction ["Lights:Parachute", {
+	turn_lights_on = true;
+}];
+this addAction ["Insertion", {
+	start_boarding = true;
+}];
+
+// action menu to get on plane 
+player addAction ["Ready to go", {
+	start_boarding = true;
+}];
+
 // Insertion - 1 = Plane paradrop
 
 // Warp plane to position 
@@ -125,6 +192,7 @@ this addAction ["Fire", {
 		_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 5];
 	};
 }];
+this moveInCargo insertion_plane;
 // Error, doesn't see arty_1_target ... wtf. Straiight positions. 
 
 this addAction ["Fire", {

@@ -1,6 +1,6 @@
 // Config options for quick toggle of features 
 // Play the intro
-cgqc_cfg_intro = true;
+cgqc_cfg_intro = false;
 // Show 3dIcons 
 cgqc_cfg_3dicons = false;
 
@@ -14,6 +14,9 @@ cgqc_cfg_3dicons = false;
 if (cgqc_cfg_intro) then {
 	[] execVM "scripts\CGQC_Intro.sqf";
 };
+
+// load basic uniform
+[] execVM "scripts\cgqc_default_loadout.sqf";
 
 if (cgqc_cfg_3dicons) then {
 	// ------------------------------------------------------

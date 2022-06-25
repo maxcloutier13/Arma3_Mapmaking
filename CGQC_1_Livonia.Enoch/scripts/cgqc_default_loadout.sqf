@@ -1,7 +1,7 @@
 // Clears units loadout and inserts the base items 
 
 // Remove every item, in case 
-removeAllWeapons player;
+// removeAllWeapons player;
 removeAllItems player;
 removeAllAssignedItems player;
 
@@ -25,8 +25,6 @@ for "_i" from 0 to 1 do {
 	player addItemToUniform "ACE_CableTie";
 };
 player addItemToUniform "ACE_EarPlugs";
-// player addItemToUniform "ACE_RangeCard";
-// player addItemToUniform "ACE_MapTools";
 player addItemToUniform "ACRE_PRC343";
 
 // vest

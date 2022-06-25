@@ -2,28 +2,16 @@
 // General Multiplayer Configuration.
 // ---------------------------------------------------------------------------------------------------------
 
-author = "[CGQC] Votre nom Ici";                                             
-onLoadName = "[CGQC] Opération: Quelque chose";                                                   	
+author = "[CGQC] Cpl. Cloutier";                                             
+onLoadName = "Opération: Slava Solenya 1";                                                   	
 //onLoadMission = "Mission Zeus For CGQC Community";                                                             
 //loadScreen = "textures\BG1.paa";
 //Texture de loadscreen
 loadScreen = "textures\loading_screen_1.paa";
 onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : https://units.arma3.com/unit/CGQC<br/>Groupe Steam : https://steamcommunity.com/groups/CGQC<br/>Groupe Facebook : https://www.facebook.com/groups/CGQCP</t>";
-briefingName = "[CGQC] Opération Face de Pet";
+briefingName = "Opération: Slava Solenya 1";
 //Texture overview
 overviewPicture = "textures\loading_screen_1.paa";
-
-//Briefing Metis Presentation 
-class mts_presentation_topics{
-    //Unique name for a separate Presentation
-    class cgqc_briefing{
-        displayName = "Briefing"; //Displayed name
-        path = "textures\briefing" //Relative path from root folder
-        name = "briefing" //Name of the image files
-        extension = ".paa" //File extension. Can be paa/jpg or ogv movie 
-        slides = 6; //Number of slides
-    };
-};
 
 //Typical mission config
 class Header { 
@@ -55,11 +43,11 @@ wreckRemovalMaxTime = 500;					// Maximal time in seconds after which a wreck is
 // ---------------------------------------------------------------------------------------------------------
 class CfgSounds {
     sounds[] = {};
-    class fortunate {               //class name can be anything and will be called later{
-        name= "fortunate";
+    class abierto {               //class name can be anything and will be called later{
+        name= "abierto";
         //sound[] = {\sounds\fortunate.ogg, 1, 1.0, 2};  
-        sound[] = {"\sounds\fortunate.ogg", 1, 1}; 
-        titles[] = {0,"CCR - Fortunate Son"};
+        sound[] = {"\sounds\abierto.ogg.ogg", 1, 1}; 
+        titles[] = {0,"Tommy Guerrero - Abierto"};
         //target | volume | pitch, less = lower & more = higher | Distancetitles[] = {};
     };
 };
