@@ -1,3 +1,36 @@
+this addAction ["Play abierto", {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+	hint "Playing";
+}];
+this addAction ["Play Fortunate", {
+	while { true } do {
+		playing_song = (_this select 0) say3D "fortunate";
+		sleep 181;
+	};
+	hint "Playing";
+}];
+this addAction ["Stop", {
+	deleteVehicle playing_song;
+	hint "Stopping";
+}];
+
+// start artillery just when mission is started. 
+if (phase_mission_started) then {
+	[this] spawn {
+		Myobject = _this select 0;
+		while { true } do {
+			createVehicle [ "R_80mm_HE", getPos Myobject, [], 0, "CAN_COLLIDE"];
+			sleep 17;
+		};
+	};
+};
+
+// start artillery at dawn 
+if (phase_mission_started_dawn) then {};
+
 // Add check that everyone is on board before triggering insertion 
 this removeWeapon (primaryWeapon this);
 null = [this] spawn {
@@ -10,6 +43,7 @@ this addAction ["Insertion!", {
 		alive _x && !(_x in insertion_plane)
 	} count allPlayers ) == 0) then {
 		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
 		player removeAction 0;
 	} else {
 		hint "Il manque quelqu'un..";
