@@ -43,13 +43,6 @@ wreckRemovalMaxTime = 500;					// Maximal time in seconds after which a wreck is
 // ---------------------------------------------------------------------------------------------------------
 class CfgSounds {
     sounds[] = {};
-    class fortunate {               //class name can be anything and will be called later{
-        name= "fortunate";
-        //sound[] = {\sounds\fortunate.ogg, 1, 1.0, 2};  
-        sound[] = {"\sounds\fortunate.ogg", 1, 1}; 
-        titles[] = {0,"CCR - Fortunate Son"};
-        //target | volume | pitch, less = lower & more = higher | Distancetitles[] = {};
-    };
     class abierto {               //class name can be anything and will be called later{
         name= "fortunate";
         //sound[] = {\sounds\fortunate.ogg, 1, 1.0, 2};  

@@ -1,3 +1,74 @@
+// Cleaned up laptop menu
+this addAction ["Lights:Start presentation", {
+	start_presentation = true;
+	stop_presentation = false;
+	deleteVehicle playing_song;
+	hint "Briefing";
+}];
+this addAction ["Lights:Stop presentation", {
+	stop_presentation = true;
+	start_presentation = false;
+	hint "Au repos";
+}];
+this addAction ["Start boarding", {
+	start_boarding = true;
+	parachute_light = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+// play music
+this addAction ["Play Music", {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+}];
+this addAction ["Stop Music", {
+	deleteVehicle playing_song;
+}];
+
+[laptop_briefing, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+// Put that shit in ace interaction my friend 
+_play_fortunate = ["playFortunate", "Play Fortunate", "", {
+	[this] spawn {
+		while { true } do {
+			playing_song = (_this select 0) say3D "fortunate";
+			sleep 181;
+		};
+	};
+}, {
+	true
+}] call ace_interact_menu_fnc_createAction;
+[qg_radio, 0, ["ACE_MainActions"], _play_fortunate] call ace_interact_menu_fnc_addActionToObject;
+// NOOO-oooo. Doesn't like the "sleep" part and starts crashing hard.
+
+_var = ["_Action name", "_Name of action", "_Icon", {
+	_code
+}, {
+	_condition
+}] call ace_interact_menu_fnc_createAction;
+
+["PlayFortunate", "Play Fortunate", "", {
+	_target setDamage 1;
+}, {
+	true
+}, {}, [parameters], [0, 0, 0], 100] call ace_interact_menu_fnc_createAction;
+
+[qg_radio, 0, ["ACE_MainActions"], _play_fortunate] call ace_interact_menu_fnc_addActionToObject;
+
+this addAction ["Play Abierto", {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+	hint "Playing abierto";
+}];
+this addAction ["Stop", {
+	deleteVehicle playing_song;
+	hint "Stopping";
+}];
+
 this addAction ["Play abierto", {
 	while { true } do {
 		playing_song = (_this select 0) say3D "abierto";
@@ -31,7 +102,7 @@ if (phase_mission_started) then {
 // start artillery at dawn 
 if (phase_mission_started_dawn) then {};
 
-// Add check that everyone is on board before triggering insertion 
+// Zeus menu : Add check that everyone is on board before triggering insertion 
 this removeWeapon (primaryWeapon this);
 null = [this] spawn {
 	_unit = (_this select 0);
@@ -180,6 +251,11 @@ null = [this] spawn {
 	sleep 1;
 	_unit action ['SwitchWeapon', _unit, _unit, 100];
 };
+this addAction ["Insertion!", {
+	[] execVM "scripts\cgqc_insertion_plane.sqf";
+	player removeAction 0;
+}];
+
 this addAction ["Lights:Start presentation", {
 	start_presentation = true;
 	stop_presentation = false;
