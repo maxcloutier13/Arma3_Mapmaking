@@ -1,3 +1,50 @@
+// spawn a bomb every X seconds 
+// Put this in the init of the target object. 
+[this] spawn {
+	Myobject = _this select 0;
+	while { true } do {
+		createVehicle [ "Bo_GBU12_LGB", getPos Myobject, [], 0, "CAN_COLLIDE"];
+		sleep 30;
+	};
+};
+
+// Ambient artillery shots on the horizon 
+// Trigger that runs very 10 secs
+null = [this] spawn {
+	arty_fire_1 = true;
+	sleep 10;
+	arty_fire_1 = false;
+	sleep 3;
+};
+// Naaah...
+
+// Send presentation to laptop 
+
+[laptop_briefing, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+this addAction ["Lights:Start presentation", {
+	start_presentation = true;
+	stop_presentation = false;
+	hint "Briefing";
+}];
+this addAction ["Lights:Stop presentation", {
+	stop_presentation = true;
+	start_presentation = false;
+	hint "Au repos";
+}];
+this addAction ["Lights:Parachute", {
+	parachute_light = true;
+}];
+this addAction ["Start boarding", {
+	start_boarding = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+// Insertion action on Zeus. Deletes itself after use 
+this addAction ["Insertion!", {
+	[] execVM "scripts\cgqc_insertion_plane.sqf";
+	player removeAction 0;
+}];
+
 // Skip time to a specific time 
 _timeToSkipTo = 0;
 skipTime ((_timeToSkipTo - dayTime + 24) % 24);
