@@ -3,7 +3,7 @@
 // Remove every item, in case 
 // removeAllWeapons player;
 removeAllItems player;
-removeAllAssignedItems player;
+// removeAllAssignedItems player;
 
 // uniform
 for "_i" from 0 to 9 do {

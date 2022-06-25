@@ -1,3 +1,35 @@
+// Skip time to a specific time 
+_timeToSkipTo = 0;
+skipTime ((_timeToSkipTo - dayTime + 24) % 24);
+
+// Adding the trigger to start insertion to Zeus menu 
+this removeWeapon (primaryWeapon this);
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["Lights:Start presentation", {
+	start_presentation = true;
+	stop_presentation = false;
+	hint "Briefing";
+}];
+this addAction ["Lights:Stop presentation", {
+	stop_presentation = true;
+	start_presentation = false;
+	hint "Au repos";
+}];
+this addAction ["Lights:Parachute", {
+	parachute_light = true;
+}];
+this addAction ["Start boarding", {
+	start_boarding = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["Insertion!", {
+	[] execVM "scripts\cgqc_insertion_plane.sqf";
+}];
+
 // move to laptop 
 _action = ["start_presentation", "Start Presentation", "", {
 	start_presentation = true;

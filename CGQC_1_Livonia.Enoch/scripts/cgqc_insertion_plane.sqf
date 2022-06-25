@@ -1,12 +1,14 @@
 private ["_text"];
 
 [] spawn {
-	hint "All ready";
 	sleep 2;
-	// set waypoint
-	_wp = insertion_plane_group addWaypoint [getPos insertion_waypoint, 0];
 	// Black screen 
 	cutText ["", "BLACK FADED", 999];
+	// Kill sound 
+	0.1 fadeSound 0;
+	0.1 fadeMusic 0;
+	// set waypoint
+	_wp = insertion_plane_group addWaypoint [getPos insertion_waypoint, 0];
 	sleep 7;
 	// move plane position 
 	insertion_plane setPos (getPos insertion_spawn);
@@ -17,9 +19,6 @@ private ["_text"];
 	_wp setWaypointType "MOVE";
 	_wp setWaypointSpeed "FULL";
 
-	// Kill sound 
-	0.1 fadeSound 0;
-	0.1 fadeMusic 0;
 	// Fade in the sound
 	5 fadeSound 1;
 	5 fadeMusic 1;
