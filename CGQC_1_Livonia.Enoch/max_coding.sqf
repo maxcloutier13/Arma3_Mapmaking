@@ -1,9 +1,27 @@
 // spawn a bomb every X seconds 
 // Put this in the init of the target object. 
+
 [this] spawn {
 	Myobject = _this select 0;
 	while { true } do {
 		createVehicle [ "Bo_GBU12_LGB", getPos Myobject, [], 0, "CAN_COLLIDE"];
+		sleep 30;
+	};
+};
+
+// R_80mm_HE
+[this] spawn {
+	Myobject = _this select 0;
+	while { true } do {
+		createVehicle [ "R_80mm_HE", getPos Myobject, [], 0, "CAN_COLLIDE"];
+		sleep 30;
+	};
+};
+// R_57mm_HE
+[this] spawn {
+	Myobject = _this select 0;
+	while { true } do {
+		createVehicle [ "R_57mm_HE", getPos Myobject, [], 0, "CAN_COLLIDE"];
 		sleep 30;
 	};
 };
