@@ -1,3 +1,24 @@
+// Add check that everyone is on board before triggering insertion 
+this removeWeapon (primaryWeapon this);
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		player removeAction 0;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+// Cut off environment sounds when in base 
+enableEnvironment [false, false];
+
 // spawn a bomb every X seconds 
 // Put this in the init of the target object. 
 
