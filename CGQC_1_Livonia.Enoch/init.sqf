@@ -1,12 +1,21 @@
 // Destroy zone
+// Can be static, building, house 
 if (isServer) then {
-	_houseArray = (getPos destroy_city_1) nearObjects ["House", 500];
+	_check = true;
+	_houseArray = (getPos destroy_1) nearObjects ["building", 500];
 	{
-		_x setDamage 0.7;
+		// completely destroy one
+		if (_check) then {
+			_x setDamage 1;
+			_check = false;
+		} else {
+			// Only half destroy the other
+			_x setDamage 0.8;
+			_check = true;
+		};
 	} forEach _houseArray;
 };
 
-// "House"
 // ------------------------------------------------------
 // CGQC Legacy init
 // ------------------------------------------------------

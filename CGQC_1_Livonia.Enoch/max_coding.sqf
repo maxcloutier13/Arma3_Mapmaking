@@ -1,3 +1,22 @@
+// Destroy radius. Put this in init: 
+// Destroy zone
+// Can be static, building, house 
+if (isServer) then {
+	_check = true;
+	_houseArray = (getPos destroy_1) nearObjects ["building", 500];
+	{
+		// completely destroy one
+		if (_check) then {
+			_x setDamage 1;
+			_check = false;
+		} else {
+			// Only half destroy the other
+			_x setDamage 0.8;
+			_check = true;
+		};
+	} forEach _houseArray;
+};
+
 // Detroy the insertion plane and other insertion stuffs. 
 {
 	deleteVehicle _x
