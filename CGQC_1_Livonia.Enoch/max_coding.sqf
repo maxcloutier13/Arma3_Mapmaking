@@ -1,3 +1,59 @@
+// Destroy towns 
+
+["destroyed_airfield", 100, 92, "", ]
+
+// Fix artillery 
+[this] spawn {
+	_Myobject = _this select 0;
+	while { true } do {
+		createVehicle [ "Bo_GBU12_LGB", getPos _this, [], 0, "CAN_COLLIDE"];
+		sleep 2;
+	};
+};
+
+// Radio auto-play 
+this addAction ["Play Music", {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+}];
+this addAction ["Stop Music", {
+	deleteVehicle playing_song;
+}];
+[this] spawn {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+};
+
+// Light inside the blackfish 
+private _light = "#lightpoint" createVehicleLocal [0, 0, 0];
+_light setLightIntensity 0.5;
+_light setLightBrightness 0.8;
+_light setLightUseFlare true;
+_light setLightFlareSize 3.0;
+_light setLightFlareMaxDistance 1000;
+_light setLightDayLight true;
+_light lightAttachObject [this, [0, 0, -2]];
+
+[this, _light] spawn {
+	params ["_plane", "_light"];
+	waitUntil {
+		_light setLightColor [0.5, 0, 0];
+		_light setLightAmbient [0.5, 0, 0];
+		sleep 2;
+
+		_light setLightColor [0, 0.5, 0];
+		_light setLightAmbient [0, 0.5, 0];
+		sleep 2;
+
+		!alive _plane
+	};
+	deleteVehicle _light;
+};
+
 // Cleaned up laptop menu
 this addAction ["Lights:Start presentation", {
 	start_presentation = true;

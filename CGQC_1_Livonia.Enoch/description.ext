@@ -3,13 +3,13 @@
 // ---------------------------------------------------------------------------------------------------------
 
 author = "[CGQC] Cpl. Cloutier";                                             
-onLoadName = "Opération: Slava Solenya 1";                                                   	
+onLoadName = "Opération: Slava Solenya .";                                                   	
 //onLoadMission = "Mission Zeus For CGQC Community";                                                             
 //loadScreen = "textures\BG1.paa";
 //Texture de loadscreen
 loadScreen = "textures\loading_screen_1.paa";
 onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : https://units.arma3.com/unit/CGQC<br/>Groupe Steam : https://steamcommunity.com/groups/CGQC<br/>Groupe Facebook : https://www.facebook.com/groups/CGQCP</t>";
-briefingName = "Opération: Slava Solenya 1";
+briefingName = "Opération: Slava Solenya .";
 //Texture overview
 overviewPicture = "textures\loading_screen_1.paa";
 
@@ -43,12 +43,10 @@ wreckRemovalMaxTime = 500;					// Maximal time in seconds after which a wreck is
 // ---------------------------------------------------------------------------------------------------------
 class CfgSounds {
     sounds[] = {};
-    class abierto {               //class name can be anything and will be called later{
-        name= "fortunate";
-        //sound[] = {\sounds\fortunate.ogg, 1, 1.0, 2};  
+    class abierto {               
+        name= "abierto";  
         sound[] = {"\sounds\abierto.ogg", 1, 1}; 
         titles[] = {0,"Tommy Guerrero - Abierto"};
-        //target | volume | pitch, less = lower & more = higher | Distancetitles[] = {};
     };
 };
 

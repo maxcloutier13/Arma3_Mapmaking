@@ -1,6 +1,6 @@
 // Config options for quick toggle of features 
 // Play the intro
-cgqc_cfg_intro = false;
+cgqc_cfg_intro = true;
 // Show 3dIcons 
 cgqc_cfg_3dicons = false;
 
