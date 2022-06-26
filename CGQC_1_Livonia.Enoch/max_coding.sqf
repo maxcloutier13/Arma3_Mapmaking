@@ -1,29 +1,70 @@
-arty_1
+// Separate trigger 
 _null = [] spawn {
 	while { fire_arty_1 } do {
-		_arty = arti_1;
-		_arty2 = arti_2;
+		_arty = arty_1;
 		_target = arty_1_target;
 		_artyAmmo = getArtilleryAmmo [_arty] select 0;
 		_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
 		_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
 		if (_artyETA > 0 and _inRange) then {
 			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
-			sleep 2;
-			_arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
 			sleep 15;
 			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
-			sleep 3;
-			_arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
 			sleep 11;
 			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
 			sleep 15;
-			sleep 2;
-			_arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
 		};
 	};
 };
-
+// arty_2
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		_arty = arty_2;
+		_target = arty_1_target;
+		_artyAmmo = getArtilleryAmmo [_arty] select 0;
+		_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+		_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+		if (_artyETA > 0 and _inRange) then {
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+			sleep 11;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 19;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 7;
+		};
+	};
+};
+// Wow I code like a retard 
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		_arty = arty_1;
+		_target = arty_1_target;
+		_artyAmmo = getArtilleryAmmo [_arty] select 0;
+		_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+		_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+		if (_artyETA > 0 and _inRange) then {
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 15;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+			sleep 11;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 15;
+		};
+		_arty2 = arty_2;
+		_target2 = arty_1_target;
+		_artyAmmo2 = getArtilleryAmmo [_arty2] select 0;
+		_artyETA2 = _arty2 getArtilleryETA [getPosATL _target2, _artyAmmo2];
+		_inRange2 = (getPosATL _target2) inRangeOfArtillery [[_arty2], _artyAmmo2];
+		if (_artyETA2 > 0 and _inRange2) then {
+			_arty2 commandArtilleryFire [getPosATL _target2, _artyAmmo2, 2];
+			sleep 15;
+			_arty2 commandArtilleryFire [getPosATL _target2, _artyAmmo2, 1];
+			sleep 11;
+			_arty2 commandArtilleryFire [getPosATL _target2, _artyAmmo2, 3];
+			sleep 12;
+		};
+	};
+};
 // Add more 
 _null = [] spawn {
 	while { fire_arty_1 } do {

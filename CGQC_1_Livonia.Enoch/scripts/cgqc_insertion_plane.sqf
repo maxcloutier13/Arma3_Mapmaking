@@ -19,7 +19,7 @@ private ["_text"];
 	[_text, 0, 0, 6, 3] spawn BIS_fnc_dynamicText;
 	sleep 5;
 	// move plane position 
-	insertion_plane setPos (getPos insertion_spawn);
+	insertion_plane setPosATL (getPosATL insertion_spawn);
 	// Gives it a nudge 
 	insertion_plane setVelocity [(vectorDir insertion_plane select 0), (vectorDir insertion_plane select 1)*300, (vectorDir insertion_plane select 2)];
 	insertion_plane flyInHeight 1500;
