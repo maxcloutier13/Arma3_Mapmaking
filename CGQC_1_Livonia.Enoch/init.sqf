@@ -2,7 +2,7 @@
 // Can be static, building, house 
 if (isServer) then {
 	_check = true;
-	_houseArray = (getPos destroy_1) nearObjects ["building", 500];
+	_houseArray = (getPos destroy_1) nearObjects ["static", 500];
 	{
 		// completely destroy one
 		if (_check) then {
@@ -10,7 +10,7 @@ if (isServer) then {
 			_check = false;
 		} else {
 			// Only half destroy the other
-			_x setDamage 0.8;
+			_x setDamage 0.95;
 			_check = true;
 		};
 	} forEach _houseArray;

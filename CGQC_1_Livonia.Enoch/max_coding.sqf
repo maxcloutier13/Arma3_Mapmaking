@@ -1,3 +1,13 @@
+// Latest version 
+// Destroy zone
+// Can be static, building, house 
+if (isServer) then {
+	_buildingArray = (getPos destroy_1) nearObjects ["building", 500];
+	{
+		_x setDamage 0.95;
+	} forEach _buildingArray;
+};
+
 // Destroy radius. Put this in init: 
 // Destroy zone
 // Can be static, building, house 
