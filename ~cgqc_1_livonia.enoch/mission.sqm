@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=42;
+	toggles=170;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -24,14 +24,13 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5597.0996,213.7672,7969.0732};
-		dir[]={-0.58144689,-0.37386334,0.72259909};
-		up[]={-0.23437762,0.92748278,0.29127532};
-		aside[]={0.77909523,-3.4458935e-008,0.62690711};
+		pos[]={5142.1084,116.3202,8338.7041};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710671,0.70710683};
 	};
 };
 binarizationWanted=0;
-sourceName="cgqc_1_livonia";
+sourceName="~cgqc_1_livonia";
 addons[]=
 {
 	"A3_Ui_F",
@@ -92,9 +91,9 @@ addons[]=
 	"cTab",
 	"acre_api",
 	"A3_Modules_F_Curator_Curator",
+	"UK3CB_Factions_KDF_O",
 	"A3_Soft_F_Quadbike_01",
-	"UK3CB_Factions_CW_SOV_O_LATE",
-	"UK3CB_Factions_KDF_O"
+	"UK3CB_Factions_CW_SOV_O_LATE"
 };
 class AddonsMetaData
 {
@@ -436,22 +435,22 @@ class AddonsMetaData
 		};
 		class Item50
 		{
+			className="UK3CB_Factions_KDF";
+			name="3CB Factions - KDF";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item51
+		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item51
+		class Item52
 		{
 			className="UK3CB_Factions_CW_SOV";
 			name="3CB Factions - CW_SOV";
-			author="3 Commando Brigade";
-			url="www.3commandobrigade.com";
-		};
-		class Item52
-		{
-			className="UK3CB_Factions_KDF";
-			name="3CB Factions - KDF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
@@ -1068,7 +1067,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=19;
 		class Item0
 		{
 			dataType="Layer";
@@ -88601,11 +88600,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5290.0239,98.743629,8223.4541};
-						angles[]={0,6.1580458,-0};
+						position[]={5153.2202,98.743629,8355.9395};
+						angles[]={0,5.6344471,-0};
 					};
 					side="West";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						skill=1;
@@ -88787,7 +88786,7 @@ class Mission
 					};
 					id=601;
 					type="B_Soldier_F";
-					atlOffset=-3.546463;
+					atlOffset=6.1389847;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -88931,7 +88930,7 @@ class Mission
 			{
 			};
 			id=600;
-			atlOffset=-3.546463;
+			atlOffset=6.1389847;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -89601,7 +89600,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Phases";
-			state=1;
 			class Entities
 			{
 				items=2;
@@ -89662,12 +89660,28 @@ class Mission
 		};
 		class Item15
 		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5149.228,91.525574,8383.9082};
+				angles[]={6.2547951,5.4934311,0.10937513};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=773;
+			type="UK3CB_KDF_O_MAZ_543_SCUD";
+			atlOffset=-3.8146973e-005;
+		};
+		class Item16
+		{
 			dataType="Layer";
 			name="Artillery shoot on target";
-			state=1;
 			class Entities
 			{
-				items=7;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -89732,12 +89746,12 @@ class Mission
 				class Item1
 				{
 					dataType="Trigger";
-					position[]={5503.5889,91.760612,8074.7031};
-					angle=5.4977865;
+					position[]={5151.4219,91.75248,8366.7783};
+					angle=5.497787;
 					class Attributes
 					{
 						condition="fire_arty_1";
-						onActivation="_null = [] spawn { " \n " while { fire_arty_1 } do { " \n "  _arty = arty_1; " \n "  _arty2 = arty_2; " \n "  _target = arty_1_target; " \n "  _artyAmmo = getArtilleryAmmo [_arty] select 0; " \n "  _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo]; " \n "  _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo]; " \n "  if (_artyETA > 0 and _inRange) then { " \n "   _arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1]; " \n "   sleep 2; " \n "   _arty2 commandArtilleryFire [getPosATL _target, _artyAmmo, 2]; " \n "   sleep 15; " \n "   _arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3]; " \n "   sleep 3; " \n "   _arty2 commandArtilleryFire [getPosATL _target, _artyAmmo, 1]; " \n "   sleep 11; " \n "   _arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2]; " \n "   sleep 15; " \n "   sleep 2; " \n "   _arty2 commandArtilleryFire [getPosATL _target, _artyAmmo, 3]; " \n "  }; " \n " }; " \n "};";
+						onActivation="_null = [] spawn { " \n " while { fire_arty_1 } do { " \n "  _arty = arty_1; " \n "  _arty2 = arty_2; " \n "  _target = arty_1_target; " \n "  _artyAmmo = getArtilleryAmmo [_arty] select 0; " \n "  _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo]; " \n "  _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo]; " \n "  if (_artyETA > 0 and _inRange) then { " \n "   _arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1]; " \n "   sleep 2; " \n "   _arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 2]; " \n "   sleep 15; " \n "   _arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3]; " \n "   sleep 3; " \n "   _arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 1]; " \n "   sleep 11; " \n "   _arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2]; " \n "   sleep 15; " \n "   sleep 2; " \n "   _arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 3]; " \n "  }; " \n " }; " \n "}; " \n "";
 						sizeA=0;
 						sizeB=0;
 						repeatable=1;
@@ -89745,7 +89759,7 @@ class Mission
 					};
 					id=743;
 					type="EmptyDetector";
-					atlOffset=-0.17494202;
+					atlOffset=-0.12400055;
 				};
 				class Item2
 				{
@@ -89760,13 +89774,13 @@ class Mission
 							class PositionInfo
 							{
 								position[]={5147.0176,91.293762,8371.041};
-								angles[]={0.049560208,5.7577634,6.1938229};
+								angles[]={6.2672505,5.4947152,0.097075209};
 							};
 							side="East";
 							flags=4;
 							class Attributes
 							{
-								name="arty_1D";
+								name="ambient_arty_1D";
 							};
 							id=785;
 							type="UK3CB_CW_SOV_O_LATE_CREW";
@@ -89777,16 +89791,17 @@ class Mission
 							class PositionInfo
 							{
 								position[]={5146.8696,93.141663,8371.1475};
-								angles[]={0.049560208,5.7577634,6.1938229};
+								angles[]={6.2672505,5.4947152,0.097075209};
 							};
 							side="East";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
-								name="arty_1G";
+								name="ambient_arty_1G";
 							};
 							id=786;
 							type="UK3CB_CW_SOV_O_LATE_CREW";
+							atlOffset=1.8658676;
 						};
 						class Item2
 						{
@@ -89794,16 +89809,16 @@ class Mission
 							class PositionInfo
 							{
 								position[]={5146.8696,93.141663,8371.1475};
-								angles[]={0.049560208,5.7577634,6.1938229};
+								angles[]={6.2672505,5.4947152,0.097075209};
 							};
 							side="East";
-							flags=4;
 							class Attributes
 							{
-								name="arty_1C";
+								name="ambient_arty_1C";
 							};
 							id=787;
 							type="UK3CB_CW_SOV_O_LATE_CREW_COMM";
+							atlOffset=1.8658676;
 						};
 					};
 					class Attributes
@@ -89867,7 +89882,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={5143.2573,91.253624,8366.5361};
-								angles[]={0.081419863,5.7577715,6.1716509};
+								angles[]={6.2672505,5.4947152,0.097075209};
 							};
 							side="East";
 							flags=4;
@@ -89877,6 +89892,7 @@ class Mission
 							};
 							id=789;
 							type="UK3CB_CW_SOV_O_LATE_CREW";
+							atlOffset=-3.0517578e-005;
 						};
 						class Item1
 						{
@@ -89884,16 +89900,17 @@ class Mission
 							class PositionInfo
 							{
 								position[]={5143.1094,93.101524,8366.6426};
-								angles[]={0.081419863,5.7577715,6.1716509};
+								angles[]={6.2672505,5.4947152,0.097075209};
 							};
 							side="East";
-							flags=6;
+							flags=2;
 							class Attributes
 							{
 								name="arty_1G_1";
 							};
 							id=790;
 							type="UK3CB_CW_SOV_O_LATE_CREW";
+							atlOffset=1.8666916;
 						};
 						class Item2
 						{
@@ -89901,16 +89918,16 @@ class Mission
 							class PositionInfo
 							{
 								position[]={5143.1094,93.101524,8366.6426};
-								angles[]={0.081419863,5.7577715,6.1716509};
+								angles[]={6.2672505,5.4947152,0.097075209};
 							};
 							side="East";
-							flags=4;
 							class Attributes
 							{
 								name="arty_1C_1";
 							};
 							id=791;
 							type="UK3CB_CW_SOV_O_LATE_CREW_COMM";
+							atlOffset=1.8666916;
 						};
 					};
 					class Attributes
@@ -89960,336 +89977,320 @@ class Mission
 						};
 					};
 					id=788;
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5514.3081,92.84478,8059.0322};
-						angles[]={0.041575778,5.7568417,6.211309};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=773;
-					type="UK3CB_KDF_O_MAZ_543_SCUD";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5489.8823,94.819313,8077.1606};
-						angles[]={0.049560208,5.7577634,6.1938229};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						init="this addEventHandler [""Fired"",{(_this select 0) setVehicleAmmo 1}]";
-						name="arty_1";
-					};
-					id=784;
-					type="UK3CB_CW_SOV_O_LATE_2S1";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="rhs_ammoslot_1_type";
-							expression="_this setVariable ['rhs_ammoslot_1_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_of462";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="rhs_ammoslot_2_type";
-							expression="_this setVariable ['rhs_ammoslot_2_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_d462";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="rhs_ammoslot_4_type";
-							expression="_this setVariable ['rhs_ammoslot_4_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_bk6m";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="rhs_ammoslot_3_type";
-							expression="_this setVariable ['rhs_ammoslot_3_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_s463";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value && !isMultiplayer) then {doStop _this}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ENH_engineOn";
-							expression="_this engineOn _value";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=7;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5515.5767,91.910698,8082.2012};
-						angles[]={0.081419863,5.7577715,6.1716509};
-					};
-					side="East";
-					flags=4;
-					class Attributes
-					{
-						init="this addEventHandler [""Fired"",{(_this select 0) setVehicleAmmo 1}]";
-						name="arty_2";
-					};
-					id=792;
-					type="UK3CB_CW_SOV_O_LATE_2S1";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="rhs_ammoslot_1_type";
-							expression="_this setVariable ['rhs_ammoslot_1_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_of462";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="rhs_ammoslot_2_type";
-							expression="_this setVariable ['rhs_ammoslot_2_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_d462";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="rhs_ammoslot_4_type";
-							expression="_this setVariable ['rhs_ammoslot_4_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_bk6m";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="rhs_ammoslot_3_type";
-							expression="_this setVariable ['rhs_ammoslot_3_type', _value];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="rhs_mag_s463";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ENH_doStop";
-							expression="if (!is3DEN && _value && !isMultiplayer) then {doStop _this}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="ENH_engineOn";
-							expression="_this engineOn _value";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=7;
-					};
+					atlOffset=0.11500549;
 				};
 			};
 			id=58;
-			atlOffset=6.0633316;
+			atlOffset=92.584396;
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5146.8701,93.140282,8371.0977};
+				angles[]={6.2672505,5.4947152,0.097075209};
+			};
+			side="East";
+			flags=4;
+			class Attributes
+			{
+				name="ambient_arty_1";
+			};
+			id=784;
+			type="UK3CB_CW_SOV_O_LATE_2S1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_ammoslot_1_type";
+					expression="_this setVariable ['rhs_ammoslot_1_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_of462";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_ammoslot_2_type";
+					expression="_this setVariable ['rhs_ammoslot_2_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_d462";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_ammoslot_4_type";
+					expression="_this setVariable ['rhs_ammoslot_4_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_bk6m";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_ammoslot_3_type";
+					expression="_this setVariable ['rhs_ammoslot_3_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_s463";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ENH_doStop";
+					expression="if (!is3DEN && _value && !isMultiplayer) then {doStop _this}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ENH_engineOn";
+					expression="_this engineOn _value";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=7;
+			};
+		};
+		class Item18
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5141.3062,93.100182,8365.9521};
+				angles[]={6.2672505,5.4947152,0.097075209};
+			};
+			side="East";
+			flags=4;
+			class Attributes
+			{
+				name="ambient_arty_2";
+			};
+			id=792;
+			type="UK3CB_CW_SOV_O_LATE_2S1";
+			atlOffset=0.11500549;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_ammoslot_1_type";
+					expression="_this setVariable ['rhs_ammoslot_1_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_of462";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_ammoslot_2_type";
+					expression="_this setVariable ['rhs_ammoslot_2_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_d462";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_ammoslot_4_type";
+					expression="_this setVariable ['rhs_ammoslot_4_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_bk6m";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_ammoslot_3_type";
+					expression="_this setVariable ['rhs_ammoslot_3_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_s463";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ENH_doStop";
+					expression="if (!is3DEN && _value && !isMultiplayer) then {doStop _this}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ENH_engineOn";
+					expression="_this engineOn _value";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=7;
+			};
 		};
 	};
 	class Connections

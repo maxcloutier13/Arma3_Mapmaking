@@ -1,5 +1,75 @@
-// Destroy towns 
+arty_1
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		_arty = arti_1;
+		_arty2 = arti_2;
+		_target = arty_1_target;
+		_artyAmmo = getArtilleryAmmo [_arty] select 0;
+		_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+		_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+		if (_artyETA > 0 and _inRange) then {
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 2;
+			_arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 15;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+			sleep 3;
+			_arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 11;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 15;
+			sleep 2;
+			_arty_2 commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+		};
+	};
+};
 
+// Add more 
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		_arty = arty_1;
+		_arty2 = arty_2;
+		_target = arty_1_target;
+		_artyAmmo = getArtilleryAmmo [_arty] select 0;
+		_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+		_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+		if (_artyETA > 0 and _inRange) then {
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 2;
+			_arty2 commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 15;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+			sleep 3;
+			_arty2 commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 11;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 15;
+			sleep 2;
+			_arty2 commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+		};
+	};
+};
+
+// Artillery
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		_arty = this;
+		_target = arty_1_target;
+		_artyAmmo = getArtilleryAmmo [_arty] select 0;
+		_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+		_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+		if (_artyETA > 0 and _inRange) then {
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+			sleep 15;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+			sleep 11;
+			_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+			sleep 15;
+		};
+	};
+};
+
+// Destroy towns 
 ["destroyed_airfield", 100, 92, "", ]
 
 // Fix artillery 
