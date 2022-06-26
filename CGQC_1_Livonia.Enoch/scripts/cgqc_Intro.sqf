@@ -5,10 +5,10 @@ private ["_text"];
 0.1 fadeSound 0;
 0.1 fadeMusic 0;
 [] spawn {
+	sleep 4;
 	// Fade in the sound
 	10 fadeSound 1;
 	15 fadeMusic 1;
-	sleep 4;
 	// max not sure this is needed. Advise.
 	titleText ["", "PLAIN"];
 	titleFadeOut 2;
@@ -24,7 +24,7 @@ private ["_text"];
 	"dynamicBlur" ppEffectCommit 2;
 
 	// Infotext en bas à droide
-	sleep 10;
+	sleep 15;
 	[str ("QG de l'Unité 13"), str("Quelque part"), str(date select 1) + "." + str(date select 2) + "." + str(date select 0)] spawn BIS_fnc_infoText;
 	sleep 20;
 };

@@ -1,3 +1,13 @@
+// Detroy the insertion plane and other insertion stuffs. 
+{
+	deleteVehicle _x
+} forEach crew (insertion_plane) + [insertion_plane];
+deleteVehicle trg_insertion_1;
+deleteVehicle trg_insertion_2;
+deleteVehicle trg_insertion_3;
+deleteVehicle trg_insertion_4;
+deleteVehicle trg_insertion_5;
+
 // Separate trigger 
 _null = [] spawn {
 	while { fire_arty_1 } do {

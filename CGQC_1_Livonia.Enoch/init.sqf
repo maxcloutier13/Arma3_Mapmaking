@@ -1,3 +1,12 @@
+// Destroy zone
+if (isServer) then {
+	_houseArray = (getPos destroy_city_1) nearObjects ["House", 500];
+	{
+		_x setDamage 0.7;
+	} forEach _houseArray;
+};
+
+// "House"
 // ------------------------------------------------------
 // CGQC Legacy init
 // ------------------------------------------------------
