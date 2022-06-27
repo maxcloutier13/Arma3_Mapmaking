@@ -2,6 +2,9 @@
 // Init Script on server start
 // ------------------------------------------------------
 
+// set mission state to false 
+phase_mission_started = false;
+
 // max not sure we need those with ACE and such... to check.
 ["Initialize"] call BIS_fnc_dynamicGroups; // call vanilla group function
 ["Initialize"] execVM "scripts\fn_advancedTowingInit.sqf"; // call Advanced Towing Script

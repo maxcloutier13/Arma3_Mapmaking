@@ -1,3 +1,15 @@
+// Check if exfil vehicle prent in marker 
+this && exfil_heli in thisList
+
+// Check if player has parachute 
+boarding_started = true;
+if ("B_Parachute" in (unitBackpack player)) then {
+	player moveInCargo insertion_plane;
+};
+} else {
+titleText ["Ramasse un parachute...", "PLAIN DOWN", 3];
+titleFadeOut 2;
+
 // Latest version 
 // Destroy zone
 // Can be static, building, house 

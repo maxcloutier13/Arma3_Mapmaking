@@ -5,20 +5,19 @@ private ["_text"];
 0.1 fadeSound 0;
 0.1 fadeMusic 0;
 [] spawn {
-	sleep 4;
-	// Fade in the sound
-	10 fadeSound 1;
-	15 fadeMusic 1;
 	// max not sure this is needed. Advise.
 	titleText ["", "PLAIN"];
 	titleFadeOut 2;
 	// Wait a bit
-	sleep 4;
+	sleep 8;
 
 	// Wake up with blur
 	"dynamicBlur" ppEffectEnable true;
 	"dynamicBlur" ppEffectAdjust [6];
 	"dynamicBlur" ppEffectCommit 0;
+	// Fade in the sound
+	10 fadeSound 1;
+	15 fadeMusic 1;
 	[1, "BLACK", 5] spawn BIS_fnc_fadeEffect;
 	"dynamicBlur" ppEffectAdjust [0.0];
 	"dynamicBlur" ppEffectCommit 2;
