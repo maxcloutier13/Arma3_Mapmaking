@@ -26,7 +26,6 @@ private ["_text"];
 	_wp setWaypointType "MOVE";
 	_wp setWaypointSpeed "FULL";
 	sleep 8;
-
 	// Fade in the sound
 	5 fadeSound 1;
 	5 fadeMusic 1;

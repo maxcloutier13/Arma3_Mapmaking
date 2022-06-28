@@ -1,9 +1,11 @@
 private ["_text"];
 // Black screen 
 [0, "BLACK", 0.05] spawn BIS_fnc_fadeEffect;
-// Kill sound - Doesn't work
-0.1 fadeSound 0;
-0.1 fadeMusic 0;
+/*
+// Kill sound - Doesn't work (this gets loaded wayyyyy after the music)
+	0.1 fadeSound 0;
+	0.1 fadeMusic 0;
+*/
 [] spawn {
 	// max not sure this is needed. Advise.
 	titleText ["", "PLAIN"];

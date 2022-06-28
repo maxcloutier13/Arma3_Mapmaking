@@ -16,14 +16,12 @@ for "_i" from 0 to 1 do {
 	player addItemToUniform "ACE_morphine";
 };
 for "_i" from 0 to 1 do {
-	player addItemToUniform "ACE_splint";
-};
-for "_i" from 0 to 1 do {
 	player addItemToUniform "ACE_tourniquet";
 };
 for "_i" from 0 to 1 do {
 	player addItemToUniform "ACE_CableTie";
 };
+player addItemToUniform "ACE_splint";
 player addItemToUniform "ACE_EarPlugs";
 player addItemToUniform "ACRE_PRC343";
 

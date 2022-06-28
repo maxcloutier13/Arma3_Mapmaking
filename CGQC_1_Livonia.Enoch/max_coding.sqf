@@ -1,3 +1,144 @@
+// Zeus menu updated 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	parachute_light = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+this addAction [
+	"------ Insert music ON", {
+		song_insertion = zeus_player say3D ["roll_right", 10, 1];
+	}
+];
+this addAction [
+	"------ Insert music OFF", {
+		deleteVehicle song_insertion;
+	}
+];
+this addAction [
+	"---------- Remove Zeus Actions", {
+		removeAllActions player;
+	}
+];
+
+// Getting close
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	parachute_light = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+this addAction [
+	"Insertion music on", {
+		insertion_plane say3D ["roll_right", 300, 1];
+	}
+];
+this addAction [
+	"Remove Zeus Actions", {
+		removeAllActions player;
+	}
+];
+
+// Play song in insertion 
+if (phase_mission_started) then {
+	insertion_song = insertion_plane say3D "roll_right";
+};
+
+// CBA version of say3D works great apparently 
+if (isServer) then {
+	[unit, "sound", 200] call CBA_fnc_globalSay3d;
+};
+
+// find name of player to tell him to chute up 
+
+hint format ["%1 ramasse un parachute!", (name player)];
+
+// if parachute then loadup
+if (backpack player isEqualTo "B_Parachute") then {
+	player moveInCargo insertion_plane;
+};
+
+// Check if player has parachute
+!()
+
+// Cut volume on radio init?
+// Cut volume here?
+if (hasInterface) then {
+	0.1 fadeSound 0;
+	0.1 fadeMusic 0;
+};
+[this] spawn {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+};
+
+// Zeus menu auto-deleting action after triggering it 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+		removeAllActions player;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+// Play music only on server-side 
+this addAction ["Play Music", {
+	while { true } do {
+		playing_song = (_this select 0) say3D "abierto";
+		sleep 239;
+	};
+}];
+this addAction ["Stop Music", {
+	deleteVehicle playing_song;
+}];
+if (isServer) then {
+	[this] spawn {
+		while { true } do {
+			playing_song = (_this select 0) say3D "abierto";
+			sleep 239;
+		};
+	};
+};
+
 // Check if exfil vehicle prent in marker 
 this && exfil_heli in thisList
 

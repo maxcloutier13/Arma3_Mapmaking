@@ -45,8 +45,13 @@ class CfgSounds {
     sounds[] = {};
     class abierto {               
         name= "abierto";  
-        sound[] = {"\sounds\abierto.ogg", 1, 1}; 
-        titles[] = {0,"Tommy Guerrero - Abierto"};
+        sound[] = {"\sounds\abierto.ogg", 1, 1, 10}; 
+        titles[] = {3,"Tommy Guerrero - Abierto"};
+    };
+    class roll_right {
+        name = "roll_right";
+        sound[] = {"\sounds\roll_right.ogg", 1, 1, 10}; 
+        titles[] = {10,"RATM - Roll Right"};
     };
 };
 
