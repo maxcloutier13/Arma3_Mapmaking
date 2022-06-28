@@ -5,6 +5,10 @@
 // set mission state to false 
 phase_mission_started = false;
 
+// Custom mission start time = midnight 
+_timeToSkipTo = 0;
+skipTime ((_timeToSkipTo - dayTime + 24) % 24);
+
 // max not sure we need those with ACE and such... to check.
 ["Initialize"] call BIS_fnc_dynamicGroups; // call vanilla group function
 ["Initialize"] execVM "scripts\fn_advancedTowingInit.sqf"; // call Advanced Towing Script

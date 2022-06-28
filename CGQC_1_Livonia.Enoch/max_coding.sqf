@@ -1,3 +1,43 @@
+// Turn off lightsources 
+light setLightBrightness 0;
+deleteMarker "cover_complete_map";
+// Only works on the last one that ran. Need unique names. Fuu 
+light_1 setLightBrightness 0;
+light_5 setLightBrightness 0;
+light_6 setLightBrightness 0;
+qg_light_projector setDamage 0;
+qg_light_title setDamage 0.95;
+deleteMarker "cover_complete_map";
+
+// Light it back up 
+light_1 setLightBrightness 0.5;
+light_5 setLightBrightness 0.3;
+light_6 setLightBrightness 0.3;
+qg_light_projector setDamage 0.95;
+
+// start presentation 
+qg_light_1 setDamage 0.95;
+qg_light_2 setDamage 0.95;
+qg_light_3 setDamage 0.95;qg_light_4 setDamage 0.95;qg_light_5 setDamage 0;qg_light_6 setDamage 0.95;ready_light setDamage 0.95;deleteMarker "cover_complete_map";
+
+// FUCKING LIGHTSOURCE DU CRISS
+light = "#lightpoint" createVehicle position this;
+light setLightBrightness 0.5;
+light setLightColor [1, 1, 1];
+light setLightAmbient [1, 1, 1];
+
+// Nope remoteExec? 
+remoteExec ["skipTime", 0, false]
+
+// Dammage testing 
+null = [this] spawn {
+	while { true } do {
+		private _health = ((1 - damage test_soldier) * 100);
+		hintSilent format ["%1 dam", _damage];
+		sleep 2;
+	};
+};
+
 // Fuck music in vehicle. Ace fucks it up. 
 // Sorting zeus menu. 
 null = [this] spawn {
