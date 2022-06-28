@@ -11,7 +11,7 @@ private ["_text"];
 	titleText ["", "PLAIN"];
 	titleFadeOut 2;
 	// Wait a bit
-	sleep 8;
+	sleep 1;
 
 	// Wake up with blur
 	"dynamicBlur" ppEffectEnable true;

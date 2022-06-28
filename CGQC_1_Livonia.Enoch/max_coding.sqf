@@ -1,3 +1,78 @@
+// Fuck music in vehicle. Ace fucks it up. 
+// Sorting zeus menu. 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	parachute_light = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+this addAction [
+	"------ Play Abierto", {
+		if (!isNull playing_song) then {
+			deleteVehicle playing_song;
+		};
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+
+this addAction [
+	"------ Insert music OFF", {
+		deleteVehicle playing_song;
+	}
+];
+this addAction [
+	"---------- Remove Zeus Actions", {
+		removeAllActions player;
+	}
+];
+
+// Stops ace from updating music volume all the time
+ace_hearing_disableVolumeUpdate = true;
+
+// Always plays super loud. Oh shit it's because of ace hearing!! WTF!
+ace_hearing_disableVolumeUpdate = true;
+playMusic "01_roll_right";
+insertion_plane say3D ["roll_right", 50, 1];
+
+// Music 
+// Description.ext
+class CfgMusic
+{
+	sounds[] = {
+		01, 02
+	};
+	class music_roll_right
+	{
+		name = "music_roll_right";
+		sound[] = {
+			"sounds\roll_right.ogg", 0.2, 1.0
+		};
+		titles[] = {
+			0, ""
+		};
+	};
+};
+
 // Zeus menu updated 
 null = [this] spawn {
 	_unit = (_this select 0);
@@ -21,7 +96,7 @@ this addAction ["---- Insertion!", {
 }];
 this addAction [
 	"------ Insert music ON", {
-		song_insertion = zeus_player say3D ["roll_right", 10, 1];
+		song_insertion = [insertion_plane, player] say2D ["roll_right", 100, 1];
 	}
 ];
 this addAction [

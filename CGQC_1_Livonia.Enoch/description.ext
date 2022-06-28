@@ -41,6 +41,7 @@ wreckRemovalMaxTime = 500;					// Maximal time in seconds after which a wreck is
 
 
 // ---------------------------------------------------------------------------------------------------------
+//Custom sounds
 class CfgSounds {
     sounds[] = {};
     class abierto {               
@@ -53,6 +54,24 @@ class CfgSounds {
         sound[] = {"\sounds\roll_right.ogg", 1, 1, 10}; 
         titles[] = {10,"RATM - Roll Right"};
     };
+};
+
+//Custom Music  
+class CfgMusic
+{
+	sounds[] = {
+		01, 02
+	};
+	class 01_roll_right
+	{
+		name = "01_roll_right";
+		sound[] = {
+			"sounds\roll_right.ogg", 1, 1.0
+		};
+		titles[] = {
+			0, ""
+		};
+	};
 };
 
 
