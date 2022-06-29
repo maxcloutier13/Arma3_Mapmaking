@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=549;
+	toggles=1573;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=5193;
+		nextID=5185;
 	};
 	class MarkerIDProvider
 	{
@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1740;
+		nextID=1739;
 	};
 	class Camera
 	{
-		pos[]={12206.025,102.27331,-333.74292};
-		dir[]={0.030089775,-0.50386035,0.86326092};
-		up[]={0.017551871,0.86378509,0.50355458};
-		aside[]={0.99939311,0,-0.034834791};
+		pos[]={12206.979,103.84434,-344.07541};
+		dir[]={-0.82840359,-0.55998856,-0.013073576};
+		up[]={-0.55991793,0.82850069,-0.008836492};
+		aside[]={-0.01578044,-7.0838723e-008,0.99988043};
 	};
 };
 binarizationWanted=0;
-sourceName="CGQC_1_Livonia";
+sourceName="~CGQC_1_Livonia";
 addons[]=
 {
 	"MRHSatellite",
@@ -68,7 +68,6 @@ addons[]=
 	"A3_Structures_F_Exp_Walls_Pipe",
 	"A3_Signs_F",
 	"A3_Modules_F_ObjectModifiers",
-	"a3u_mod",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Characters_F",
 	"Tier1_Weapons_cfg",
@@ -123,7 +122,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=65;
+		items=64;
 		class Item0
 		{
 			className="MRHSatellite";
@@ -300,266 +299,260 @@ class AddonsMetaData
 		};
 		class Item26
 		{
-			className="A3U_Mod";
-			name="A3U Mod";
-			author="Spyke";
-		};
-		class Item27
-		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item27
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item28
 		{
 			className="Tier1_Weapons_cfg";
 			name="Tier1_Weapons_cfg";
 		};
-		class Item30
+		class Item29
 		{
 			className="mas_can_lite_common";
 			name="mas_can_lite_common";
 			author="massi & authors in credits";
 		};
-		class Item31
+		class Item30
 		{
 			className="A3_Characters_F_Enoch";
 			name="Arma 3 Contact Platform - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item32
+		class Item31
 		{
 			className="acre_sys_prc343";
 			name="ACRE2 - AN/PRC-343";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item33
+		class Item32
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item33
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item34
 		{
 			className="rhs_c_troops";
 			name="AFRF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item36
+		class Item35
 		{
 			className="re_rhsafrf_factions";
 			name="RE: RHS AFRF Factions Fix";
 			author="amartyn";
 		};
-		class Item37
+		class Item36
 		{
 			className="rhs_c_bmd";
 			name="BMD-1 & 2 IFV";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item38
+		class Item37
 		{
 			className="rhs_c_weapons";
 			name="AFRF Weapons Pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item39
+		class Item38
 		{
 			className="ace_compat_rhs_afrf3";
 			name="ACE3 - RHS AFRF Compatibility";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item40
+		class Item39
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item41
+		class Item40
 		{
 			className="acre_main";
 			name="ACRE2 - Main";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item42
+		class Item41
 		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item43
+		class Item42
 		{
 			className="A3_Armor_F_Exp";
 			name="Arma 3 Apex - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item44
+		class Item43
 		{
 			className="UK3CB_Factions_LDF";
 			name="3CB Factions - LDF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item45
+		class Item44
 		{
 			className="UK3CB_Factions_Weapons";
 			name="3CB Factions - Weapons";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item46
+		class Item45
 		{
 			className="rhsusf_c_weapons";
 			name="RHSUSF Weapons & Accessories";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item47
+		class Item46
 		{
 			className="UK3CB_Factions_Equipment";
 			name="3CB Factions - Equipment";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item48
+		class Item47
 		{
 			className="ace_captives";
 			name="ACE3 - Captives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item49
+		class Item48
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item50
+		class Item49
 		{
 			className="acre_sys_prc152";
 			name="ACRE2 - AN/PRC-152";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item51
+		class Item50
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item52
+		class Item51
 		{
 			className="ace_microdagr";
 			name="ACE3 - MicroDAGR";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item53
+		class Item52
 		{
 			className="ace_flashlights";
 			name="ACE3 - Flashlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item54
+		class Item53
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item55
+		class Item54
 		{
 			className="A3_Soft_F_Enoch";
 			name="Arma 3 Contact Platform - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item56
+		class Item55
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item57
+		class Item56
 		{
 			className="UK3CB_Factions_KDF";
 			name="3CB Factions - KDF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item58
+		class Item57
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item59
+		class Item58
 		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item60
+		class Item59
 		{
 			className="ace_intelitems";
 			name="ACE3 - Intel Items";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item61
+		class Item60
 		{
 			className="ace_rangecard";
 			name="ACE3 - Range Card";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item62
+		class Item61
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item63
+		class Item62
 		{
 			className="ace_scopes";
 			name="ACE3 - Scopes";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item64
+		class Item63
 		{
 			className="cTab";
 			name="cTab";
@@ -8010,7 +8003,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=12;
+						items=10;
 						class Item0
 						{
 							dataType="Layer";
@@ -8023,6 +8016,7 @@ class Mission
 								{
 									dataType="Layer";
 									name="Base";
+									state=1;
 									class Entities
 									{
 										items=8;
@@ -8038,7 +8032,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=3540;
 											type="Land_Canal_Dutch_01_15m_F";
@@ -8079,7 +8073,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=3541;
 											type="Land_Canal_Dutch_01_15m_F";
@@ -8120,7 +8114,6 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												dynamicSimulation=1;
 											};
 											id=3714;
 											type="CUP_A1_Road_runway_beton";
@@ -8138,7 +8131,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=4920;
 											type="Land_Canal_Dutch_01_15m_F";
@@ -8197,7 +8190,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
 											};
 											id=5097;
 											type="Land_Hangar_F";
@@ -8214,7 +8206,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
 											};
 											id=5096;
 											type="Land_ConcreteWall_01_m_pole_F";
@@ -8232,7 +8223,6 @@ class Mission
 											flags=4;
 											class Attributes
 											{
-												dynamicSimulation=1;
 											};
 											id=5103;
 											type="Bunker_PMC";
@@ -8249,7 +8239,6 @@ class Mission
 											side="Empty";
 											class Attributes
 											{
-												dynamicSimulation=1;
 											};
 											id=5108;
 											type="Tarp_01_Small_Black_F";
@@ -8286,6 +8275,7 @@ class Mission
 								{
 									dataType="Layer";
 									name="Decoration";
+									state=1;
 									class Entities
 									{
 										items=1;
@@ -8301,7 +8291,6 @@ class Mission
 											class Attributes
 											{
 												name="flag_blackbeard";
-												dynamicSimulation=1;
 											};
 											id=363;
 											type="UserTexture10m_F";
@@ -8338,6 +8327,7 @@ class Mission
 								{
 									dataType="Layer";
 									name="Light source";
+									state=1;
 									class Entities
 									{
 										items=5;
@@ -8353,7 +8343,6 @@ class Mission
 											{
 												init="light_1 = ""#lightpoint"" createvehicle position this;" \n "light_1 setlightbrightness 0.5;" \n "light_1 setlightcolor [1,1,1]; " \n "light_1 setlightambient [1,1,1];";
 												name="qg_light_01";
-												dynamicSimulation=1;
 											};
 											id=3542;
 											type="Sign_Arrow_Blue_F";
@@ -8394,7 +8383,6 @@ class Mission
 											{
 												init="light_5 = ""#lightpoint"" createvehicle position this;" \n "light_5 setlightbrightness 0.3;" \n "light_5 setlightcolor [1,1,1]; " \n "light_5 setlightambient [1,1,1];";
 												name="qg_light_05";
-												dynamicSimulation=1;
 											};
 											id=3732;
 											type="Sign_Arrow_Blue_F";
@@ -8435,7 +8423,6 @@ class Mission
 											{
 												init="light_6 = ""#lightpoint"" createvehicle position this;" \n "light_6 setlightbrightness 0.3;" \n "light_6 setlightcolor [1,1,1]; " \n "light_6 setlightambient [1,1,1];";
 												name="qg_light_06";
-												dynamicSimulation=1;
 											};
 											id=3733;
 											type="Sign_Arrow_Blue_F";
@@ -8478,7 +8465,6 @@ class Mission
 											{
 												init="this setDamage 0.95";
 												name="qg_light_projector";
-												dynamicSimulation=1;
 											};
 											id=5083;
 											type="Land_PortableLight_single_F";
@@ -8497,7 +8483,6 @@ class Mission
 											class Attributes
 											{
 												name="qg_light_title";
-												dynamicSimulation=1;
 											};
 											id=5081;
 											type="Land_PortableLight_single_F";
@@ -8511,6 +8496,7 @@ class Mission
 								{
 									dataType="Layer";
 									name="Tunnel";
+									state=1;
 									class Entities
 									{
 										items=6;
@@ -8525,7 +8511,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=4069;
 											type="Land_Canal_Dutch_01_bridge_F";
@@ -8565,7 +8551,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=4070;
 											type="Land_Canal_Dutch_01_bridge_F";
@@ -8605,7 +8591,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=4071;
 											type="Land_Canal_Dutch_01_bridge_F";
@@ -8645,7 +8631,6 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
 											};
 											id=4066;
 											type="Land_Canal_Dutch_01_bridge_F";
@@ -8662,7 +8647,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=4067;
 											type="Land_Canal_Dutch_01_bridge_F";
@@ -8702,7 +8687,7 @@ class Mission
 											flags=1;
 											class Attributes
 											{
-												dynamicSimulation=1;
+												disableSimulation=1;
 											};
 											id=4068;
 											type="Land_Canal_Dutch_01_bridge_F";
@@ -8759,7 +8744,6 @@ class Mission
 						{
 							dataType="Layer";
 							name="Briefing";
-							state=1;
 							class Entities
 							{
 								items=14;
@@ -8925,7 +8909,7 @@ class Mission
 									class Attributes
 									{
 										init="[this] call MRH_fnc_IsSatMonitor;";
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=357;
 									type="Land_TripodScreen_01_large_black_F";
@@ -8951,26 +8935,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item2
@@ -8985,7 +8950,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=358;
 									type="Land_TripodScreen_01_large_black_F";
@@ -8994,8 +8959,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
+											property="mrh_isSatScreen";
+											expression="_this setVariable ['MRH_isSatelitteScreen',_value];[[_this],MRH_fnc_objectAttributesScreen] RemoteExec ['Call',0,true]";
 											class Value
 											{
 												class data
@@ -9030,26 +8995,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute2
-										{
-											property="mrh_isSatScreen";
-											expression="_this setVariable ['MRH_isSatelitteScreen',_value];[[_this],MRH_fnc_objectAttributesScreen] RemoteExec ['Call',0,true]";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=3;
+										nAttributes=2;
 									};
 								};
 								class Item3
@@ -9065,7 +9011,6 @@ class Mission
 									{
 										init="this setObjectTextureGlobal [0, ""textures\QG_mapboard_title.paa""];";
 										createAsSimpleObject=1;
-										dynamicSimulation=1;
 									};
 									id=355;
 									type="Land_MapBoard_F";
@@ -9091,26 +9036,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item4
@@ -9128,7 +9054,6 @@ class Mission
 										init="this setObjectTextureGlobal [0, ""textures\QG_mapboard_missionbrief.paa""];";
 										name="QG_missionbrief";
 										createAsSimpleObject=1;
-										dynamicSimulation=1;
 									};
 									id=356;
 									type="Land_MapBoard_F";
@@ -9154,26 +9079,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item5
@@ -9337,7 +9243,6 @@ class Mission
 									class Attributes
 									{
 										name="projector_canvas";
-										dynamicSimulation=1;
 									};
 									id=346;
 									type="UserTexture10m_F";
@@ -9363,26 +9268,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item7
@@ -9398,34 +9284,9 @@ class Mission
 									class Attributes
 									{
 										init="[this] call MRH_fnc_IsSatelliteConsole;";
-										disableSimulation=1;
-										dynamicSimulation=1;
 									};
 									id=348;
 									type="SatPhone";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item8
 								{
@@ -9440,7 +9301,7 @@ class Mission
 									class Attributes
 									{
 										createAsSimpleObject=1;
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=330;
 									type="Land_PortableDesk_01_black_F";
@@ -9449,8 +9310,8 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
+											property="Wing_R_hide";
+											expression="_this animate ['Wing_R_hide_source',_value,true]";
 											class Value
 											{
 												class data
@@ -9459,10 +9320,10 @@ class Mission
 													{
 														type[]=
 														{
-															"BOOL"
+															"SCALAR"
 														};
 													};
-													value=0;
+													value=1;
 												};
 											};
 										};
@@ -9485,26 +9346,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute2
-										{
-											property="Wing_R_hide";
-											expression="_this animate ['Wing_R_hide_source',_value,true]";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										nAttributes=3;
+										nAttributes=2;
 									};
 								};
 								class Item9
@@ -9522,7 +9364,6 @@ class Mission
 										init="this setObjectTextureGlobal [0, ""textures\QG_mapboard_missionbrief.paa""];";
 										name="QG_missionbrief_1";
 										createAsSimpleObject=1;
-										dynamicSimulation=1;
 									};
 									id=641;
 									type="Land_MapBoard_F";
@@ -9548,26 +9389,7 @@ class Mission
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item10
@@ -9615,34 +9437,10 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=5092;
 									type="Misc_Videoprojektor";
 									atlOffset=7.2078018;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item13
 								{
@@ -9657,35 +9455,10 @@ class Mission
 									{
 										init="this addAction [""Lights:Start presentation"", { " \n " start_presentation = true; " \n " stop_presentation = false; " \n " deleteVehicle playing_song; " \n " hint ""Briefing""; " \n "}]; " \n "this addAction [""Lights:Stop presentation"", { " \n " stop_presentation = true; " \n " start_presentation = false; " \n " hint ""Au repos""; " \n "}]; " \n "";
 										name="laptop_briefing";
-										disableSimulation=1;
-										dynamicSimulation=1;
 									};
 									id=5112;
 									type="Land_Laptop_unfolded_F";
 									atlOffset=0.94083405;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 							};
 							id=344;
@@ -9695,7 +9468,6 @@ class Mission
 						{
 							dataType="Layer";
 							name="Loadout";
-							state=1;
 							class Entities
 							{
 								items=13;
@@ -9712,7 +9484,6 @@ class Mission
 									class Attributes
 									{
 										name="QG_crate_acre";
-										dynamicSimulation=1;
 									};
 									id=335;
 									type="ACRE_RadioSupplyCrate";
@@ -9754,7 +9525,6 @@ class Mission
 									class Attributes
 									{
 										name="qg_radio";
-										dynamicSimulation=1;
 									};
 									id=343;
 									type="CUP_radio_b";
@@ -9796,7 +9566,6 @@ class Mission
 									class Attributes
 									{
 										name="cgqc_stand_medical_1";
-										dynamicSimulation=1;
 									};
 									id=342;
 									type="ACE_medicalSupplyCrate";
@@ -9858,7 +9627,7 @@ class Mission
 									{
 										name="QG_base_items";
 										createAsSimpleObject=1;
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=341;
 									type="Land_PortableDesk_01_black_F";
@@ -9977,7 +9746,7 @@ class Mission
 									{
 										name="QG_base_items_1";
 										createAsSimpleObject=1;
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=527;
 									type="Land_PortableDesk_01_black_F";
@@ -10095,7 +9864,6 @@ class Mission
 									class Attributes
 									{
 										name="QG_crate_acre_1";
-										dynamicSimulation=1;
 									};
 									id=543;
 									type="ACRE_RadioSupplyCrate";
@@ -10137,7 +9905,6 @@ class Mission
 									class Attributes
 									{
 										name="cgqc_stand_medical_2";
-										dynamicSimulation=1;
 									};
 									id=544;
 									type="ACE_medicalSupplyCrate";
@@ -10198,7 +9965,6 @@ class Mission
 									class Attributes
 									{
 										name="cgqc_box_arsenal_1";
-										dynamicSimulation=1;
 									};
 									id=639;
 									type="B_supplyCrate_F";
@@ -35885,7 +35651,6 @@ class Mission
 									class Attributes
 									{
 										name="cgqc_box_arsenal_2";
-										dynamicSimulation=1;
 									};
 									id=640;
 									type="B_supplyCrate_F";
@@ -61277,7 +61042,7 @@ class Mission
 									class Attributes
 									{
 										init="this addAction [""Add base to <t color='#00FF00'>Uniform</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToUniform ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_epinephrine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_morphine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_splint"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_tourniquet"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToUniform ""ACE_CableTie"";}, " \n "player addItemToUniform ""ACE_EarPlugs""; " \n "} " \n "]; " \n " " \n "this addAction [""Add base to <t color='#00FF00'>BackPack</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToBackpack ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_500"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_250"";}, " \n "player addItemToBackpack ""ACE_EntrenchingTool"", " \n "player addItemToBackpack ""ACE_microDAGR"", " \n "player addItemToBackpack ""ACE_Flashlight_MX991""; " \n "} " \n "];" \n "" \n "this addAction [""<t color='#FF0000'>Remove all base items from your inventory</t>"", ""removeAllItems player""];" \n "" \n "this addAction [""<t color='#FF0000'>Remove ALL items from inventory</t>"", ""removeAllItemsWithMagazines player""];";
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=5088;
 									type="Land_Laptop_Intel_01_F";
@@ -61295,7 +61060,7 @@ class Mission
 									class Attributes
 									{
 										init="this addAction [""Add base to <t color='#00FF00'>Uniform</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToUniform ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_epinephrine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_morphine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_splint"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_tourniquet"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToUniform ""ACE_CableTie"";}, " \n "player addItemToUniform ""ACE_EarPlugs""; " \n "} " \n "]; " \n " " \n "this addAction [""Add base to <t color='#00FF00'>BackPack</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToBackpack ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_500"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_250"";}, " \n "player addItemToBackpack ""ACE_EntrenchingTool"", " \n "player addItemToBackpack ""ACE_microDAGR"", " \n "player addItemToBackpack ""ACE_Flashlight_MX991""; " \n "} " \n "];" \n "" \n "this addAction [""<t color='#FF0000'>Remove all base items from your inventory</t>"", ""removeAllItems player""];" \n "" \n "this addAction [""<t color='#FF0000'>Remove ALL items from inventory</t>"", ""removeAllItemsWithMagazines player""];";
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=5089;
 									type="Land_Laptop_Intel_02_F";
@@ -61313,7 +61078,7 @@ class Mission
 									class Attributes
 									{
 										init="this addAction [""Add base to <t color='#00FF00'>Uniform</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToUniform ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_epinephrine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_morphine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_splint"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_tourniquet"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToUniform ""ACE_CableTie"";}, " \n "player addItemToUniform ""ACE_EarPlugs""; " \n "} " \n "]; " \n " " \n "this addAction [""Add base to <t color='#00FF00'>BackPack</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToBackpack ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_500"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_250"";}, " \n "player addItemToBackpack ""ACE_EntrenchingTool"", " \n "player addItemToBackpack ""ACE_microDAGR"", " \n "player addItemToBackpack ""ACE_Flashlight_MX991""; " \n "} " \n "];" \n "" \n "this addAction [""<t color='#FF0000'>Remove all base items from your inventory</t>"", ""removeAllItems player""];" \n "" \n "this addAction [""<t color='#FF0000'>Remove ALL items from inventory</t>"", ""removeAllItemsWithMagazines player""];";
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=5090;
 									type="Land_Laptop_Intel_01_F";
@@ -61332,7 +61097,7 @@ class Mission
 									class Attributes
 									{
 										init="this addAction [""Add base to <t color='#00FF00'>Uniform</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToUniform ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_epinephrine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_morphine"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_splint"";}, " \n "for ""_i"" from 0 to 3 do { player addItemToUniform ""ACE_tourniquet"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToUniform ""ACE_CableTie"";}, " \n "player addItemToUniform ""ACE_EarPlugs""; " \n "} " \n "]; " \n " " \n "this addAction [""Add base to <t color='#00FF00'>BackPack</t>"",  " \n "{ " \n "for ""_i"" from 0 to 9 do { player addItemToBackpack ""ACE_fieldDressing"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_500"";}, " \n "for ""_i"" from 0 to 1 do { player addItemToBackpack ""ACE_bloodIV_250"";}, " \n "player addItemToBackpack ""ACE_EntrenchingTool"", " \n "player addItemToBackpack ""ACE_microDAGR"", " \n "player addItemToBackpack ""ACE_Flashlight_MX991""; " \n "} " \n "];" \n "" \n "this addAction [""<t color='#FF0000'>Remove all base items from your inventory</t>"", ""removeAllItems player""];" \n "" \n "this addAction [""<t color='#FF0000'>Remove ALL items from inventory</t>"", ""removeAllItemsWithMagazines player""];";
-										dynamicSimulation=1;
+										disableSimulation=1;
 									};
 									id=5091;
 									type="Land_Laptop_Intel_01_F";
@@ -61346,7 +61111,6 @@ class Mission
 						{
 							dataType="Layer";
 							name="Parachute stuff";
-							state=1;
 							class Entities
 							{
 								items=10;
@@ -61361,34 +61125,10 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=683;
 									type="Land_LampAirport_F";
 									atlOffset=-7.6293945e-006;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item1
 								{
@@ -61402,34 +61142,10 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=1071;
 									type="Land_PipeFence_02_s_4m_F";
 									atlOffset=0.17951202;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item2
 								{
@@ -61443,33 +61159,9 @@ class Mission
 									flags=5;
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=5109;
 									type="Land_PipeFence_02_s_4m_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item3
 								{
@@ -61482,34 +61174,10 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=656;
 									type="RoadCone_F";
 									atlOffset=0.17965698;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item4
 								{
@@ -61522,34 +61190,10 @@ class Mission
 									flags=4;
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=657;
 									type="RoadCone_F";
 									atlOffset=0.21620941;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=1;
-									};
 								};
 								class Item5
 								{
@@ -61562,7 +61206,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=531;
 									type="Box_NATO_Support_F";
@@ -61584,30 +61227,11 @@ class Mission
 															"STRING"
 														};
 													};
-													value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+													value="[[[[],[]],[[],[]],[[],[]],[[""B_Parachute""],[40]]],false]";
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item6
@@ -61621,7 +61245,6 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										dynamicSimulation=1;
 									};
 									id=634;
 									type="Box_NATO_Support_F";
@@ -61643,30 +61266,11 @@ class Mission
 															"STRING"
 														};
 													};
-													value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+													value="[[[[],[]],[[],[]],[[],[]],[[""B_Parachute""],[40]]],false]";
 												};
 											};
 										};
-										class Attribute1
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=2;
+										nAttributes=1;
 									};
 								};
 								class Item7
@@ -61919,157 +61523,9 @@ class Mission
 							type="EmptyDetector";
 							atlOffset=0.00044250488;
 						};
-						class Item10
-						{
-							dataType="Trigger";
-							position[]={12205.375,98.355072,-353};
-							class Attributes
-							{
-								name="trg_remove_grenades";
-								text="Remove grenades";
-								condition="this && !start_boarding";
-								onActivation="player removeMagazines ""HandGrenade"";hint ""removed grenades"";";
-								sizeA=20;
-								sizeB=2;
-								repeatable=1;
-								activationBy="ANYPLAYER";
-								isRectangle=1;
-							};
-							id=5187;
-							type="EmptyDetector";
-							atlOffset=0.0004119873;
-						};
-						class Item11
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={12205.875,98.35466,-347.625};
-							};
-							id=5189;
-							type="A3U_ModuleSafePos";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="SafePos_Damage_ON";
-									expression="_this setVariable ['SafePos_Damage',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="SafePos_ShowWariningText";
-									expression="_this setVariable ['SafePos_ShowWariningText_C',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="SafePos_Radius_Num";
-									expression="_this setVariable ['SafePos_Radius',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=50;
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="SafePos_ShowInOutText";
-									expression="_this setVariable ['SafePos_ShowInOutText_C',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute4
-								{
-									property="SafePos_Fire_ON";
-									expression="_this setVariable ['SafePos_Fire',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="SafePos_Vehciles_ON";
-									expression="_this setVariable ['SafePos_Vehicles',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"BOOL"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=6;
-							};
-						};
 					};
 					id=933;
-					atlOffset=0.24864197;
+					atlOffset=0.99415588;
 				};
 				class Item1
 				{
@@ -62133,15 +61589,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={12206,98.356285,-356.45001};
+												position[]={12206,98.356102,-356.45001};
 												angles[]={0,0.014486233,0};
 											};
 											side="West";
 											flags=7;
 											class Attributes
 											{
-												rank="CAPTAIN";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Squad Leader@Spartan";
 												isPlayable=1;
 												class Inventory
@@ -62198,7 +61653,6 @@ class Mission
 											};
 											id=1038;
 											type="B_Soldier_F";
-											atlOffset=0.00018310547;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -62285,15 +61739,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={12210,98.410179,-356.45001};
+												position[]={12210,98.410217,-356.45001};
 												angles[]={0,0.014486233,0};
 											};
 											side="West";
 											flags=5;
 											class Attributes
 											{
-												rank="LIEUTENANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Spartan 1 - Team Leader";
 												isPlayable=1;
 												class Inventory
@@ -62350,7 +61803,7 @@ class Mission
 											};
 											id=1039;
 											type="B_Soldier_F";
-											atlOffset=0.054077148;
+											atlOffset=0.054115295;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -62437,15 +61890,14 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={12202,98.409767,-356.45001};
+												position[]={12202,98.410217,-356.45001};
 												angles[]={0,0.014486233,0};
 											};
 											side="West";
 											flags=5;
 											class Attributes
 											{
-												rank="LIEUTENANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Spartan2 - Team Leader";
 												isPlayable=1;
 												class Inventory
@@ -62502,7 +61954,7 @@ class Mission
 											};
 											id=1040;
 											type="B_Soldier_F";
-											atlOffset=0.053665161;
+											atlOffset=0.054115295;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -62595,8 +62047,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Medic";
 												isPlayable=1;
 												class Inventory
@@ -62747,8 +62198,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Medic";
 												isPlayable=1;
 												class Inventory
@@ -62898,8 +62348,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Engineer";
 												isPlayable=1;
 												class Inventory
@@ -63069,8 +62518,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Engineer";
 												isPlayable=1;
 												class Inventory
@@ -63239,8 +62687,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Machine Gunner";
 												isPlayable=1;
 												class Inventory
@@ -63391,8 +62838,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Machine Gunner";
 												isPlayable=1;
 												class Inventory
@@ -63542,8 +62988,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="MG Assitant";
 												isPlayable=1;
 												class Inventory
@@ -63694,8 +63139,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="MG Assitant";
 												isPlayable=1;
 												class Inventory
@@ -63845,8 +63289,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="AT Specialist";
 												isPlayable=1;
 												class Inventory
@@ -63997,8 +63440,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="AT Specialist";
 												isPlayable=1;
 												class Inventory
@@ -64148,8 +63590,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="AA Specialist";
 												isPlayable=1;
 												class Inventory
@@ -64300,8 +63741,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												rank="SERGEANT";
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="AA Specialist";
 												isPlayable=1;
 												class Inventory
@@ -64451,7 +63891,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -64582,7 +64022,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -64713,7 +64153,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -64844,7 +64284,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -64969,13 +64409,13 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={12212,98.410713,-358.45001};
+												position[]={12212,98.410217,-358.45001};
 											};
 											side="West";
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -65032,7 +64472,7 @@ class Mission
 											};
 											id=1057;
 											type="B_Soldier_F";
-											atlOffset=0.054611206;
+											atlOffset=0.054115295;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -65106,7 +64546,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Marksman";
 												isPlayable=1;
 												class Inventory
@@ -65276,7 +64716,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Marksman";
 												isPlayable=1;
 												class Inventory
@@ -65446,7 +64886,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -65578,7 +65018,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -65710,7 +65150,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -65842,7 +65282,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -65974,7 +65414,7 @@ class Mission
 											flags=5;
 											class Attributes
 											{
-												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};" \n "";
+												init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n "};";
 												description="Rifleman";
 												isPlayable=1;
 												class Inventory
@@ -66136,7 +65576,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="2 - Mission started";
-					state=1;
 					class Entities
 					{
 						items=4;
@@ -66245,7 +65684,7 @@ class Mission
 											};
 											id=1079;
 											type="B_T_Pilot_F";
-											atlOffset=-3.8146973e-006;
+											atlOffset=-0.023002625;
 										};
 										class Item1
 										{
@@ -66256,12 +65695,13 @@ class Mission
 												angles[]={6.2237744,4.7128429,6.2392201};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1080;
 											type="B_T_Pilot_F";
-											atlOffset=6.693325;
+											atlOffset=-0.023002625;
 										};
 										class Item2
 										{
@@ -66272,12 +65712,13 @@ class Mission
 												angles[]={6.2237744,4.7128429,6.2392201};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1081;
 											type="B_T_Pilot_F";
-											atlOffset=6.693325;
+											atlOffset=-0.023002625;
 										};
 										class Item3
 										{
@@ -66288,12 +65729,13 @@ class Mission
 												angles[]={6.2237744,4.7128429,6.2392201};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1082;
 											type="B_T_Pilot_F";
-											atlOffset=6.693325;
+											atlOffset=-0.023002625;
 										};
 									};
 									class Attributes
@@ -66357,7 +65799,7 @@ class Mission
 										};
 									};
 									id=532;
-									atlOffset=-252.33;
+									atlOffset=-0.023002625;
 								};
 								class Item4
 								{
@@ -66646,7 +66088,7 @@ class Mission
 								};
 							};
 							id=81;
-							atlOffset=104.53456;
+							atlOffset=103.72995;
 						};
 						class Item2
 						{
@@ -69138,7 +68580,7 @@ class Mission
 						};
 					};
 					id=935;
-					atlOffset=8.9535141;
+					atlOffset=11.169502;
 				};
 				class Item3
 				{
@@ -71137,7 +70579,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=3;
+						items=2;
 						class Item0
 						{
 							dataType="Layer";
@@ -71935,20 +71377,13 @@ class Mission
 							id=970;
 							atlOffset=-38.934387;
 						};
-						class Item2
-						{
-							dataType="Layer";
-							name="1 - Mine bridge";
-							id=5192;
-							atlOffset=-252.33;
-						};
 					};
 					id=995;
-					atlOffset=-109.60594;
+					atlOffset=142.15718;
 				};
 			};
 			id=681;
-			atlOffset=0.85249329;
+			atlOffset=21.738449;
 		};
 		class Item2
 		{
@@ -72007,7 +71442,7 @@ class Mission
 							};
 							title="Big hangar";
 							id=982;
-							atlOffset=9.0259933;
+							atlOffset=0.00016021729;
 						};
 						class Item4
 						{
@@ -73734,7 +73169,7 @@ class Mission
 			};
 			id=5183;
 			type="ModuleRespawnPosition_F";
-			atlOffset=0.27000046;
+			atlOffset=0.00037765503;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -73840,11 +73275,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=24;
+			nextID=23;
 		};
 		class Links
 		{
-			items=24;
+			items=23;
 			class Item0
 			{
 				linkID=0;
@@ -74070,16 +73505,6 @@ class Mission
 				linkID=22;
 				item0=1067;
 				item1=5184;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item23
-			{
-				linkID=23;
-				item0=5189;
-				item1=355;
 				class CustomData
 				{
 					type="Sync";

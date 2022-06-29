@@ -1,7 +1,6 @@
 private ["_text"];
 
 [] spawn {
-	sleep 2;
 	// Black screen 
 	cutText ["", "BLACK FADED", 999];
 	// Kill sound 

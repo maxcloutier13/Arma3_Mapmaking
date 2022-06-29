@@ -1,3 +1,68 @@
+// Eventhandler for when player gains control 
+// Fix to remove fucking initial 2 grenades 
+["CBA_loadingScreenDone", {
+	hint "removing fucking grenades";
+	player removeMagazines "HandGrenade";
+}] call CBA_fnc_addEventHandler;
+// hint displays. Grenades are STILL FUCKING THERE.
+// At what fucking point do they get inserted. FucK!
+
+// Fix phases not activating/ layers not hiding 
+// publicVariable time 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+	while { true } do {
+		playing_song = qg_radio say3D "abierto";
+		sleep 239;
+	};
+};
+
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+		publicVariable "phase_mission_started";
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+this addAction [
+	"------ Play Abierto", {
+		if (!isNull playing_song) then {
+			deleteVehicle playing_song;
+		};
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+
+this addAction [
+	"------ Insert music OFF", {
+		deleteVehicle playing_song;
+	}
+];
+this addAction [
+	"---------- Remove Zeus Actions", {
+		removeAllActions player;
+	}
+];
+
 // Other player, holster 
 null = [this] spawn {
 	_unit = (_this select 0);

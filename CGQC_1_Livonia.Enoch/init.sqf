@@ -1,3 +1,6 @@
+// Initial boarding state 
+start_boarding = false;
+
 // Destroy zone
 // Can be static, building, house 
 if (isServer) then {
