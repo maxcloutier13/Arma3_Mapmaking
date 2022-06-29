@@ -1,5 +1,8 @@
 // Black out screen ASAP  
 [0, "BLACK", 0.05] spawn BIS_fnc_fadeEffect;
+// Sound off ASAP 
+0.1 fadeSound 0;
+0.1 fadeMusic 0;
 // Config options for quick toggle of features 
 // Play the intro
 cgqc_cfg_intro = true;

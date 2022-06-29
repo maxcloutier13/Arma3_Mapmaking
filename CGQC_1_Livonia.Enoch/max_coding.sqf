@@ -1,3 +1,122 @@
+// Other player, holster 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+
+// This seems aight
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+	if (isNull playing_song) then {
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	};
+};
+
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	parachute_light = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+this addAction [
+	"------ Play Abierto", {
+		if (!isNull playing_song) then {
+			deleteVehicle playing_song;
+		};
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+
+this addAction [
+	"------ Insert music OFF", {
+		deleteVehicle playing_song;
+	}
+];
+this addAction [
+	"---------- Remove Zeus Actions", {
+		removeAllActions player;
+	}
+];
+
+// load music on trigger when player present instead of radio init 
+// Yeaaaah plays multiple, trigger gets initialised on each player. Fuck
+null = [this] spawn {
+	while { true } do {
+		playing_song = qg_radio say3D "abierto";
+		sleep 239;
+	};
+};
+
+// Autoplay on zeus init instead. 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	parachute_light = true;
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		[] execVM "scripts\cgqc_insertion_plane.sqf";
+		phase_mission_started = true;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+this addAction [
+	"------ Play Abierto", {
+		if (!isNull playing_song) then {
+			deleteVehicle playing_song;
+		};
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+
+this addAction [
+	"------ Insert music OFF", {
+		deleteVehicle playing_song;
+	}
+];
+this addAction [
+	"---------- Remove Zeus Actions", {
+		removeAllActions player;
+	}
+];
+
 // Turn off lightsources 
 light setLightBrightness 0;
 deleteMarker "cover_complete_map";
@@ -18,7 +137,12 @@ qg_light_projector setDamage 0.95;
 // start presentation 
 qg_light_1 setDamage 0.95;
 qg_light_2 setDamage 0.95;
-qg_light_3 setDamage 0.95;qg_light_4 setDamage 0.95;qg_light_5 setDamage 0;qg_light_6 setDamage 0.95;ready_light setDamage 0.95;deleteMarker "cover_complete_map";
+qg_light_3 setDamage 0.95;
+qg_light_4 setDamage 0.95;
+qg_light_5 setDamage 0;
+qg_light_6 setDamage 0.95;
+ready_light setDamage 0.95;
+deleteMarker "cover_complete_map";
 
 // FUCKING LIGHTSOURCE DU CRISS
 light = "#lightpoint" createVehicle position this;
