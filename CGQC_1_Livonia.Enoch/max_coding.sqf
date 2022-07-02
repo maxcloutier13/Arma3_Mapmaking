@@ -1,3 +1,12 @@
+// Flare when detected 
+
+_flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [0, 100, 100]);
+flrObj setVelocity [0, 0, -3];
+_flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [40, 140, 100]);
+flrObj setVelocity [0, 0, -3];
+_flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [-40, 60, 150]);
+flrObj setVelocity [0, 0, -3];
+
 // Eventhandler for when player gains control 
 // Fix to remove fucking initial 2 grenades 
 ["CBA_loadingScreenDone", {
@@ -6,6 +15,7 @@
 }] call CBA_fnc_addEventHandler;
 // hint displays. Grenades are STILL FUCKING THERE.
 // At what fucking point do they get inserted. FucK!
+// Litteraly a trigger they walk trough to get to the arsenal. Fuck. 
 
 // Fix phases not activating/ layers not hiding 
 // publicVariable time 

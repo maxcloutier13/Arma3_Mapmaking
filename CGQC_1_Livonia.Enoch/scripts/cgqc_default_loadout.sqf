@@ -1,7 +1,7 @@
 // Clears units loadout and inserts the base items 
 
 // Remove every item, in case 
-removeAllWeapons player;
+// removeAllWeapons player;
 removeAllItems player;
 // removeAllAssignedItems player;
 
