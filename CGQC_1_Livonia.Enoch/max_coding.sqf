@@ -1,3 +1,87 @@
+// Teleport pole 
+this addAction ["Insertion", {
+	player setPos (getMarkerPos "respawn_west");
+}];
+
+// arty 2 
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		if (alive arty_2) then {
+			_arty = arty_2;
+			_target = arty_1_target;
+			_artyAmmo = getArtilleryAmmo [_arty] select 0;
+			_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+			_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+			if (_artyETA > 0 and _inRange) then {
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+				sleep 11;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+				sleep 19;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+				sleep 7;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+				sleep 65;
+			};
+		};
+	};
+};
+
+// stop artillery when dead 
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		if (alive arty_1) then {
+			_arty = arty_1;
+			_target = arty_1_target;
+			_artyAmmo = getArtilleryAmmo [_arty] select 0;
+			_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+			_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+			if (_artyETA > 0 and _inRange) then {
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+				sleep 15;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+				sleep 11;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
+				sleep 15;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
+				sleep 31;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
+				sleep 40;
+			};
+		};
+	};
+};
+
+// Pause on sentry
+null = [this] spawn {
+	sleep 10;
+};
+// Mine garrison
+[this, bridge_hq, 20, 3, false, 0.8] call CBA_fnc_taskDefend;
+// local patrol
+[group this, getPos this, 100] call BIS_fnc_taskPatrol;
+
+// CBA stuff. Put this in leader INIT
+// Garison buildings 
+[this] call CBA_fnc_taskDefend;
+// Go towards marker HQ and garison 
+// group, position, radius, treshold, patrol, hold
+[this, hq, 300, 3, true] call CBA_fnc_taskDefend;
+// Create a random patrol 400m around AO
+[group this, getPos this, 400] call BIS_fnc_taskPatrol;
+
+// time and separate flares 
+hint "They know you're here";
+null = [this] spawn {
+	_flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [0, 100, 100]);
+	flrObj setVelocity [0, 0, -20];
+	sleep 3;
+	_flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [40, 140, 100]);
+	flrObj setVelocity [0, 0, -20];
+	sleep 6;
+	_flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [-40, 60, 150]);
+	flrObj setVelocity [0, 0, -20];
+};
+
 // Flare when detected 
 
 _flrObj = "F_40mm_white" createVehicle ((player) modelToWorld [0, 100, 100]);
