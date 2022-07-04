@@ -2,17 +2,18 @@ private ["_text"];
 // Black screen 
 [0, "BLACK", 0.05] spawn BIS_fnc_fadeEffect;
 
-// Kill sound - Doesn't work (this gets loaded wayyyyy after the music)
+
+// Kill sound 
 0.1 fadeSound 0;
 0.1 fadeMusic 0;
 
-[] spawn {
+
+_null = [] spawn {
 	// max not sure this is needed. Advise.
 	titleText ["", "PLAIN"];
 	titleFadeOut 2;
 	// Wait a bit
 	sleep 1;
-
 	// Wake up with blur
 	"dynamicBlur" ppEffectEnable true;
 	"dynamicBlur" ppEffectAdjust [6];
@@ -23,6 +24,7 @@ private ["_text"];
 	[1, "BLACK", 5] spawn BIS_fnc_fadeEffect;
 	"dynamicBlur" ppEffectAdjust [0.0];
 	"dynamicBlur" ppEffectCommit 2;
+
 
 	// Infotext en bas à droide
 	sleep 15;

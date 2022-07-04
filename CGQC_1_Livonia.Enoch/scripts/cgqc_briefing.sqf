@@ -12,5 +12,4 @@ _cgqc_ps_command = (
     "<font size='14' color='#ff0000'>#gradPersistenceSave</font>"
 );
 player createDiaryRecord ["Diary", ["CGQC", _cgqc_ps_command]];
-player createDiaryRecord ["Diary", ["Opération FDP", "FDP comme dans Face de Pet"]];
 player createDiaryRecord ["Diary", ["Unit 13","L'Unité 13 est un sous-groupe clandestin composées principalement de membres de CSOR spécialisé dans l'action directe.</br>"]];

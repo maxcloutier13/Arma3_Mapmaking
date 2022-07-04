@@ -1,9 +1,97 @@
+//Single artillery script combined 
+_null = [] spawn { 
+ while { fire_arty_1 } do { 
+  if (alive arty_1) then { 
+   _arty = arty_1; 
+   _target = arty_1_target; 
+   _artyAmmo = getArtilleryAmmo [_arty] select 0; 
+   _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo]; 
+   _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo]; 
+   _shots = floor(random [1, 3, 5]); 
+   _wait = floor (random [25, 50, 80]); 
+   if (_artyETA > 0 and _inRange) then { 
+    _arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots]; 
+    sleep _wait; 
+   }; 
+  }; 
+  if (alive arty_2) then { 
+   _arty = arty_2; 
+   _target = arty_1_target; 
+   _artyAmmo = getArtilleryAmmo [_arty] select 0; 
+   _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo]; 
+   _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo]; 
+   _shots = floor(random [1, 3, 5]); 
+   _wait = floor (random [25, 50, 80]); 
+   if (_artyETA > 0 and _inRange) then { 
+    _arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots]; 
+    sleep _wait; 
+   }; 
+  }; 
+ }; 
+};
+
+//Delete covers when insertion starts 
+enableEnvironment [true,true]; 
+fire_arty_1 = true;  
+PublicVariable "fire_arty_1";  
+_timeToSkipTo = 3;  
+skipTime ((_timeToSkipTo - dayTime + 24) % 24); 
+0 setOvercast 0.8;
+forceWeatherChange;
+deleteMarker "cover_left";
+deleteMarker "cover_right";
+deleteMarker "cover_top";
+deleteMarker "cover_bottom";
+
+
+//Clear out clouds as mission goes 
+900 setOvercast 0.1;
+//Mission started: add overcast
+enableEnvironment [true,true];
+fire_arty_1 = true; 
+PublicVariable "fire_arty_1"; 
+_timeToSkipTo = 3; 
+skipTime ((_timeToSkipTo - dayTime + 24) % 24);
+0 setOvercast 0.8;
+forceWeatherChange;
+
+//Apparently need this to apply fast:
+0 setOvercast 1;
+0 setRain 1;
+
+
+// random sleep time for artillery 
+_wait = floor (random [11, 15, 25, 65]);  // floor makes the returned num a whole num, non decimal.
+hint format ["Value of C is : %1", C];
+
+// random number 
+C = floor (random [600, 800, 1000]);  // floor makes the returned num a whole num, non decimal.
+hint format ["Value of C is : %1", C];
+
 // Teleport pole 
 this addAction ["Insertion", {
 	player setPos (getMarkerPos "respawn_west");
 }];
 
-// arty 2 
+_null = [] spawn {
+ while { fire_arty_1 } do {
+  if (alive arty_1) then {
+   _arty = arty_1;
+   _target = arty_1_target;
+   _artyAmmo = getArtilleryAmmo [_arty] select 0;
+   _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+   _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+   _shots = floor(random [1, 3, 5]);
+   _wait = floor (random [15, 30, 65]);
+   if (_artyETA > 0 and _inRange) then {
+    _arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots];
+    sleep _wait;
+   };
+  };
+ };
+};
+
+// arty 2 Random version
 _null = [] spawn {
 	while { fire_arty_1 } do {
 		if (alive arty_2) then {
@@ -12,15 +100,11 @@ _null = [] spawn {
 			_artyAmmo = getArtilleryAmmo [_arty] select 0;
 			_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
 			_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+			_shots = floor(random [1, 5]);
+			_wait = floor (random [11, 65]);
 			if (_artyETA > 0 and _inRange) then {
-				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 3];
-				sleep 11;
-				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 1];
-				sleep 19;
-				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
-				sleep 7;
-				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, 2];
-				sleep 65;
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots];
+				sleep _wait;
 			};
 		};
 	};
