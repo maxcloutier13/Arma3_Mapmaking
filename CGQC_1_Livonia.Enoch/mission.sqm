@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2307;
+		nextID=2356;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="cgqc_1_livonia";
+sourceName="CGQC_SlavaSolenya";
 addons[]=
 {
 	"MRHSatellite",
@@ -170447,11 +170447,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12206.021,98.356102,-327.14923};
+						position[]={12206.021,98.355614,-327.14902};
 						angles[]={0,3.103719,0};
 					};
 					side="West";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						skill=1;
@@ -170459,6 +170459,7 @@ class Mission
 						init="null = [this] spawn { " \n " _unit = (_this select 0); " \n " sleep 1; " \n " _unit action ['SwitchWeapon', _unit, _unit, 100]; " \n " while { true } do { " \n "  playing_song = qg_radio say3D ""abierto""; " \n "  sleep 239; " \n " }; " \n "}; " \n " " \n "this addAction [""------------------------"", { " \n " hint """"; " \n "}]; " \n "this addAction [""-- Start boarding"", { " \n " start_boarding = true; " \n " publicVariable ""start_boarding""; " \n " hint ""Ramassez un parachute et dirigez vous vers la porte du fond""; " \n "}]; " \n " " \n "this addAction [""---- Insertion!"", { " \n " if (( { " \n "  alive _x && !(_x in insertion_plane) " \n " } count allPlayers ) == 0) then { " \n "  [] execVM ""scripts\cgqc_insertion_plane.sqf""; " \n "  phase_mission_started = true; " \n "  publicVariable ""phase_mission_started""; " \n " } else { " \n "  hint ""Il manque quelqu'un..""; " \n " }; " \n "}]; " \n " " \n "this addAction [ " \n " ""------ Play Abierto"", { " \n "  if (!isNull playing_song) then { " \n "   deleteVehicle playing_song; " \n "  }; " \n "  while { true } do { " \n "   playing_song = qg_radio say3D ""abierto""; " \n "   sleep 239; " \n "  }; " \n " } " \n "]; " \n " " \n "this addAction [ " \n " ""------ Insert music OFF"", { " \n "  deleteVehicle playing_song; " \n " } " \n "]; " \n "this addAction [ " \n " ""---------- Remove Zeus Actions"", { " \n "  removeAllActions player; " \n " } " \n "];";
 						name="zeus_player_1";
 						description="Zeus @ HQ";
+						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -170637,6 +170638,7 @@ class Mission
 					};
 					id=5222;
 					type="B_Soldier_F";
+					atlOffset=0.79399872;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -171094,6 +171096,7 @@ class Mission
 			{
 			};
 			id=5223;
+			atlOffset=0.79399872;
 		};
 		class Item5
 		{
