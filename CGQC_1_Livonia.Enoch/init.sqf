@@ -1,23 +1,74 @@
 // Initial boarding state 
 start_boarding = false;
+phase_mission_started = false;
 
 // Destroy zone
 // Can be static, building, house 
-if (isServer) then {
-	_check = true;
-	_houseArray = (getPos destroy_1) nearObjects ["static", 500];
-	{
+/*
+	if (isServer) then {
+		_check = true;
+		_houseArray = (getPos destroy_1) nearObjects ["static", 500];
+		{
 		// completely destroy one
-		if (_check) then {
-			_x setDamage 1;
-			_check = false;
-		} else {
+			if (_check) then {
+				_x setDamage 1;
+				_check = false;
+			} else {
 			// Only half destroy the other
-			_x setDamage 0.95;
-			_check = true;
-		};
-	} forEach _houseArray;
-};
+				_x setDamage 0.95;
+				_check = true;
+			};
+		} forEach _houseArray;
+	};
+*/
+
+// Custom CBA Events
+// Start Mission 
+["cgqc_phase_mission_started", {
+	// Black screen 
+	cutText ["", "BLACK FADED", 999];
+	// Kill sound 
+	0.1 fadeSound 0;
+	0.1 fadeMusic 0;
+	// Bring back ambient sounds
+	enableEnvironment [true, true];
+	// Start artillery fire
+	fire_arty_1 = true;
+	PublicVariable "fire_arty_1";// not needed?
+	// Skip time
+	_timeToSkipTo = 3.3;
+	skipTime ((_timeToSkipTo - dayTime + 24) % 24);
+	// set weather cloudy
+	0 setOvercast 0.9;
+	forceWeatherChange;
+	// Delete all the map covers
+	deleteMarker "cover_left";
+	deleteMarker "cover_right";
+	deleteMarker "cover_top";
+	deleteMarker "cover_bottom";
+	deleteMarker "cover_all";
+	// move player to plane
+	player moveInCargo insertion_plane;
+	// Insertion itself
+	[] execVM "scripts\cgqc_insertion_plane.sqf";
+}] call CBA_fnc_addEventHandler;
+
+// Start presentation 
+["cgqc_start_presentation", {
+	light_5 setLightBrightness 0;
+	light_6 setLightBrightness 0;
+	qg_light_projector setDamage 0;
+	qg_light_title setDamage 0.95;
+	deleteMarker "cover_all";
+}] call CBA_fnc_addEventHandler;
+
+// stop presentation 
+["cgqc_stop_presentation", {
+	light_5 setLightBrightness 0.4;
+	light_6 setLightBrightness 0.4;
+	qg_light_projector setDamage 0.95;
+	qg_light_title setDamage 0;
+}] call CBA_fnc_addEventHandler;
 
 // ------------------------------------------------------
 // CGQC Legacy init

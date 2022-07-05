@@ -2,11 +2,9 @@ private ["_text"];
 // Black screen 
 [0, "BLACK", 0.05] spawn BIS_fnc_fadeEffect;
 
-
 // Kill sound 
 0.1 fadeSound 0;
 0.1 fadeMusic 0;
-
 
 _null = [] spawn {
 	// max not sure this is needed. Advise.

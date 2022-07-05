@@ -1,41 +1,277 @@
-//Single artillery script combined 
-_null = [] spawn { 
- while { fire_arty_1 } do { 
-  if (alive arty_1) then { 
-   _arty = arty_1; 
-   _target = arty_1_target; 
-   _artyAmmo = getArtilleryAmmo [_arty] select 0; 
-   _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo]; 
-   _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo]; 
-   _shots = floor(random [1, 3, 5]); 
-   _wait = floor (random [25, 50, 80]); 
-   if (_artyETA > 0 and _inRange) then { 
-    _arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots]; 
-    sleep _wait; 
-   }; 
-  }; 
-  if (alive arty_2) then { 
-   _arty = arty_2; 
-   _target = arty_1_target; 
-   _artyAmmo = getArtilleryAmmo [_arty] select 0; 
-   _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo]; 
-   _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo]; 
-   _shots = floor(random [1, 3, 5]); 
-   _wait = floor (random [25, 50, 80]); 
-   if (_artyETA > 0 and _inRange) then { 
-    _arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots]; 
-    sleep _wait; 
-   }; 
-  }; 
- }; 
+// slideshow textures 
+textures\QG_projector_2_1_Mission.paa, textures\QG_projector_0_blank.paa, textures\QG_projector_1_CGQC.paa
+
+// Alright. CBA directly from zeus. Let's clear some triggers... 
+
+// CBA Events... 
+// This in init.sqf
+["my_personal_hint_event", {
+	hint "Yep, this is a hint";
+}] call CBA_fnc_addEventHandler;
+// call like this
+// Run on all machines 
+["cgqc_insertion_boarding", []] call CBA_fnc_globalEvent;
+// Only run local 
+["cgqc_stop_presentation", []] call CBA_fnc_localEvent;
+
+// Zeus again 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction [
+	"- Music: Play", {
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+this addAction [
+	"- Music: Stop", {
+		deleteVehicle playing_song;
+	}
+];
+this addAction ["-- Lights:Start presentation", {
+	["cgqc_start_presentation", []] call CBA_fnc_globalEvent;
+	hint "Briefing";
+}];
+this addAction ["-- Lights:Stop presentation", {
+	["cgqc_stop_presentation", []] call CBA_fnc_globalEvent;
+	hint "Au repos";
+}];
+this addAction ["--- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction ["---- Insertion!", {
+	phase_mission_started = true;
+	publicVariable "phase_mission_started";
+	["cgqc_phase_mission_started", []] call CBA_fnc_globalEvent;
+	removeAllActions player;
+}];
+
+// move from laptop to zeus 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction ["Lights:Start presentation", {
+	start_presentation = true;
+	stop_presentation = false;
+	publicVariable "start_presentation";
+	publicVariable "stop_presentation";
+	hint "Briefing";
+}];
+this addAction ["Lights:Stop presentation", {
+	stop_presentation = true;
+	start_presentation = false;
+	publicVariable "start_presentation";
+	publicVariable "stop_presentation";
+	hint "Au repos";
+}];
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		phase_mission_started = true;
+		publicVariable "phase_mission_started";
+		removeAllActions player;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+this addAction [
+	"------ Play Abierto", {
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+this addAction [
+	"------ Insert music OFF", {
+		deleteVehicle playing_song;
+	}
+];
+
+// Boarding script  
+if (backpack player isEqualTo "B_Parachute") then {
+	player moveInCargo insertion_plane;
 };
 
-//Delete covers when insertion starts 
-enableEnvironment [true,true]; 
-fire_arty_1 = true;  
-PublicVariable "fire_arty_1";  
-_timeToSkipTo = 3;  
-skipTime ((_timeToSkipTo - dayTime + 24) % 24); 
+// Zeus menu. Encore. 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+
+this addAction ["------------------------", {
+	hint "";
+}];
+
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		phase_mission_started = true;
+		publicVariable "phase_mission_started";
+		removeAllActions player;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+this addAction [
+	"------ Play Abierto", {
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	}
+];
+
+this addAction [
+	"------ music OFF", {
+		deleteVehicle playing_song;
+	}
+];
+
+// Presentation on w. publicVariable
+light_5 setLightBrightness 0;
+light_6 setLightBrightness 0;
+qg_light_projector setDamage 0;
+qg_light_title setDamage 0.95;
+deleteMarker "cover_all";
+publicVariable light_5;
+publicVariable light_6;
+publicVariable qg_light_projector;
+publicVariable qg_light_title;
+// Doesn't seem to do much. 
+
+// Presentation on
+light_5 setLightBrightness 0;
+light_6 setLightBrightness 0;
+qg_light_projector setDamage 0;
+qg_light_title setDamage 0.95;
+deleteMarker "cover_all";
+
+// Phase mission started MP fix 
+enableEnvironment [true, true];
+fire_arty_1 = true;
+PublicVariable "fire_arty_1";
+_timeToSkipTo = 3.3;
+skipTime ((_timeToSkipTo - dayTime + 24) % 24);
+0 setOvercast 0.9;
+forceWeatherChange;
+deleteMarker "cover_left";
+deleteMarker "cover_right";
+deleteMarker "cover_top";
+deleteMarker "cover_bottom";
+[] execVM "scripts\cgqc_insertion_plane.sqf";
+
+// Zeus MP fix 
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+
+this addAction ["------------------------", {
+	hint "";
+}];
+
+this addAction ["-- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+
+this addAction ["---- Insertion!", {
+	if (( {
+		alive _x && !(_x in insertion_plane)
+	} count allPlayers ) == 0) then {
+		phase_mission_started = true;
+		publicVariable "phase_mission_started";
+		removeAllActions player;
+	} else {
+		hint "Il manque quelqu'un..";
+	};
+}];
+
+this addAction ["------ Play/Pause", {
+	if (!isNull playing_song) then {
+		deleteVehicle playing_song;
+	} else {
+		while { true } do {
+			playing_song = qg_radio say3D "abierto";
+			sleep 239;
+		};
+	};
+}];
+
+// Single artillery script combined 
+_null = [] spawn {
+	while { fire_arty_1 } do {
+		if (alive arty_1) then {
+			_arty = arty_1;
+			_target = arty_1_target;
+			_artyAmmo = getArtilleryAmmo [_arty] select 0;
+			_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+			_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+			_shots = floor(random [1, 3, 5]);
+			_wait = floor (random [25, 50, 80]);
+			if (_artyETA > 0 and _inRange) then {
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots];
+				sleep _wait;
+			};
+		};
+		if (alive arty_2) then {
+			_arty = arty_2;
+			_target = arty_1_target;
+			_artyAmmo = getArtilleryAmmo [_arty] select 0;
+			_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+			_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+			_shots = floor(random [1, 3, 5]);
+			_wait = floor (random [25, 50, 80]);
+			if (_artyETA > 0 and _inRange) then {
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots];
+				sleep _wait;
+			};
+		};
+	};
+};
+
+// Delete covers when insertion starts 
+enableEnvironment [true, true];
+fire_arty_1 = true;
+PublicVariable "fire_arty_1";
+_timeToSkipTo = 3;
+skipTime ((_timeToSkipTo - dayTime + 24) % 24);
 0 setOvercast 0.8;
 forceWeatherChange;
 deleteMarker "cover_left";
@@ -43,22 +279,20 @@ deleteMarker "cover_right";
 deleteMarker "cover_top";
 deleteMarker "cover_bottom";
 
-
-//Clear out clouds as mission goes 
+// Clear out clouds as mission goes 
 900 setOvercast 0.1;
-//Mission started: add overcast
-enableEnvironment [true,true];
-fire_arty_1 = true; 
-PublicVariable "fire_arty_1"; 
-_timeToSkipTo = 3; 
+// Mission started: add overcast
+enableEnvironment [true, true];
+fire_arty_1 = true;
+PublicVariable "fire_arty_1";
+_timeToSkipTo = 3;
 skipTime ((_timeToSkipTo - dayTime + 24) % 24);
 0 setOvercast 0.8;
 forceWeatherChange;
 
-//Apparently need this to apply fast:
+// Apparently need this to apply fast:
 0 setOvercast 1;
 0 setRain 1;
-
 
 // random sleep time for artillery 
 _wait = floor (random [11, 15, 25, 65]);  // floor makes the returned num a whole num, non decimal.
@@ -74,24 +308,24 @@ this addAction ["Insertion", {
 }];
 
 _null = [] spawn {
- while { fire_arty_1 } do {
-  if (alive arty_1) then {
-   _arty = arty_1;
-   _target = arty_1_target;
-   _artyAmmo = getArtilleryAmmo [_arty] select 0;
-   _artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
-   _inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
-   _shots = floor(random [1, 3, 5]);
-   _wait = floor (random [15, 30, 65]);
-   if (_artyETA > 0 and _inRange) then {
-    _arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots];
-    sleep _wait;
-   };
-  };
- };
+	while { fire_arty_1 } do {
+		if (alive arty_1) then {
+			_arty = arty_1;
+			_target = arty_1_target;
+			_artyAmmo = getArtilleryAmmo [_arty] select 0;
+			_artyETA = _arty getArtilleryETA [getPosATL _target, _artyAmmo];
+			_inRange = (getPosATL _target) inRangeOfArtillery [[_arty], _artyAmmo];
+			_shots = floor(random [1, 3, 5]);
+			_wait = floor (random [15, 30, 65]);
+			if (_artyETA > 0 and _inRange) then {
+				_arty commandArtilleryFire [getPosATL _target, _artyAmmo, _shots];
+				sleep _wait;
+			};
+		};
+	};
 };
 
-// arty 2 Random version
+// arty 2 random version
 _null = [] spawn {
 	while { fire_arty_1 } do {
 		if (alive arty_2) then {
