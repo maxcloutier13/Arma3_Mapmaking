@@ -1,5 +1,3 @@
-textures\QG_projection_1_logo.paa, textures\QG_projection_2_1_mission.paa, textures\QG_projection_3_map.paa
-
 // slideshow textures 
 textures\QG_projector_2_1_Mission.paa, textures\QG_projector_0_blank.paa, textures\QG_projector_1_CGQC.paa
 
