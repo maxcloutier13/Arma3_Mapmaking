@@ -1,0 +1,1 @@
+titleText ["You rested for 1 hours", "BLACK IN",7]; [[{ skipTime 1; }], "BIS_fnc_call"] call BIS_fnc_MP;

@@ -1,0 +1,36 @@
+//Respawn setting for Alive
+respawn=3
+
+class CfgSettings {
+    class CBA {
+        class Caching {
+            compile = 0;
+            xeh = 0;
+            functions = 0;
+        };
+    };
+};
+
+class CfgSounds
+{
+	sounds[] = {Hint, Hit, Buzzer};
+
+	class Hint
+	{
+		name = "Hint";
+		sound[] = {"\Sound\Hint.ogg", 0.10, 1};
+		titles[] = {};
+	};
+	class Hit
+	{
+		name = "Hit";
+		sound[] = {"\Sound\Hit.ogg", 0.10, 1};
+		titles[] = {};
+	};
+	class Buzzer
+	{
+		name = "Buzzer";
+		sound[] = {"\Sound\Buzzer.ogg", 0.30, 1};
+		titles[] = {};
+	};
+};

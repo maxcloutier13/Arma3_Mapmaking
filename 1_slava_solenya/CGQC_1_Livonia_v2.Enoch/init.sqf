@@ -71,18 +71,14 @@ phase_mission_started = false;
 }] call CBA_fnc_addEventHandler;
 
 ["cgqc_music_play", {
-	if (hasInterface) then {
-		while { true } do {
-			playing_song = qg_radio say3D "abierto";
-			sleep 239;
-		};
+	while { true } do {
+		playing_song = qg_radio say3D "abierto";
+		sleep 239;
 	};
 }] call CBA_fnc_addEventHandler;
 
 ["cgqc_music_stop", {
-	if (hasInterface) then {
-		deleteVehicle playing_song;
-	};
+	deleteVehicle playing_song;
 }] call CBA_fnc_addEventHandler;
 
 // ------------------------------------------------------
