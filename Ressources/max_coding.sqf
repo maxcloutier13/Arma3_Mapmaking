@@ -1,3 +1,178 @@
+// Change equipment depending on class
+// Define class in description.ext 
+class CfgUnitTemplates
+{
+	class balaclavaReplace
+	{
+		facewearList[] =
+		{
+			"rhs_balaclava",
+			"rhs_balaclava1_olive"
+		};
+	};
+};
+
+// Add this to init.sqf 
+if (hasInterface) then {
+	private _zeus = (allMissionObjects "ModuleCurator_F") select 0;
+
+	_zeus addEventHandler ["CuratorObjectPlaced", {
+		params ["_curator", "_entity"];
+
+		if (_entity isKindOf "Man" && {
+			(side (group _entity)) isEqualTo east
+		}) then {
+			[_entity, "balaclavaReplace"] call BIS_fnc_unitHeadgear;
+		};
+	}];
+};
+
+// Acre jamming
+[{
+	// ACRE signal processing
+	private _coreSignal = _this call acre_sys_signal_fnc_getSignalCore;
+	_coreSignal params ["_Px", "_maxSignal"];
+
+	    // Modify signal (eg. zero-out if in jam area)
+	if (player inArea myTrigger) then {
+		_Px = 0;
+	};
+
+	    // Return final signal
+	[_Px, _maxSignal]
+}] call acre_api_fnc_setCustomSignalFunc;
+
+// remoteExec say3D
+this addAction["Play", {
+	playing_song = ([qg_radio, ["abierto", 20, 1]] remoteExec ["say3d", 0, true]);
+}];
+this addAction["Stop", {
+	deleteVehicle playing_song;
+}];
+// ref
+this addAction["TEST ALARM", {
+	([alarm1, ["Sirenair", 1500, 1]] remoteExec ["say3d", 0, true]);
+}];
+
+// iterate players 
+[]spawn{
+	{
+		_x action ["Eject", vehicle _x];
+		sleep 0.25;
+	}forEach allPlayers;
+};
+_text = ("<t size='1' >VERT! GO! GO! GO!</t>");
+[_text, 0, 0, 3, 2] spawn BIS_fnc_dynamicText;
+
+// Attempt at remoteExec and running something on everyone
+if (isServer) then {
+	crew1 = createGroup west;
+	truck1 = [[1845.43, 5716.46, 0], 290, "B_LSV_01_unarmed_F", crew1] call BIS_fnc_spawnVehicle;
+
+	truck = (truck1 select 0);
+	publicvariable "truck";
+
+	{
+		[_x, truck] remoteExec ["moveInCargo", _x];
+	} count allPlayers;
+};
+
+// Arg. The CBA is deprecated. Fuck me. Here goes remoteExec calice. 
+([qg_radio, ["abierto", 10, 1]] remoteExec ["say3d", 0, true]);
+
+// ref  
+this addAction["TEST ALARM", {
+	([alarm1, ["Sirenair", 1500, 1]] remoteExec ["say3d", 0, true]);
+}];
+
+// Fix music player// insertion
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction [
+	"- Music: Play", {
+		["cgqc_music_play", []] call CBA_fnc_globalEvent;
+	}
+];
+this addAction [
+	"- Music: Stop", {
+		["cgqc_music_stop", []] call CBA_fnc_globalEvent;
+	}
+];
+this addAction ["-- Lights:Start presentation", {
+	["cgqc_start_presentation", []] call CBA_fnc_globalEvent;
+	hint "Briefing";
+}];
+this addAction ["-- Lights:Stop presentation", {
+	["cgqc_stop_presentation", []] call CBA_fnc_globalEvent;
+	hint "Au repos";
+}];
+this addAction ["--- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction ["---- Insertion!", {
+	phase_mission_started = true;
+	publicVariable "phase_mission_started";
+	["cgqc_phase_mission_started", []] call CBA_fnc_globalEvent;
+	removeAllActions player;
+}];
+
+// // 
+// 
+// /
+
+// Previous
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction [
+	"- Music: Play", {
+		["cgqc_music_play", []] call CBA_fnc_globalEventJIP;
+	}
+];
+this addAction [
+	"- Music: Stop", {
+		["cgqc_music_stop", []] call CBA_fnc_globalEventJIP;
+	}
+];
+this addAction ["-- Lights:Start presentation", {
+	["cgqc_start_presentation", []] call CBA_fnc_globalEventJIP;
+	hint "Briefing";
+}];
+this addAction ["-- Lights:Stop presentation", {
+	["cgqc_stop_presentation", []] call CBA_fnc_globalEventJIP;
+	hint "Au repos";
+}];
+this addAction ["--- Start boarding", {
+	start_boarding = true;
+	publicVariable "start_boarding";
+	hint "Ramassez un parachute et dirigez vous vers la porte du fond";
+}];
+this addAction ["------------------------", {
+	hint "";
+}];
+this addAction ["---- Insertion!", {
+	phase_mission_started = true;
+	publicVariable "phase_mission_started";
+	["cgqc_phase_mission_started", []] call CBA_fnc_globalEvent;
+	removeAllActions player;
+}];
+
 // slideshow textures 
 textures\QG_projector_2_1_Mission.paa, textures\QG_projector_0_blank.paa, textures\QG_projector_1_CGQC.paa
 
