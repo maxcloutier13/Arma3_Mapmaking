@@ -1,4 +1,4 @@
-name = "CGQC";
+name = "CGQC_Core";
 picture = "mod.paa";
 actionName = "Discord";
 action = "https://discord.gg/NyhmQmej";

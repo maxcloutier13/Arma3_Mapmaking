@@ -1,0 +1,50 @@
+; unRap auto comments
+
+[classes]
+; Comments for classes, displayed on previous line
+ViewPilot=internal camera viewing limitations
+ 
+[arrays]
+; Comments for array type, displayed on previous line
+threat=threat (VSoft, VArmor, VAir), how threatening vehicle is to unit types
+    
+[properties]
+; Comments for value types, displayed at end of line
+sensitivity=sensor sensitivity
+brakeDistance=vehicle movement precision
+gunBeg=endpoint of the gun
+gunEnd=chamber of the gun
+maxSpeed=max speed on level road, km/h
+minFireTime=minimal time spent firing on single target
+camouflage=how dificult to spot - bigger - better spotable
+audible=audible - bigger - better heard
+accuracy=accuracy needed to recognize type of this target
+animated=true = model is animated and cannot be assumed static
+cloudletDuration=time to live (not including fades)
+cloudletAnimPeriod=animation speed
+cloudletGrowUp=grow-up time
+cloudletFadeIn=fade-in time
+cloudletFadeOut=fade-out time
+cloudletAccY=vertical acceleration
+cloudletMinYSpeed=vertical speed range
+sourceSize=size of area from which particles are emitted
+submerged=initial submersion, <0 inital delay
+aileronSensitivity =relative aileron sensitivity
+elevatorSensitivity =relative elevator sensitivity
+noseDownCoef =how much goes nose down during turns
+damperForce =larger number more stiffness dampers
+damperDamping =larger number less movement in dampers
+damperSize = max. damper amplitude
+attendant=can heal other vehicles
+
+visibleFire=how much is visible when this weapon is fired
+visibleFireTime=how long is it visible
+maxControlRange=max range for manual control, 0 = no control (passive weapon)
+maxLeadSpeed=max estimated speed km/h
+muzzlePos=position and direction of muzzle
+cartridgePos=position and velocity of outgoing empty cartridge
+aiRateOfFire=delay between shots at given distance
+aiRateOfFireDistanceat shorter distance delay goes lineary to zero
+
+latitude=positive is south
+longitude=positive is east

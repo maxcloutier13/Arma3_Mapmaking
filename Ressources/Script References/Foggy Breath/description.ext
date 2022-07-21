@@ -1,0 +1,6 @@
+respawnOnStart = 0;
+
+class CfgFunctions
+{
+	#include "scripts\GOM\foggyBreath\GOM_foggyBreath.hpp"
+};

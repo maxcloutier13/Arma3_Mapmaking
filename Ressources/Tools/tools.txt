@@ -1,0 +1,54 @@
+Tools for Armed Assault/ArmA 2, 07.07.2010
+by Kegetys, http://www.kegetys.net
+
+Based largely on file format information from BIS wiki, thanks
+to everyone who contributed on those.
+
+cpbo:
+Extracts and creates PBO files. Run from windows explorer to
+associate it with directories and PBO files, after which you
+can extract PBO files by double clicking, and create PBO files
+by right clicking a directory. Also can be used from console.
+The PBO path prefix is saved to and read from a special file
+called $PBOPREFIX$ in the directory.
+
+unRap:
+"Decodes" raP encoded files, such as config.bin and rvmat files.
+Run the exe from windows explorer and select the file(s) you want
+to decode, or use from console.
+unRap overwrites all files it needs without asking, so be
+careful when working with original game files.
+
+PAAplug:
+Experimental PAA format plugin for Adobe Photoshop.
+
+UE_highlight:
+SQS/SQF syntax highlighting for UltraEdit.
+
+New in 07.07.2010 release:
+- fixed cpbo crash when extracting PBOs without header block
+
+New in 06.06.2010 release:
+- fixed cpbo extraction issues with some PBOs
+
+New in 06.06.2009 release:
+- cpbo now has an optional GUI for selecting files to extract:
+  right click a PBO and select 'Extract PBO...' to show the
+  dialog. (run the cpbo.exe first to create the registry association)
+- PAAplug support for loading ArmA 2 LZO compressed PAA files
+- Fix for FLAG tag saving (mipmap filtering)
+
+New in 30.3.2007 release:
+- unRap class fix
+- UE syntax highlight fixes & updates
+
+
+Notes:
+cpbo creates its shell integration using the following
+registry keys:
+ HKEY_CLASSES_ROOT\.pbo\DefaultIcon
+ HKEY_CLASSES_ROOT\.pbo\shell\Extract all
+ HKEY_CLASSES_ROOT\.pbo\shell\Extract PBO...
+ HKEY_CLASSES_ROOT\Folder\shell\create PBO\
+you can remove these keys with regedit to remove the explorer
+integration
