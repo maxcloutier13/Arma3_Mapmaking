@@ -1,4 +1,4 @@
-//Default info
+// Default info
 class CfgPatches
 {
 	class MyAddon
@@ -19,19 +19,20 @@ class CfgPatches
 	};
 };
 
-//Custom face definition
+// Custom face definition --------------------------------------------------------
 class CfgFaces
 {
-#include "cfgHeads.hpp"
+#include "cfg_heads.hpp"
 };
 
-//Custom helicopter helmet
+// Custom helicopter helmet --------------------------------------------------------
 class cfgWeapons
 {
-#include "cfgHelmets.hpp"
+#include "cfg_helmets.hpp"
 };
-//Custom patches
+
+// Custom patches ------------------------------------------------------------------
 class cfgUnitInsignia
 {
-#include "cfgPatches.hpp"
+#include "cfg_patches.hpp"
 };
