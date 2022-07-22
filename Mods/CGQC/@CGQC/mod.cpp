@@ -10,5 +10,5 @@ logoSmall = "cgqc_core_32.paa";
 
 tooltip = "CGQC Core";
 tooltipOwned = "CGQC Core - Owned";
-overview = "CGQC<br/><br/>https://discord.gg/THNAHP8H";
+overview = "CGQC<br/><br/>Joignez vous à nous!<br/><br/>https://discord.gg/THNAHP8H";
 author = "silent1";
