@@ -80,3 +80,80 @@ Ressources/1024x1024.psd
 Ressources/1024x512_Screen.psd
 Ressources/2048x1024.psd
 Ressources/512x1024-Flag.psd
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/body_parts.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/body_parts.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/corpse_parts.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/corpse_parts.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/head_trauma.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/head_trauma.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_head.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_head.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_props.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_props.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_sounds.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_sounds.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_units.pbo
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/Addons/horror_units.pbo.horror_mod.bisign
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/key/horror_mod.bikey
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/meta.cpp
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/mod.cpp
+Mods/dev/CGQC_missionpack_1_mali/@@Horror_Mod/mod.paa
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/addons/bocr_main.pbo
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/addons/bocr_main.pbo.bocr_2.1.0.0-aec7930e.bisign
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/AUTHORS.txt
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/keys/bocr_2.1.0.0.bikey
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/LICENSE
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/logo_bocr_ca.paa
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/meta.cpp
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/mod.cpp
+Mods/dev/CGQC_missionpack_1_mali/@BackpackOnChest - Redux/README.md
+Mods/dev/CGQC_missionpack_1_mali/@BG21 Slaughter Assets/addons/BG21_slaughter.pbo
+Mods/dev/CGQC_missionpack_1_mali/@BG21 Slaughter Assets/addons/BG21_slaughter.pbo.Battlegroup21.bisign
+Mods/dev/CGQC_missionpack_1_mali/@BG21 Slaughter Assets/bg21.paa
+Mods/dev/CGQC_missionpack_1_mali/@BG21 Slaughter Assets/keys/Battlegroup21.bikey
+Mods/dev/CGQC_missionpack_1_mali/@BG21 Slaughter Assets/meta.cpp
+Mods/dev/CGQC_missionpack_1_mali/@BG21 Slaughter Assets/mod.cpp
+Mods/dev/CGQC_missionpack_1_mali/@Not what they seem/addons/notwhattheyseem.pbo
+Mods/dev/CGQC_missionpack_1_mali/@Not what they seem/addons/notwhattheyseem.pbo.monk1junk1.bisign
+Mods/dev/CGQC_missionpack_1_mali/@Not what they seem/keys/monk1junk1.bikey
+Mods/dev/CGQC_missionpack_1_mali/@Not what they seem/meta.cpp
+Mods/dev/CGQC_missionpack_1_mali/@Not what they seem/mod.cpp
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_backpack.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_backpack_02.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_gazelle.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_panther.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_uniforms.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_uniforms02.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_uniforms03.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_vests.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_vests2.pbo
+Mods/dev/CGQC_missionpack_1_mali/France stuff/amf_vests3.pbo
+Mods/release/@CGQC_mission1_mali/Addons/amf_gazelle.pbo
+Mods/release/@CGQC_mission1_mali/Addons/amf_panther.pbo
+Mods/release/@CGQC_mission1_mali/Addons/AR_AdvancedRappelling.pbo
+Mods/release/@CGQC_mission1_mali/Addons/AUR_AdvancedUrbanRappelling.pbo
+Mods/release/@CGQC_mission1_mali/Addons/backpackOnChest_redux.pbo
+Mods/release/@CGQC_mission1_mali/Addons/better_inventory.pbo
+Mods/release/@CGQC_mission1_mali/Addons/BG21_slaughter_assets.pbo
+Mods/release/@CGQC_mission1_mali/Addons/deployable_darter.pbo
+Mods/release/@CGQC_mission1_mali/Addons/Edaly_Tiger.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_body_parts.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_corpse_parts.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_head_trauma.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_horror_head.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_horror_props.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_horror_sounds.pbo
+Mods/release/@CGQC_mission1_mali/Addons/horrorMod_horror_units.pbo
+Mods/release/@CGQC_mission1_mali/Addons/Ibragim_SwapWeapons.pbo
+Mods/release/@CGQC_mission1_mali/Addons/immersion_cigs_animations.pbo
+Mods/release/@CGQC_mission1_mali/Addons/immersion_pops.pbo
+Mods/release/@CGQC_mission1_mali/Addons/murshun_cigs.pbo
+Mods/release/@CGQC_mission1_mali/Addons/notwhattheyseem.pbo
+Mods/release/@CGQC_mission1_mali/Addons/ragdoll_physics_plus.pbo
+Mods/release/@CGQC_mission1_mali/Addons/RSPN_Assets.pbo
+Mods/release/@CGQC_mission1_mali/Addons/smokerework.pbo
+Mods/release/@CGQC_mission1_mali/Addons/sps_blackhornet.pbo
+Mods/release/@CGQC_mission1_mali/Addons/tao_rewrite_main.pbo
+Mods/release/@CGQC_mission1_mali/Addons/vet_unflipping.pbo
+Mods/release/@CGQC_mission1_mali/mod.cpp
+Mods/release/@CGQC_mission1_mali/mod.paa
