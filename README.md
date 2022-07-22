@@ -1,5 +1,5 @@
 # Arma3 Mapmaking
-## Just a little repository with all my dev crap to make some custom missions and assets for arma3. 
+## Repository pour ma shit de dev pour faire des maps et des assets d'arma3
 
 ### 0_cgqc_base
 Mapstuff pour CGQC. Le stuff par défaut comme référence.
