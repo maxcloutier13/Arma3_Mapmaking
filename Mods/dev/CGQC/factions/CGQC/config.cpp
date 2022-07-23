@@ -52,8 +52,8 @@ class cfgVehicles
         respawnItems[] = {"ACRE_PRC343", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_epinephrine", "ACE_epinephrine", "ACE_EarPlugs", "ACE_morphine", "ACE_morphine", "ACE_splint", "ACE_tourniquet", "ACE_tourniquet", "ACE_CableTie", "ACE_CableTie", "ACE_MapTools", "ACE_IR_Strobe_Item"};
         magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag"};
         respawnMagazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag"};
-        linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "H_Beret_02", "V_Rangemaster_belt", "None"};
-        respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "H_Beret_02", "V_Rangemaster_belt", "None"};
+        linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_blue", "V_Rangemaster_belt", "None"};
+        respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_blue", "V_Rangemaster_belt", "None"};
         backpack = "CGQC_Soldat_Base_pack";
         editorPreview = "\CGQC\factions\CGQC\cgqc_soldat_base.jpg";
     };
