@@ -13,7 +13,4 @@ Missions en dévelopement
 ### Mods
 Section dévelopement du mod custom CGQC
 
-### Ressources
-Textures, sounds. Références de code. Tools. Plein de patentes.
-
  
