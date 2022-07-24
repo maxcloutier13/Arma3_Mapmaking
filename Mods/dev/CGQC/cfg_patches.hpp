@@ -1,10 +1,18 @@
 // CGQC Patches -------------------------------------------------------------------------------
+class cgqc_patch_logo
+{
+	displayName = "CGQC Logo";
+	author = "audi/silent1";
+	texture = "\cgqc\patches\cgqc_patch_logo.paa";
+	textureVehicle = "\cgqc\patches\cgqc_patch_logo.paa";
+};
+
 class cgqc_patch_logo_ukr
 {
 	displayName = "CGQC Logo Ukraine";
 	author = "audi/silent1";
-	texture = "\cgqc\patches\cgqc_patch_logo_new.paa";
-	textureVehicle = "\cgqc\patches\cgqc_patch_logo_new.paa";
+	texture = "\cgqc\patches\cgqc_patch_logo_ukr.paa";
+	textureVehicle = "\cgqc\patches\cgqc_patch_logo_ukr.paa";
 };
 
 class cgqc_patch_logo_black
@@ -13,14 +21,6 @@ class cgqc_patch_logo_black
 	author = "audi/silent1";
 	texture = "\cgqc\patches\cgqc_patch_logo_black.paa";
 	textureVehicle = "\cgqc\patches\cgqc_patch_logo_black.paa";
-};
-
-class cgqc_patch_logo
-{
-	displayName = "CGQC Logo";
-	author = "audi/silent1";
-	texture = "\cgqc\patches\cgqc_patch_logo.paa";
-	textureVehicle = "\cgqc\patches\cgqc_patch_logo.paa";
 };
 
 class cgqc_patch_logo_camo
