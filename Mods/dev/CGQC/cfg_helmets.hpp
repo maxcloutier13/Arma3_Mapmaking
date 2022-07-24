@@ -55,7 +55,7 @@ class cgqc_helmet_crew_test : H_CrewHelmetHeli_B
 
 //Cloutier Samurai -------------------------------------------
 class H_PilotHelmetHeli_B: H_HelmetB{};
-class cgqc_helmet_cloutier_1: H_PilotHelmetHeli_B
+class cgqc_helmet_cloutier_samurai: H_PilotHelmetHeli_B
 {
 	scope=2;
 	author="silent1";
@@ -67,7 +67,7 @@ class cgqc_helmet_cloutier_1: H_PilotHelmetHeli_B
 };
 
 class H_CrewHelmetHeli_B: H_HelmetB{};
-class cgqc_helmet_crew_cloutier_1 : H_CrewHelmetHeli_B
+class cgqc_helmet_crew_cloutier_samurai : H_CrewHelmetHeli_B
 {
 	scope=2;
 	author="silent1";

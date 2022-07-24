@@ -1,17 +1,18 @@
 class CfgPatches
 {
-    class CGQC
+    class CGQC_2022_faction
     {
+        addonRootClass = "CGQC_2022";
+        requiredVersion = 0.1;
+        requiredAddons[] = {"CGQC", "acre_sys_prc343", "ace_medical_treatment", "ace_hearing", "ace_captives", "ace_maptools", "ace_attach", "ace_trenches", "ace_microdagr", "A3_Weapons_F", "A3_Characters_F", "cTab", "mas_can_lite_common"};
         units[] = {"CGQC_Soldat_Moderne"};
         weapons[] = {"CGQC_Tier1_Glock19_WAR"};
-        requiredVersion = 0.1;
-        requiredAddons[] = {"cgqc", "ace_medical_treatment", "ace_hearing", "ace_captives", "ace_maptools", "ace_attach", "ace_trenches", "ace_microdagr", "ace_tagging", "A3_Weapons_F", "A3_Weapons_F_Pistols_P07", "A3_Characters_F", "CuratorOnly_Characters_F_BLUFOR"};
     };
 };
+
 class cfgWeapons
 {
     class Tier1_Glock19_WAR;
-
     class CGQC_Tier1_Glock19_WAR : Tier1_Glock19_WAR
     {
         displayName = "Glock19";
