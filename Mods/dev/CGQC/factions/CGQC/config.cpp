@@ -2,7 +2,7 @@ class CfgPatches
 {
     class CGQC_core_faction
     {
-        addonRootClass = "CGQC_core";
+        addonRootClass = "CGQC";
         requiredVersion = 0.1;
         requiredAddons[] = {"acre_sys_prc343", "ace_medical_treatment", "ace_hearing", "ace_captives", "ace_maptools", "ace_attach", "ace_trenches", "ace_microdagr", "A3_Weapons_F", "A3_Characters_F"};
         units[] = {"CGQC_Soldat_Base", "CGQC_Soldat_Base_pack"};
