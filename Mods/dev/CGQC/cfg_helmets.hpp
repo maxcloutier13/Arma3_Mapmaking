@@ -28,18 +28,6 @@ class cgqc_beret_blue: H_Beret_EAF_01_F
 	hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_beret_blue.paa"};
 };
 
-// Cap with headphones
-/*
-class H_Cap_Headphones;
-class cgqc_cap_green: H_Cap_Headphones
-{
-	scope=2;
-	author="silent1";
-	displayName="CGQC Casquette verte";
-	hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_cap_green.paa"};
-};
-*/
-
 class cgqc_cap_green: H_HelmetB
 {
 	author="silent1";
