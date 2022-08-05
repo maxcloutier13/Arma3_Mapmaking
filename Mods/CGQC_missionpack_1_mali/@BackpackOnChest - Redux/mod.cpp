@@ -1,0 +1,12 @@
+name = "BackpackOnChestRedux";
+picture = "logo_bocr_ca.paa";
+actionName = "GitHub";
+action = "https://github.com/mjc4wilton/BackpackOnChestRedux";
+description = "Backpack On Chest - Redux";
+logo = "logo_bocr_ca.paa";
+logoOver = "logo_bocr_ca.paa";
+tooltip = "Rewrite of the original DerZade BackpackOnChest mod";
+tooltipOwned = "Owned by mjc4wilton and DerZade";
+overview = "BackpackOnChestRedux";
+author = "mjc4wilton";
+overviewPicture = "logo_ace3_ca.paa";
