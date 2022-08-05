@@ -10,7 +10,5 @@ Ma map de training custom
 ### 1_"missionName"
 Missions en dévelopement
 
-### Mods
-Section dévelopement du mod custom CGQC
 
  
