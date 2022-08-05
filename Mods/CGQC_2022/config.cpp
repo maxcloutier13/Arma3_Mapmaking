@@ -13,7 +13,7 @@ class CfgPatches
 		// When any of the addons is missing, pop-up warning will appear when launching the game.
 		requiredAddons[] = {"CGQC", "ace_medical_treatment", "ace_hearing", "ace_captives", "ace_maptools", "cTab", "ace_attach", "acre_sys_prc343", "ace_trenches", "ace_microdagr", "ace_tagging", "mas_can_lite_common"};
 		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
-		units[] = {"CGQC_Soldat_Moderne"};
+		units[] = {"CGQC_Soldat_Moderne", "CGQC_Officer_Moderne"};
 		weapons[] = {
 			"cgqc_gun_glock19_wood",
 			"cgqc_acc_M8541A_wood", "cgqc_acc_bipod_wood", "cgqc_acc_anpeq15_laser_wood", "cgqc_acc_silencer_wood"};

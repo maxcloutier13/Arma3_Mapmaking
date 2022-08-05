@@ -14,7 +14,8 @@ class CfgPatches
 		requiredAddons[] = {"ace_medical_treatment", "ace_hearing", "ace_captives", "ace_maptools", "ace_attach", "acre_sys_prc343",
 							"ace_trenches", "ace_microdagr", "ace_tagging"};
 		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
-		units[] = {"CGQC_Soldat_Base", "CGQC_Soldat_Base_pack",
+		units[] = {"CGQC_Soldat_Base", "CGQC_Officer_Base",
+				   "CGQC_Soldat_Base_pack",
 				   "Headgear_cgqc_beret_green", "Headgear_cgqc_beret_blue", "Headgear_cgqc_cap_green",
 				   "Headgear_cgqc_helmet_cloutier_samurai", "Headgear_cgqc_helmet_crew_cloutier_samurai",
 				   "Headgear_cgqc_helmet_villeneuve", "Headgear_cgqc_helmet_crew_villeneuve",

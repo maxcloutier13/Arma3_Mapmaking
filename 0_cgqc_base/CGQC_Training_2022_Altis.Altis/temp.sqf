@@ -19,3 +19,36 @@ hintSilent format["RemV: %1 m/s\nDistance: %2 m\nScore: %3/5\n\n---- Moyenne ---
 	hintSilent format["RemV: %1 m/s\nDistance: %2 m\n\n---- Average ----\nAccuracy: %3/100\nScore: %4/100",
 	round(_velocity call BIS_fnc_magnitude), round(_distance * 10) / 10, round(_accuracy * 10000) / 100, round(_score * 100) / 100];
 };
+
+// CGQC Teleport
+this addAction ["Teleport vers: Airport", "scripts\teleportation1.sqf", [], 1, false, true, "", "_this distance _target < 3"];
+this addAction ["Teleport vers: Base Principale", "scripts\teleportation2.sqf", [], 1, false, true, "", "_this distance _target < 3"];
+this addAction ["Teleport vers: Karting", "scripts\teleportation3.sqf", [], 1, false, true, "", "_this distance _target < 3"];
+this addAction ["Teleport vers: Heliport", "scripts\teleportation4.sqf", [], 1, false, true, "", "_this distance _target < 3"];
+this addAction ["Teleport vers: Formation:Sniping", "scripts\teleportation5.sqf", [], 1, false, true, "", "_this distance _target < 3"];
+
+// Medical training 
+
+call{
+	this addAction["Nouveau patient", "scripts\createpatient.sqf"];
+	this addAction["Enlever le patient", "{
+		if ((typeOf _x == 'b_survivor_F') && (!isPlayer _x)) then {
+			deleteVehicle _x
+		}
+	} forEach allUnits;
+	{
+		if ((typeOf _x == 'b_g_survivor_F') && (!isPlayer _x)) then {
+			deleteVehicle _x
+		}
+	} forEach allUnits;
+"];
+this attachTo[campTable];
+}
+
+// Delete patient 
+this addAction["Nouveau patient", "scripts\createpatient.sqf"];
+this addAction["Retirer tout les patients", "scripts\deletepatient.sqf"];
+this attachTo[campTable];
+
+// Iterate trough items within trigger area 
+forEach thislist

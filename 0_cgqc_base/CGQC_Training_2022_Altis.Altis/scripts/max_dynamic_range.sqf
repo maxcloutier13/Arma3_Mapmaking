@@ -28,7 +28,7 @@ TrainingCourse_AverageImpactDeviation = 0;
 		["Open", true] call ace_arsenal_fnc_initBox
 	}, "", 0, false, false];
 */
-range_act1 = player addaction [("<t color=""#FF4444"">" + "Open Virtual Arsenal" + "</t>"), {
+range_act1 = player addaction [("<t color=""#FF4444"">" + "---Mode sniper: OFF" + "</t>"), {
 	nul=execVM "scripts\max_dynamic_range_off.sqf";
 }, "", 0, false, false];
 range_act2 = player addaction [("<t color=""#BBBBBB"">" + "---Reset statistiques" + "</t>"), "scripts\fnc_reset_stats.sqf", "", 0, false, false];
@@ -45,8 +45,8 @@ range_act17 = player addaction [("<t color=""#999999"">" + "Cibles aléatoire (M
 range_act18 = player addaction [("<t color=""#999999"">" + "Cibles aléatoire (Longue portée)" + "</t>"), "scripts\fnc_generate_targets.sqf", ["TargetP_Inf2_Acc2_F", 500, false, 100, 2500], 0, false, false];
 // range_act11 = player addaction [("<t color=""#55CC66"">" + "Add Steel Plate" + "</t>"), "scripts\fnc_create_target.sqf", ["Land_Target_Oval_F", false, false], 0, false, false];
 // range_act12 = player addaction [("<t color=""#55CC66"">" + "Add balloon target" + "</t>"), "scripts\fnc_create_balloon_target.sqf", ["Land_Balloon_01_water_F", false, false], 0, false, false];
-range_act13 = player addaction [("<t color=""#CCAA44"">" + "Traçage de la balle" + "</t>"), "scripts\fnc_toggle_path_tracing.sqf", "", 0, false, false];
-range_act14 = player addaction [("<t color=""#CCAA44"">" + "Caméra" + "</t>"), "scripts\fnc_toggle_bullet_camera.sqf", "", 0, false, false];
+range_act13 = player addaction [("<t color=""#CCAA44"">" + "Traçage de tir" + "</t>"), "scripts\fnc_toggle_path_tracing.sqf", "", 0, false, false];
+range_act14 = player addaction [("<t color=""#CCAA44"">" + "Caméra de tir" + "</t>"), "scripts\fnc_toggle_bullet_camera.sqf", "", 0, false, false];
 // player addaction [("<t color=""#AA9977"">" + "King of the hill" + "</t>"), "fnc_king_of_the_hill.sqf", "", 0, false, false];
 range_act6 = player addaction [("<t color=""#995599"">" + "DANGER - Soldat" + "</t>"), "scripts\fnc_create_soldier.sqf", ["O_G_Soldier_F", false, false, false], 0, false, false];
 range_act7 = player addaction [("<t color=""#995599"">" + "DANGER - Patrouille" + "</t>"), "scripts\fnc_create_soldier.sqf", ["I_G_Soldier_F", false, true, true], 0, false, false];

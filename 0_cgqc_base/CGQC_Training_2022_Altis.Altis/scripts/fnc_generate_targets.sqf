@@ -7,19 +7,20 @@ _targetRandomDir = _arguments select 2;
 _targetRangeMin = _arguments select 3;
 _targetRangeMax = _arguments select 4;
 
+// Delete targets
 {
 	_x removeAllEventHandlers "HitPart";
 	deleteVehicle _x
 } forEach TrainingCourse_TargetList;
-{
-	deleteVehicle _x
-} forEach allUnits;
-{
-	deleteVehicle _x
-} forEach allDead;
-{
-	deleteGroup _x
-} forEach allGroups;
+/*
+	{
+		deleteVehicle _x
+	} forEach allUnits;
+	
+	{
+		deleteGroup _x
+	} forEach allGroups;
+*/
 
 TrainingCourse_TargetList = [];
 

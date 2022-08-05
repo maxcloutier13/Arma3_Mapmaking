@@ -6,6 +6,16 @@ waitUntil {
 // Deactivate Alt+click teleport
 // ["teleportHandler", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 
+// Remove all targets 
+{
+	_x removeAllEventHandlers "HitPart";
+	deleteVehicle _x
+} forEach TrainingCourse_TargetList;
+// Remove all dead Bodies 
+{
+	deleteVehicle _x
+} forEach allDead;
+
 TrainingCourse_TargetList = [];
 TrainingCourse_BulletPathTracing = false;
 TrainingCourse_BulletCamera = false;
@@ -28,8 +38,8 @@ player removeAction range_act7;
 player removeAction range_act8;
 player removeAction range_act9;
 player removeAction range_act10;
-player removeAction range_act11;
-player removeAction range_act12;
+// player removeAction range_act11;
+// player removeAction range_act12;
 player removeAction range_act13;
 player removeAction range_act14;
 player removeAction range_act15;
