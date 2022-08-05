@@ -10,7 +10,5 @@ _group2=createGroup west;
 [pat, selectRandom[0.3,0.5,0.7,0.9], "RightArm", selectrandom ["stab","bullet","falling"]] call ace_medical_fnc_addDamageToUnit;
 [pat, selectRandom[0.3,0.5,0.7,0.9], "LeftArm", selectrandom ["stab","bullet","falling"]] call ace_medical_fnc_addDamageToUnit;
 [MedicalData1,0] call BIS_fnc_dataTerminalAnimate;
-hint 'Your patient is ready';
+hint 'Le patient est prêt';
 
-
-//the first selctrandom chooses a randomish damage from a small one to a large one, the second selectrandom chooses the type of damage.

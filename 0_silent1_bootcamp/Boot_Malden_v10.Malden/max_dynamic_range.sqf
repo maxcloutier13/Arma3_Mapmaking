@@ -3,11 +3,13 @@
 waitUntil {!isNull player};
 
 //Activate Alt+click teleport
+/*
 ["teleportHandler", "onMapSingleClick", {
 	if (_alt) then {
 		player setPosATL _pos;
 	};
 }] call BIS_fnc_addStackedEventHandler;
+*/
 
 TrainingCourse_TargetList = [];
 TrainingCourse_BulletPathTracing = false;

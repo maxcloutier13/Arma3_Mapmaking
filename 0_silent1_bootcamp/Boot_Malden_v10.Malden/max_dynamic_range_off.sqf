@@ -2,7 +2,7 @@
 waitUntil {!isNull player};
 
 //Deactivate Alt+click teleport
-["teleportHandler", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
+//["teleportHandler", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
 
 TrainingCourse_TargetList = [];
 TrainingCourse_BulletPathTracing = false;
