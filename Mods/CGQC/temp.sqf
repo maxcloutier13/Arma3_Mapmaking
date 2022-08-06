@@ -28,3 +28,5 @@ class cgqc_cap_green : H_HelmetB
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_cap_green.paa"};
 };
+
+// Beret fucked

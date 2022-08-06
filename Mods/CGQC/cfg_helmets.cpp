@@ -3,28 +3,40 @@ class H_HelmetB : ItemCore
 {
 	class ItemInfo;
 };
-
-class HeadgearItem;
-
-// Berets ----------------------------------------------------------------------
-class H_Beret_blk;		// Vanilla beret without patch
-class H_Beret_02;		// Vanilla beret with patch
-class H_Beret_EAF_01_F; // LDF round patch beret
-// CGQC Green beret
-class cgqc_beret_green : H_Beret_EAF_01_F
+class HelmetBase : ItemCore
 {
-	scope = 2;
-	author = "silent1";
-	displayName = "CGQC Beret vert";
-	hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_beret_green.paa"};
+	class ItemInfo;
 };
-
-class cgqc_beret_blue : H_Beret_EAF_01_F
+class H_Beret_blk : HelmetBase
 {
-	scope = 2;
+	class ItemInfo;
+};
+// Berets ----------------------------------------------------------------------
+class cgqc_beret_blue : H_Beret_blk
+{
 	author = "silent1";
 	displayName = "CGQC Beret bleu";
+	_generalMacro = "cgqc_beret_blue";
+	picture = "\A3\Characters_F_Enoch\Headgear\data\UI\icon_H_Beret_EAF_01_F_CA.paa";
+	model = "\A3\Characters_F_Enoch\Headgear\H_Beret_EAF_01_F";
 	hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_beret_blue.paa"};
+	hiddenSelectionsMaterials[] = {"\CGQC\helmets\cgqc_beret.rvmat"};
+	class ItemInfo : ItemInfo
+	{
+		mass = 6;
+		allowedSlots[] = {801, 901, 701, 605};
+		uniformModel = "\A3\Characters_F_Enoch\Headgear\H_Beret_EAF_01_F";
+		modelSides[] = {3};
+	};
+};
+
+class cgqc_beret_green : cgqc_beret_blue
+{
+	author = "silent1";
+	displayName = "CGQC Beret Vert";
+	_generalMacro = "cgqc_beret_green";
+	hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_beret_green.paa"};
+	hiddenSelectionsMaterials[] = {"\CGQC\helmets\cgqc_beret.rvmat"};
 };
 
 class cgqc_cap_green : H_HelmetB
