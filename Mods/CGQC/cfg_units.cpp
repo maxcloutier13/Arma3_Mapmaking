@@ -24,8 +24,8 @@ class CGQC_Soldat_Base : B_Soldier_f
 		"ACE_IR_Strobe_Item", "ACE_microDAGR"};
 	magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag"};
 	respawnMagazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag"};
-	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_blue", "V_Rangemaster_belt", "None"};
-	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_blue", "V_Rangemaster_belt", "None"};
+	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "V_Rangemaster_belt", "None"};
+	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "V_Rangemaster_belt", "None"};
 	backpack = "CGQC_Soldat_Base_pack";
 	editorPreview = "\CGQC\factions\cgqc_soldat_base.jpg";
 };

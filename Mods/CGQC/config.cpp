@@ -26,7 +26,7 @@ class CfgPatches
 				   "Weapon_cgqc_gun_p99_wood",
 				   "Weapon_cgqc_gun_spar17_tremblay", "Weapon_cgqc_gun_spar17_canpat", "Weapon_cgqc_gun_spar17_wood"};
 		// List of weapons (CfgWeapons classes) contained in the addon.
-		weapons[] = {"cgqc_beret_green", "cgqc_beret_blue", "cgqc_cap_green",
+		weapons[] = {"cgqc_beret_vanilla", "cgqc_beret_green", "cgqc_beret_blue", "cgqc_cap_green",
 					 "cgqc_helmet_cloutier_samurai", "cgqc_helmet_crew_cloutier_samurai",
 					 "cgqc_uniform_instructeur",
 					 "cgqc_gun_spar17_tremblay", "cgqc_gun_spar17_canpat", "cgqc_gun_spar17_wood",
