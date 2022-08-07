@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=713;
+		nextID=720;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=745;
+		nextID=801;
 	};
 	class Camera
 	{
-		pos[]={1948.0853,10.914246,7078.856};
-		dir[]={0.81732076,-0.3793233,0.43372342};
-		up[]={0.33507496,0.92526072,0.17781292};
-		aside[]={0.46875578,-3.335299e-007,-0.88333684};
+		pos[]={2085.6238,20.254509,7096.6025};
+		dir[]={0.55545563,-0.69150579,-0.462062};
+		up[]={0.53164411,0.72233272,-0.44225386};
+		aside[]={-0.63958842,-2.1299347e-006,-0.76886123};
 	};
 };
 binarizationWanted=0;
@@ -93,6 +93,7 @@ addons[]=
 	"A3_Characters_F_Orange_Facewear",
 	"A3_Characters_F_Enoch_Facewear",
 	"rhs_c_troops",
+	"re_rhsusf_factions",
 	"ace_goggles",
 	"mas_can_lite_common",
 	"cTab",
@@ -106,25 +107,25 @@ addons[]=
 	"ace_chemlights",
 	"ace_compat_rhs_usf3",
 	"ace_trenches",
-	"A3_Weapons_F_Exp_Rifles_SPAR_03",
+	"CGQC",
 	"A3_Weapons_F_Mark_Acc",
 	"ace_ballistics",
+	"ace_rangecard",
 	"A3_Weapons_F_Mark_LongRangeRifles_DMR_02",
+	"real_fix_weapons",
 	"ace_scopes",
 	"A3_Weapons_F_Acc",
+	"ace_vector",
+	"ace_atragmx",
+	"ace_kestrel4500",
 	"A3_Weapons_F_Items",
 	"ace_explosives",
 	"A3_Weapons_F_Tank_Launchers_MRAWS",
 	"A3_Weapons_F_Tank",
 	"A3_Weapons_F_Exp",
 	"mas_can_lite_items",
-	"CGQC",
 	"A3_Structures_F_EPA_Items_Medical",
 	"A3_Weapons_F_Mark",
-	"ace_atragmx",
-	"ace_kestrel4500",
-	"ace_vector",
-	"ace_rangecard",
 	"ace_tripod",
 	"Desert",
 	"CUP_Misc3_Config",
@@ -138,7 +139,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=84;
+		items=86;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -479,228 +480,240 @@ class AddonsMetaData
 		};
 		class Item50
 		{
+			className="re_rhsusf_factions";
+			name="RE: RHS USF Factions Fix";
+			author="amartyn";
+		};
+		class Item51
+		{
 			className="ace_goggles";
 			name="ACE3 - Goggles";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item51
+		class Item52
 		{
 			className="mas_can_lite_common";
 			name="mas_can_lite_common";
 			author="massi & authors in credits";
 		};
-		class Item52
+		class Item53
 		{
 			className="cTab";
 			name="cTab";
 		};
-		class Item53
+		class Item54
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item54
+		class Item55
 		{
 			className="ace_hearing";
 			name="ACE3 - Hearing";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item55
+		class Item56
 		{
 			className="ace_captives";
 			name="ACE3 - Captives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item56
+		class Item57
 		{
 			className="ace_maptools";
 			name="ACE3 - Map Tools";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item57
+		class Item58
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item58
+		class Item59
 		{
 			className="ace_microdagr";
 			name="ACE3 - MicroDAGR";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item59
+		class Item60
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item60
+		class Item61
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item61
+		class Item62
 		{
 			className="ace_compat_rhs_usf3";
 			name="ACE3 - RHS USF Compatibility";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item62
+		class Item63
 		{
 			className="ace_trenches";
 			name="ACE3 - Trenches";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item63
-		{
-			className="A3_Weapons_F_Exp";
-			name="Arma 3 Apex - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 		class Item64
-		{
-			className="A3_Weapons_F_Mark";
-			name="Arma 3 Marksmen - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item65
-		{
-			className="ace_ballistics";
-			name="ACE3 - Ballistics";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item66
-		{
-			className="ace_scopes";
-			name="ACE3 - Scopes";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item67
-		{
-			className="ace_explosives";
-			name="ACE3 - Explosives";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item68
-		{
-			className="A3_Weapons_F_Tank";
-			name="Arma 3 Tank - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item69
-		{
-			className="mas_can_lite_items";
-			name="mas_can_lite_items";
-			author="massi & authors in credits";
-		};
-		class Item70
 		{
 			className="CGQC";
 			name="CGQC Core";
 			author="silent1";
 			url="Insert Github";
 		};
-		class Item71
+		class Item65
 		{
-			className="A3_Structures_F_EPA";
-			name="Arma 3 Survive Episode - Buildings and Structures";
+			className="A3_Weapons_F_Mark";
+			name="Arma 3 Marksmen - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item72
+		class Item66
 		{
-			className="ace_atragmx";
-			name="ACE3 - ATragMX";
+			className="ace_ballistics";
+			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item73
-		{
-			className="ace_kestrel4500";
-			name="ACE3 - Kestrel 4500";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item74
-		{
-			className="ace_vector";
-			name="ACE3 - Vector";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item75
+		class Item67
 		{
 			className="ace_rangecard";
 			name="ACE3 - Range Card";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
+		class Item68
+		{
+			className="real_fix_weapons";
+			name="Real Weapons Fix";
+			author="amartyn";
+		};
+		class Item69
+		{
+			className="ace_scopes";
+			name="ACE3 - Scopes";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item70
+		{
+			className="ace_vector";
+			name="ACE3 - Vector";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item71
+		{
+			className="ace_atragmx";
+			name="ACE3 - ATragMX";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item72
+		{
+			className="ace_kestrel4500";
+			name="ACE3 - Kestrel 4500";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item73
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item74
+		{
+			className="A3_Weapons_F_Tank";
+			name="Arma 3 Tank - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item75
+		{
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 		class Item76
+		{
+			className="mas_can_lite_items";
+			name="mas_can_lite_items";
+			author="massi & authors in credits";
+		};
+		class Item77
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item78
 		{
 			className="ace_tripod";
 			name="ACE3 - Tripod";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item77
+		class Item79
 		{
 			className="Desert";
 			name="Desert";
 		};
-		class Item78
+		class Item80
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item79
+		class Item81
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item80
+		class Item82
 		{
 			className="UK3CB_Factions_LDF";
 			name="3CB Factions - LDF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item81
+		class Item83
 		{
 			className="ace_intelitems";
 			name="ACE3 - Intel Items";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item82
+		class Item84
 		{
 			className="UK3CB_Factions_Equipment";
 			name="3CB Factions - Equipment";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item83
+		class Item85
 		{
 			className="acre_sys_prc152";
 			name="ACRE2 - AN/PRC-152";
@@ -730,7 +743,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -975,7 +988,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1260,14 +1273,14 @@ class Mission
 		windForced=1;
 		year=2035;
 		day=28;
-		hour=11;
-		minute=-17;
+		hour=13;
+		minute=-18;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=6;
+		items=9;
 		class Item0
 		{
 			dataType="Layer";
@@ -36904,7 +36917,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -36988,7 +37001,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrier1_swat";
+										typeName="V_mas_can_PlateCarrier1_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -37026,14 +37039,14 @@ class Mission
 											class Item5
 											{
 												name="1Rnd_HE_Grenade_shell";
-												count=4;
+												count=5;
 												ammoLeft=1;
 											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -37083,7 +37096,7 @@ class Mission
 											class Item7
 											{
 												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=10;
+												count=12;
 												ammoLeft=30;
 											};
 											class Item8
@@ -37137,7 +37150,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=643;
@@ -37239,12 +37252,12 @@ class Mission
 								{
 									class primaryWeapon
 									{
-										name="Tier1_SR16_Carbine_Mod2_MFT_Black";
+										name="rhs_weap_m4a1_blockII";
 										optics="Tier1_EXPS3_0_3xMag_Black_Up";
 										muzzle="Tier1_KAC_556_QDC_CQB_Black";
-										flashlight="Tier1_URX4_NGAL_M300C_Black";
-										underBarrel="Tier1_AFG_MLOK_Black";
-										firemode="Tier1_SR16_Carbine_Mod2_MFT_Black:Single";
+										flashlight="Tier1_M4BII_NGAL_M300C_Black_FL";
+										underBarrel="rhsusf_acc_grip2";
+										firemode="rhs_weap_m4a1_blockII:Single";
 										class primaryMuzzleMag
 										{
 											name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
@@ -37266,7 +37279,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -37350,7 +37363,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierLR_swat";
+										typeName="V_mas_can_PlateCarrierLR_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -37363,37 +37376,37 @@ class Mission
 											};
 											class Item1
 											{
-												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=8;
-												ammoLeft=30;
-											};
-											class Item2
-											{
 												name="MiniGrenade";
 												count=2;
 												ammoLeft=1;
 											};
-											class Item3
+											class Item2
 											{
 												name="rhs_mag_m67";
 												count=2;
 												ammoLeft=1;
 											};
-											class Item4
+											class Item3
 											{
 												name="ACE_M84";
 												count=2;
 												ammoLeft=1;
 											};
+											class Item4
+											{
+												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
+												count=10;
+												ammoLeft=30;
+											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_Kitbag_rgr";
 										isBackpack=1;
 										class MagazineCargo
 										{
-											items=8;
+											items=7;
 											class Item0
 											{
 												name="ACE_Chemlight_HiRed";
@@ -37433,14 +37446,8 @@ class Mission
 											class Item6
 											{
 												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=10;
+												count=15;
 												ammoLeft=30;
-											};
-											class Item7
-											{
-												name="rhsusf_m112_mag";
-												count=1;
-												ammoLeft=1;
 											};
 										};
 										class ItemCargo
@@ -37469,7 +37476,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=639;
@@ -37571,12 +37578,12 @@ class Mission
 								{
 									class primaryWeapon
 									{
-										name="Tier1_SR16_CQB_Mod2_MFT_Black";
+										name="rhs_weap_mk18";
 										optics="Tier1_EXPS3_0_3xMag_Black_Up";
 										muzzle="Tier1_KAC_556_QDC_CQB_Black";
-										flashlight="Tier1_URX4_NGAL_M300C_Black";
-										underBarrel="Tier1_AFG_MLOK_Black";
-										firemode="Tier1_SR16_CQB_Mod2_MFT_Black:Single";
+										flashlight="Tier1_Mk18_NGAL_M300C_Black";
+										underBarrel="rhsusf_acc_grip2";
+										firemode="rhs_weap_mk18:Single";
 										class primaryMuzzleMag
 										{
 											name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
@@ -37598,7 +37605,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -37682,7 +37689,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierLR_swat";
+										typeName="V_mas_can_PlateCarrierRF_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -37714,14 +37721,14 @@ class Mission
 											class Item4
 											{
 												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=8;
+												count=10;
 												ammoLeft=30;
 											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_Kitbag_rgr";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -37771,7 +37778,7 @@ class Mission
 											class Item7
 											{
 												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=10;
+												count=15;
 												ammoLeft=30;
 											};
 										};
@@ -37801,7 +37808,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=641;
@@ -37880,7 +37887,7 @@ class Mission
 													"STRING"
 												};
 											};
-											value="PersianHead_A3_04_a";
+											value="GreekHead_A3_01";
 										};
 									};
 								};
@@ -37907,6 +37914,7 @@ class Mission
 										optics="Tier1_EXPS3_0_3xMag_Black_Up";
 										muzzle="Tier1_KAC_556_QDC_CQB_Black";
 										flashlight="Tier1_Mk46Mod1_LA5_M600V_Black";
+										underBarrel="Tier1_SAW_Bipod_DD";
 										firemode="Tier1_MK46_Mod1_Savit:FullAuto";
 										class primaryMuzzleMag
 										{
@@ -37929,7 +37937,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38013,7 +38021,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierAR_swat";
+										typeName="V_mas_can_PlateCarrierAR_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38052,7 +38060,7 @@ class Mission
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -38102,7 +38110,7 @@ class Mission
 											class Item7
 											{
 												name="rhsusf_100Rnd_556x45_M995_soft_pouch";
-												count=4;
+												count=7;
 												ammoLeft=100;
 											};
 										};
@@ -38132,7 +38140,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=645;
@@ -38261,7 +38269,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38345,7 +38353,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierAR_swat";
+										typeName="V_mas_can_PlateCarrierAR_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38377,14 +38385,14 @@ class Mission
 											class Item4
 											{
 												name="Tier1_100Rnd_762x51_Belt_M61_AP";
-												count=3;
+												count=4;
 												ammoLeft=100;
 											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -38464,7 +38472,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=647;
@@ -38566,12 +38574,12 @@ class Mission
 								{
 									class primaryWeapon
 									{
-										name="arifle_SPAR_03_blk_F";
+										name="cgqc_gun_spar17_wood";
 										optics="optic_AMS";
-										muzzle="Tier1_SRD762_Black";
-										flashlight="rhsusf_acc_anpeq15_bk";
-										underBarrel="bipod_01_F_blk";
-										firemode="arifle_SPAR_03_blk_F:Single";
+										muzzle="cgqc_acc_silencer_wood";
+										flashlight="cgqc_acc_anpeq15_laser_wood";
+										underBarrel="cgqc_acc_bipod_wood";
+										firemode="cgqc_gun_spar17_wood:Single";
 										class primaryMuzzleMag
 										{
 											name="ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
@@ -38593,7 +38601,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38607,7 +38615,7 @@ class Mission
 										};
 										class ItemCargo
 										{
-											items=13;
+											items=14;
 											class Item0
 											{
 												name="ItemAndroid";
@@ -38673,11 +38681,16 @@ class Mission
 												name="ACE_microDAGR";
 												count=1;
 											};
+											class Item13
+											{
+												name="ACE_RangeCard";
+												count=1;
+											};
 										};
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierRF_swat";
+										typeName="V_mas_can_PlateCarrierLR_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38716,7 +38729,7 @@ class Mission
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -38766,7 +38779,7 @@ class Mission
 											class Item7
 											{
 												name="ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
-												count=10;
+												count=15;
 												ammoLeft=20;
 											};
 										};
@@ -38796,7 +38809,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=649;
@@ -38921,11 +38934,11 @@ class Mission
 									};
 									class binocular
 									{
-										name="Rangefinder";
+										name="ACE_VectorDay";
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -38939,7 +38952,7 @@ class Mission
 										};
 										class ItemCargo
 										{
-											items=13;
+											items=14;
 											class Item0
 											{
 												name="ItemAndroid";
@@ -39005,11 +39018,16 @@ class Mission
 												name="ACE_microDAGR";
 												count=1;
 											};
+											class Item13
+											{
+												name="ACE_RangeCard";
+												count=1;
+											};
 										};
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierRF_swat";
+										typeName="V_mas_can_PlateCarrierLR_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -39041,14 +39059,28 @@ class Mission
 											class Item4
 											{
 												name="ACE_10Rnd_338_300gr_HPBT_Mag";
-												count=6;
+												count=3;
 												ammoLeft=10;
+											};
+										};
+										class ItemCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="ACE_ATragMX";
+												count=1;
+											};
+											class Item1
+											{
+												name="ACE_Kestrel4500";
+												count=1;
 											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -39098,7 +39130,7 @@ class Mission
 											class Item7
 											{
 												name="ACE_10Rnd_338_300gr_HPBT_Mag";
-												count=10;
+												count=20;
 												ammoLeft=10;
 											};
 										};
@@ -39128,7 +39160,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=651;
@@ -39230,12 +39262,12 @@ class Mission
 								{
 									class primaryWeapon
 									{
-										name="Tier1_SR16_CQB_Mod2_MFT_Black";
+										name="rhs_weap_m4a1_blockII";
 										optics="Tier1_EXPS3_0_3xMag_Black_Up";
 										muzzle="Tier1_KAC_556_QDC_CQB_Black";
-										flashlight="Tier1_URX4_NGAL_M300C_Black";
-										underBarrel="Tier1_AFG_MLOK_Black";
-										firemode="Tier1_SR16_CQB_Mod2_MFT_Black:Single";
+										flashlight="Tier1_M4BII_NGAL_M300C_Black";
+										underBarrel="rhsusf_acc_grip2";
+										firemode="rhs_weap_m4a1_blockII:Single";
 										class primaryMuzzleMag
 										{
 											name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
@@ -39257,7 +39289,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -39341,7 +39373,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierLR_swat";
+										typeName="V_mas_can_PlateCarrier1_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -39380,7 +39412,7 @@ class Mission
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -39486,7 +39518,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=655;
@@ -39588,12 +39620,12 @@ class Mission
 								{
 									class primaryWeapon
 									{
-										name="Tier1_SR16_CQB_Mod2_MFT_Black";
+										name="rhs_weap_m4a1_blockII";
 										optics="Tier1_EXPS3_0_3xMag_Black_Up";
 										muzzle="Tier1_KAC_556_QDC_CQB_Black";
-										flashlight="Tier1_URX4_NGAL_M300C_Black";
-										underBarrel="Tier1_AFG_MLOK_Black";
-										firemode="Tier1_SR16_CQB_Mod2_MFT_Black:Single";
+										flashlight="Tier1_M4BII_NGAL_M300C_Black";
+										underBarrel="rhsusf_acc_grip2";
+										firemode="rhs_weap_m4a1_blockII:Single";
 										class primaryMuzzleMag
 										{
 											name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
@@ -39615,7 +39647,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -39699,7 +39731,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierLR_swat";
+										typeName="V_mas_can_PlateCarrierRF_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -39731,14 +39763,14 @@ class Mission
 											class Item4
 											{
 												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=8;
+												count=10;
 												ammoLeft=30;
 											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -39797,7 +39829,7 @@ class Mission
 											class Item1
 											{
 												name="ACE_salineIV_500";
-												count=5;
+												count=7;
 											};
 											class Item2
 											{
@@ -39812,12 +39844,12 @@ class Mission
 											class Item4
 											{
 												name="ACE_morphine";
-												count=10;
+												count=20;
 											};
 											class Item5
 											{
 												name="ACE_epinephrine";
-												count=10;
+												count=20;
 											};
 											class Item6
 											{
@@ -39827,7 +39859,7 @@ class Mission
 											class Item7
 											{
 												name="ACE_tourniquet";
-												count=5;
+												count=4;
 											};
 										};
 									};
@@ -39837,7 +39869,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=663;
@@ -39939,12 +39971,12 @@ class Mission
 								{
 									class primaryWeapon
 									{
-										name="Tier1_SR16_CQB_Mod2_MFT_Black";
+										name="rhs_weap_mk18";
 										optics="Tier1_EXPS3_0_3xMag_Black_Up";
 										muzzle="Tier1_KAC_556_QDC_CQB_Black";
-										flashlight="Tier1_URX4_NGAL_M300C_Black";
-										underBarrel="Tier1_AFG_MLOK_Black";
-										firemode="Tier1_SR16_CQB_Mod2_MFT_Black:Single";
+										flashlight="Tier1_Mk18_NGAL_M300C_Black";
+										underBarrel="rhsusf_acc_grip2";
+										firemode="rhs_weap_mk18:Single";
 										class primaryMuzzleMag
 										{
 											name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
@@ -39975,7 +40007,7 @@ class Mission
 									};
 									class uniform
 									{
-										typeName="U_mas_can_B_suite_CQB";
+										typeName="U_mas_can_B_CombatUniform_S_NTOG";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -40059,7 +40091,7 @@ class Mission
 									};
 									class vest
 									{
-										typeName="V_mas_can_PlateCarrierLR_swat";
+										typeName="V_mas_can_PlateCarrierLR_green";
 										isBackpack=0;
 										class MagazineCargo
 										{
@@ -40091,14 +40123,14 @@ class Mission
 											class Item4
 											{
 												name="rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-												count=8;
+												count=10;
 												ammoLeft=30;
 											};
 										};
 									};
 									class backpack
 									{
-										typeName="B_mas_can_Kitbag_b";
+										typeName="B_mas_can_Kitbag_d";
 										isBackpack=1;
 										class MagazineCargo
 										{
@@ -40184,7 +40216,7 @@ class Mission
 									gps="ItemGPS";
 									goggles="None";
 									hmd="NVGoggles_mas_can_hv";
-									headgear="H_mas_can_opscore_b";
+									headgear="H_mas_can_opscore_g";
 								};
 							};
 							id=653;
@@ -40359,7 +40391,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={2099.5703,5.8003335,7087.1631};
+								position[]={2098.6187,5.8003335,7087.1602};
 							};
 							side="Empty";
 							flags=4;
@@ -40433,7 +40465,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={2098.6511,5.8003335,7087.1572};
+								position[]={2099.5752,5.8003335,7087.1772};
 							};
 							side="Empty";
 							flags=4;
@@ -40860,7 +40892,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={2105.4482,5.6706877,7087.2681};
+								position[]={2105.4482,5.6706877,7087.1968};
 							};
 							side="Empty";
 							class Attributes
@@ -40875,7 +40907,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={2105.2615,5.7630811,7087.624};
+								position[]={2105.2615,5.7630811,7087.6885};
 								angles[]={5.4977875,0,0};
 							};
 							side="Empty";
@@ -41136,7 +41168,7 @@ class Mission
 					name="00_1_Swag";
 					class Entities
 					{
-						items=5;
+						items=4;
 						class Item0
 						{
 							dataType="Object";
@@ -41184,22 +41216,6 @@ class Mission
 							type="Headgear_cgqc_cap_green";
 						};
 						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2094.4795,5.8393941,7087.7295};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-							};
-							id=669;
-							type="Headgear_cgqc_helmet_cloutier_samurai";
-							atlOffset=0.17701578;
-						};
-						class Item4
 						{
 							dataType="Object";
 							class PositionInfo
@@ -42023,6 +42039,53 @@ class Mission
 			{
 			};
 			id=677;
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2105.3574,5.702847,7087.3506};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=713;
+			type="Item_rhs_weap_M136";
+			atlOffset=0.702847;
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2094.4089,5.8279128,7087.7324};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=714;
+			type="Headgear_cgqc_helmet_crew_audi";
+			atlOffset=0.1655345;
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2094.6914,5.8253689,7087.7363};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=719;
+			type="Headgear_cgqc_helmet_crew_villeneuve";
+			atlOffset=0.16299057;
 		};
 	};
 	class Connections

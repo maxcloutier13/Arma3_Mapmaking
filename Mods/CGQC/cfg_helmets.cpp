@@ -79,6 +79,7 @@ class cgqc_cap_green : H_HelmetB
 	ace_hearing_lowerVolume = 0.5;
 	hiddenSelections[] = {"camo"};
 	hiddenSelectionsTextures[] = {"\CGQC\helmets\cgqc_cap_green.paa"};
+	hiddenSelectionsMaterials[] = {"\CGQC\helmets\cgqc_cap_green.rvmat"};
 };
 
 // Helicopter/Crew helmets -----------------------------------------------------------------------------------------------
