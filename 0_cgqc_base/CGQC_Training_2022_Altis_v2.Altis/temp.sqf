@@ -52,3 +52,25 @@ this attachTo[campTable];
 
 // Iterate trough items within trigger area 
 forEach thislist
+
+// Check if parachute
+if (backpack player isEqualTo "B_Parachute") then {
+	player moveInCargo insertion_plane;
+};
+if (backpack player isEqualTo "B_Parachute") then {
+	this addAction ["Training parachute: Saut 800m", "scripts\parachute_training.sqf", [800], 1, false, true, "", "_this distance _target < 3"];
+	this addAction ["Training parachute: Saut 3000m", "scripts\parachute_training.sqf", [3000], 1, false, true, "", "_this distance _target < 3"];
+	this addAction ["Training parachute: Saut 5000m", "scripts\parachute_training.sqf", [5000], 1, false, true, "", "_this distance _target < 3"];
+};
+
+// 
+if (isTouchingGround player) then {};
+deleteVehicle (class object du parachute)
+
+// Loadout selection
+this addAction ["HQ", "scripts\loadout_HQ.sqf"];
+/*
+	this addAction ["Team/Squad Leader", "scripts\loadout_TL.sqf"];
+	this addAction ["Rifleman - Carbine", "scripts\loadout_rifleman_carbine.sqf"];
+	this addAction ["Rifleman - CQB", "scripts\loadout_rifleman_cqb.sqf"];
+*/

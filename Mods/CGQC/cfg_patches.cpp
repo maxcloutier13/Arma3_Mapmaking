@@ -6,6 +6,22 @@ class cgqc_patch_logo
 	texture = "\cgqc\patches\cgqc_patch_logo.paa";
 	textureVehicle = "\cgqc\patches\cgqc_patch_logo.paa";
 };
+class cgqc_patch_logo_relief
+{
+	displayName = "CGQC Logo relief";
+	author = "audi/silent1";
+	texture = "\cgqc\patches\cgqc_patch_logo.paa";
+	textureVehicle = "\cgqc\patches\cgqc_patch_logo_2.paa";
+	material = "\cgqc\patches\cgqc_patch.rvmat";
+};
+class cgqc_patch_logo_relief_max
+{
+	displayName = "CGQC Logo relief max";
+	author = "audi/silent1";
+	texture = "\cgqc\patches\cgqc_patch_logo.paa";
+	textureVehicle = "\cgqc\patches\cgqc_patch_logo_2.paa";
+	material = "\cgqc\patches\cgqc_patch_2.rvmat";
+};
 class cgqc_patch_logo_ukr
 {
 	displayName = "CGQC Logo Ukraine";
