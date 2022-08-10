@@ -85,3 +85,17 @@ this addAction ["Helicopter Pilot", "loadouts\mk1_heli_pilot.sqf"];
 this addAction ["Helicopter Crew", "loadouts\mk1_heli_crew.sqf"];
 this addAction ["Jet Pilot", "loadouts\mk1_at_jet_pilot.sqf"];
 this addAction ["Tank Driver/Crew", "loadouts\mk1_driver_tank.sqf"];
+
+// Holster on init
+null = [this] spawn {
+	_unit = (_this select 0);
+	sleep 1;
+	_unit action ['SwitchWeapon', _unit, _unit, 100];
+};
+
+// Holster + set rank
+// set rank according to player name prefix
+// Subalternes: Sdt-Cpl-CplC
+// Sous officiers: Sgt-Adju-AdjuM-AdjuC
+// Officiers: Slt-Lt.-Capt-Maj-Lcol-Col
+null = execVM "scripts\initialize_player.sqf";
