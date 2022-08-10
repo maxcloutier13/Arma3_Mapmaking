@@ -99,3 +99,5 @@ null = [this] spawn {
 // Sous officiers: Sgt-Adju-AdjuM-AdjuC
 // Officiers: Slt-Lt.-Capt-Maj-Lcol-Col
 null = execVM "scripts\initialize_player.sqf";
+
+_text = ("<t size='2' >Sup Cloutier</t>");

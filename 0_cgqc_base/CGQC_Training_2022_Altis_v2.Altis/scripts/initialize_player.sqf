@@ -1,8 +1,16 @@
+waitUntil {
+	time > 1
+};
+_text = (
+"<img size= '6' style='vertical-align:middle' shadow='false' image='textures\CGQC.paa'/>" +
+"<br/>" +
+"<t size='2' >Terrain d'entraînement</t><br /><t align='right'>CGQC</t>"
+);
+[_text, 0, 0, 2, 2] spawn BIS_fnc_dynamicText;
 // Holster weapon
-sleep 1;
 player action ['SwitchWeapon', player, player, 100];
-sleep 5;
 // set rank according to player name prefix
+sleep 7;
 _name = name player;
 _prefix = _name select[0, 4];
 // hint format ["%1 -Rank: %2", _name, _prefix];
@@ -10,49 +18,62 @@ switch (_prefix) do
 {
 	case "Sdt.": {
 		player setRank "PRIVATE";
-		hint "Bonsoir Soldat!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir Soldat!</t>");
 	};
 	case "Cpl.": {
 		player setRank "CORPORAL";
-		hint "Bonsoir Caporal!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Caporal!</t>");
 	};
 	case "CplC": {
 		player setRank "CORPORAL";
-		hint "Bonsoir Caporal-Chef!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Caporal-Chef!</t>");
 	};
 	case "Sgt.": {
 		player setRank "SERGEANT";
-		hint "Bonsoir Sergeant!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Sergeant!</t>");
 	};
 	case "Adju": {
 		player setRank "SERGEANT";
-		hint "Bonsoir Adjudent!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Adjudent!</t>");
 	};
 	case "SLt.": {
 		player setRank "LIEUTENANT";
-		hint "Bonsoir Sous-lieutenant!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Sous-Lieutenant!</t>");
 	};
 	case "Lt. ": {
 		player setRank "LIEUTENANT";
-		hint "Bonsoir Lieuntenant!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Lieutenant!</t>");
 	};
 	case "Capt": {
 		player setRank "CAPTAIN";
-		hint "Y va comment Capitaine Tremblay?";
+		_text = ("<br/>" + "<t size='2' >Sup, Tremblay!</t>");
 	};
 	case "Maj.": {
 		player setRank "MAJOR";
-		hint "Bonsoir Major!";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Major!</t>");
 	};
 	case "LCol": {
 		player setRank "COLONEL";
-		hint "Sup Fréchette?";
+		_text = ("<br/>" + "<t size='2' >Sup Fréchette?</t>");
 	};
 	case "Col.": {
 		player setRank "COLONEL";
-		hint "Yo Audi!";
+		_text = ("<br/>" + "<t size='2' >Yo Audi!</t>");
 	};
 	default {
-		hint "Rank failed. Something's wrong"
+		player setRank "PRIVATE";
+		_text = ("<br/>" + "<t size='2' >Bonsoir, Visiteur!</t>" +
+		"<br/>" +"<t size='1' >Joint nous sur teamspeak: ts.cgqc.ca</t>" +
+		"<br/>" +"<t size='1' >discord.gg/RCyRKWVG</t>");
 	};
 };
+[_text, 0, 0, 2, 2] spawn BIS_fnc_dynamicText;
+titleFadeOut 2;
+{
+	systemChat format [
+		"%1 est %2",
+		name _x,
+		["mort", "vivant"] select alive _x
+	];
+	sleep 1;
+} forEach allPlayers;

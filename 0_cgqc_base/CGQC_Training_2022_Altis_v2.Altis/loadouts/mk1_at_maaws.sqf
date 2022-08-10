@@ -1,5 +1,6 @@
 _unit = _this select 1;
 execVM "loadouts\transition.sqf";
+sleep 2;
 _unit setUnitTrait ["Medic", false];
 _unit setUnitTrait ["engineer", false];
 _unit setUnitTrait ["explosiveSpecialist", true];
