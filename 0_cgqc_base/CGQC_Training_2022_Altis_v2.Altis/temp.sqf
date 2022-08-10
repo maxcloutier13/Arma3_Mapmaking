@@ -68,9 +68,20 @@ if (isTouchingGround player) then {};
 deleteVehicle (class object du parachute)
 
 // Loadout selection
-this addAction ["HQ", "scripts\loadout_HQ.sqf"];
-/*
-	this addAction ["Team/Squad Leader", "scripts\loadout_TL.sqf"];
-	this addAction ["Rifleman - Carbine", "scripts\loadout_rifleman_carbine.sqf"];
-	this addAction ["Rifleman - CQB", "scripts\loadout_rifleman_cqb.sqf"];
-*/
+this addAction ["HQ", "loadouts\mk1_hq.sqf"];
+this addAction ["Team/Squad Leader", "loadouts\mk1_tl.sqf"];
+this addAction ["Team/Squad Leader CQB", "loadouts\mk1_tl_cqb.sqf"];
+this addAction ["Rifleman - Carbine", "loadouts\mk1_rifleman_carbine.sqf"];
+this addAction ["Rifleman - CQB", "loadouts\mk1_rifleman_cqb.sqf"];
+this addAction ["Medic", "loadouts\mk1_medic.sqf"];
+this addAction ["Engineer", "loadouts\mk1_engineer.sqf"];
+this addAction ["MG (Light)", "loadouts\mk1_lmg.sqf"];
+this addAction ["MG (Heavy)", "loadouts\mk1_hmg.sqf"];
+this addAction ["Marksman", "loadouts\mk1_marksman.sqf"];
+this addAction ["Sniper", "loadouts\mk1_sniper.sqf"];
+this addAction ["Anti-Tank (MAAWS)", "loadouts\mk1_at_maaws.sqf"];
+this addAction ["Anti-Tank (Javelin)", "loadouts\mk1_at_javelin.sqf"];
+this addAction ["Helicopter Pilot", "loadouts\mk1_heli_pilot.sqf"];
+this addAction ["Helicopter Crew", "loadouts\mk1_heli_crew.sqf"];
+this addAction ["Jet Pilot", "loadouts\mk1_at_jet_pilot.sqf"];
+this addAction ["Tank Driver/Crew", "loadouts\mk1_driver_tank.sqf"];

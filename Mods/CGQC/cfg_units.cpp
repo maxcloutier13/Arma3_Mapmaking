@@ -37,6 +37,10 @@ class CGQC_Officer_Base : B_Soldier_f
 	editorSubcategory = "EdSubcat_cgqc_Training";
 	side = 1;
 	displayName = "Officier (Base)";
+	attendant = 1;
+	canDeactivateMines = 1;
+	engineer = 1;
+	detectSkill = 31;
 	uniformClass = "U_B_CombatUniform_mcam_vest";
 	weapons[] = {"Rangefinder", "cgqc_gun_p99_wood", "Put", "Throw"};
 	respawnWeapons[] = {"Rangefinder", "cgqc_gun_p99_wood", "Put", "Throw"};

@@ -38,6 +38,10 @@ class cgqc_officer_moderne : B_Soldier_f
 	editorSubcategory = "EdSubcat_cgqc_Training";
 	side = 1;
 	displayName = "Officier (Moderne)";
+	attendant = 1;
+	canDeactivateMines = 1;
+	engineer = 1;
+	detectSkill = 31;
 	uniformClass = "U_mas_can_B_CombatUniform_S_NTOG";
 	weapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	respawnWeapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
