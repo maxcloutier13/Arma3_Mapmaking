@@ -222,3 +222,21 @@ class rhsusf_acc_premier: rhsusf_acc_LEUPOLDMK4_2
 		};
 	};
 };
+
+// Custom boxes
+class Extended_Init_EventHandlers
+{
+	class B_CargoNet_01_ammo_F
+	{
+		init = "(_this select 0) call (compile preprocessFileLineNumbers 'scripts\barsenalCrate.sqf')";
+	};
+};
+
+// 
+
+/oooooooh
+
+class Meteo_EH
+{
+	init = "_this execVM '\a3\Props_F_Enoch\Military\Equipment\scripts\meteo.sqf'";
+};

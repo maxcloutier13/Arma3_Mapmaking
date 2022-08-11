@@ -1,6 +1,8 @@
 CHVD_allowNoGrass = true;
-// Prepare loadout for CGQC_mk1
-[]execVM "loadouts\loadouts.sqf";
+// Event to run when player is done loading
+[ "CBA_loadingScreenDone", {
+	null = execVM "scripts\initialize_player.sqf";
+} ] call CBA_fnc_addEventHandler;
 
 // Only run on clients, excluding HCs
 [] spawn {

@@ -106,3 +106,4 @@ class cfgVehicles
 #include "cfg_backpacks.cpp"
 #include "cfg_items.cpp"
 };
+#include "cfg_autorank.cpp"

@@ -114,8 +114,8 @@ class CfgEditorSubcategories
 // Custom units ----------------------------------------------------------------------------
 class cfgVehicles
 {
-// Backpacks
-#include "cfg_backpacks.cpp"
+// Containers
+#include "cfg_containers.cpp"
 // Training units
 #include "cfg_units_training.cpp"
 // mk1 units
