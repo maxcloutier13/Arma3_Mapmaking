@@ -11,6 +11,7 @@ class arifle_mas_can_mp7_F;
 class rhs_weap_mk18_m320;
 class launch_mas_can_javelin_F;
 class srifle_LRR_F;
+class arifle_SPAR_03_blk_F;
 
 // Pistol.
 class cgqc_gun_glock19_wood : Tier1_Glock19_WAR_TB
@@ -19,7 +20,7 @@ class cgqc_gun_glock19_wood : Tier1_Glock19_WAR_TB
 	author = "silent1";
 	_generalMacro = "cgqc_gun_glock19_wood";
 	baseWeapon = "cgqc_gun_glock19_wood";
-	displayName = "CGQC Glock19 Woodland";
+	displayName = "CGQC Glock19";
 	/*
 	hiddenSelectionsTextures[] = {
 		"\CGQC\guns\cgqc_gun_p99_wood.paa"};
@@ -33,8 +34,8 @@ class cgqc_gun_law_wood : rhs_weap_m72a7
 	author = "silent1";
 	_generalMacro = "cgqc_gun_law_wood";
 	baseWeapon = "cgqc_gun_law_wood";
-	displayName = "CGQC m72a7 LAW Woodland";
-	hiddenSelectionsTextures[] = {"\CGQC_2022\guns\cgqc_gun_law_wood.paa"};
+	displayName = "CGQC m72a7 LAW";
+	// hiddenSelectionsTextures[] = {"\CGQC_2022\guns\cgqc_gun_law_wood.paa"};
 };
 
 // Basic guns -----------------------------------------------------------------------------------
@@ -66,6 +67,39 @@ class cgqc_gun_mk1_mk18 : rhs_weap_mk18
 	baseWeapon = "cgqc_gun_mk1_mk18";
 	displayName = "CGQC mk18";
 	// hiddenSelectionsTextures[] = {"\CGQC\guns\cgqc_gun_law_wood.paa"};
+};
+
+class cgqc_gun_mk1_hk417 : arifle_SPAR_03_blk_F
+{
+	scope = 2;
+	author = "silent1";
+	_generalMacro = "cgqc_gun_mk1_hk417";
+	baseWeapon = "cgqc_gun_mk1_hk417";
+	displayName = "CGQC hk417";
+	// hiddenSelectionsTextures[] = {"\CGQC\guns\cgqc_gun_law_wood.paa"};
+	class LinkedItems
+	{
+		class LinkedItemsMuzzle
+		{
+			slot = "MuzzleSlot";
+			item = "Tier1_SandmanS_Black";
+		};
+		class LinkedItemsOptic
+		{
+			slot = "CowsSlot";
+			item = "Tier1_Razor_Gen3_110_Geissele_Docter";
+		};
+		class LinkedItemsAcc
+		{
+			slot = "PointerSlot";
+			item = "rhsusf_acc_anpeq15_bk_light";
+		};
+		class LinkedItemsUnder
+		{
+			slot = "UnderBarrelSlot";
+			item = "bipod_01_F_blk";
+		};
+	};
 };
 
 class cgqc_gun_mk1_mk46 : Tier1_MK46_Mod1_Savit

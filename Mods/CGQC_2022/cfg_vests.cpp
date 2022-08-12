@@ -3,6 +3,7 @@ class V_mas_can_PlateCarrierLR_tan;
 class V_mas_can_PlateCarrierRF_tan;
 class V_mas_can_PlateCarrierAR_tan;
 class UK3CB_V_Pilot_Vest;
+class UK3CB_V_Pilot_Vest_Black;
 class V_Rangemaster_belt;
 
 class cgqc_vest_mk1_belt : V_Rangemaster_belt
@@ -44,5 +45,12 @@ class cgqc_vest_mk1_pilot : UK3CB_V_Pilot_Vest
 {
     author = "silent1";
     _generalMacro = "cgqc_vest_mk1_pilot";
-    displayName = "CGQC Veste mk1 Pilote";
+    displayName = "CGQC Veste mk1 Pilote (Vert)";
+};
+
+class cgqc_vest_mk1_pilot_black : UK3CB_V_Pilot_Vest_Black
+{
+    author = "silent1";
+    _generalMacro = "cgqc_vest_mk1_pilot_black";
+    displayName = "CGQC Veste mk1 Pilote (Noir)";
 };

@@ -1,8 +1,8 @@
 class B_Kitbag_rgr;
-class cgqc_pack_mk1_magic;
 class B_Parachute;
 class Box_NATO_Equip_F;
 class B_supplyCrate_F;
+class cgqc_pack_mk1_magic;
 
 // Mk1 box
 class cgqc_box_mk1_rolebox : Box_NATO_Equip_F
@@ -1197,8 +1197,6 @@ class CGQC_units_mk1_3_AT_Javelin_pack : cgqc_pack_mk1_kitbag
     {
     };
 };
-}
-;
 
 class CGQC_units_mk1_4_Tank_Driver_pack : cgqc_pack_mk1_magic
 {
