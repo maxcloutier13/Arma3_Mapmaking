@@ -28,6 +28,7 @@ class CfgPatches
 		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
 		units[] = {
 			"cgqc_box_mk1_rolebox",
+			"cgqc_box_mk1_plus",
 			"cgqc_box_original",
 			"CGQC_units_mk1_0_HQ_pack",
 			"CGQC_units_mk1_0_TeamLeader_Carbine_pack",

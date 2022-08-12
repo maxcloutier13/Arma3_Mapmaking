@@ -87,7 +87,7 @@ this addItemToBackpack "G_mas_can_gasmask";
 this addItemToBackpack "ItemcTab";
 this addItemToBackpack "MRH_FoldedSatcomAntenna";
 this addItemToBackpack "MRH_TacticalDisplay";
-this addItemToBackpack "ACRE_PRC77";
+this addItemToBackpack "ACRE_PRC117F";
 this addItemToBackpack "ACE_Chemlight_HiRed";
 this addItemToBackpack "ACE_Chemlight_IR";
 for "_i" from 1 to 3 do {

@@ -37,6 +37,21 @@ class cgqc_box_mk1_rolebox : Box_NATO_Equip_F
     };
 };
 
+// Mk1+ box
+class cgqc_box_mk1_plus : cgqc_box_mk1_rolebox
+{
+    author = "silent1";
+    _generalMacro = "cgqc_box_mk1_plus";
+    displayName = "CGQC MK1+ Rolebox";
+    hiddenSelectionsTextures[] = {"\CGQC_2022\containers\cgqc_box_mk1_rolebox_texture.paa",
+                                  "\CGQC_2022\containers\cgqc_box_mk1_plus_label.paa"};
+    editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Equip_F.jpg";
+    class EventHandlers
+    {
+        init = "_this execVM '\CGQC_2022\loadouts\cgqc_box_mk1_plus.sqf'";
+    };
+};
+
 // Original training map box
 class cgqc_box_original : B_supplyCrate_F
 {
@@ -159,10 +174,10 @@ class CGQC_units_mk1_0_HQ_pack : cgqc_pack_mk1_kitbag
             count = 1;
             name = "MRH_TacticalDisplay";
         };
-        class _xx_ACRE_PRC77
+        class _xx_ACRE_PRC117F
         {
             count = 1;
-            name = "ACRE_PRC77";
+            name = "ACRE_PRC117F";
         };
     };
     class TransportWeapons
