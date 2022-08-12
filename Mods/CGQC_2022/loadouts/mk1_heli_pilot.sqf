@@ -21,9 +21,9 @@ _unit addPrimaryWeaponItem "40Rnd_46x30SD_mas_can_mag";
 _unit addWeapon "cgqc_gun_glock19_wood";
 
 comment "Add containers";
-_unit forceAddUniform "U_mas_can_B_CombatUniform_S_SWAT";
+_unit forceAddUniform "cgqc_uniform_mk1_helipilot";
 _unit addVest "cgqc_vest_mk1_pilot";
-_unit addBackpack "CGQC_mk1_4_Pilot_heli_pack";
+_unit addBackpack "CGQC_units_mk1_4_Pilot_heli_pack";
 
 comment "Add binoculars";
 _unit addWeapon "Rangefinder";
@@ -57,7 +57,7 @@ for "_i" from 1 to 2 do {
 	_unit addItemToVest "MiniGrenade";
 };
 for "_i" from 1 to 2 do {
-	_unit addItemToVest "rhs_mag_m67";
+	_unit addItemToVest "HandGrenade";
 };
 for "_i" from 1 to 2 do {
 	_unit addItemToVest "ACE_M84";

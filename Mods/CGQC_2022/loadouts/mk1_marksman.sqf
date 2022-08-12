@@ -15,7 +15,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add weapons";
-_unit addWeapon "cgqc_gun_spar17_wood";
+_unit addWeapon "cgqc_gun_hk417_wood";
 _unit addPrimaryWeaponItem "cgqc_acc_silencer_wood";
 _unit addPrimaryWeaponItem "cgqc_acc_anpeq15_laser_wood";
 _unit addPrimaryWeaponItem "optic_AMS";
@@ -66,7 +66,7 @@ for "_i" from 1 to 2 do {
 	_unit addItemToVest "MiniGrenade";
 };
 for "_i" from 1 to 2 do {
-	_unit addItemToVest "rhs_mag_m67";
+	_unit addItemToVest "HandGrenade";
 };
 for "_i" from 1 to 2 do {
 	_unit addItemToVest "ACE_M84";

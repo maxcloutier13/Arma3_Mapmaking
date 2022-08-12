@@ -5,7 +5,7 @@ class rhs_weap_m4a1_blockII_M203;
 class rhs_weap_mk18;
 class Tier1_MK46_Mod1_Savit;
 class Tier1_MK48_Mod0;
-class cgqc_gun_spar17_wood;
+class cgqc_gun_hk417_wood;
 class launch_MRAWS_green_F;
 class arifle_mas_can_mp7_F;
 class rhs_weap_mk18_m320;
@@ -34,7 +34,7 @@ class cgqc_gun_law_wood : rhs_weap_m72a7
 	_generalMacro = "cgqc_gun_law_wood";
 	baseWeapon = "cgqc_gun_law_wood";
 	displayName = "CGQC m72a7 LAW Woodland";
-	hiddenSelectionsTextures[] = {"\CGQC\guns\cgqc_gun_law_wood.paa"};
+	hiddenSelectionsTextures[] = {"\CGQC_2022\guns\cgqc_gun_law_wood.paa"};
 };
 
 // Basic guns -----------------------------------------------------------------------------------
@@ -320,7 +320,7 @@ class cgqc_gun_mk1_rifleman_mk18 : cgqc_gun_mk1_mk18
 	};
 };
 
-class cgqc_gun_mk1_marksman_417 : cgqc_gun_spar17_wood
+class cgqc_gun_mk1_marksman_417 : cgqc_gun_hk417_wood
 {
 	scope = 1;
 	class LinkedItems

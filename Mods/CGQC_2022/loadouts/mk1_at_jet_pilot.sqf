@@ -22,9 +22,9 @@ _unit addWeapon "cgqc_gun_glock19_wood";
 _unit addHandgunItem "Tier1_20Rnd_9x19_FMJ";
 
 comment "Add containers";
-_unit forceAddUniform "U_I_pilotCoveralls";
+_unit forceAddUniform "cgqc_uniform_mk1_jetpilot";
 _unit addVest "cgqc_vest_mk1_pilot";
-_unit addBackpack "CGQC_mk1_4_Pilot_Jet_pack";
+_unit addBackpack "CGQC_units_mk1_4_Pilot_Jet_pack";
 
 comment "Add binoculars";
 _unit addWeapon "Rangefinder";
@@ -59,13 +59,13 @@ for "_i" from 1 to 2 do {
 	_unit addItemToVest "MiniGrenade";
 };
 for "_i" from 1 to 2 do {
-	_unit addItemToVest "rhs_mag_m67";
+	_unit addItemToVest "HandGrenade";
 };
 _unit addItemToVest "ACE_M84";
 for "_i" from 1 to 4 do {
 	_unit addItemToVest "40Rnd_46x30SD_mas_can_mag";
 };
-_unit addHeadgear "H_PilotHelmetFighter_B";
+_unit addHeadgear "cgqc_helmet_mk1_jetpilot";
 _unit addGoggles "rhs_googles_yellow";
 
 comment "Add items";

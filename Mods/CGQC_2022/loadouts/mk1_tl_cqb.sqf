@@ -64,7 +64,7 @@ for "_i" from 1 to 2 do {
 	_unit addItemToVest "MiniGrenade";
 };
 for "_i" from 1 to 2 do {
-	_unit addItemToVest "rhs_mag_m67";
+	_unit addItemToVest "HandGrenade";
 };
 for "_i" from 1 to 2 do {
 	_unit addItemToVest "ACE_M84";

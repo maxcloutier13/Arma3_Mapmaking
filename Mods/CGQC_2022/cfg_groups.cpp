@@ -116,119 +116,119 @@ class cfgGroups
                     class Unit0
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_0_HQ";
+                        vehicle = "CGQC_units_mk1_0_HQ";
                         rank = "PRIVATE";
                         position[] = {0, -0, 0};
                     };
                     class Unit1
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_0_TeamLeader_Carbine";
+                        vehicle = "CGQC_units_mk1_0_TeamLeader_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -5, 0};
                     };
                     class Unit2
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_0_TeamLeader_CQB";
+                        vehicle = "CGQC_units_mk1_0_TeamLeader_CQB";
                         rank = "PRIVATE";
                         position[] = {0, -10, 0};
                     };
                     class Unit3
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_Carbine";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -15, 0};
                     };
                     class Unit4
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_CQB";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_CQB";
                         rank = "PRIVATE";
                         position[] = {0, -20, 0};
                     };
                     class Unit5
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Medic";
+                        vehicle = "CGQC_units_mk1_1_Medic";
                         rank = "PRIVATE";
                         position[] = {0, -25, 0};
                     };
                     class Unit6
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Engineer";
+                        vehicle = "CGQC_units_mk1_1_Engineer";
                         rank = "PRIVATE";
                         position[] = {0, -30, 0};
                     };
                     class Unit7
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_LMG";
+                        vehicle = "CGQC_units_mk1_2_LMG";
                         rank = "PRIVATE";
                         position[] = {0, -35, 0};
                     };
                     class Unit8
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_HMG";
+                        vehicle = "CGQC_units_mk1_2_HMG";
                         rank = "PRIVATE";
                         position[] = {0, -40, 0};
                     };
                     class Unit9
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_Marksman";
+                        vehicle = "CGQC_units_mk1_2_Marksman";
                         rank = "PRIVATE";
                         position[] = {0, -45, 0};
                     };
                     class Unit10
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_Sniper";
+                        vehicle = "CGQC_units_mk1_2_Sniper";
                         rank = "PRIVATE";
                         position[] = {0, -50, 0};
                     };
                     class Unit11
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Tank_Driver";
+                        vehicle = "CGQC_units_mk1_4_Tank_Driver";
                         rank = "PRIVATE";
                         position[] = {0, -55, 0};
                     };
                     class Unit12
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Pilot_heli";
+                        vehicle = "CGQC_units_mk1_4_Pilot_heli";
                         rank = "PRIVATE";
                         position[] = {0, -60, 0};
                     };
                     class Unit13
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_crew_heli";
+                        vehicle = "CGQC_units_mk1_4_crew_heli";
                         rank = "PRIVATE";
                         position[] = {0, -65, 0};
                     };
                     class Unit14
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Pilot_Jet";
+                        vehicle = "CGQC_units_mk1_4_Pilot_Jet";
                         rank = "PRIVATE";
                         position[] = {0, -70, 0};
                     };
                     class Unit15
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_3_AT_MAAWS";
+                        vehicle = "CGQC_units_mk1_3_AT_MAAWS";
                         rank = "PRIVATE";
                         position[] = {0, -75, 0};
                     };
                     class Unit16
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_3_AT_Javelin";
+                        vehicle = "CGQC_units_mk1_3_AT_Javelin";
                         rank = "PRIVATE";
                         position[] = {0, -80, 0};
                     };
@@ -241,77 +241,77 @@ class cfgGroups
                     class Unit0
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_0_TeamLeader_Carbine";
+                        vehicle = "CGQC_units_mk1_0_TeamLeader_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -0, 0};
                     };
                     class Unit1
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_Carbine";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -5, 0};
                     };
                     class Unit2
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Medic";
+                        vehicle = "CGQC_units_mk1_1_Medic";
                         rank = "PRIVATE";
                         position[] = {0, -10, 0};
                     };
                     class Unit3
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Engineer";
+                        vehicle = "CGQC_units_mk1_1_Engineer";
                         rank = "PRIVATE";
                         position[] = {0, -15, 0};
                     };
                     class Unit4
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_LMG";
+                        vehicle = "CGQC_units_mk1_2_LMG";
                         rank = "PRIVATE";
                         position[] = {0, -20, 0};
                     };
                     class Unit5
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_Marksman";
+                        vehicle = "CGQC_units_mk1_2_Marksman";
                         rank = "PRIVATE";
                         position[] = {0, -25, 0};
                     };
                     class Unit6
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_3_AT_MAAWS";
+                        vehicle = "CGQC_units_mk1_3_AT_MAAWS";
                         rank = "PRIVATE";
                         position[] = {0, -30, 0};
                     };
                     class Unit7
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_Carbine";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -35, 0};
                     };
                     class Unit8
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_Carbine";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -40, 0};
                     };
                     class Unit9
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_Carbine";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -45, 0};
                     };
                     class Unit10
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_1_Rifleman_Carbine";
+                        vehicle = "CGQC_units_mk1_1_Rifleman_Carbine";
                         rank = "PRIVATE";
                         position[] = {0, -50, 0};
                     };
@@ -324,21 +324,21 @@ class cfgGroups
                     class Unit0
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Tank_Driver";
+                        vehicle = "CGQC_units_mk1_4_Tank_Driver";
                         rank = "PRIVATE";
                         position[] = {0, -0, 0};
                     };
                     class Unit1
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Tank_Driver";
+                        vehicle = "CGQC_units_mk1_4_Tank_Driver";
                         rank = "PRIVATE";
                         position[] = {0, -5, 0};
                     };
                     class Unit2
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Tank_Driver";
+                        vehicle = "CGQC_units_mk1_4_Tank_Driver";
                         rank = "PRIVATE";
                         position[] = {0, -10, 0};
                     };
@@ -351,21 +351,21 @@ class cfgGroups
                     class Unit0
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_Pilot_heli";
+                        vehicle = "CGQC_units_mk1_4_Pilot_heli";
                         rank = "PRIVATE";
                         position[] = {0, -0, 0};
                     };
                     class Unit1
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_crew_heli";
+                        vehicle = "CGQC_units_mk1_4_crew_heli";
                         rank = "PRIVATE";
                         position[] = {0, -5, 0};
                     };
                     class Unit2
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_4_crew_heli";
+                        vehicle = "CGQC_units_mk1_4_crew_heli";
                         rank = "PRIVATE";
                         position[] = {0, -10, 0};
                     };
@@ -394,14 +394,14 @@ class cfgGroups
                     class Unit0
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_Sniper";
+                        vehicle = "CGQC_units_mk1_2_Sniper";
                         rank = "PRIVATE";
                         position[] = {0, -0, 0};
                     };
                     class Unit1
                     {
                         side = 1;
-                        vehicle = "CGQC_mk1_2_Marksman";
+                        vehicle = "CGQC_units_mk1_2_Marksman";
                         rank = "PRIVATE";
                         position[] = {0, -5, 0};
                     };

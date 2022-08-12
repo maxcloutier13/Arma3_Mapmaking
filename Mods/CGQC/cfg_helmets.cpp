@@ -86,74 +86,74 @@ class cgqc_cap_green : H_HelmetB
 class H_PilotHelmetHeli_B;
 class H_CrewHelmetHeli_B;
 // Cloutier / Samurai -----------------------------------------------------
-class cgqc_helmet_cloutier_samurai : H_PilotHelmetHeli_B
+class cgqc_helmet_cloutier : H_PilotHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
-	displayName = "CGQC Cloutier Samurai";
+	displayName = "CGQC Heli Cloutier";
 	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cloutier.paa"};
 	grad_slingHelmet_allow = true;
 };
-class cgqc_helmet_crew_cloutier_samurai : H_CrewHelmetHeli_B
+class cgqc_helmet_crew_cloutier : H_CrewHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
-	displayName = "CGQC Cloutier Samurai Full";
+	displayName = "CGQC Heli Cloutier Full";
 	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cloutier.paa"};
 	grad_slingHelmet_allow = true;
 };
 
 // CGQC Airforce black -----------------------------------------------------
-class cgqc_helmet_cgqc_black : H_PilotHelmetHeli_B
+class cgqc_helmet_heli_black : H_PilotHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
 	displayName = "CGQC Heli Noir";
-	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cgqc_black.paa"};
+	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_heli_black.paa"};
 	grad_slingHelmet_allow = true;
 };
-class cgqc_helmet_crew_cgqc_black : H_CrewHelmetHeli_B
+class cgqc_helmet_crew_black : H_CrewHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
 	displayName = "CGQC Heli Noir full";
-	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cgqc_black.paa"};
+	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_heli_black.paa"};
 	grad_slingHelmet_allow = true;
 };
 
 // CGQC Airforce Green -----------------------------------------------------
-class cgqc_helmet_cgqc_green : H_PilotHelmetHeli_B
+class cgqc_helmet_heli_green : H_PilotHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
 	displayName = "CGQC Heli Vert";
-	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cgqc_green.paa"};
+	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_heli_green.paa"};
 	grad_slingHelmet_allow = true;
 };
-class cgqc_helmet_crew_cgqc_green : H_CrewHelmetHeli_B
+class cgqc_helmet_crew_green : H_CrewHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
 	displayName = "CGQC Heli Vert full";
-	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cgqc_green.paa"};
+	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_heli_green.paa"};
 	grad_slingHelmet_allow = true;
 };
 
 // CGQC Airforce woodland -----------------------------------------------------
-class cgqc_helmet_cgqc_wood : H_PilotHelmetHeli_B
+class cgqc_helmet_heli_wood : H_PilotHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
 	displayName = "CGQC Heli Woodland";
-	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cgqc_wood.paa"};
+	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_heli_wood.paa"};
 	grad_slingHelmet_allow = true;
 };
-class cgqc_helmet_crew_cgqc_wood : H_CrewHelmetHeli_B
+class cgqc_helmet_crew_wood : H_CrewHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
 	displayName = "CGQC Heli Woodland full";
-	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_cgqc_wood.paa"};
+	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_heli_wood.paa"};
 	grad_slingHelmet_allow = true;
 };
 
@@ -162,7 +162,7 @@ class cgqc_helmet_villeneuve : H_PilotHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
-	displayName = "CGQC Villeneuve Noir";
+	displayName = "CGQC Heli Villeneuve";
 	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_villeneuve.paa"};
 	grad_slingHelmet_allow = true;
 };
@@ -170,7 +170,7 @@ class cgqc_helmet_crew_villeneuve : H_CrewHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
-	displayName = "CGQC Villeneuve Noir Full";
+	displayName = "CGQC Heli Villeneuve Full";
 	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_villeneuve.paa"};
 	grad_slingHelmet_allow = true;
 };
@@ -180,7 +180,7 @@ class cgqc_helmet_audi : H_PilotHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
-	displayName = "CGQC Audi Noir";
+	displayName = "CGQC Heli Audi";
 	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_audi.paa"};
 	grad_slingHelmet_allow = true;
 };
@@ -188,7 +188,7 @@ class cgqc_helmet_crew_audi : H_CrewHelmetHeli_B
 {
 	scope = 2;
 	author = "silent1";
-	displayName = "CGQC Audi Noir Full";
+	displayName = "CGQC Heli Audi Full";
 	hiddenSelectionsTextures[] = {"\cgqc\helmets\cgqc_helmet_audi.paa"};
 	grad_slingHelmet_allow = true;
 };

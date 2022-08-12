@@ -60,7 +60,7 @@ for "_i" from 1 to 2 do {
 	_unit addItemToVest "MiniGrenade";
 };
 for "_i" from 1 to 2 do {
-	_unit addItemToVest "rhs_mag_m67";
+	_unit addItemToVest "HandGrenade";
 };
 _unit addItemToVest "ACE_M84";
 for "_i" from 1 to 7 do {

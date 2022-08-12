@@ -173,7 +173,7 @@ class Headgear_cgqc_cap_green : Headgear_Base_F
 };
 
 // Helicopter helmets --------------------------------------------------------------------------------
-class Headgear_cgqc_helmet_cloutier_samurai : Headgear_Base_F
+class Headgear_cgqc_helmet_cloutier : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -185,7 +185,7 @@ class Headgear_cgqc_helmet_cloutier_samurai : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_cloutier_samurai
+        class cgqc_helmet_cloutier
         {
             name = "cgqc_helmet_cloutier_samurai";
             count = 1;
@@ -213,7 +213,7 @@ class Headgear_cgqc_helmet_crew_cloutier_samurai : Headgear_Base_F
     };
 };
 
-class Headgear_cgqc_helmet_cgqc_green : Headgear_Base_F
+class Headgear_cgqc_helmet_heli_green : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -225,15 +225,15 @@ class Headgear_cgqc_helmet_cgqc_green : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_cgqc_green
+        class cgqc_helmet_heli_green
         {
-            name = "cgqc_helmet_cgqc_green";
+            name = "cgqc_helmet_heli_green";
             count = 1;
         };
     };
 };
 
-class Headgear_cgqc_helmet_crew_cgqc_green : Headgear_Base_F
+class Headgear_cgqc_helmet_crew_green : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -245,15 +245,15 @@ class Headgear_cgqc_helmet_crew_cgqc_green : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_crew_cgqc_green
+        class cgqc_helmet_crew_green
         {
-            name = "cgqc_helmet_crew_cgqc_green";
+            name = "cgqc_helmet_crew_green";
             count = 1;
         };
     };
 };
 
-class Headgear_cgqc_helmet_cgqc_black : Headgear_Base_F
+class Headgear_cgqc_helmet_heli_black : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -265,15 +265,15 @@ class Headgear_cgqc_helmet_cgqc_black : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_cgqc_black
+        class cgqc_helmet_heli_black
         {
-            name = "cgqc_helmet_cgqc_black";
+            name = "cgqc_helmet_heli_black";
             count = 1;
         };
     };
 };
 
-class Headgear_cgqc_helmet_crew_cgqc_black : Headgear_Base_F
+class Headgear_cgqc_helmet_crew_black : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -285,15 +285,15 @@ class Headgear_cgqc_helmet_crew_cgqc_black : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_crew_cgqc_black
+        class cgqc_helmet_crew_black
         {
-            name = "cgqc_helmet_crew_cgqc_black";
+            name = "cgqc_helmet_crew_black";
             count = 1;
         };
     };
 };
 
-class Headgear_cgqc_helmet_cgqc_wood : Headgear_Base_F
+class Headgear_cgqc_helmet_heli_wood : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -305,15 +305,15 @@ class Headgear_cgqc_helmet_cgqc_wood : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_cgqc_wood
+        class cgqc_helmet_heli_wood
         {
-            name = "cgqc_helmet_cgqc_wood";
+            name = "cgqc_helmet_heli_wood";
             count = 1;
         };
     };
 };
 
-class Headgear_cgqc_helmet_crew_cgqc_wood : Headgear_Base_F
+class Headgear_cgqc_helmet_crew_wood : Headgear_Base_F
 {
     scope = 2;
     scopeCurator = 2;
@@ -325,9 +325,9 @@ class Headgear_cgqc_helmet_crew_cgqc_wood : Headgear_Base_F
     model = "\A3\Weapons_F\DummyCap.p3d";
     class TransportItems
     {
-        class cgqc_helmet_crew_cgqc_wood
+        class cgqc_helmet_crew_wood
         {
-            name = "cgqc_helmet_crew_cgqc_wood";
+            name = "cgqc_helmet_crew_wood";
             count = 1;
         };
     };
