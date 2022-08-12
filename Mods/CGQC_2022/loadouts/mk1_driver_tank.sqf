@@ -26,7 +26,7 @@ this addVest "cgqc_vest_mk1_pilot";
 this addBackpack "CGQC_units_mk1_4_Tank_Driver_pack";
 
 comment "Add binoculars";
-this addWeapon "Rangefinder";
+this addWeapon "cgqc_item_rangefinder";
 
 comment "Add items to containers";
 this addItemToUniform "ItemAndroid";

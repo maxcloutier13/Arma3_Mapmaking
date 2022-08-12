@@ -47,7 +47,7 @@ this addVest "cgqc_vest_mk1_tan_lr";
 this addBackpack "CGQC_units_mk1_3_AT_Javelin_pack";
 
 comment "Add binoculars";
-this addWeapon "Rangefinder";
+this addWeapon "cgqc_item_rangefinder";
 
 comment "Add items to containers";
 this addItemToUniform "ItemAndroid";

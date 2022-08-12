@@ -12,6 +12,7 @@ class rhs_weap_mk18_m320;
 class launch_mas_can_javelin_F;
 class srifle_LRR_F;
 class arifle_SPAR_03_blk_F;
+class Rangefinder;
 
 // Pistol.
 class cgqc_gun_glock19_wood : Tier1_Glock19_WAR_TB
@@ -36,6 +37,16 @@ class cgqc_gun_law_wood : rhs_weap_m72a7
 	baseWeapon = "cgqc_gun_law_wood";
 	displayName = "CGQC m72a7 LAW";
 	// hiddenSelectionsTextures[] = {"\CGQC_2022\guns\cgqc_gun_law_wood.paa"};
+};
+
+// Items -----------------------------------------------------------------------
+class cgqc_item_rangefinder : Rangefinder
+{
+	scope = 2;
+	author = "silent1";
+	_generalMacro = "cgqc_item_rangefinder";
+	baseWeapon = "cgqc_item_rangefinder";
+	displayName = "CGQC Rangefinder";
 };
 
 // Basic guns -----------------------------------------------------------------------------------

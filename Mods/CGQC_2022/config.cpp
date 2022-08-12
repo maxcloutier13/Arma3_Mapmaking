@@ -103,7 +103,8 @@ class CfgPatches
 			"cgqc_gun_mk1_mp7",
 			"cgqc_gun_mk1_mk18_gl",
 			"cgqc_gun_mk1_AT_m4a1",
-			"cgqc_gun_mk1_Javelin"};
+			"cgqc_gun_mk1_Javelin",
+			"cgqc_item_rangefinder"};
 	};
 };
 

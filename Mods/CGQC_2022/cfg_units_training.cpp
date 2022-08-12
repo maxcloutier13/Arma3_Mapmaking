@@ -9,8 +9,8 @@ class cgqc_soldat_moderne : B_Soldier_f
 	side = 1;
 	displayName = "Soldat (Moderne)";
 	uniformClass = "cgqc_uniform_mk1";
-	weapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
-	respawnWeapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
+	weapons[] = {"cgqc_item_rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
+	respawnWeapons[] = {"cgqc_item_rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	items[] = {"ItemAndroid", "ItemcTabHCam", "ACRE_PRC343",
 			   "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
 			   "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
@@ -25,8 +25,8 @@ class cgqc_soldat_moderne : B_Soldier_f
 					  "ACE_IR_Strobe_Item", "ACE_microDAGR"};
 	magazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
 	respawnMagazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
-	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "cgqc_vest_mk1_belt", "None"};
-	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "cgqc_vest_mk1_belt", "None"};
+	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "cgqc_item_rangefinder", "cgqc_beret_vanilla", "cgqc_vest_mk1_belt", "None"};
+	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "cgqc_item_rangefinder", "cgqc_beret_vanilla", "cgqc_vest_mk1_belt", "None"};
 	backpack = "cgqc_pack_mk1_magic";
 	editorPreview = "\CGQC_2022\pics\cgqc_soldat_moderne.jpg";
 };
@@ -43,8 +43,8 @@ class cgqc_officer_moderne : B_Soldier_f
 	engineer = 1;
 	detectSkill = 31;
 	uniformClass = "cgqc_uniform_mk1";
-	weapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
-	respawnWeapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
+	weapons[] = {"cgqc_item_rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
+	respawnWeapons[] = {"cgqc_item_rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	items[] = {"ItemAndroid", "ItemcTabHCam", "ACRE_PRC343", "ACRE_PRC152",
 			   "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
 			   "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing",
@@ -59,8 +59,8 @@ class cgqc_officer_moderne : B_Soldier_f
 					  "ACE_IR_Strobe_Item", "ACE_microDAGR"};
 	magazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
 	respawnMagazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
-	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_cap_green", "cgqc_vest_mk1_belt", "None"};
-	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_cap_green", "cgqc_vest_mk1_belt", "None"};
+	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "cgqc_item_rangefinder", "cgqc_cap_green", "cgqc_vest_mk1_belt", "None"};
+	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "cgqc_item_rangefinder", "cgqc_cap_green", "cgqc_vest_mk1_belt", "None"};
 	backpack = "cgqc_pack_mk1_magic";
 	editorPreview = "\CGQC_2022\pics\cgqc_officer_moderne.jpg";
 };
