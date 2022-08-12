@@ -8,7 +8,7 @@ class cgqc_soldat_moderne : B_Soldier_f
 	editorSubcategory = "EdSubcat_cgqc_Training";
 	side = 1;
 	displayName = "Soldat (Moderne)";
-	uniformClass = "U_mas_can_B_CombatUniform_S_NTOG";
+	uniformClass = "cgqc_uniform_mk1";
 	weapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	respawnWeapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	items[] = {"ItemAndroid", "ItemcTabHCam", "ACRE_PRC343",
@@ -25,9 +25,9 @@ class cgqc_soldat_moderne : B_Soldier_f
 					  "ACE_IR_Strobe_Item", "ACE_microDAGR"};
 	magazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
 	respawnMagazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
-	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "V_Rangemaster_belt", "None"};
-	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "V_Rangemaster_belt", "None"};
-	backpack = "CGQC_Soldat_Base_pack";
+	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "cgqc_vest_mk1_belt", "None"};
+	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_beret_vanilla", "cgqc_vest_mk1_belt", "None"};
+	backpack = "cgqc_pack_mk1_magic";
 	editorPreview = "\CGQC_2022\pics\cgqc_soldat_moderne.jpg";
 };
 
@@ -42,7 +42,7 @@ class cgqc_officer_moderne : B_Soldier_f
 	canDeactivateMines = 1;
 	engineer = 1;
 	detectSkill = 31;
-	uniformClass = "U_mas_can_B_CombatUniform_S_NTOG";
+	uniformClass = "cgqc_uniform_mk1";
 	weapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	respawnWeapons[] = {"Rangefinder", "cgqc_gun_glock19_wood", "Put", "Throw"};
 	items[] = {"ItemAndroid", "ItemcTabHCam", "ACRE_PRC343", "ACRE_PRC152",
@@ -59,8 +59,8 @@ class cgqc_officer_moderne : B_Soldier_f
 					  "ACE_IR_Strobe_Item", "ACE_microDAGR"};
 	magazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
 	respawnMagazines[] = {"Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP", "Tier1_15Rnd_9x19_JHP"};
-	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_cap_green", "V_Rangemaster_belt", "None"};
-	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_cap_green", "V_Rangemaster_belt", "None"};
-	backpack = "CGQC_Soldat_Base_pack";
+	linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_cap_green", "cgqc_vest_mk1_belt", "None"};
+	respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "Rangefinder", "cgqc_cap_green", "cgqc_vest_mk1_belt", "None"};
+	backpack = "cgqc_pack_mk1_magic";
 	editorPreview = "\CGQC_2022\pics\cgqc_officer_moderne.jpg";
 };

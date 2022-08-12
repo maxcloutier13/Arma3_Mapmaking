@@ -1,5 +1,5 @@
 class B_AssaultPack_rgr;
-class CGQC_Soldat_Base_pack : B_AssaultPack_rgr
+class cgqc_pack_mk1_magic : B_AssaultPack_rgr
 {
     scope = 2;
     author = "silent1";

@@ -1,5 +1,10 @@
-// Woodland silencer
 class muzzle_snds_B_snd_F;
+class rhsusf_acc_premier_mrds;
+class bipod_01_F_snd;
+class rhsusf_acc_anpeq15;
+class rhsusf_acc_anpeq15_light;
+
+// Woodland silencer
 class cgqc_acc_silencer_wood : muzzle_snds_B_snd_F
 {
 	author = "silent1";
@@ -9,7 +14,6 @@ class cgqc_acc_silencer_wood : muzzle_snds_B_snd_F
 };
 
 // Woodland scope
-class rhsusf_acc_premier_mrds;
 class cgqc_acc_M8541A_wood : rhsusf_acc_premier_mrds
 {
 	scope = 2;
@@ -19,7 +23,6 @@ class cgqc_acc_M8541A_wood : rhsusf_acc_premier_mrds
 };
 
 // Woodland bipod
-class bipod_01_F_snd;
 class cgqc_acc_bipod_wood : bipod_01_F_snd
 {
 	author = "$STR_A3_Bohemia_Interactive";
@@ -30,7 +33,6 @@ class cgqc_acc_bipod_wood : bipod_01_F_snd
 };
 
 // Woodland laser/light combo
-class rhsusf_acc_anpeq15;
 class cgqc_acc_anpeq15_laser_wood : rhsusf_acc_anpeq15
 {
 	picture = "\CGQC_2022\acc\ANPEQ15_wood\cgqc_ANPEQ15_laser_wood_pic.paa";
@@ -42,7 +44,6 @@ class cgqc_acc_anpeq15_laser_wood : rhsusf_acc_anpeq15
 	model = "\CGQC_2022\acc\cgqc_acc_ANPEQ15_wood";
 };
 
-class rhsusf_acc_anpeq15_light;
 class cgqc_acc_anpeq15_light_wood : rhsusf_acc_anpeq15_light
 {
 	picture = "\CGQC_2022\acc\ANPEQ15_wood\cgqc_ANPEQ15_light_wood_pic";

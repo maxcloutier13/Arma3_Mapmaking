@@ -1,19 +1,21 @@
 class B_Kitbag_rgr;
-class CGQC_Soldat_Base_pack;
+class cgqc_pack_mk1_magic;
 class B_Parachute;
 class Box_NATO_Equip_F;
+class B_supplyCrate_F;
 
 // Mk1 box
-class cgqc_mk1_rolebox : Box_NATO_Equip_F
+class cgqc_box_mk1_rolebox : Box_NATO_Equip_F
 {
     author = "silent1";
-    _generalMacro = "cgqc_mk1_rolebox";
+    _generalMacro = "cgqc_box_mk1_rolebox";
     displayName = "CGQC MK1 Rolebox";
-    hiddenSelectionsTextures[] = {"\CGQC_2022\containers\cgqc_mk1_rolebox_texture.paa", ""};
+    hiddenSelectionsTextures[] = {"\CGQC_2022\containers\cgqc_box_mk1_rolebox_texture.paa",
+                                  "\CGQC_2022\containers\cgqc_box_mk1_rolebox_label.paa"};
     editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Equip_F.jpg";
     class EventHandlers
     {
-        init = "_this execVM '\CGQC_2022\loadouts\cgqc_mk1_box.sqf'";
+        init = "_this execVM '\CGQC_2022\loadouts\cgqc_box_mk1.sqf'";
     };
     class SimpleObject
     {
@@ -35,19 +37,51 @@ class cgqc_mk1_rolebox : Box_NATO_Equip_F
     };
 };
 
+// Original training map box
+class cgqc_box_original : B_supplyCrate_F
+{
+    author = "silent1";
+    _generalMacro = "cgqc_box_original";
+    displayName = "CGQC SupplyBox Originale";
+    hiddenSelectionsTextures[] = {"\CGQC_2022\containers\cgqc_box_originale.paa"};
+    editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\C_IDAP_supplyCrate_F.jpg";
+    class EventHandlers
+    {
+        init = "_this execVM '\CGQC_2022\loadouts\cgqc_box_original.sqf'";
+    };
+    class SimpleObject
+    {
+        eden = 1;
+        animate[] = {};
+        hide[] = {};
+        verticalOffset = 0.892;
+        verticalOffsetWorld = 0;
+        init = "''";
+    };
+    class TransportMagazines
+    {
+    };
+    class TransportWeapons
+    {
+    };
+    class TransportItems
+    {
+    };
+};
+
 // Basic Backpacks --------------------------------------------------------------------------------------
-class CGQC_pack_kitbag_green : B_Kitbag_rgr
+class cgqc_pack_mk1_kitbag : B_Kitbag_rgr
 {
     scope = 2;
     author = "silent1";
-    _generalMacro = "CGQC_pack_kitbag_green";
+    _generalMacro = "cgqc_pack_mk1_kitbag";
     maximumLoad = 320;
     mass = 20;
-    displayName = "CGQC Kitbag Vert";
+    displayName = "CGQC Kitbag mk1 Vert";
 };
 
 // mk1 Backpacks --------------------------------------------------------------------------------------
-class CGQC_mk1_0_HQ_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_0_HQ_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -131,7 +165,7 @@ class CGQC_mk1_0_HQ_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_0_TeamLeader_Carbine_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_0_TeamLeader_Carbine_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -230,7 +264,7 @@ class CGQC_mk1_0_TeamLeader_Carbine_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_1_Rifleman_Carbine_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_1_Rifleman_Carbine_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -304,7 +338,7 @@ class CGQC_mk1_1_Rifleman_Carbine_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_1_Rifleman_CQB_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_1_Rifleman_CQB_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -383,7 +417,7 @@ class CGQC_mk1_1_Rifleman_CQB_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_2_LMG_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_2_LMG_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -457,7 +491,7 @@ class CGQC_mk1_2_LMG_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_2_HMG_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_2_HMG_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -536,7 +570,7 @@ class CGQC_mk1_2_HMG_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_2_Marksman_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_2_Marksman_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -615,7 +649,7 @@ class CGQC_mk1_2_Marksman_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_2_Sniper_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_2_Sniper_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -694,7 +728,7 @@ class CGQC_mk1_2_Sniper_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_1_Engineer_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_1_Engineer_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -798,7 +832,7 @@ class CGQC_mk1_1_Engineer_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_1_Medic_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_1_Medic_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -892,7 +926,7 @@ class CGQC_mk1_1_Medic_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_3_AT_MAAWS_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_3_AT_MAAWS_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -971,7 +1005,7 @@ class CGQC_mk1_3_AT_MAAWS_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_4_Tank_Driver_pack : CGQC_Soldat_Base_pack
+class CGQC_mk1_4_Tank_Driver_pack : cgqc_pack_mk1_magic
 {
     scope = 1;
     class TransportMagazines
@@ -1023,7 +1057,7 @@ class CGQC_mk1_4_Pilot_Jet_pack : B_Parachute
     };
 };
 
-class CGQC_mk1_0_TeamLeader_CQB_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_0_TeamLeader_CQB_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines
@@ -1097,7 +1131,7 @@ class CGQC_mk1_0_TeamLeader_CQB_pack : CGQC_pack_kitbag_green
     };
 };
 
-class CGQC_mk1_3_AT_Javelin_pack : CGQC_pack_kitbag_green
+class CGQC_mk1_3_AT_Javelin_pack : cgqc_pack_mk1_kitbag
 {
     scope = 1;
     class TransportMagazines

@@ -22,9 +22,9 @@ _unit addWeapon "cgqc_gun_glock19_wood";
 _unit addHandgunItem "Tier1_20Rnd_9x19_FMJ";
 
 comment "Add containers";
-_unit forceAddUniform "U_mas_can_B_CombatUniform_S_NTOG";
-_unit addVest "UK3CB_V_Pilot_Vest";
-_unit addBackpack "CGQC_Soldat_Base_pack";
+_unit forceAddUniform "cgqc_uniform_mk1";
+_unit addVest "cgqc_vest_mk1_pilot";
+_unit addBackpack "cgqc_pack_mk1_magic";
 
 comment "Add binoculars";
 _unit addWeapon "Rangefinder";
@@ -72,7 +72,7 @@ _unit addItemToBackpack "ToolKit";
 for "_i" from 1 to 2 do {
 	_unit addItemToBackpack "HandGrenade";
 };
-_unit addHeadgear "rhsusf_cvc_green_ess";
+_unit addHeadgear "cgqc_helmet_mk1_tank";
 _unit addGoggles "G_mas_can_balaM_b";
 
 comment "Add items";

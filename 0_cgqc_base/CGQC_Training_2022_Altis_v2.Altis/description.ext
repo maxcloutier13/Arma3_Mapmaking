@@ -21,7 +21,6 @@ class ACEX_Fortify_Presets {
         objects[] = {
             {"Land_Sign_MinesDanger_English_F", 10},
 			{"Land_Sign_MinesTall_English_F", 5}
-
 		};
 	};
 };

@@ -22,7 +22,7 @@ _unit addWeapon "cgqc_gun_glock19_wood";
 
 comment "Add containers";
 _unit forceAddUniform "U_mas_can_B_CombatUniform_S_SWAT";
-_unit addVest "UK3CB_V_Pilot_Vest_Black";
+_unit addVest "cgqc_vest_mk1_pilot";
 _unit addBackpack "CGQC_mk1_4_crew_heli_pack";
 
 comment "Add binoculars";

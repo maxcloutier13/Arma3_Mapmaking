@@ -15,7 +15,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_blockII";
+_unit addWeapon "cgqc_gun_mk1_m4a1blkII";
 _unit addPrimaryWeaponItem "Tier1_KAC_556_QDC_CQB_Black";
 _unit addPrimaryWeaponItem "Tier1_M4BII_NGAL_M300C_Black";
 _unit addPrimaryWeaponItem "Tier1_Razor_Gen2_16_Geissele_Docter";
@@ -25,9 +25,9 @@ _unit addWeapon "cgqc_gun_glock19_wood";
 _unit addHandgunItem "Tier1_15Rnd_9x19_JHP";
 
 comment "Add containers";
-_unit forceAddUniform "U_mas_can_B_CombatUniform_S_NTOG";
-_unit addVest "V_mas_can_PlateCarrierRF_tan";
-_unit addBackpack "CGQC_pack_kitbag_green";
+_unit forceAddUniform "cgqc_uniform_mk1";
+_unit addVest "cgqc_vest_mk1_tan_rf";
+_unit addBackpack "cgqc_pack_mk1_kitbag";
 
 comment "Add binoculars";
 _unit addWeapon "Rangefinder";
@@ -107,7 +107,7 @@ _unit addItemToBackpack "B_IR_Grenade";
 for "_i" from 1 to 7 do {
 	_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
 };
-_unit addHeadgear "cgqc_helmet_medic_green";
+_unit addHeadgear "cgqc_helmet_mk1_medic";
 _unit addGoggles "G_mas_can_balaM_T";
 
 comment "Add items";

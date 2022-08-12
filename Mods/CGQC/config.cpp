@@ -23,7 +23,7 @@ class CfgPatches
 		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
 		units[] = {"CGQC_Soldat_Base",
 				   "CGQC_Officer_Base",
-				   "CGQC_Soldat_Base_pack",
+				   "cgqc_pack_mk1_magic",
 				   "cgqc_flag_coop_black",
 				   "cgqc_flag_coop_white",
 				   "cgqc_flag_logo_black",
@@ -56,41 +56,41 @@ class CfgPatches
 				   "Weapon_cgqc_gun_spar17_canpat",
 				   "Weapon_cgqc_gun_spar17_wood"};
 		// List of weapons (CfgWeapons classes) contained in the addon.
-		weapons[] = {"cgqc_beret_vanilla", "cgqc_beret_green", "cgqc_beret_blue", "cgqc_cap_green",
-					 "cgqc_helmet_cloutier_samurai", "cgqc_helmet_crew_cloutier_samurai",
+		weapons[] = {"cgqc_beret_vanilla",
+					 "cgqc_beret_green",
+					 "cgqc_beret_blue",
+					 "cgqc_cap_green",
+					 "cgqc_helmet_cloutier_samurai",
+					 "cgqc_helmet_crew_cloutier_samurai",
 					 "cgqc_uniform_instructeur",
-					 "cgqc_gun_spar17_tremblay", "cgqc_gun_spar17_canpat", "cgqc_gun_spar17_wood",
+					 "cgqc_gun_spar17_tremblay",
+					 "cgqc_gun_spar17_canpat",
+					 "cgqc_gun_spar17_wood",
 					 "cgqc_gun_p99_wood"};
 	};
 };
-
-// Faction definition ------------------------------------------------------------------------------------------------------
+// Faction
 class cfgFactionClasses
 {
 #include "cfg_factions.cpp"
 };
-
-// Custom face definition --------------------------------------------------------------------------------------------------
+// Heads/Faces
 class CfgFaces
 {
 #include "cfg_heads.cpp"
 };
-
+// Guns and equipment
 class cfgWeapons
 {
-// Custom helmets -----------------------------------------------------------------------------------------------------------
 #include "cfg_helmets.cpp"
-// Custom guns --------------------------------------------------------------------------------------------------------------
 #include "cfg_guns.cpp"
 };
-
-// Custom patches -----------------------------------------------------------------------------------------------------------
+// Patches
 class cfgUnitInsignia
 {
 #include "cfg_patches.cpp"
 };
-
-// Custom Editor category for units ----------------------------------------------------------------------------
+// Editor categories
 class CfgEditorSubcategories
 {
 	class EdSubcat_cgqc_Training
@@ -98,7 +98,7 @@ class CfgEditorSubcategories
 		displayName = "Men (Training)";
 	};
 };
-// Custom vehicles/objects --------------------------------------------------------------------------------------------------
+// Units, backpacks, flags
 class cfgVehicles
 {
 #include "cfg_flags.cpp"
@@ -106,4 +106,5 @@ class cfgVehicles
 #include "cfg_backpacks.cpp"
 #include "cfg_items.cpp"
 };
-#include "cfg_autorank.cpp"
+// Custom events
+#include "cfg_eventhandlers.cpp"

@@ -27,6 +27,8 @@ class CfgPatches
 							"mas_can_lite_common"};
 		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
 		units[] = {
+			"cgqc_box_mk1_rolebox",
+			"cgqc_box_original",
 			"CGQC_mk1_0_HQ_pack",
 			"CGQC_mk1_0_TeamLeader_Carbine_pack",
 			"CGQC_mk1_0_TeamLeader_CQB_pack",
@@ -46,7 +48,7 @@ class CfgPatches
 			"CGQC_mk1_4_crew_heli_pack",
 			"cgqc_soldat_moderne",
 			"CGQC_officer_moderne",
-			"CGQC_pack_kitbag_green",
+			"cgqc_pack_mk1_kitbag",
 			"CGQC_mk1_0_HQ",
 			"CGQC_mk1_0_TeamLeader_Carbine",
 			"CGQC_mk1_0_TeamLeader_CQB",
@@ -65,28 +67,38 @@ class CfgPatches
 			"CGQC_mk1_4_Pilot_Jet",
 			"CGQC_mk1_4_crew_heli"};
 		weapons[] = {
-			"cgqc_helmet_medic_green",
-			"cgqc_helmet_cgqc_green",
+			"cgqc_helmet_mk1",
+			"cgqc_helmet_mk1_medic",
+			"cgqc_helmet_mk1_tank",
+			"cgqc_uniform_mk1",
+			"cgqc_vest_mk1_tan_lr",
+			"cgqc_vest_mk1_tan_rf",
+			"cgqc_vest_mk1_tan_ar",
+			"cgqc_vest_mk1_pilot",
 			"cgqc_gun_glock19_wood",
+			"cgqc_gun_law_wood",
 			"cgqc_acc_M8541A_wood",
 			"cgqc_acc_bipod_wood",
 			"cgqc_acc_anpeq15_laser_wood",
 			"cgqc_acc_silencer_wood"
-			"cgqc_mk1_weap_hq_m4a1",
-			"cgqc_mk1_weap_TL_m4a1",
-			"cgqc_mk1_weap_rifleman_m4a1",
-			"cgqc_mk1_weap_rifleman_mk18",
-			"cgqc_mk1_weap_lmg_mk46",
-			"cgqc_mk1_weap_hmg_mk48",
-			"cgqc_mk1_weap_marksman_417",
-			"cgqc_mk1_weap_sniper_m200",
-			"cgqc_mk1_weap_engineer_m4a1",
-			"cgqc_mk1_weap_medic_m4a1",
-			"cgqc_mk1_weap_AT_MAAWS",
-			"cgqc_mk1_weap_crew_mp7",
-			"cgqc_mk1_weap_TL_mk18",
-			"cgqc_mk1_weap_AT_m4a1",
-			"cgqc_mk1_weap_AT_Javelin"};
+			"cgqc_gun_mk1_m4a1blkII",
+			"cgqc_gun_mk1_m4a1blkII_gl",
+			"cgqc_gun_mk1_mk18",
+			"cgqc_gun_mk1_hq_m4a1",
+			"cgqc_gun_mk1_TL_m4a1",
+			"cgqc_gun_mk1_rifleman_m4a1",
+			"cgqc_gun_mk1_rifleman_mk18",
+			"cgqc_gun_mk1_mk46",
+			"cgqc_gun_mk1_mk48",
+			"cgqc_gun_mk1_marksman_417",
+			"cgqc_gun_mk1_m200",
+			"cgqc_gun_mk1_engineer_m4a1",
+			"cgqc_gun_mk1_medic_m4a1",
+			"cgqc_gun_mk1_MAAWS",
+			"cgqc_gun_mk1_mp7",
+			"cgqc_gun_mk1_mk18_gl",
+			"cgqc_gun_mk1_AT_m4a1",
+			"cgqc_gun_mk1_Javelin"};
 	};
 };
 
@@ -98,6 +110,10 @@ class cfgWeapons
 {
 // Custom helmets ---------------------------------------
 #include "cfg_helmets.cpp"
+// Custom uniforms ---------------------------------------
+#include "cfg_uniforms.cpp"
+// Custom vests ---------------------------------------
+#include "cfg_vests.cpp"
 // Custom guns ---------------------------------------
 #include "cfg_guns.cpp"
 // Custom accessories ---------------------------------------

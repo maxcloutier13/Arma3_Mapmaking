@@ -23,7 +23,7 @@ _unit addHandgunItem "Tier1_20Rnd_9x19_FMJ";
 
 comment "Add containers";
 _unit forceAddUniform "U_I_pilotCoveralls";
-_unit addVest "UK3CB_V_Pilot_Vest";
+_unit addVest "cgqc_vest_mk1_pilot";
 _unit addBackpack "CGQC_mk1_4_Pilot_Jet_pack";
 
 comment "Add binoculars";

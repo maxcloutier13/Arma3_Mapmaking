@@ -6,6 +6,13 @@ class cgqc_patch_logo
 	texture = "\cgqc\patches\cgqc_patch_logo.paa";
 	textureVehicle = "\cgqc\patches\cgqc_patch_logo.paa";
 };
+class cgqc_patch_outsider
+{
+	displayName = "CGQC Outsider";
+	author = "silent1";
+	texture = "\cgqc\patches\cgqc_patch_outsider.paa";
+	textureVehicle = "\cgqc\patches\cgqc_patch_outsider.paa";
+};
 class cgqc_patch_logo_relief
 {
 	displayName = "CGQC Logo relief";

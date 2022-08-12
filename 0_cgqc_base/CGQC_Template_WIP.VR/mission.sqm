@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=969;
+		nextID=1025;
 	};
 	class Camera
 	{
-		pos[]={2116.0364,9.5546246,7089.5415};
-		dir[]={-0.85458374,-0.31601685,-0.41235721};
-		up[]={-0.28472427,0.94871628,-0.1373897};
-		aside[]={-0.43462849,2.249144e-006,0.90072405};
+		pos[]={2101.4753,12.693557,7176.0645};
+		dir[]={-0.0084189866,-0.77346635,0.63380015};
+		up[]={-0.010273234,0.63383931,0.77339607};
+		aside[]={0.99992055,1.2143573e-008,0.01328216};
 	};
 };
 binarizationWanted=0;
@@ -751,7 +751,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -996,7 +996,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1293,7 +1293,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="CGQC - 220618";
-			state=1;
 			class Entities
 			{
 				items=4;
@@ -2661,7 +2660,6 @@ class Mission
 							{
 							};
 							id=313;
-							atlOffset=-5;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -4055,7 +4053,6 @@ class Mission
 							{
 							};
 							id=327;
-							atlOffset=-5;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -4389,7 +4386,6 @@ class Mission
 							{
 							};
 							id=341;
-							atlOffset=-5;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -4723,7 +4719,6 @@ class Mission
 							{
 							};
 							id=345;
-							atlOffset=-5;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5077,7 +5072,6 @@ class Mission
 							{
 							};
 							id=349;
-							atlOffset=-5;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5214,7 +5208,6 @@ class Mission
 							{
 							};
 							id=353;
-							atlOffset=-5;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5241,7 +5234,6 @@ class Mission
 						};
 					};
 					id=96;
-					atlOffset=-5;
 				};
 				class Item1
 				{
@@ -32764,7 +32756,7 @@ class Mission
 				};
 			};
 			id=23;
-			atlOffset=-0.61560917;
+			atlOffset=0.009390831;
 		};
 		class Item1
 		{
@@ -37162,7 +37154,7 @@ class Mission
 								};
 							};
 							id=643;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -37488,7 +37480,7 @@ class Mission
 								};
 							};
 							id=639;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -37820,7 +37812,7 @@ class Mission
 								};
 							};
 							id=641;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38152,7 +38144,7 @@ class Mission
 								};
 							};
 							id=645;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38484,7 +38476,7 @@ class Mission
 								};
 							};
 							id=647;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38821,7 +38813,7 @@ class Mission
 								};
 							};
 							id=649;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -39172,7 +39164,7 @@ class Mission
 								};
 							};
 							id=651;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -39530,7 +39522,7 @@ class Mission
 								};
 							};
 							id=655;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -39881,7 +39873,7 @@ class Mission
 								};
 							};
 							id=663;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -40228,7 +40220,7 @@ class Mission
 								};
 							};
 							id=653;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -40519,7 +40511,7 @@ class Mission
 								};
 							};
 							id=725;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -40801,7 +40793,7 @@ class Mission
 								};
 							};
 							id=721;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -41091,7 +41083,7 @@ class Mission
 								};
 							};
 							id=727;
-							type="CGQC_Soldat_Moderne";
+							type="cgqc_soldat_moderne";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -41556,7 +41548,7 @@ class Mission
 							};
 							id=656;
 							type="Land_Bandage_F";
-							atlOffset=4.7683716e-007;
+							atlOffset=0.021905422;
 						};
 						class Item1
 						{
@@ -41659,7 +41651,7 @@ class Mission
 						};
 					};
 					id=605;
-					atlOffset=0.37155914;
+					atlOffset=0.37190151;
 				};
 				class Item8
 				{
@@ -42550,7 +42542,7 @@ class Mission
 				};
 			};
 			id=664;
-			atlOffset=0.087300301;
+			atlOffset=0.6984024;
 		};
 		class Item5
 		{
