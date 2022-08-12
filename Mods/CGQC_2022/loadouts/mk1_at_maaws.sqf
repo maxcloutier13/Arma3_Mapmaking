@@ -1,4 +1,4 @@
-_unit = __unit select 1;
+_unit = _this select 1;
 execVM "\CGQC_2022\loadouts\transition.sqf";
 sleep 2;
 _unit setUnitTrait ["Medic", false];
