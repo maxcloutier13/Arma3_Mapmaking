@@ -1,4 +1,4 @@
-_unit = _this select 1;
+_unit = __unit select 1;
 execVM "\CGQC_2022\loadouts\transition.sqf";
 sleep 2;
 _unit setUnitTrait ["Medic", false];
@@ -15,110 +15,110 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add weapons";
-this addWeapon "cgqc_gun_mk1_hk417";
-this addPrimaryWeaponItem "Tier1_SandmanS_Black";
-this addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk_light";
-this addPrimaryWeaponItem "Tier1_Razor_Gen3_110_Geissele_Docter";
-this addPrimaryWeaponItem "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
-this addPrimaryWeaponItem "bipod_01_F_blk";
-this addWeapon "cgqc_gun_glock19_wood";
-this addHandgunItem "Tier1_15Rnd_9x19_JHP";
+_unit addWeapon "cgqc_gun_mk1_hk417";
+_unit addPrimaryWeaponItem "Tier1_SandmanS_Black";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk_light";
+_unit addPrimaryWeaponItem "Tier1_Razor_Gen3_110_Geissele_Docter";
+_unit addPrimaryWeaponItem "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+_unit addPrimaryWeaponItem "bipod_01_F_blk";
+_unit addWeapon "cgqc_gun_glock19_wood";
+_unit addHandgunItem "Tier1_15Rnd_9x19_JHP";
 
 comment "Add containers";
-this forceAddUniform "cgqc_uniform_mk1";
-this addVest "cgqc_vest_mk1_tan_lr";
-this addBackpack "CGQC_units_mk1_2_Marksman_pack";
+_unit forceAddUniform "cgqc_uniform_mk1";
+_unit addVest "cgqc_vest_mk1_tan_lr";
+_unit addBackpack "CGQC_units_mk1_2_Marksman_pack";
 
 comment "Add binoculars";
-this addWeapon "ACE_Vector";
+_unit addWeapon "ACE_Vector";
 
 comment "Add items to containers";
-this addItemToUniform "ItemAndroid";
-this addItemToUniform "ItemcTabHCam";
-this addItemToUniform "ACRE_PRC343";
+_unit addItemToUniform "ItemAndroid";
+_unit addItemToUniform "ItemcTabHCam";
+_unit addItemToUniform "ACRE_PRC343";
 for "_i" from 1 to 15 do {
-	this addItemToUniform "ACE_fieldDressing";
+	_unit addItemToUniform "ACE_fieldDressing";
 };
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_epinephrine";
+	_unit addItemToUniform "ACE_epinephrine";
 };
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_EarPlugs";
+	_unit addItemToUniform "ACE_EarPlugs";
 };
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_morphine";
+	_unit addItemToUniform "ACE_morphine";
 };
-this addItemToUniform "ACE_splint";
+_unit addItemToUniform "ACE_splint";
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_tourniquet";
+	_unit addItemToUniform "ACE_tourniquet";
 };
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_CableTie";
+	_unit addItemToUniform "ACE_CableTie";
 };
-this addItemToUniform "ACE_MapTools";
-this addItemToUniform "ACE_IR_Strobe_Item";
-this addItemToUniform "ACE_microDAGR";
-this addItemToUniform "ACE_RangeCard";
-this addItemToUniform "ACE_ATragMX";
-this addItemToUniform "ACE_Kestrel4500";
+_unit addItemToUniform "ACE_MapTools";
+_unit addItemToUniform "ACE_IR_Strobe_Item";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToUniform "ACE_RangeCard";
+_unit addItemToUniform "ACE_ATragMX";
+_unit addItemToUniform "ACE_Kestrel4500";
 for "_i" from 1 to 5 do {
-	this addItemToVest "ACE_fieldDressing";
+	_unit addItemToVest "ACE_fieldDressing";
 };
 for "_i" from 1 to 2 do {
-	this addItemToVest "ACE_salineIV_500";
+	_unit addItemToVest "ACE_salineIV_500";
 };
-this addItemToVest "ACE_EntrenchingTool";
-this addItemToVest "G_mas_can_gasmask";
-this addItemToVest "ACE_ATragMX";
-this addItemToVest "ACE_Kestrel4500";
+_unit addItemToVest "ACE_EntrenchingTool";
+_unit addItemToVest "G_mas_can_gasmask";
+_unit addItemToVest "ACE_ATragMX";
+_unit addItemToVest "ACE_Kestrel4500";
 for "_i" from 1 to 2 do {
-	this addItemToVest "MiniGrenade";
+	_unit addItemToVest "MiniGrenade";
 };
 for "_i" from 1 to 2 do {
-	this addItemToVest "ACE_M84";
+	_unit addItemToVest "ACE_M84";
 };
 for "_i" from 1 to 6 do {
-	this addItemToVest "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+	_unit addItemToVest "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 };
-this addItemToVest "HandGrenade";
-this addItemToVest "ACE_Chemlight_HiRed";
-this addItemToVest "ACE_Chemlight_IR";
-this addItemToVest "SmokeShell";
+_unit addItemToVest "HandGrenade";
+_unit addItemToVest "ACE_Chemlight_HiRed";
+_unit addItemToVest "ACE_Chemlight_IR";
+_unit addItemToVest "SmokeShell";
 for "_i" from 1 to 10 do {
-	this addItemToBackpack "ACE_fieldDressing";
+	_unit addItemToBackpack "ACE_fieldDressing";
 };
 for "_i" from 1 to 2 do {
-	this addItemToBackpack "ACE_salineIV_500";
+	_unit addItemToBackpack "ACE_salineIV_500";
 };
-this addItemToBackpack "ACE_EntrenchingTool";
-this addItemToBackpack "G_mas_can_gasmask";
-this addItemToBackpack "ACE_ATragMX";
-this addItemToBackpack "ACE_Kestrel4500";
-this addItemToBackpack "ACE_Chemlight_HiRed";
-this addItemToBackpack "ACE_Chemlight_IR";
+_unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "G_mas_can_gasmask";
+_unit addItemToBackpack "ACE_ATragMX";
+_unit addItemToBackpack "ACE_Kestrel4500";
+_unit addItemToBackpack "ACE_Chemlight_HiRed";
+_unit addItemToBackpack "ACE_Chemlight_IR";
 for "_i" from 1 to 3 do {
-	this addItemToBackpack "SmokeShell";
-};
-for "_i" from 1 to 3 do {
-	this addItemToBackpack "SmokeShellBlue";
+	_unit addItemToBackpack "SmokeShell";
 };
 for "_i" from 1 to 3 do {
-	this addItemToBackpack "SmokeShellRed";
+	_unit addItemToBackpack "SmokeShellBlue";
 };
-this addItemToBackpack "B_IR_Grenade";
-this addItemToBackpack "rhsusf_m112_mag";
+for "_i" from 1 to 3 do {
+	_unit addItemToBackpack "SmokeShellRed";
+};
+_unit addItemToBackpack "B_IR_Grenade";
+_unit addItemToBackpack "rhsusf_m112_mag";
 for "_i" from 1 to 13 do {
-	this addItemToBackpack "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+	_unit addItemToBackpack "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 };
 for "_i" from 1 to 3 do {
-	this addItemToBackpack "HandGrenade";
+	_unit addItemToBackpack "HandGrenade";
 };
-this addHeadgear "cgqc_helmet_mk1";
-this addGoggles "G_mas_can_balaM_T";
+_unit addHeadgear "cgqc_helmet_mk1";
+_unit addGoggles "G_mas_can_balaM_T";
 
 comment "Add items";
-this linkItem "ItemMap";
-this linkItem "ItemCompass";
-this linkItem "ItemWatch";
-this linkItem "B_UavTerminal";
-this linkItem "NVGoggles_mas_can_hv";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "B_UavTerminal";
+_unit linkItem "NVGoggles_mas_can_hv";

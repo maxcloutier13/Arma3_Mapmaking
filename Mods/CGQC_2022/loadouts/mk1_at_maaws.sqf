@@ -1,4 +1,4 @@
-_unit = _this select 1;
+_unit = __unit select 1;
 execVM "\CGQC_2022\loadouts\transition.sqf";
 sleep 2;
 _unit setUnitTrait ["Medic", false];
@@ -15,107 +15,107 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add weapons";
-this addWeapon "cgqc_gun_mk1_mk18";
-this addPrimaryWeaponItem "Tier1_KAC_556_QDC_CQB_Black";
-this addPrimaryWeaponItem "Tier1_Mk18_NGAL_M300C_Black";
-this addPrimaryWeaponItem "Tier1_EXPS3_0_3xMag_Black_Up";
-this addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-this addPrimaryWeaponItem "rhsusf_acc_grip2";
-this addWeapon "cgqc_gun_mk1_MAAWS";
-this addSecondaryWeaponItem "MRAWS_HEAT_F";
-this addWeapon "cgqc_gun_glock19_wood";
-this addHandgunItem "Tier1_15Rnd_9x19_JHP";
+_unit addWeapon "cgqc_gun_mk1_mk18";
+_unit addPrimaryWeaponItem "Tier1_KAC_556_QDC_CQB_Black";
+_unit addPrimaryWeaponItem "Tier1_Mk18_NGAL_M300C_Black";
+_unit addPrimaryWeaponItem "Tier1_EXPS3_0_3xMag_Black_Up";
+_unit addPrimaryWeaponItem "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
+_unit addPrimaryWeaponItem "rhsusf_acc_grip2";
+_unit addWeapon "cgqc_gun_mk1_MAAWS";
+_unit addSecondaryWeaponItem "MRAWS_HEAT_F";
+_unit addWeapon "cgqc_gun_glock19_wood";
+_unit addHandgunItem "Tier1_15Rnd_9x19_JHP";
 
 comment "Add containers";
-this forceAddUniform "cgqc_uniform_mk1";
-this addVest "cgqc_vest_mk1_tan_lr";
-this addBackpack "CGQC_units_mk1_3_AT_MAAWS_pack";
+_unit forceAddUniform "cgqc_uniform_mk1";
+_unit addVest "cgqc_vest_mk1_tan_lr";
+_unit addBackpack "CGQC_units_mk1_3_AT_MAAWS_pack";
 
 comment "Add binoculars";
-this addWeapon "cgqc_item_rangefinder";
+_unit addWeapon "cgqc_item_rangefinder";
 
 comment "Add items to containers";
-this addItemToUniform "ItemAndroid";
-this addItemToUniform "ItemcTabHCam";
-this addItemToUniform "ACRE_PRC343";
+_unit addItemToUniform "ItemAndroid";
+_unit addItemToUniform "ItemcTabHCam";
+_unit addItemToUniform "ACRE_PRC343";
 for "_i" from 1 to 19 do {
-	this addItemToUniform "ACE_fieldDressing";
+	_unit addItemToUniform "ACE_fieldDressing";
 };
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_epinephrine";
+	_unit addItemToUniform "ACE_epinephrine";
 };
 for "_i" from 1 to 3 do {
-	this addItemToUniform "ACE_EarPlugs";
+	_unit addItemToUniform "ACE_EarPlugs";
 };
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_morphine";
+	_unit addItemToUniform "ACE_morphine";
 };
-this addItemToUniform "ACE_splint";
+_unit addItemToUniform "ACE_splint";
 for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_tourniquet";
-};
-for "_i" from 1 to 2 do {
-	this addItemToUniform "ACE_CableTie";
-};
-this addItemToUniform "ACE_MapTools";
-this addItemToUniform "ACE_IR_Strobe_Item";
-this addItemToUniform "ACE_microDAGR";
-this addItemToVest "ACE_fieldDressing";
-for "_i" from 1 to 2 do {
-	this addItemToVest "ACE_salineIV_500";
-};
-this addItemToVest "ACE_EntrenchingTool";
-this addItemToVest "G_mas_can_gasmask";
-for "_i" from 1 to 2 do {
-	this addItemToVest "MiniGrenade";
+	_unit addItemToUniform "ACE_tourniquet";
 };
 for "_i" from 1 to 2 do {
-	this addItemToVest "ACE_M84";
+	_unit addItemToUniform "ACE_CableTie";
+};
+_unit addItemToUniform "ACE_MapTools";
+_unit addItemToUniform "ACE_IR_Strobe_Item";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToVest "ACE_fieldDressing";
+for "_i" from 1 to 2 do {
+	_unit addItemToVest "ACE_salineIV_500";
+};
+_unit addItemToVest "ACE_EntrenchingTool";
+_unit addItemToVest "G_mas_can_gasmask";
+for "_i" from 1 to 2 do {
+	_unit addItemToVest "MiniGrenade";
+};
+for "_i" from 1 to 2 do {
+	_unit addItemToVest "ACE_M84";
 };
 for "_i" from 1 to 9 do {
-	this addItemToVest "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
+	_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
 };
-this addItemToVest "ACE_Chemlight_HiRed";
-this addItemToVest "ACE_Chemlight_IR";
+_unit addItemToVest "ACE_Chemlight_HiRed";
+_unit addItemToVest "ACE_Chemlight_IR";
 for "_i" from 1 to 2 do {
-	this addItemToVest "SmokeShell";
+	_unit addItemToVest "SmokeShell";
 };
 for "_i" from 1 to 10 do {
-	this addItemToBackpack "ACE_fieldDressing";
+	_unit addItemToBackpack "ACE_fieldDressing";
 };
 for "_i" from 1 to 2 do {
-	this addItemToBackpack "ACE_salineIV_500";
+	_unit addItemToBackpack "ACE_salineIV_500";
 };
-this addItemToBackpack "ACE_EntrenchingTool";
-this addItemToBackpack "G_mas_can_gasmask";
-this addItemToBackpack "ACE_Chemlight_HiRed";
-this addItemToBackpack "ACE_Chemlight_IR";
+_unit addItemToBackpack "ACE_EntrenchingTool";
+_unit addItemToBackpack "G_mas_can_gasmask";
+_unit addItemToBackpack "ACE_Chemlight_HiRed";
+_unit addItemToBackpack "ACE_Chemlight_IR";
 for "_i" from 1 to 3 do {
-	this addItemToBackpack "SmokeShell";
-};
-for "_i" from 1 to 3 do {
-	this addItemToBackpack "SmokeShellBlue";
+	_unit addItemToBackpack "SmokeShell";
 };
 for "_i" from 1 to 3 do {
-	this addItemToBackpack "SmokeShellRed";
+	_unit addItemToBackpack "SmokeShellBlue";
 };
-this addItemToBackpack "B_IR_Grenade";
-this addItemToBackpack "rhsusf_m112_mag";
+for "_i" from 1 to 3 do {
+	_unit addItemToBackpack "SmokeShellRed";
+};
+_unit addItemToBackpack "B_IR_Grenade";
+_unit addItemToBackpack "rhsusf_m112_mag";
 for "_i" from 1 to 5 do {
-	this addItemToBackpack "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
+	_unit addItemToBackpack "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
 };
 for "_i" from 1 to 2 do {
-	this addItemToBackpack "MRAWS_HEAT_F";
+	_unit addItemToBackpack "MRAWS_HEAT_F";
 };
 for "_i" from 1 to 2 do {
-	this addItemToBackpack "HandGrenade";
+	_unit addItemToBackpack "HandGrenade";
 };
-this addHeadgear "cgqc_helmet_mk1";
-this addGoggles "G_mas_can_balaM_T";
+_unit addHeadgear "cgqc_helmet_mk1";
+_unit addGoggles "G_mas_can_balaM_T";
 
 comment "Add items";
-this linkItem "ItemMap";
-this linkItem "ItemCompass";
-this linkItem "ItemWatch";
-this linkItem "ItemGPS";
-this linkItem "NVGoggles_mas_can_hv";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemGPS";
+_unit linkItem "NVGoggles_mas_can_hv";
