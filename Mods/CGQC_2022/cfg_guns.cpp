@@ -13,6 +13,7 @@ class launch_mas_can_javelin_F;
 class srifle_LRR_F;
 class arifle_SPAR_03_blk_F;
 class Rangefinder;
+class Laserdesignator_03;
 
 // Pistol.
 class cgqc_gun_glock19_wood : Tier1_Glock19_WAR_TB
@@ -47,6 +48,15 @@ class cgqc_item_rangefinder : Rangefinder
 	_generalMacro = "cgqc_item_rangefinder";
 	baseWeapon = "cgqc_item_rangefinder";
 	displayName = "CGQC Rangefinder";
+};
+
+class cgqc_item_laserdesignator : Laserdesignator_03
+{
+	scope = 2;
+	author = "silent1";
+	_generalMacro = "cgqc_item_laserdesignator";
+	baseWeapon = "cgqc_item_laserdesignator";
+	displayName = "CGQC Laser Designator";
 };
 
 // Basic guns -----------------------------------------------------------------------------------

@@ -30,7 +30,7 @@ this addBackpack "CGQC_units_mk1_0_HQ_pack";
 
 comment "Add binoculars";
 this addMagazine "Laserbatteries";
-this addWeapon "Laserdesignator_03";
+this addWeapon "cgqc_item_laserdesignator";
 
 comment "Add items to containers";
 this addItemToUniform "ACRE_PRC343";
