@@ -66,7 +66,8 @@ class CfgPatches
 			"CGQC_units_mk1_4_Tank_Driver",
 			"CGQC_units_mk1_4_Pilot_heli",
 			"CGQC_units_mk1_4_Pilot_Jet",
-			"CGQC_units_mk1_4_crew_heli"};
+			"CGQC_units_mk1_4_crew_heli",
+			"cgqc_heli_ah6"};
 		weapons[] = {
 			"cgqc_helmet_mk1",
 			"cgqc_helmet_mk1_medic",
@@ -135,6 +136,7 @@ class CfgEditorSubcategories
 	};
 };
 // Custom units ----------------------------------------------------------------------------
+#include "cfg_pre_vehicles.cpp"
 class cfgVehicles
 {
 // Containers
@@ -143,6 +145,8 @@ class cfgVehicles
 #include "cfg_units_training.cpp"
 // mk1 units
 #include "cfg_units_mk1.cpp"
+// mk1 vehicles
+#include "cfg_vehicles.cpp"
 };
 // Groups ---------------------------------------------------------------------------------
 #include "cfg_groups.cpp"
