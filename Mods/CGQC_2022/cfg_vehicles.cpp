@@ -4199,7 +4199,7 @@ class cgqc_heli_uh60m : cgqc_heli_UH60M_base
         };
         class MainTurret : MainTurret
         {
-            gunnerType = "rhsusf_army_ucp_helicrew";
+            gunnerType = "CGQC_units_mk1_4_crew_heli";
             isCopilot = 0;
             showAsCargo = 1;
             body = "mainTurret";
@@ -4299,7 +4299,7 @@ class cgqc_heli_uh60m : cgqc_heli_UH60M_base
         };
         class RightDoorGun : MainTurret
         {
-            gunnerType = "rhsusf_army_ucp_helicrew";
+            gunnerType = "CGQC_units_mk1_4_crew_heli";
             body = "Turret_2";
             gun = "Gun_2";
             animationSourceBody = "Turret_2";
