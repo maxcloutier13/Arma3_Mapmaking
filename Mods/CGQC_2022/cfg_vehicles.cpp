@@ -117,6 +117,7 @@ class cgqc_heli_melb_base : Helicopter_Base_H
     dlc = "RHS_USAF";
     side = 1;
     faction = "cgqc";
+#include "loadouts\cgqc_heli_light.sqf"
     crew = "CGQC_units_mk1_4_Pilot_heli";
     model = "rhsusf\addons\rhsusf_melb\MELB.p3d";
     picture = "rhsusf\addons\rhsusf_melb\Data\ui\melb_h_6m_ca.paa";
@@ -3051,15 +3052,7 @@ class cgqc_heli_uh1 : cgqc_heli_uh1_base
     faction = "cgqc";
     crew = "CGQC_units_mk1_4_Pilot_heli";
     typicalCargo[] = {"CGQC_units_mk1_4_crew_heli"};
-    class TransportMagazines
-    {
-    };
-    class TransportItems
-    {
-    };
-    class TransportWeapons
-    {
-    };
+#include "loadouts\cgqc_heli_medium.sqf"
     enableSweep = 0;
     hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod", "decals"};
     hiddenSelectionsTextures[] = {"rhsgref\addons\rhsgref_air\uh1h\data\uh1h_hidf_grey_co.paa",
@@ -3303,63 +3296,7 @@ class cgqc_heli_UH60M_base : cgqc_heli_U60_base
             };
         };
     };
-    class TransportMagazines
-    {
-        class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
-        {
-            magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
-            count = 12;
-        };
-        class _xx_rhs_mag_m67
-        {
-            magazine = "rhs_mag_m67";
-            count = 4;
-        };
-        class _xx_rhs_mag_m18_green
-        {
-            magazine = "rhs_mag_m18_green";
-            count = 2;
-        };
-        class _xx_rhs_mag_m18_red
-        {
-            magazine = "rhs_mag_m18_red";
-            count = 2;
-        };
-        class _xx_rhs_mag_an_m8hc
-        {
-            magazine = "rhs_mag_an_m8hc";
-            count = 4;
-        };
-    };
-    class TransportItems
-    {
-        class _xx_FirstAidKit
-        {
-            name = "FirstAidKit";
-            count = 10;
-        };
-        class _xx_Medikit
-        {
-            name = "Medikit";
-            count = 2;
-        };
-    };
-    class TransportWeapons
-    {
-        class _xx_rhs_weap_m4_carryhandle
-        {
-            weapon = "rhs_weap_m4_carryhandle";
-            count = 2;
-        };
-    };
-    class TransportBackpacks
-    {
-        class _xx_B_Parachute
-        {
-            backpack = "B_Parachute";
-            count = 4;
-        };
-    };
+#include "loadouts\cgqc_heli_medium.sqf"
     radarType = 0;
     attenuationEffectType = "HeliAttenuation";
     occludeSoundsWhenIn = 0.56234133;

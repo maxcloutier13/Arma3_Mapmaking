@@ -1,5 +1,4 @@
-// Heavy helicopter loadout
-
+// Light helicopter loadout
 class TransportMagazines
 {
 	// Grenades ------------------------------------------------
@@ -63,12 +62,12 @@ class TransportMagazines
 	// Explosives ------------------------------------------------
 	class _xx_rhsusf_m112_mag
 	{
-		count = 5;
+		count = 2;
 		magazine = "rhsusf_m112_mag";
 	};
 	class _xx_rhsusf_m112x4_mag
 	{
-		count = 5;
+		count = 1;
 		magazine = "rhsusf_m112x4_mag";
 	};
 };
@@ -77,64 +76,64 @@ class TransportItems
 	// Meds ------------------------------------------------
 	class _xx_ACE_fieldDressing
 	{
-		count = 100;
+		count = 30;
 		name = "ACE_fieldDressing";
 	};
 	class _xx_ACE_salineIV_500
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_salineIV_500";
 	};
 	class _xx_ACE_salineIV
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_salineIV";
 	};
 	class _xx_ACE_epinephrine
 	{
-		count = 20;
+		count = 10;
 		name = "ACE_epinephrine";
 	};
 	class _xx_ACE_morphine
 	{
-		count = 20;
+		count = 10;
 		name = "ACE_morphine";
 	};
 	class _xx_ACE_splint
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_splint";
 	};
 	class _xx_ACE_tourniquet
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_tourniquet";
 	};
 
 	// items ------------------------------------------------
 	class _xx_ACE_EarPlugs
 	{
-		count = 5;
+		count = 2;
 		name = "ACE_EarPlugs";
 	};
 	class _xx_ACRE_PRC343
 	{
-		count = 5;
+		count = 2;
 		name = "ACRE_PRC343";
 	};
 	class _xx_ACRE_PRC152
 	{
-		count = 5;
+		count = 2;
 		name = "ACRE_PRC152";
 	};
 	class _xx_ACE_EntrenchingTool
 	{
-		count = 5;
+		count = 2;
 		name = "ACE_EntrenchingTool";
 	};
 	class _xx_ACE_microDAGR
 	{
-		count = 5;
+		count = 1;
 		name = "ACE_microDAGR";
 	};
 	class _xx_ACE_RangeCard
@@ -144,12 +143,12 @@ class TransportItems
 	};
 	class _xx_G_mas_can_gasmask
 	{
-		count = 10;
+		count = 4;
 		name = "G_mas_can_gasmask";
 	};
 	class _xx_ToolKit
 	{
-		count = 2;
+		count = 1;
 		name = "ToolKit";
 	};
 	class _xx_ACE_DefusalKit
@@ -175,6 +174,6 @@ class TransportBackpacks
 	class _xx_B_Parachute
 	{
 		backpack = "B_Parachute";
-		count = 20;
+		count = 7;
 	};
 };

@@ -1,4 +1,4 @@
-// Heavy helicopter loadout
+// Medium helicopter loadout 
 
 class TransportMagazines
 {
@@ -63,12 +63,12 @@ class TransportMagazines
 	// Explosives ------------------------------------------------
 	class _xx_rhsusf_m112_mag
 	{
-		count = 5;
+		count = 3;
 		magazine = "rhsusf_m112_mag";
 	};
 	class _xx_rhsusf_m112x4_mag
 	{
-		count = 5;
+		count = 2;
 		magazine = "rhsusf_m112x4_mag";
 	};
 };
@@ -77,37 +77,37 @@ class TransportItems
 	// Meds ------------------------------------------------
 	class _xx_ACE_fieldDressing
 	{
-		count = 100;
+		count = 50;
 		name = "ACE_fieldDressing";
 	};
 	class _xx_ACE_salineIV_500
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_salineIV_500";
 	};
 	class _xx_ACE_salineIV
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_salineIV";
 	};
 	class _xx_ACE_epinephrine
 	{
-		count = 20;
+		count = 10;
 		name = "ACE_epinephrine";
 	};
 	class _xx_ACE_morphine
 	{
-		count = 20;
+		count = 10;
 		name = "ACE_morphine";
 	};
 	class _xx_ACE_splint
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_splint";
 	};
 	class _xx_ACE_tourniquet
 	{
-		count = 10;
+		count = 5;
 		name = "ACE_tourniquet";
 	};
 
@@ -175,6 +175,6 @@ class TransportBackpacks
 	class _xx_B_Parachute
 	{
 		backpack = "B_Parachute";
-		count = 20;
+		count = 10;
 	};
 };
