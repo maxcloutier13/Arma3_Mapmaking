@@ -1,1 +1,2 @@
 saving = 0;
+loadScreen = "textures\loading_screen_1.paa";
