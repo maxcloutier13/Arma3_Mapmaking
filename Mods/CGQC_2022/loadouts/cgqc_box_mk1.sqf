@@ -26,7 +26,7 @@ _source addAction ["- Tank Driver/Crew", "\CGQC_2022\loadouts\mk1_driver_tank.sq
 // set default loadouts for CGQC_mk1
 [ "mk1_0_HQ", getUnitLoadout "CGQC_units_mk1_0_HQ" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_0_TeamLeader_Carbine", getUnitLoadout "CGQC_units_mk1_0_TeamLeader_Carbine" ] call ace_arsenal_fnc_addDefaultLoadout;
-[ "mk1_0_TeamLeader_CQB", getUnitLoadout "CGQC_units_mk1_1_Rifleman_Carbine" ] call ace_arsenal_fnc_addDefaultLoadout;
+[ "mk1_0_TeamLeader_CQB", getUnitLoadout "CGQC_units_mk1_0_TeamLeader_CQB" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_1_Rifleman_CQB", getUnitLoadout "CGQC_units_mk1_1_Rifleman_CQB" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_1_Medic", getUnitLoadout "CGQC_units_mk1_1_Medic" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_1_Engineer", getUnitLoadout "CGQC_units_mk1_1_Engineer" ] call ace_arsenal_fnc_addDefaultLoadout;
@@ -37,6 +37,6 @@ _source addAction ["- Tank Driver/Crew", "\CGQC_2022\loadouts\mk1_driver_tank.sq
 [ "mk1_3_AT_MAAWS", getUnitLoadout "CGQC_units_mk1_3_AT_MAAWS" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_3_AT_Javelin", getUnitLoadout "CGQC_units_mk1_3_AT_Javelin" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_4_Tank_Driver", getUnitLoadout "CGQC_units_mk1_4_Tank_Driver" ] call ace_arsenal_fnc_addDefaultLoadout;
-// [ "mk1_4_Pilot_helicopter", getUnitLoadout "CGQC_units_mk1_4_Pilot_heli" ] call ace_arsenal_fnc_addDefaultLoadout;
+[ "mk1_4_Pilot_helicopter", getUnitLoadout "CGQC_units_mk1_4_Pilot_heli" ] call ace_arsenal_fnc_addDefaultLoadout;
 [ "mk1_4_Pilot_Jet", getUnitLoadout "CGQC_units_mk1_4_Pilot_Jet" ] call ace_arsenal_fnc_addDefaultLoadout;
-// [ "mk1_4_crew_helicopter", getUnitLoadout "CGQC_units_mk1_4_crew_heli" ] call ace_arsenal_fnc_addDefaultLoadout;
+[ "mk1_4_crew_helicopter", getUnitLoadout "CGQC_units_mk1_4_crew_heli" ] call ace_arsenal_fnc_addDefaultLoadout;

@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=317;
+		nextID=320;
 	};
 	class LayerIndexProvider
 	{
-		nextID=162;
+		nextID=168;
 	};
 	class Camera
 	{
-		pos[]={2096.2878,12.828257,7128.7485};
-		dir[]={0.0081151146,-0.50792348,-0.86136395};
-		up[]={0.0047850558,0.86140221,-0.50790095};
-		aside[]={-0.99995565,0,-0.0094208196};
+		pos[]={2103.5017,20.919537,7113.209};
+		dir[]={0.0019584449,-0.79656845,-0.60454887};
+		up[]={0.0025804942,0.6045481,-0.79656512};
+		aside[]={-0.99999803,2.6384441e-009,-0.0032395159};
 	};
 };
 binarizationWanted=0;
@@ -1448,15 +1448,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2097.9517,5.3815289,7093.979};
-						angles[]={0,4.712389,0};
+						position[]={2098,5.3815289,7096};
+						angles[]={-0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
 					};
-					id=270;
+					id=317;
 					type="cgqc_box_mk1_rolebox";
 				};
 				class Item1
@@ -1464,15 +1464,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2094,5.3815289,7094};
-						angles[]={0,4.712389,0};
+						position[]={2094,5.3815289,7096};
+						angles[]={-0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
 					};
-					id=271;
+					id=318;
 					type="cgqc_box_mk1_plus";
 				};
 				class Item2
@@ -1480,14 +1480,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2110,5.8924227,7096};
+						position[]={2110.0349,5.8924227,7096.1724};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
 					};
-					id=284;
+					id=319;
 					type="cgqc_box_original";
 				};
 			};

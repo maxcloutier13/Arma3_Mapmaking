@@ -3,7 +3,7 @@ class TransportMagazines
 	// Grenades ------------------------------------------------
 	class _xx_HandGrenade
 	{
-		count = 10;
+		count = 5;
 		magazine = "HandGrenade";
 	};
 	class _xx_ACE_Chemlight_HiRed
@@ -18,43 +18,43 @@ class TransportMagazines
 	};
 	class _xx_SmokeShell
 	{
-		count = 10;
+		count = 5;
 		magazine = "SmokeShell";
 	};
 	class _xx_SmokeShellBlue
 	{
-		count = 10;
+		count = 5;
 		magazine = "SmokeShellBlue";
 	};
 	class _xx_SmokeShellRed
 	{
-		count = 10;
+		count = 5;
 		magazine = "SmokeShellRed";
 	};
 	class _xx_B_IR_Grenade
 	{
-		count = 10;
+		count = 5;
 		magazine = "B_IR_Grenade";
 	};
 	// ammo ------------------------------------------------
 	class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull
 	{
-		count = 50;
+		count = 20;
 		magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
 	};
 	class _xx_ACE_20Rnd_762x51_Mk319_Mod_0_Mag
 	{
-		count = 50;
+		count = 20;
 		magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 	};
 	class _xx_7Rnd_408_Mag
 	{
-		count = 50;
+		count = 20;
 		magazine = "7Rnd_408_Mag";
 	};
 	class _xx_Tier1_15Rnd_9x19_JHP
 	{
-		count = 50;
+		count = 20;
 		magazine = "Tier1_15Rnd_9x19_JHP";
 	};
 
@@ -145,12 +145,6 @@ class TransportItems
 		count = 10;
 		name = "G_mas_can_gasmask";
 	};
-	class _xx_NVGoggles_mas_can_hv
-	{
-		count = 2;
-		name = "NVGoggles_mas_can_hv";
-	};
-
 	class _xx_ToolKit
 	{
 		count = 2;
