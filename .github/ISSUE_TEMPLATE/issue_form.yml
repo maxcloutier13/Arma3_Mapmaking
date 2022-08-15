@@ -1,6 +1,6 @@
 name: CGQC Bug Report
 description: Bug Report
-title: "[Bug]: "
+title: ""
 labels: ["bug", "triage"]
 assignees:
   - octocat
