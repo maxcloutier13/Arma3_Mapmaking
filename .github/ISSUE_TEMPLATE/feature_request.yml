@@ -22,6 +22,6 @@ body:
       label: Que voulez vous ajouter au mod?
       description: Votre suggestion
       placeholder: Donnez le plus d'info possible.
-      value: ""
+      value: "Votre suggestion"
     validations:
       required: true
