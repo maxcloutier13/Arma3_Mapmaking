@@ -1,0 +1,10 @@
+name: CGQC Rapport de problème
+description: Quest-ce qui s'est passé?
+labels: [bug]
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: What happened?
+  validations:
+    required: true
