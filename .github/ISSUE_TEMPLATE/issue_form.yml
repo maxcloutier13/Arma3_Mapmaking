@@ -5,6 +5,6 @@ body:
 - type: textarea
   id: description
   attributes:
-    label: What happened?
+    label: Quest-ce qui s'est passé?
   validations:
     required: true
