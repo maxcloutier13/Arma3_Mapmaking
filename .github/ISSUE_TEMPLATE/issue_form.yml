@@ -8,4 +8,10 @@ body:
     label: Quest-ce qui s'est passé?
   validations:
     required: true
+    - type: textarea
+  id: ident
+  attributes:
+    label: Qui es-tu?
+  validations:
+    required: true
 
