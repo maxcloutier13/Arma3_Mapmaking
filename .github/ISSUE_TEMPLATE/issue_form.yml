@@ -1,5 +1,5 @@
-name: Bug Report
-description: File a bug report
+name: CGQC Bug Report
+description: Bug Report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
@@ -8,13 +8,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Merci de prendre le temps de remplir ce formulaire!!
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Contact
+      description: Quel est votre nom?
     validations:
       required: false
   - type: textarea
