@@ -9,9 +9,3 @@ body:
       description: Qui es-tu?
     validations:
       required: false
-- type: textarea
-  id: description
-  attributes:
-    label: Quest-ce qui s'est passé?
-  validations:
-    required: true
