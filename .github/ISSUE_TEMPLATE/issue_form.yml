@@ -22,6 +22,6 @@ body:
       label: Que s'est il passé?
       description: Quel est le bug?
       placeholder: Donnez le plus d'info possible.
-      value: "A bug happened!"
+      value: "Ça chie!"
     validations:
       required: true
