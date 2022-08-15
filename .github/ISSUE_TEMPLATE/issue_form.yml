@@ -3,6 +3,12 @@ description: Quest-ce qui s'est passé?
 labels: [bug]
 body:
 - type: textarea
+  id: user
+  attributes:
+    label: Nom du joueur:
+  validations:
+    required: true
+- type: textarea
   id: description
   attributes:
     label: Quest-ce qui s'est passé?
