@@ -2,12 +2,13 @@ name: CGQC Rapport de problème
 description: Quest-ce qui s'est passé?
 labels: [bug]
 body:
-- type: textarea
-  id: user
-  attributes:
-    label: Nom du joueur:
-  validations:
-    required: true
+- type: input
+    id: contact
+    attributes:
+      label: Nom du joueur
+      description: Qui es-tu?
+    validations:
+      required: false
 - type: textarea
   id: description
   attributes:
