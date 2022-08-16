@@ -9,8 +9,3 @@ Ma map de training custom
 
 ### 1_"missionName"
 Missions en dévelopement
-
-### Mods
-Les mods officiels du groupe
- 
-This is a test.
