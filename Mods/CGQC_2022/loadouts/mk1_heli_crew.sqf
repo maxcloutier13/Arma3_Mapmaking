@@ -22,16 +22,18 @@ _unit addWeapon "cgqc_gun_glock19_wood";
 
 comment "Add containers";
 _unit forceAddUniform "cgqc_uniform_mk1_helipilot";
-_unit addVest "UK3CB_V_Pilot_Vest_Black";
+_unit addVest "cgqc_vest_mk1_pilot_black";
 _unit addBackpack "CGQC_units_mk1_4_crew_heli_pack";
 
 comment "Add binoculars";
 _unit addWeapon "cgqc_item_rangefinder";
 
 comment "Add items to containers";
-_unit addItemToUniform "ItemAndroid";
-_unit addItemToUniform "ItemcTabHCam";
+_unit addItemToUniform "ACRE_PRC343";
 _unit addItemToUniform "ACRE_PRC152";
+_unit addItemToUniform "ItemAndroid";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToUniform "ItemcTabHCam";
 for "_i" from 1 to 10 do {
 	_unit addItemToUniform "ACE_fieldDressing";
 };
@@ -49,21 +51,16 @@ for "_i" from 1 to 2 do {
 for "_i" from 1 to 2 do {
 	_unit addItemToUniform "ACE_CableTie";
 };
-_unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
-_unit addItemToUniform "ACE_microDAGR";
-_unit addItemToUniform "HandGrenade";
-for "_i" from 1 to 2 do {
-	_unit addItemToVest "MiniGrenade";
+_unit addItemToUniform "ACE_RangeCard";
+for "_i" from 1 to 3 do {
+	_unit addItemToVest "HandGrenade";
 };
 for "_i" from 1 to 2 do {
 	_unit addItemToVest "ACE_M84";
 };
 for "_i" from 1 to 3 do {
 	_unit addItemToVest "40Rnd_46x30SD_mas_can_mag";
-};
-for "_i" from 1 to 4 do {
-	_unit addItemToVest "HandGrenade";
 };
 _unit addHeadgear "cgqc_helmet_crew_black";
 _unit addGoggles "G_mas_can_wrap_B";

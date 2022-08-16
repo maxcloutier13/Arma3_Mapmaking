@@ -250,11 +250,6 @@ class CGQC_units_mk1_0_TeamLeader_Carbine_pack : cgqc_pack_mk1_kitbag
             count = 3;
             magazine = "1Rnd_Smoke_Grenade_shell";
         };
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
-        };
     };
     class TransportItems
     {
@@ -329,10 +324,25 @@ class CGQC_units_mk1_0_TeamLeader_CQB_pack : cgqc_pack_mk1_kitbag
             count = 12;
             magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
         };
-        class _xx_HandGrenade
+        class _xx_1Rnd_HE_Grenade_shell
         {
-            count = 2;
-            magazine = "HandGrenade";
+            count = 10;
+            magazine = "1Rnd_HE_Grenade_shell";
+        };
+        class _xx_UGL_FlareRed_F
+        {
+            count = 3;
+            magazine = "UGL_FlareRed_F";
+        };
+        class _xx_1Rnd_SmokeBlue_Grenade_shell
+        {
+            count = 3;
+            magazine = "1Rnd_SmokeBlue_Grenade_shell";
+        };
+        class _xx_1Rnd_Smoke_Grenade_shell
+        {
+            count = 3;
+            magazine = "1Rnd_Smoke_Grenade_shell";
         };
     };
     class TransportItems
@@ -402,11 +412,6 @@ class CGQC_units_mk1_1_Rifleman_Carbine_pack : cgqc_pack_mk1_kitbag
         {
             count = 10;
             magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-        };
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
         };
     };
     class TransportItems
@@ -482,11 +487,6 @@ class CGQC_units_mk1_1_Rifleman_CQB_pack : cgqc_pack_mk1_kitbag
             count = 10;
             magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
         };
-        class _xx_HandGrenade
-        {
-            count = 4;
-            magazine = "HandGrenade";
-        };
     };
     class TransportItems
     {
@@ -555,11 +555,6 @@ class CGQC_units_mk1_1_Medic_pack : cgqc_pack_mk1_kitbag
         {
             count = 6;
             magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-        };
-        class _xx_HandGrenade
-        {
-            count = 1;
-            magazine = "HandGrenade";
         };
     };
     class TransportItems
@@ -665,11 +660,7 @@ class CGQC_units_mk1_1_Engineer_pack : cgqc_pack_mk1_kitbag
             count = 1;
             magazine = "rhsusf_m112x4_mag";
         };
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
-        };
+
         class _xx_rhsusf_mine_m14_mag
         {
             count = 4;
@@ -843,11 +834,6 @@ class CGQC_units_mk1_2_HMG_pack : cgqc_pack_mk1_kitbag
             count = 2;
             magazine = "Tier1_250Rnd_762x51_Belt_M993_AP";
         };
-        class _xx_HandGrenade
-        {
-            count = 3;
-            magazine = "HandGrenade";
-        };
     };
     class TransportItems
     {
@@ -921,11 +907,6 @@ class CGQC_units_mk1_2_Marksman_pack : cgqc_pack_mk1_kitbag
         {
             count = 13;
             magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
-        };
-        class _xx_HandGrenade
-        {
-            count = 3;
-            magazine = "HandGrenade";
         };
     };
     class TransportItems
@@ -1011,11 +992,6 @@ class CGQC_units_mk1_2_Sniper_pack : cgqc_pack_mk1_kitbag
             count = 14;
             magazine = "7Rnd_408_Mag";
         };
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
-        };
     };
     class TransportItems
     {
@@ -1038,6 +1014,16 @@ class CGQC_units_mk1_2_Sniper_pack : cgqc_pack_mk1_kitbag
         {
             count = 1;
             name = "G_mas_can_gasmask";
+        };
+        class _xx_ACE_ATragMX
+        {
+            count = 1;
+            name = "ACE_ATragMX";
+        };
+        class _xx_ACE_Kestrel4500
+        {
+            count = 1;
+            name = "ACE_Kestrel4500";
         };
     };
     class TransportWeapons
@@ -1080,11 +1066,6 @@ class CGQC_units_mk1_3_AT_MAAWS_pack : cgqc_pack_mk1_kitbag
             count = 1;
             magazine = "B_IR_Grenade";
         };
-        class _xx_rhsusf_m112_mag
-        {
-            count = 1;
-            magazine = "rhsusf_m112_mag";
-        };
         class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull
         {
             count = 5;
@@ -1094,11 +1075,6 @@ class CGQC_units_mk1_3_AT_MAAWS_pack : cgqc_pack_mk1_kitbag
         {
             count = 2;
             magazine = "MRAWS_HEAT_F";
-        };
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
         };
     };
     class TransportItems
@@ -1164,25 +1140,15 @@ class CGQC_units_mk1_3_AT_Javelin_pack : cgqc_pack_mk1_kitbag
             count = 1;
             magazine = "B_IR_Grenade";
         };
-        class _xx_rhsusf_m112_mag
-        {
-            count = 1;
-            magazine = "rhsusf_m112_mag";
-        };
         class _xx_jav_AT_mas_can
         {
-            count = 2;
+            count = 3;
             magazine = "jav_AT_mas_can";
         };
         class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull
         {
             count = 5;
             magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
-        };
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
         };
     };
     class TransportItems
@@ -1218,11 +1184,6 @@ class CGQC_units_mk1_4_Tank_Driver_pack : cgqc_pack_mk1_magic
     scope = 1;
     class TransportMagazines
     {
-        class _xx_HandGrenade
-        {
-            count = 2;
-            magazine = "HandGrenade";
-        };
     };
     class TransportItems
     {

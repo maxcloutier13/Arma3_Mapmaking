@@ -286,7 +286,7 @@ class cgqc_gun_mk1_hq_m4a1 : cgqc_gun_mk1_m4a1blkII
 		class LinkedItemsOptic
 		{
 			slot = "CowsSlot";
-			item = "Tier1_EXPS3_0_3xMag_Black_Up";
+			item = "Tier1_Razor_Gen2_16_Geissele_Docter";
 		};
 		class LinkedItemsAcc
 		{

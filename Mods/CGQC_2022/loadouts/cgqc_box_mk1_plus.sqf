@@ -20,5 +20,5 @@ _source addAction ["- Anti-Tank (MAAWS)", "\CGQC_2022\loadouts\mk1_at_maaws.sqf"
 _source addAction ["- Anti-Tank (Javelin)", "\CGQC_2022\loadouts\mk1_at_javelin.sqf"];
 _source addAction ["- Helicopter Pilot", "\CGQC_2022\loadouts\mk1_heli_pilot.sqf"];
 _source addAction ["- Helicopter Crew", "\CGQC_2022\loadouts\mk1_heli_crew.sqf"];
-_source addAction ["- Jet Pilot", "\CGQC_2022\loadouts\mk1_at_jet_pilot.sqf"];
+_source addAction ["- Jet Pilot", "\CGQC_2022\loadouts\mk1_jet_pilot.sqf"];
 _source addAction ["- Tank Driver/Crew", "\CGQC_2022\loadouts\mk1_driver_tank.sqf"];

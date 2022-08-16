@@ -26,7 +26,7 @@ _unit addHandgunItem "Tier1_15Rnd_9x19_JHP";
 comment "Add containers";
 _unit forceAddUniform "cgqc_uniform_mk1";
 _unit addVest "cgqc_vest_mk1_tan";
-_unit addBackpack "CGQC_units_mk1_0_HQ_pack";
+_unit addBackpack "cgqc_pack_mk1_kitbag";
 
 comment "Add binoculars";
 _unit addMagazine "Laserbatteries";
@@ -35,7 +35,10 @@ _unit addWeapon "cgqc_item_laserdesignator";
 comment "Add items to containers";
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToUniform "ACRE_PRC152";
-for "_i" from 1 to 19 do {
+_unit addItemToUniform "ItemAndroid";
+_unit addItemToUniform "ACE_microDAGR";
+_unit addItemToUniform "ItemcTabHCam";
+for "_i" from 1 to 10 do {
 	_unit addItemToUniform "ACE_fieldDressing";
 };
 for "_i" from 1 to 2 do {
@@ -52,30 +55,17 @@ for "_i" from 1 to 2 do {
 for "_i" from 1 to 2 do {
 	_unit addItemToUniform "ACE_CableTie";
 };
-_unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "ACE_IR_Strobe_Item";
-_unit addItemToUniform "ACE_microDAGR";
-_unit addItemToVest "ACE_fieldDressing";
-for "_i" from 1 to 2 do {
-	_unit addItemToVest "ACE_salineIV_500";
-};
-_unit addItemToVest "ACE_EntrenchingTool";
-_unit addItemToVest "G_mas_can_gasmask";
-_unit addItemToVest "ItemcTab";
-_unit addItemToVest "MRH_FoldedSatcomAntenna";
-_unit addItemToVest "MRH_TacticalDisplay";
+_unit addItemToUniform "ACE_RangeCard";
 for "_i" from 1 to 2 do {
 	_unit addItemToVest "ACE_M84";
 };
-for "_i" from 1 to 2 do {
-	_unit addItemToVest "MiniGrenade";
-};
-for "_i" from 1 to 2 do {
+for "_i" from 1 to 6 do {
 	_unit addItemToVest "rhs_mag_30Rnd_556x45_Mk262_Stanag_Pull";
 };
-_unit addItemToVest "ACE_Chemlight_HiRed";
-_unit addItemToVest "ACE_Chemlight_IR";
-_unit addItemToVest "SmokeShell";
+for "_i" from 1 to 2 do {
+	_unit addItemToVest "HandGrenade";
+};
 for "_i" from 1 to 10 do {
 	_unit addItemToBackpack "ACE_fieldDressing";
 };
