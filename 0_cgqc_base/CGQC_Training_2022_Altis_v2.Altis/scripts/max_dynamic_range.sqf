@@ -34,9 +34,11 @@ range_act1 = player addaction [("<t color=""#FF4444"">" + "---Mode sniper: OFF" 
 range_act2 = player addaction [("<t color=""#BBBBBB"">" + "---Reset statistiques" + "</t>"), "scripts\fnc_reset_stats.sqf", "", 0, false, false];
 range_act3 = player addaction [("<t color=""#BBBBBB"">" + "--Enlever les cibles" + "</t>"), "scripts\fnc_generate_targets.sqf", ["", 0, true, 50, 1500], 0, false, false];
 range_act4 = player addaction [("<t color=""#BBBBBB"">" + "--Voir impact" + "</t>"), "scripts\fnc_check_impact.sqf", "", 0, false, false];
-range_act5 = player addaction [("<t color=""#BBBBBB"">" + "--Changer le vent" + "</t>"), {
-	setWind [random 4, random 4, true]
-}, "", 0, false, false];
+/*
+	range_act5 = player addaction [("<t color=""#BBBBBB"">" + "--Changer le vent (Faible)" + "</t>"), {
+		["cgqc_changewind", []] call CBA_fnc_serverEvent;
+	}, "", 0, false, false];
+*/
 range_act8 = player addaction [("<t color=""#559999"">" + "Cible standard" + "</t>"), "scripts\fnc_create_target.sqf", ["TargetP_Inf2_Acc2_NoPop_F", false, false], 0, false, false];
 range_act9 = player addaction [("<t color=""#559999"">" + "Cible Popup" + "</t>"), "scripts\fnc_create_target.sqf", ["TargetP_Inf2_Acc2_F", false, false], 0, false, false];
 range_act10 = player addaction [("<t color=""#559999"">" + "Cible mouvante" + "</t>"), "scripts\fnc_create_target.sqf", ["TargetP_Inf2_Acc2_F", false, true], 0, false, false];
