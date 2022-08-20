@@ -1561,6 +1561,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={2110,5.8924227,7098};
+
 					};
 					side="Empty";
 					flags=4;
@@ -2640,6 +2641,53 @@ class Mission
 			};
 			id=384;
 			type="cgqc_box_mk1_plus_plus_green";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2100,5.3815289,7096};
+				angles[]={-0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=374;
+			type="cgqc_box_mk1_rolebox_green";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2092,5.3815289,7096};
+				angles[]={-0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=375;
+			type="cgqc_box_mk1_plus_green";
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2112,5.8924227,7096};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=376;
+			type="cgqc_box_original_green";
 		};
 	};
 };
