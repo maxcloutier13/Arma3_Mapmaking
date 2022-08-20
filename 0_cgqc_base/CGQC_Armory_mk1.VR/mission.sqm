@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=374;
+		nextID=385;
 	};
 	class LayerIndexProvider
 	{
-		nextID=174;
+		nextID=193;
 	};
 	class Camera
 	{
-		pos[]={2022.4139,15.527109,7111.9893};
-		dir[]={-0.16505103,-0.48229489,-0.86045581};
-		up[]={-0.090872385,0.8759591,-0.47374681};
-		aside[]={-0.982198,-2.4794135e-006,0.18839717};
+		pos[]={2097.0889,10.82741,7129.6211};
+		dir[]={-0.1781579,-0.12310624,-0.97627634};
+		up[]={-0.022101907,0.99239337,-0.12111448};
+		aside[]={-0.98376107,-5.2968971e-009,0.17952383};
 	};
 };
 binarizationWanted=0;
@@ -33,12 +33,12 @@ addons[]=
 	"CGQC_2022",
 	"CGQC",
 	"Desert",
-	"UK3CB_Factions_LDF_B",
-	"UK3CB_Factions_Vehicles_Motorbikes",
-	"real_fix_factions",
-	"UK3CB_Factions_TKC_B",
 	"A3_Soft_F_Exp_Offroad_02",
-	"RHS_US_A2Port_Armor"
+	"UK3CB_Factions_Vehicles_Motorbikes",
+	"RHS_US_A2Port_Armor",
+	"real_fix_factions",
+	"UK3CB_Factions_LDF_B",
+	"UK3CB_Factions_TKC_B"
 };
 class AddonsMetaData
 {
@@ -66,10 +66,10 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="UK3CB_Factions_LDF";
-			name="3CB Factions - LDF";
-			author="3 Commando Brigade";
-			url="www.3commandobrigade.com";
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item4
 		{
@@ -80,30 +80,30 @@ class AddonsMetaData
 		};
 		class Item5
 		{
+			className="RHS_US_A2Port_Armor";
+			name="M2 Bradley IFV";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item6
+		{
 			className="real_fix_factions";
 			name="Real Faction Fix";
 			author="amartyn";
 		};
-		class Item6
+		class Item7
+		{
+			className="UK3CB_Factions_LDF";
+			name="3CB Factions - LDF";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item8
 		{
 			className="UK3CB_Factions_TKC";
 			name="3CB Factions - TKC";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
-		};
-		class Item7
-		{
-			className="A3_Soft_F_Exp";
-			name="Arma 3 Apex - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item8
-		{
-			className="RHS_US_A2Port_Armor";
-			name="M2 Bradley IFV";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -263,7 +263,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=15;
+		items=12;
 		class Item0
 		{
 			dataType="Layer";
@@ -1490,7 +1490,7 @@ class Mission
 			name="Supply box";
 			class Entities
 			{
-				items=3;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
@@ -1504,10 +1504,26 @@ class Mission
 					class Attributes
 					{
 					};
-					id=317;
+					id=374;
 					type="cgqc_box_mk1_rolebox";
 				};
 				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2098,5.3815289,7094};
+						angles[]={0,4.712389,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=377;
+					type="cgqc_box_mk1_rolebox_green";
+				};
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -1520,23 +1536,54 @@ class Mission
 					class Attributes
 					{
 					};
-					id=318;
+					id=381;
 					type="cgqc_box_mk1_plus";
 				};
-				class Item2
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2110.0349,5.8924227,7096.1724};
+						position[]={2094,5.3815289,7094};
+						angles[]={0,4.712389,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
 					};
-					id=319;
+					id=376;
+					type="cgqc_box_mk1_plus_green";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2110,5.8924227,7098};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=378;
 					type="cgqc_box_original";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2110,5.8924227,7096};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=379;
+					type="cgqc_box_original_green";
 				};
 			};
 			id=268;
@@ -2066,7 +2113,7 @@ class Mission
 					dataType="Comment";
 					class PositionInfo
 					{
-						position[]={2096,5,7096};
+						position[]={2096,5,7102};
 					};
 					title="MK1";
 					id=217;
@@ -2443,36 +2490,6 @@ class Mission
 		};
 		class Item7
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2036,6.6262865,7086};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=331;
-			type="UK3CB_LDF_B_Quadbike";
-		};
-		class Item8
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2028,6.5770016,7086};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=336;
-			type="UK3CB_B_M1030_USMC_WDL";
-		};
-		class Item9
-		{
 			dataType="Comment";
 			class PositionInfo
 			{
@@ -2481,7 +2498,7 @@ class Mission
 			title="ATV";
 			id=347;
 		};
-		class Item10
+		class Item8
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -2491,66 +2508,138 @@ class Mission
 			title="Moto";
 			id=348;
 		};
+		class Item9
+		{
+			dataType="Layer";
+			name="Véhicules";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2036,6.5695963,7079};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=363;
+					type="I_C_Offroad_02_unarmed_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2028,6.5770016,7086};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=336;
+					type="UK3CB_B_M1030_USMC_WDL";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2004,6.7947102,7084};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						reportOwnPosition=1;
+					};
+					id=371;
+					type="RHS_M2A3_BUSKIII_wd";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2028,6.8605418,7079.001};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=351;
+					type="B_W_LSV_01_AT_F";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2036,6.6262865,7086};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=331;
+					type="UK3CB_LDF_B_Quadbike";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2036,6.5586572,7070.0059};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=362;
+					type="UK3CB_TKC_B_SUV";
+				};
+			};
+			id=382;
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2096,5.3815289,7100};
+				angles[]={-0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=383;
+			type="cgqc_box_mk1_plus_plus";
+		};
 		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2028,6.8605418,7079.001};
+				position[]={2096,5.3815289,7098};
+				angles[]={-0,4.712389,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=351;
-			type="B_W_LSV_01_AT_F";
-		};
-		class Item12
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2036,6.5586572,7070.0059};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=362;
-			type="UK3CB_TKC_B_SUV";
-		};
-		class Item13
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2036,6.5695963,7079};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=363;
-			type="I_C_Offroad_02_unarmed_F";
-		};
-		class Item14
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2004,6.7947102,7084};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				reportOwnPosition=1;
-			};
-			id=371;
-			type="RHS_M2A3_BUSKIII_wd";
+			id=384;
+			type="cgqc_box_mk1_plus_plus_green";
 		};
 	};
 };
