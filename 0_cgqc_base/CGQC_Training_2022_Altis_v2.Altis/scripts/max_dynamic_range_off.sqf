@@ -32,7 +32,7 @@ player removeAction range_act1;
 player removeAction range_act2;
 player removeAction range_act3;
 player removeAction range_act4;
-player removeAction range_act5;
+// player removeAction range_act5;
 player removeAction range_act6;
 player removeAction range_act7;
 player removeAction range_act8;
