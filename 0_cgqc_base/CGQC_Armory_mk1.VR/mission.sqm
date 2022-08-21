@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=385;
+		nextID=387;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2097.0889,10.82741,7129.6211};
-		dir[]={-0.23268017,-0.072791144,-0.96983254};
-		up[]={-0.016984144,0.99734783,-0.070791163};
-		aside[]={-0.97241396,-8.6729415e-009,0.23329951};
+		pos[]={2091.925,16.511847,7098.8291};
+		dir[]={-0.018118437,-0.74214631,-0.67002386};
+		up[]={-0.020062178,0.67023522,-0.74187583};
+		aside[]={-0.99965483,6.4328196e-007,0.027033761};
 	};
 };
 binarizationWanted=0;
@@ -122,7 +122,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -263,14 +263,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=12;
+		items=10;
 		class Item0
 		{
 			dataType="Layer";
 			name="CGQC mk1";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Group";
@@ -1481,6 +1481,79 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item2
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={2088,5.0014391,7088.0498};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								skill=0.40000001;
+								disableSimulation=1;
+								ignoreByDynSimulGrid=1;
+							};
+							id=386;
+							type="CGQC_units_mk1_0_TeamLeader_Carbine";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"BOOL"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=385;
+				};
 			};
 			id=90;
 		};
@@ -1490,7 +1563,7 @@ class Mission
 			name="Supply box";
 			class Entities
 			{
-				items=6;
+				items=8;
 				class Item0
 				{
 					dataType="Object";
@@ -1584,6 +1657,38 @@ class Mission
 					};
 					id=379;
 					type="cgqc_box_original_green";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2096,5.3815289,7100};
+						angles[]={0,4.712389,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=383;
+					type="cgqc_box_mk1_plus_plus";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2096,5.3815289,7098};
+						angles[]={0,4.712389,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=384;
+					type="cgqc_box_mk1_plus_plus_green";
 				};
 			};
 			id=268;
@@ -2608,38 +2713,6 @@ class Mission
 				};
 			};
 			id=382;
-		};
-		class Item10
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2096,5.3815289,7100};
-				angles[]={0,4.712389,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=383;
-			type="cgqc_box_mk1_plus_plus";
-		};
-		class Item11
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2096,5.3815289,7098};
-				angles[]={0,4.712389,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=384;
-			type="cgqc_box_mk1_plus_plus_green";
 		};
 	};
 };
