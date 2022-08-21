@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=6;
+		nextID=15;
 	};
 	class Camera
 	{
-		pos[]={3681.0908,13.947712,2542.3169};
-		dir[]={-1.2363449e-007,-0.70710683,0.70710683};
-		up[]={-1.2363449e-007,0.70710671,0.70710683};
-		aside[]={1,0,1.7484557e-007};
+		pos[]={4112.229,6.5926313,3935.634};
+		dir[]={0.85922581,-0.48210776,0.17140405};
+		up[]={0.47281021,0.87609959,0.09431918};
+		aside[]={0.19564041,1.7881393e-007,-0.98071367};
 	};
 };
 binarizationWanted=0;
 sourceName="cgqc_empty";
 addons[]=
 {
-	"CGQC",
-	"A3_Modules_F_Curator_Curator"
+	"A3_Modules_F_Curator_Curator",
+	"CGQC_2022"
 };
 class AddonsMetaData
 {
@@ -36,17 +36,17 @@ class AddonsMetaData
 		items=2;
 		class Item0
 		{
-			className="CGQC";
-			name="CGQC Core";
-			author="silent1";
-			url="Insert Github";
-		};
-		class Item1
-		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="CGQC_2022";
+			name="CGQC 2022";
+			author="silent1";
+			url="Insert Github";
 		};
 	};
 };
@@ -54,6 +54,9 @@ randomSeed=6567925;
 class ScenarioData
 {
 	author="silent1";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -80,35 +83,6 @@ class Mission
 	{
 		items=2;
 		class Item0
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3677.0911,5.0014391,2550.7405};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=1;
-					type="CGQC_Officer_Base";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=0;
-		};
-		class Item1
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -197,6 +171,50 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4113.0381,5.0014391,3935.6741};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=11;
+					type="CGQC_units_mk1_0_TeamLeader_Carbine";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4114.5879,5.0014391,3936.5974};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=14;
+					type="CGQC_units_mk1_2_Marksman";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=10;
 		};
 	};
 };
