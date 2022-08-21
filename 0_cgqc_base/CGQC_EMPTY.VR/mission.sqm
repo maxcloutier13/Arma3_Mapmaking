@@ -23,18 +23,17 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="CGQC_EMPTY";
+sourceName="cgqc_empty";
 addons[]=
 {
 	"CGQC",
-	"A3_Modules_F_Curator_Curator",
-	"CGQC_2022"
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=2;
 		class Item0
 		{
 			className="CGQC";
@@ -49,18 +48,7 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
-		{
-			className="CGQC_2022";
-			name="CGQC 2022";
-			author="silent1";
-			url="Insert Github";
-		};
 	};
-};
-dlcs[]=
-{
-	"Expansion"
 };
 randomSeed=6567925;
 class ScenarioData
@@ -90,7 +78,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=2;
 		class Item0
 		{
 			dataType="Group";
@@ -209,51 +197,6 @@ class Mission
 				};
 				nAttributes=4;
 			};
-		};
-		class Item2
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3677.6248,5.3815289,2551.7966};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=3;
-			type="cgqc_box_mk1_plus";
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3680.1067,5.3815289,2551.8633};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=4;
-			type="cgqc_box_mk1_plus_plus";
-		};
-		class Item4
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={3676.8066,5.8924227,2556.1477};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=5;
-			type="cgqc_box_original";
 		};
 	};
 };
