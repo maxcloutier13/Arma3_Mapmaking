@@ -101,3 +101,9 @@ null = [this] spawn {
 null = execVM "scripts\initialize_player.sqf";
 
 _text = ("<t size='2' >Sup Cloutier</t>");
+
+
+this addAction ["Cible proche", "scripts\vest_test.sqf", [1]];
+this addAction ["Cible loin", "scripts\vest_test.sqf", [2]];
+
+
