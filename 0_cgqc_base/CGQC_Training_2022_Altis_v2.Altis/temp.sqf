@@ -107,3 +107,20 @@ this addAction ["Cible proche", "scripts\vest_test.sqf", [1]];
 this addAction ["Cible loin", "scripts\vest_test.sqf", [2]];
 
 
+// Shoothouse
+- Switch ->ON 
+- Pick random position in list 
+- Spawn target there 
+- 
+
+cqb_1_target_list = [];  
+this addAction ["CQB: Random targets", "null = execVM 'scripts\cqb_spawn_1.sqf'",[1]]; 
+SignAd_SponsorS_Vrana_F
+
+
+
+
+cqb_2_target_list = [];   
+this addAction ["CQB 2: Commencer la session", "null = execVM 'scripts\cqb_spawn_2.sqf'",[1]]; 
+this addAction ["Enlever les cibles", "{deleteVehicle _x} forEach cqb_2_target_list;"]; 
+
