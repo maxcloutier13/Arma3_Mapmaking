@@ -6,10 +6,6 @@ CHVD_allowNoGrass = true;
 	null = execVM "scripts\initialize_player.sqf";
 } ] call CBA_fnc_addEventHandler;
 
-["cgqc_changewind", {
-	setWind [random 5, random 5, false];
-}] call CBA_fnc_addEventHandler;
-
 // Only run on clients, excluding HCs
 [] spawn {
 	// Delay until the server time has sync'd
