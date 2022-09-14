@@ -1,0 +1,4909 @@
+#define _ARMA_
+
+author = "Vindicta Team";
+OnLoadName = "Vindicta";
+OnLoadMission = "Vindicta";
+allowFunctionsRecompile = 1;
+allowFunctionsLog = 1;
+overviewPicture = "\z\vindicta\addons\ui\pictures\overviewPicture.paa";
+overviewText = "Start from zero and liberate the territory from enemy occupation by using any means possible.";
+overviewTextLocked = "Start from zero and liberate the territory from enemy occupation by using any means possible.";
+enableDebugConsole = 1;
+saving = 0;
+unsafeCVL = 1;
+briefing = 0;
+respawn = 2;
+respawnButton = 1;
+respawnDelay = 2;
+DisabledAI = 1;
+respawnTemplates[] = {"Counter"};
+class Header
+{
+	gameType = "vin";
+	minplayers = 1;
+	maxplayers = 50;
+};
+class CfgSounds
+{
+	sounds[] = {};
+	class stop
+	{
+		name = "p0_stop";
+		sound[] = {"@a3\dubbing_radio_f\data\eng\Male01ENG\RadioProtocolENG\Combat\100_Commands\stop.ogg",1,1,20};
+		titles[] = {0,""};
+	};
+	class halt
+	{
+		name = "p0_halt";
+		sound[] = {"@a3\dubbing_radio_f\data\eng\Male01ENG\RadioProtocolENG\Combat\100_Commands\halt.ogg",1,1,20};
+		titles[] = {0,""};
+	};
+	class dismount
+	{
+		name = "p0_dismount";
+		sound[] = {"@a3\dubbing_radio_f\data\eng\Male01ENG\RadioProtocolENG\Combat\100_Commands\Dismount_2.ogg",1,1,20};
+		titles[] = {0,""};
+	};
+	class stayBack
+	{
+		name = "p0_stayBack";
+		sound[] = {"@a3\dubbing_radio_f\data\eng\Male01ENG\RadioProtocolENG\Combat\100_Commands\StayBack.ogg",1,1,20};
+		titles[] = {0,""};
+	};
+	class goProne_1
+	{
+		name = "p0_goProne_1";
+		sound[] = {"@a3\dubbing_radio_f\data\eng\Male01ENG\RadioProtocolENG\Combat\100_Commands\GoProne_1.ogg",1,1,20};
+		titles[] = {0,""};
+	};
+	class goProne_2
+	{
+		name = "p0_goProne_2";
+		sound[] = {"@a3\dubbing_radio_f\data\eng\Male01ENG\RadioProtocolENG\Combat\100_Commands\goProne_2.ogg",1,1,20};
+		titles[] = {0,""};
+	};
+};
+class CfgIdentities{};
+class CfgDebriefing
+{
+	class end_OOP_class_error
+	{
+		title = "OOP: critical error";
+		description = "A critical OOP error has happened. See 'OOP error' section.";
+	};
+	class End1
+	{
+		title = "Please run in multiplayer";
+		description = "Arma has no respawn in singleplayer. Please run the mission is multiplayer. You can self-host it from the multiplayer menu.";
+	};
+};
+class CfgDebriefingSections
+{
+	class OOP_error
+	{
+		title = "OOP error";
+		variable = "oop_missionEndText";
+	};
+};
+class Params{};
+class CfgFunctions
+{
+	class JN
+	{
+		class Test
+		{
+			file = "vindicta_missions\src\JeroenArsenal\Test";
+			class test_init
+			{
+				preinit = 1;
+			};
+			class test_recompile{};
+			class test_debugv2
+			{
+				postinit = 1;
+			};
+			class test_configCopier{};
+		};
+		class Common
+		{
+			file = "vindicta_missions\src\JeroenArsenal\Common";
+			class common_addActionSelect{};
+			class common_addActionCancel{};
+			class common_updateActionCancel{};
+			class common_removeActionCancel{};
+			class common_getActionCanceled{};
+		};
+		class Common_Vehicle
+		{
+			file = "vindicta_missions\src\JeroenArsenal\Common\vehicle";
+			class common_vehicle_getSeatNames{};
+			class common_vehicle_getVehicleType{};
+		};
+		class Common_Array
+		{
+			file = "vindicta_missions\src\JeroenArsenal\Common\array";
+			class common_array_add{};
+			class common_array_remove{};
+		};
+		class JNA
+		{
+			file = "vindicta_missions\src\JeroenArsenal\JNA";
+			class arsenal{};
+			class arsenal_addItem{};
+			class arsenal_cargoToArray{};
+			class arsenal_arrayToArsenal{};
+			class arsenal_cargoToArsenal{};
+			class arsenal_arsenalToArsenal{};
+			class arsenal_container{};
+			class arsenal_init{};
+			class arsenal_initPersistent{};
+			class arsenal_inList{};
+			class arsenal_itemCount{};
+			class arsenal_itemType{};
+			class arsenal_loadInventory{};
+			class arsenal_removeItem{};
+			class arsenal_requestOpen{};
+			class arsenal_requestClose{};
+			class arsenal_getEmptyArray{};
+			class arsenal_getPrimaryWeapons{};
+			class arsenal_getSecondaryWeapons{};
+			class arsenal_getHeadgear{};
+			class arsenal_getVests{};
+		};
+		class JNG
+		{
+			file = "vindicta_missions\src\JeroenArsenal\JNG";
+			class garage{};
+			class garage_addVehicle{};
+			class garage_init{};
+			class garage_releaseVehicle{};
+			class garage_removeVehicle{};
+			class garage_requestOpen{};
+			class garage_requestClose{};
+			class garage_requestVehicle{};
+			class garage_getVehicleData{};
+			class garage_garageVehicle{};
+			class garage_canGarageVehicle{};
+			class garage_updatePoints{};
+		};
+		class Ammo
+		{
+			file = "vindicta_missions\src\JeroenArsenal\Ammo";
+			class ammo_init
+			{
+				preinit = 1;
+			};
+			class ammo_getLoadout{};
+			class ammo_getPylonLoadoutMissing{};
+			class ammo_addActionRearm{};
+			class ammo_rearm{};
+			class ammo_gui{};
+			class ammo_set{};
+			class ammo_getCost{};
+			class ammo_getCargo{};
+			class ammo_setCargo{};
+			class ammo_getCargoCapacity{};
+			class ammo_setCargoCapacity{};
+		};
+		class Repair
+		{
+			file = "vindicta_missions\src\JeroenArsenal\Repair";
+			class repair_addActionRepair{};
+			class repair_addActionRepairPlayer{};
+			class repair_addSelectRepair{};
+			class repair_getWheelHitPointsWithSelections{};
+			class repair_getVehicleData{};
+			class repair_inventoryEvent{};
+			class repair_repairHitpoint{};
+			class repair_removeCargo{};
+			class repair_getCargo{};
+			class repair_setCargo{};
+			class repair_getCargoCapacity{};
+			class repair_setCargoCapacity{};
+		};
+		class JNL
+		{
+			file = "vindicta_missions\src\JeroenArsenal\JNL";
+			class logistics_init
+			{
+				preinit = 1;
+			};
+			class logistics_load{};
+			class logistics_unLoad{};
+			class logistics_addAction{};
+			class logistics_removeAction{};
+		};
+		class JNL_Actions
+		{
+			file = "vindicta_missions\src\JeroenArsenal\JNL\Actions";
+			class logistics_addActionGetInWeapon{};
+			class logistics_addActionLoad{};
+			class logistics_addActionUnload{};
+			class logistics_addEventGetOutWeapon{};
+			class logistics_removeActionGetInWeapon{};
+			class logistics_removeActionLoad{};
+			class logistics_removeActionUnload{};
+			class logistics_removeEventGetOutWeapon{};
+		};
+		class JNL_Functions
+		{
+			file = "vindicta_missions\src\JeroenArsenal\JNL\Functions";
+			class logistics_canLoad{};
+			class logistics_getCargo{};
+			class logistics_getCargoOffsetAndDir{};
+			class logistics_getCargoType{};
+			class logistics_getNodes{};
+			class logistics_lockSeats{};
+		};
+	};
+	class vin
+	{
+		class common
+		{
+			file = "vindicta_missions\src\Common";
+			class common_bearingToID{};
+			class common_remoteExec{};
+			class common_remoteExecCall{};
+			class common_getCurrentDir
+			{
+				headerType = -1;
+			};
+		};
+		class vindicta
+		{
+			class preInit
+			{
+				preInit = 1;
+				file = "vindicta_missions\src\preInit.sqf";
+			};
+		};
+	};
+};
+class RscText
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 0;
+	idc = -1;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	text = "";
+	fixedWidth = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 1;
+	colorShadow[] = {0,0,0,0.5};
+	font = "RobotoCondensed";
+	SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	linespacing = 1;
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+};
+class RscStructuredText
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 13;
+	idc = -1;
+	style = 0;
+	colorText[] = {1,1,1,1};
+	class Attributes
+	{
+		font = "RobotoCondensed";
+		color = "#ffffff";
+		colorLink = "#D09B43";
+		align = "left";
+		shadow = 1;
+	};
+	x = 0;
+	y = 0;
+	h = 0.035;
+	w = 0.1;
+	text = "";
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	shadow = 1;
+};
+class RscPicture
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 0;
+	idc = -1;
+	style = 48;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	font = "TahomaB";
+	sizeEx = 0;
+	lineSpacing = 0;
+	text = "";
+	fixedWidth = 0;
+	shadow = 0;
+	x = 0;
+	y = 0;
+	w = 0.2;
+	h = 0.15;
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+};
+class RscEdit
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 2;
+	x = 0;
+	y = 0;
+	h = 0.04;
+	w = 0.2;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {0.95,0.95,0.95,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorSelection[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",1};
+	autocomplete = "";
+	text = "";
+	size = 0.2;
+	style = "0x00 + 0x40";
+	font = "RobotoCondensed";
+	shadow = 2;
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	canModify = 1;
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+};
+class RscCombo
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 4;
+	colorSelect[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,1};
+	colorScrollbar[] = {1,0,0,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorPicture[] = {1,1,1,1};
+	colorPictureSelected[] = {1,1,1,1};
+	colorPictureDisabled[] = {1,1,1,0.25};
+	colorPictureRight[] = {1,1,1,1};
+	colorPictureRightSelected[] = {1,1,1,1};
+	colorPictureRightDisabled[] = {1,1,1,0.25};
+	colorTextRight[] = {1,1,1,1};
+	colorSelectRight[] = {0,0,0,1};
+	colorSelect2Right[] = {0,0,0,1};
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	soundSelect[] = {"\A3\ui_f\data\sound\RscCombo\soundSelect",0.1,1};
+	soundExpand[] = {"\A3\ui_f\data\sound\RscCombo\soundExpand",0.1,1};
+	soundCollapse[] = {"\A3\ui_f\data\sound\RscCombo\soundCollapse",0.1,1};
+	maxHistoryDelay = 1;
+	class ComboScrollBar
+	{
+		color[] = {1,1,1,1};
+	};
+	style = "0x10 + 0x200";
+	font = "RobotoCondensed";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	shadow = 0;
+	x = 0;
+	y = 0;
+	w = 0.12;
+	h = 0.035;
+	colorSelectBackground[] = {1,1,1,0.7};
+	arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
+	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
+	wholeHeight = 0.45;
+	colorActive[] = {1,0,0,1};
+};
+class RscListBox
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 5;
+	rowHeight = 0;
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorScrollbar[] = {1,0,0,0};
+	colorSelect[] = {0,0,0,1};
+	colorSelect2[] = {0,0,0,1};
+	colorSelectBackground[] = {0.95,0.95,0.95,1};
+	colorSelectBackground2[] = {1,1,1,0.5};
+	colorBackground[] = {0,0,0,0.3};
+	soundSelect[] = {"\A3\ui_f\data\sound\RscListbox\soundSelect",0.09,1};
+	autoScrollSpeed = -1;
+	autoScrollDelay = 5;
+	autoScrollRewind = 0;
+	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+	colorPicture[] = {1,1,1,1};
+	colorPictureSelected[] = {1,1,1,1};
+	colorPictureDisabled[] = {1,1,1,0.25};
+	colorPictureRight[] = {1,1,1,1};
+	colorPictureRightSelected[] = {1,1,1,1};
+	colorPictureRightDisabled[] = {1,1,1,0.25};
+	colorTextRight[] = {1,1,1,1};
+	colorSelectRight[] = {0,0,0,1};
+	colorSelect2Right[] = {0,0,0,1};
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	class ListScrollBar
+	{
+		color[] = {1,1,1,1};
+		autoScrollEnabled = 1;
+	};
+	x = 0;
+	y = 0;
+	w = 0.3;
+	h = 0.3;
+	style = 16;
+	font = "RobotoCondensed";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	shadow = 0;
+	colorShadow[] = {0,0,0,0.5};
+	period = 1.2;
+	maxHistoryDelay = 1;
+};
+class RscListNBox
+{
+	access = 0;
+	type = 102;
+	style = 16;
+	w = 0.4;
+	h = 0.4;
+	font = "TahomaB";
+	sizeEx = 0.04;
+	colorText[] = {0.8784,0.8471,0.651,1};
+	colorBackground[] = {0,0,0,0.6};
+	autoScrollSpeed = -1;
+	autoScrollDelay = 5;
+	autoScrollRewind = 0;
+	arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+	arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+	columns[] = {0.3,0.6,0.7};
+	color[] = {1,1,1,1};
+	colorScrollbar[] = {0.95,0.95,0.95,1};
+	colorSelect[] = {0.95,0.95,0.95,1};
+	colorSelect2[] = {0.95,0.95,0.95,1};
+	colorSelectBackground[] = {0,0,0,1};
+	colorSelectBackground2[] = {0.8784,0.8471,0.651,1};
+	drawSideArrows = 0;
+	idcLeft = -1;
+	idcRight = -1;
+	maxHistoryDelay = 1;
+	rowHeight = 0;
+	soundSelect[] = {"",0.1,1};
+	period = 1;
+	shadow = 2;
+	class ScrollBar
+	{
+		arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+		border = "#(argb,8,8,3)color(1,1,1,1)";
+		color[] = {1,1,1,0.6};
+		colorActive[] = {1,1,1,1};
+		colorDisabled[] = {1,1,1,0.3};
+		thumb = "#(argb,8,8,3)color(1,1,1,1)";
+	};
+};
+class dialog
+{
+	class controls
+	{
+		class MyLbox: RscListNBox
+		{
+			x = 0;
+			y = 0;
+			canDrag = "true";
+			rows = 10;
+			lineSpacing = 1.3;
+		};
+	};
+};
+class RscButton
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 1;
+	text = "";
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorBackground[] = {0,0,0,0.5};
+	colorBackgroundDisabled[] = {0,0,0,0.5};
+	colorBackgroundActive[] = {0,0,0,1};
+	colorFocused[] = {0,0,0,1};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
+	idc = -1;
+	style = 2;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	shadow = 2;
+	font = "RobotoCondensed";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	url = "";
+	offsetX = 0;
+	offsetY = 0;
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	borderSize = 0;
+};
+class RscShortcutButton
+{
+	deletable = 0;
+	fade = 0;
+	type = 16;
+	x = 0.1;
+	y = 0.1;
+	class HitZone
+	{
+		left = 0;
+		top = 0;
+		right = 0;
+		bottom = 0;
+	};
+	class ShortcutPos
+	{
+		left = 0;
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
+		w = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1) * (3/4)";
+		h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	};
+	class TextPos
+	{
+		left = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1) * (3/4)";
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
+		right = 0.005;
+		bottom = 0;
+	};
+	shortcuts[] = {};
+	textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
+	color[] = {1,1,1,1};
+	colorFocused[] = {1,1,1,1};
+	color2[] = {0.95,0.95,0.95,1};
+	colorDisabled[] = {1,1,1,0.25};
+	colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",1};
+	colorBackgroundFocused[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",1};
+	colorBackground2[] = {1,1,1,1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
+	class Attributes
+	{
+		font = "RobotoCondensed";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "true";
+	};
+	idc = -1;
+	style = 0;
+	default = 0;
+	shadow = 1;
+	w = 0.183825;
+	h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 20)";
+	textSecondary = "";
+	colorSecondary[] = {1,1,1,1};
+	colorFocusedSecondary[] = {1,1,1,1};
+	color2Secondary[] = {0.95,0.95,0.95,1};
+	colorDisabledSecondary[] = {1,1,1,0.25};
+	sizeExSecondary = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	fontSecondary = "RobotoCondensed";
+	animTextureDefault = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureNormal = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureDisabled = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureOver = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\over_ca.paa";
+	animTextureFocused = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\focus_ca.paa";
+	animTexturePressed = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\down_ca.paa";
+	periodFocus = 1.2;
+	periodOver = 0.8;
+	period = 0.4;
+	font = "RobotoCondensed";
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	text = "";
+	url = "";
+	action = "";
+	class AttributesImage
+	{
+		font = "RobotoCondensed";
+		color = "#E5E5E5";
+		align = "left";
+	};
+};
+class RscShortcutButtonMain
+{
+	idc = -1;
+	style = 0;
+	default = 0;
+	w = 0.313726;
+	h = 0.104575;
+	color[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	class HitZone
+	{
+		left = 0;
+		top = 0;
+		right = 0;
+		bottom = 0;
+	};
+	class ShortcutPos
+	{
+		left = 0.0145;
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)) / 2";
+		w = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2) * (3/4)";
+		h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
+	};
+	class TextPos
+	{
+		left = "(((safezoneW / safezoneH) min 1.2) / 32) * 1.5";
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 20)*2 - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)) / 2";
+		right = 0.005;
+		bottom = 0;
+	};
+	animTextureNormal = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButtonMain\normal_ca.paa";
+	animTextureDisabled = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButtonMain\disabled_ca.paa";
+	animTextureOver = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButtonMain\over_ca.paa";
+	animTextureFocused = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButtonMain\focus_ca.paa";
+	animTexturePressed = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButtonMain\down_ca.paa";
+	animTextureDefault = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButtonMain\normal_ca.paa";
+	period = 0.5;
+	font = "RobotoCondensed";
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
+	text = "";
+	action = "";
+	class Attributes
+	{
+		font = "RobotoCondensed";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "false";
+	};
+	class AttributesImage
+	{
+		font = "RobotoCondensed";
+		color = "#E5E5E5";
+		align = "false";
+	};
+};
+class RscFrame
+{
+	type = 0;
+	idc = -1;
+	deletable = 0;
+	style = 64;
+	shadow = 2;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	font = "RobotoCondensed";
+	sizeEx = 0.02;
+	text = "";
+	x = 0;
+	y = 0;
+	w = 0.3;
+	h = 0.3;
+};
+class RscSlider
+{
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 3;
+	style = 1024;
+	color[] = {1,1,1,0.8};
+	colorActive[] = {1,1,1,1};
+	shadow = 0;
+	x = 0;
+	y = 0;
+	w = 0.3;
+	h = 0.025;
+};
+class IGUIBack
+{
+	type = 0;
+	idc = 124;
+	style = 128;
+	text = "";
+	colorText[] = {0,0,0,0};
+	font = "RobotoCondensed";
+	sizeEx = 0;
+	shadow = 0;
+	x = 0.1;
+	y = 0.1;
+	w = 0.1;
+	h = 0.1;
+	colorbackground[] = {"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])","(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])","(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])","(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"};
+};
+class RscCheckBox
+{
+	idc = -1;
+	type = 77;
+	deletable = 0;
+	style = 0;
+	checked = 0;
+	x = "0.375 * safezoneW + safezoneX";
+	y = "0.36 * safezoneH + safezoneY";
+	w = "0.025 * safezoneW";
+	h = "0.04 * safezoneH";
+	color[] = {1,1,1,0.7};
+	colorFocused[] = {1,1,1,1};
+	colorHover[] = {1,1,1,1};
+	colorPressed[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.2};
+	colorBackground[] = {0,0,0,0};
+	colorBackgroundFocused[] = {0,0,0,0};
+	colorBackgroundHover[] = {0,0,0,0};
+	colorBackgroundPressed[] = {0,0,0,0};
+	colorBackgroundDisabled[] = {0,0,0,0};
+	textureChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	textureFocusedChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureFocusedUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	textureHoverChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureHoverUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	texturePressedChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	texturePressedUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	textureDisabledChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureDisabledUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	soundEnter[] = {"",0.1,1};
+	soundPush[] = {"",0.1,1};
+	soundClick[] = {"",0.1,1};
+	soundEscape[] = {"",0.1,1};
+};
+class RscTextCheckBox
+{
+	idc = -1;
+	type = 7;
+	style = 0;
+	x = "0.375 * safezoneW + safezoneX";
+	y = "0.36 * safezoneH + safezoneY";
+	w = "0.025 * safezoneW";
+	h = "0.04 * safezoneH";
+	colorText[] = {1,0,0,1};
+	color[] = {0,0,0,0};
+	colorBackground[] = {0,0,0,0};
+	colorTextSelect[] = {0,0.8,0,1};
+	colorSelectedBg[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",1};
+	colorSelect[] = {0,0,0,1};
+	colorTextDisable[] = {0.4,0.4,0.4,1};
+	colorDisable[] = {0.4,0.4,0.4,1};
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	font = "RobotoCondensed";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+	rows = 1;
+	columns = 1;
+	strings[] = {"UNCHECKED"};
+	checked_strings[] = {"CHECKED"};
+};
+class RscButtonMenu
+{
+	idc = -1;
+	type = 16;
+	style = "0x02 + 0xC0";
+	default = 0;
+	shadow = 0;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
+	animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
+	colorBackground[] = {0,0,0,0.8};
+	colorBackgroundFocused[] = {1,1,1,1};
+	colorBackground2[] = {0.75,0.75,0.75,1};
+	color[] = {1,1,1,1};
+	colorFocused[] = {0,0,0,1};
+	color2[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.25};
+	textSecondary = "";
+	colorSecondary[] = {1,1,1,1};
+	colorFocusedSecondary[] = {0,0,0,1};
+	color2Secondary[] = {0,0,0,1};
+	colorDisabledSecondary[] = {1,1,1,0.25};
+	sizeExSecondary = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	fontSecondary = "PuristaLight";
+	period = 1.2;
+	periodFocus = 1.2;
+	periodOver = 1.2;
+	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	class TextPos
+	{
+		left = "0.25 * (((safezoneW / safezoneH) min 1.2) / 40)";
+		top = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) - (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)) / 2";
+		right = 0.005;
+		bottom = 0;
+	};
+	class Attributes
+	{
+		font = "PuristaLight";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "false";
+	};
+	class ShortcutPos
+	{
+		left = "5.25 * (((safezoneW / safezoneH) min 1.2) / 40)";
+		top = 0;
+		w = "1 * (((safezoneW / safezoneH) min 1.2) / 40)";
+		h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter",0.09,1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush",0.09,1};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.09,1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.09,1};
+};
+class RscButtonMenuOK
+{
+	idc = 1;
+	shortcuts[] = {"0x00050000 + 0",28,57,156};
+	default = 1;
+	text = "$STR_OK";
+	soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenuOK\soundPush",0.09,1};
+};
+class RscButtonMenuCancel
+{
+	idc = 2;
+	shortcuts[] = {"0x00050000 + 1"};
+	text = "$STR_CANCEL";
+};
+class RscControlsGroup
+{
+	deletable = 0;
+	fade = 0;
+	class VScrollbar
+	{
+		color[] = {1,1,1,1};
+		width = 0.021;
+		autoScrollEnabled = 1;
+	};
+	class HScrollbar
+	{
+		color[] = {1,1,1,1};
+		height = 0.028;
+	};
+	class Controls{};
+	type = 15;
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = 1;
+	h = 1;
+	shadow = 0;
+	style = 16;
+};
+class MUI_BASE
+{
+	idc = -1;
+	type = 0;
+	x = 0;
+	y = 0;
+	w = 0;
+	h = 0;
+	sizeEx = "safeZoneH*0.018";
+	style = 2;
+	text = "";
+	font = "PuristaMedium";
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	blinkingPeriod = 0;
+	fixedWidth = "false";
+	lineSpacing = 0;
+	moving = "false";
+	onCanDestroy = "";
+	onChar = "";
+	onDestroy = "";
+	onIMEChar = "";
+	onIMEComposition = "";
+	onJoystickButton = "";
+	onKeyDown = "";
+	onKeyUp = "";
+	onKillFocus = "";
+	onLoad = "";
+	onMouseButtonDblClick = "";
+	onMouseButtonDown = "";
+	onMouseButtonUp = "";
+	onMouseEnter = "";
+	onMouseExit = "";
+	onMouseMoving = "";
+	onMouseZChanged = "";
+	onSetFocus = "";
+	onTimer = "";
+	onVideoStopped = "";
+	shadow = 0;
+	tileH = 0;
+	tileW = 0;
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {0.0,0.0,0.0,1};
+	tooltipColorShade[] = {0.0,0.0,0.0,1};
+};
+class MUI_BASE_ABS: MUI_BASE
+{
+	sizeEx = 0.035;
+};
+class MUI_DESCRIPTION: MUI_BASE
+{
+	idc = -1;
+	type = 0;
+	x = 0;
+	y = 0;
+	w = 0;
+	h = 0;
+	colorBackground[] = {0.0,0.0,0.0,1};
+	colorText[] = {1,1,1,1};
+	style = 0;
+};
+class MUI_DESCRIPTION_ABS: MUI_DESCRIPTION
+{
+	sizeEx = 0.035;
+};
+class MUI_BG_BLACKSOLID: MUI_BASE
+{
+	type = 0;
+	colorBackground[] = {0.0,0.0,0.0,1};
+};
+class MUI_BG_BLACKSOLID_ABS: MUI_BG_BLACKSOLID
+{
+	sizeEx = 0.035;
+};
+class MUI_BG_BLACKTRANSPARENT: MUI_BASE
+{
+	type = 0;
+	sizeEx = "safeZoneH*0.018";
+	colorBackground[] = {0,0,0,0.75};
+};
+class MUI_BG_BLACKTRANSPARENT_ABS: MUI_BG_BLACKTRANSPARENT
+{
+	sizeEx = 0.035;
+};
+class MUI_BG_TRANSPARENT: MUI_BASE
+{
+	type = 0;
+	sizeEx = "safeZoneH*0.018";
+};
+class MUI_BG_TRANSPARENT_ABS: MUI_BG_TRANSPARENT
+{
+	sizeEx = 0.035;
+};
+class MUI_BG_TRANSPARENT_LEFT: MUI_BG_TRANSPARENT
+{
+	style = 0;
+};
+class MUI_BG_TRANSPARENT_LEFT_ABS: MUI_BG_TRANSPARENT_LEFT
+{
+	sizeEx = 0.035;
+};
+class MUI_BG_TRANSPARENT_MULTILINE_LEFT: MUI_BASE
+{
+	type = 0;
+	sizeEx = "safeZoneH*0.018";
+	style = "16+0+0x200";
+	lineSpacing = 1;
+	font = "RobotoCondensed";
+};
+class MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS: MUI_BG_TRANSPARENT_MULTILINE_LEFT
+{
+	sizeEx = 0.035;
+};
+class MUI_BG_TRANSPARENT_MULTILINE_CENTER: MUI_BG_TRANSPARENT_MULTILINE_LEFT
+{
+	style = "0x02 + 16+0+0x200";
+};
+class MUI_BG_TRANSPARENT_MULTILINE_CENTER_ABS: MUI_BG_TRANSPARENT_MULTILINE_CENTER
+{
+	sizeEx = 0.035;
+};
+class MUI_HEADLINE: MUI_BG_BLACKSOLID
+{
+	type = 0;
+	x = 0;
+	y = 0;
+	w = 0;
+	h = "safeZoneH * 0.026";
+	sizeEx = "safeZoneH*0.018";
+	colorText[] = {0.0,0.0,0.0,1};
+	colorBackground[] = {1,0.682,0,1};
+	style = 0;
+	text = "";
+	font = "PuristaMedium";
+	shadow = 0;
+};
+class MUI_HEADLINE_ABS: MUI_HEADLINE
+{
+	sizeEx = 0.035;
+};
+class MUI_BUTTON_TXT: RscButton
+{
+	type = 1;
+	h = "safeZoneH * 0.02";
+	sizeEx = "safeZoneH*0.018";
+	style = "192+2";
+	font = "PuristaLight";
+	text = "";
+	borderSize = 0;
+	colorBackground[] = {0.0,0.0,0.0,1};
+	colorBackgroundActive[] = {1,1,1,1};
+	colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+	colorBorder[] = {0,0,0,0};
+	colorDisabled[] = {1,1,1,1};
+	colorFocused[] = {0.0,0.0,0.0,1};
+	colorShadow[] = {0,0,0,0};
+	offsetPressedX = 0;
+	offsetPressedY = 0;
+	offsetX = 0;
+	offsetY = 0;
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
+	shadow = 0;
+	action = "";
+	onButtonClick = "";
+	onButtonDblClick = "";
+	onButtonDown = "";
+	onButtonUp = "";
+	onLBDrop = "";
+	onMouseButtonClick = "";
+	onMouseEnter = "_this#0 ctrlSetTextColor [0, 0, 0, 1];";
+	onMouseExit = "_this#0 ctrlSetTextColor [1, 1, 1, 1];";
+};
+class MUI_BUTTON_TXT_ABS: MUI_BUTTON_TXT
+{
+	sizeEx = 0.035;
+};
+class MUI_BUTTON_LISTNBOX: MUI_BUTTON_TXT
+{
+	IDC = -1;
+	font = "RobotoCondensed";
+	style = 0;
+};
+class MUI_BUTTON_LISTNBOX_ABS: MUI_BUTTON_LISTNBOX
+{
+	sizeEx = 0.035;
+};
+class MUI_BUTTON_DUMMY: MUI_BUTTON_TXT
+{
+	colorBackground[] = {0,0,0,0};
+	colorBackgroundActive[] = {0,0,0,0};
+	colorBackgroundDisabled[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,0};
+	colorDisabled[] = {0,0,0,0};
+	colorFocused[] = {0,0,0,0};
+	colorShadow[] = {0,0,0,0};
+};
+class MUI_BUTTON_TXT_CHECKBOX_LIKE: MUI_BG_BLACKSOLID
+{
+	sizeEx = "safeZoneH*0.018";
+	style = "192+2";
+	font = "PuristaLight";
+	text = "";
+	colorBackground[] = {0.0,0.0,0.0,1};
+	colorBackgroundActive[] = {0.0,0.0,0.0,1};
+	colorBackgroundDisabled[] = {0.0,0.0,0.0,1};
+	onLoad = "[_this select 0] call ui_fnc_buttonCheckboxInit;";
+};
+class MUI_BUTTON_TXT_CHECKBOX_LIKE_ABS: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	sizeEx = 0.035;
+};
+class MUI_BUTTON_TXT_CHECKBOX: RscTextCheckBox
+{
+	type = 7;
+	style = 2;
+	h = "safezoneh * 0.02";
+	colorText[] = {1,1,1,1};
+	colorTextSelect[] = {0.13,0.7,0.29,1};
+	color[] = {0,0,0,1};
+	colorBackground[] = {1,0,0,1};
+	colorSelectedBg[] = {0,1,0,1};
+	onMouseEnter = "(_this select 0) ctrlSetBackgroundColor [1,1,1,1]; (_this select 0) ctrlSetTextColor [0,0,0,1];";
+	onMouseExit = "(_this select 0) ctrlSetBackgroundColor [0,0,0,0]; (_this select 0) ctrlSetTextColor [1,1,1,1];";
+	colorSelect[] = {0,0,0,0};
+	colorTextDisable[] = {0,0,0,1};
+	colorDisable[] = {0,0,0,1};
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {0.0,0.0,0.0,1};
+	tooltipColorShade[] = {0.0,0.0,0.0,1};
+	font = "RobotoCondensed";
+	sizeEx = "safeZoneH*0.018";
+	rows = 1;
+	columns = 1;
+	strings[] = {"Show intel"};
+	checked_strings[] = {"Show intel"};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter",0.09,1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush",0.09,1};
+};
+class MUI_BUTTON_TXT_CHECKBOX_ABS: MUI_BUTTON_TXT_CHECKBOX
+{
+	sizeEx = 0.035;
+};
+class MUI_LISTNBOX: MUI_BASE
+{
+	type = 102;
+	style = 16;
+	columns[] = {"3.0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)",0.0};
+	sizeEx = "safeZoneH*0.018";
+	font = "PuristaMedium";
+	maxHistoryDelay = 1;
+	lineSpacing = "0.0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	rowHeight = "1.0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	headerHeight = "0.9 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	colorActive[] = {1,1,1,1};
+	colorDisabled[] = {0,0,0,0};
+	colorSelect[] = {0.0,0.0,0.0,1};
+	colorSelect2[] = {0.0,0.0,0.0,1};
+	colorSelectBackground[] = {1,1,1,1};
+	colorSelectBackground2[] = {1,1,1,1};
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {0.0,0.0,0.0,1};
+	tooltipColorShade[] = {0.0,0.0,0.0,1};
+	soundSelect[] = {"\A3\ui_f\data\sound\RscListbox\soundSelect",1,1};
+	autoScrollSpeed = -1;
+	autoScrollDelay = 5;
+	autoScrollRewind = 0;
+	drawSideArrows = 0;
+	disableOverflow = 1;
+	idcLeft = -1;
+	idcRight = -1;
+	fade = 0;
+	show = 1;
+	period = 0;
+	class ListScrollBar
+	{
+		width = 0;
+		height = 0;
+		scrollSpeed = 0.01;
+		arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		color[] = {1,1,1,1};
+	};
+};
+class MUI_LISTNBOX_ABS: MUI_LISTNBOX
+{
+	sizeEx = 0.035;
+};
+class MUI_LISTNBOX_BUTTON: MUI_BUTTON_TXT
+{
+	width = "1.0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	height = "1.0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+	text = "X";
+};
+class MUI_LISTNBOX_BUTTON_ABS: MUI_LISTNBOX_BUTTON
+{
+	sizeEx = 0.035;
+};
+class MUI_STRUCT_TXT: RscStructuredText
+{
+	type = 13;
+	class Attributes
+	{
+		font = "PuristaMedium";
+		color = "#ffffff";
+		colorLink = "#D09B43";
+		align = "center";
+		shadow = 1;
+	};
+};
+class MUI_STRUCT_TXT_ABS: MUI_STRUCT_TXT
+{
+	sizeEx = 0.035;
+};
+class MUI_ST_FRAME: MUI_BASE
+{
+	type = 0;
+	sizeEx = "safeZoneH*0.018";
+	style = 64;
+	text = "";
+	font = "PuristaBold";
+};
+class MUI_ST_FRAME_ABS: MUI_ST_FRAME
+{
+	sizeEx = 0.035;
+};
+class MUI_PROGRESSBAR: MUI_BASE
+{
+	type = 8;
+	style = 0;
+	colorBackground[] = {0,0,0,0};
+	colorFrame[] = {0.0,0.0,0.0,1};
+	colorBar[] = {1,0.682,0,1};
+	colorText[] = {0.663,0.153,0.149,1};
+	shadow = 2;
+	texture = "#(argb,8,8,3)color(1,1,1,1)";
+};
+class MUI_PROGRESSBAR_ABS: MUI_PROGRESSBAR
+{
+	sizeEx = 0.035;
+};
+class MUI_EDIT: MUI_BASE
+{
+	type = 2;
+	sizeEx = "safeZoneH*0.018";
+	style = "0x10 + 0x200";
+	text = "";
+	font = "PuristaMedium";
+	autocomplete = "";
+	canModify = "true";
+	maxChars = 1000;
+	forceDrawCaret = "false";
+	colorSelection[] = {0.13,0.54,0.21,1};
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {0,0,0,0};
+	colorBackground[] = {0,0,0,0};
+	lineSpacing = 1;
+};
+class MUI_EDIT_ABS: MUI_EDIT
+{
+	sizeEx = 0.035;
+};
+class MUI_GROUP: MUI_BASE
+{
+	deletable = 0;
+	fade = 0;
+	class VScrollbar
+	{
+		color[] = {1,1,1,1};
+		width = 0.021;
+		autoScrollEnabled = 1;
+	};
+	class HScrollbar
+	{
+		color[] = {1,1,1,1};
+		height = 0.028;
+	};
+	class Controls{};
+	type = 15;
+	x = 0;
+	y = 0;
+	w = 1;
+	h = 1;
+	shadow = 0;
+};
+class MUI_GROUP_ABS: MUI_GROUP
+{
+	sizeEx = 0.035;
+};
+class MUI_COMBOBOX: RscCombo
+{
+	idc = -1;
+	sizeEx = "safeZoneH*0.018";
+	text = "";
+	style = 4;
+	font = "PuristaMedium";
+	access = 0;
+	type = 4;
+	h = 0.05;
+	rowHeight = 0.025;
+	wholeHeight = 0.25;
+	colorSelect[] = {0.0,0.0,0.0,1};
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0.0,0.0,0.0,1};
+	colorScrollbar[] = {1,1,1,1};
+	colorDisabled[] = {0.0,0.0,0.5,0.5};
+	soundSelect[] = {"",0.1,1};
+	soundExpand[] = {"",0.1,1};
+	soundCollapse[] = {"",0.1,1};
+	maxHistoryDelay = 1.0;
+	shadow = 0;
+	arrowEmpty = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_ca.paa";
+	arrowFull = "\A3\ui_f\data\GUI\RscCommon\rsccombo\arrow_combo_active_ca.paa";
+	class ComboScrollBar
+	{
+		color[] = {1,1,1,0.6};
+		colorActive[] = {1,1,1,1};
+		colorDisabled[] = {1,1,1,0.3};
+		thumb = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
+		arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
+		border = "#(argb,8,8,3)color(1,1,1,1)";
+		shadow = 0;
+	};
+};
+class MUI_COMBOBOX_ABS: MUI_COMBOBOX
+{
+	sizeEx = 0.035;
+};
+class MUI_TREE
+{
+	idc = -1;
+	onLoad = "params ['_tv'];			_classes = 'true' configClasses (configFile >> 'CfgVehicles');			for '_i' from 0 to 10 do			{				_tv tvAdd [[], configName selectRandom _classes];				for '_j' from 0 to 10 do				{					_tv tvAdd [[_i], configName selectRandom _classes];					for '_k' from 0 to 10 do					{						_tv tvAdd [[_i, _j], configName selectRandom _classes];					};				};			};";
+	moving = 0;
+	type = 12;
+	style = 0;
+	sizeEx = "safeZoneH*0.018";
+	rowHeight = "safeZoneH*0.018";
+	font = "RobotoCondensed";
+	colorText[] = {1,1,1,1};
+	colorBackground[] = {0,0,0,0.8};
+	colorDisabled[] = {1,1,1,0.25};
+	shadow = 0;
+	access = 0;
+	idcSearch = -1;
+	colorSelect[] = {1,1,1,0.7};
+	colorSelectText[] = {0,0,0,1};
+	colorBorder[] = {0,0,0,0};
+	colorSearch[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"};
+	colorMarked[] = {0.2,0.3,0.7,1};
+	colorMarkedText[] = {0,0,0,1};
+	colorMarkedSelected[] = {0,0.5,0.5,1};
+	multiselectEnabled = 0;
+	colorPicture[] = {1,1,1,1};
+	colorPictureSelected[] = {0,0,0,1};
+	colorPictureDisabled[] = {1,1,1,0.25};
+	colorPictureRight[] = {1,1,1,1};
+	colorPictureRightSelected[] = {0,0,0,1};
+	colorPictureRightDisabled[] = {1,1,1,0.25};
+	colorArrow[] = {1,1,1,1};
+	maxHistoryDelay = 1;
+	colorSelectBackground[] = {0,0,0,0.5};
+	colorLines[] = {0,0,0,0};
+	class ScrollBar
+	{
+		arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+		arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+		autoScrollDelay = 5;
+		autoScrollEnabled = 0;
+		autoScrollRewind = 0;
+		autoScrollSpeed = -1;
+		border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+		color[] = {1,1,1,0.6};
+		colorActive[] = {1,1,1,1};
+		colorDisabled[] = {1,1,1,0.3};
+		height = 0;
+		scrollSpeed = 0.06;
+		shadow = 0;
+		thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+		width = 0;
+	};
+	expandedTexture = "A3\ui_f\data\gui\rsccommon\rsctree\expandedTexture_ca.paa";
+	hiddenTexture = "A3\ui_f\data\gui\rsccommon\rsctree\hiddenTexture_ca.paa";
+	borderSize = 0;
+	expandOnDoubleclick = 1;
+};
+class ClientMapUI
+{
+	idd = -1;
+	enableSimulation = "true";
+	movingEnable = "true";
+	moving = "true";
+	canDrag = "true";
+	class ControlsBackground{};
+	class Controls
+	{
+		class CMUI_INTEL_LISTBOX_BG: MUI_BASE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.103";
+			w = "safeZoneW * 0.233";
+			h = "safeZoneH * 0.374";
+			colorBackground[] = {0,0,0,0.85};
+			colorText[] = {0,0,0,0};
+			text = "";
+		};
+		class CMUI_INTEL_LISTBOX: MUI_LISTNBOX
+		{
+			IDC = 4007;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.111";
+			w = "safeZoneW * 0.233";
+			h = "safeZoneH * 0.366";
+			colorBackground[] = {0.0,0.0,0.0,1};
+			font = "EtelkaMonospacePro";
+			sizeEx = "safeZoneH*0.015";
+			style = 32;
+			rowHeight = 0.048;
+		};
+		class CMUI_INTEL_HEADLINE: MUI_HEADLINE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.043";
+			w = "safeZoneW * 0.233";
+			text = "$STR_INT_INTEL";
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {1,0.682,0,1};
+		};
+		class CMUI_INTEL_ACTIVE_DESCR: MUI_DESCRIPTION
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.675";
+			w = "safeZoneW * 0.102";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_ACTIVE";
+			style = 1;
+		};
+		class CMUI_INTEL_INACTIVE_DESCR: MUI_DESCRIPTION
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.705";
+			w = "safeZoneW * 0.102";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_PLANNED";
+			style = 1;
+		};
+		class CMUI_INTEL_ENDED_DESCR: MUI_DESCRIPTION
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.735";
+			w = "safeZoneW * 0.102";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_ENDED";
+			style = 1;
+		};
+		class CMUI_INTEL_BTN_ACTIVE_MAP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.866";
+			y = "safeZoneY + safeZoneH * 0.675";
+			w = "safeZoneW * 0.061";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_MAP";
+		};
+		class CMUI_INTEL_BTN_ACTIVE_LIST: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.932";
+			y = "safeZoneY + safeZoneH * 0.675";
+			w = "safeZoneW * 0.061";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_LIST";
+		};
+		class CMUI_INTEL_BTN_INACTIVE_MAP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.866";
+			y = "safeZoneY + safeZoneH * 0.705";
+			w = "safeZoneW * 0.061";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_MAP";
+		};
+		class CMUI_INTEL_BTN_INACTIVE_LIST: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.932";
+			y = "safeZoneY + safeZoneH * 0.705";
+			w = "safeZoneW * 0.061";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_LIST";
+		};
+		class CMUI_INTEL_BTN_ENDED_MAP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.866";
+			y = "safeZoneY + safeZoneH * 0.735";
+			w = "safeZoneW * 0.061";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_MAP";
+		};
+		class CMUI_INTEL_BTN_ENDED_LIST: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.932";
+			y = "safeZoneY + safeZoneH * 0.735";
+			w = "safeZoneW * 0.061";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_LIST";
+		};
+		class CMUI_HINTS_BG: RscPicture
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.184";
+			y = "safeZoneY + safeZoneH * 0.043";
+			w = "safeZoneW * 0.58";
+			h = "safeZoneH * 0.026";
+			text = "vindicta_missions\src\UI\Images\gradient_2way.paa";
+			colorBackground[] = {0.2,0.2,0.2,0.6};
+			colorText[] = {0.1,0.1,0.1,1};
+		};
+		class CMUI_HINTS: MUI_BG_TRANSPARENT
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.184";
+			y = "safeZoneY + safeZoneH * 0.043";
+			w = "safeZoneW * 0.58";
+			h = "safeZoneH * 0.026";
+			text = "testestest";
+			font = "RobotoCondensed";
+		};
+		class CMUI_BUTTON_PLAYERS: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.116";
+			y = "safeZoneY + safeZoneH * 0.002";
+			w = "safeZoneW * 0.118";
+			h = "safeZoneH * 0.029";
+			text = "$STR_INT_PLAYERS";
+		};
+		class CMUI_BUTTON_LOC: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.236";
+			y = "safeZoneY + safeZoneH * 0.002";
+			w = "safeZoneW * 0.118";
+			h = "safeZoneH * 0.029";
+			text = "$STR_INT_LOC";
+		};
+		class CMUI_BUTTON_LOC_MINI_PANELS: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.599";
+			y = "safeZoneY + safeZoneH * 0.002";
+			w = "safeZoneW * 0.118";
+			h = "safeZoneH * 0.028";
+			text = "$STR_INT_OVERVIEW";
+		};
+		class CMUI_BUTTON_INTELP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.357";
+			y = "safeZoneY + safeZoneH * 0.002";
+			w = "safeZoneW * 0.118";
+			h = "safeZoneH * 0.029";
+			text = "$STR_INT_PANEL";
+		};
+		class CMUI_BUTTON_NOTIF: MUI_BUTTON_TXT
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.478";
+			y = "safeZoneY + safeZoneH * 0.002";
+			w = "safeZoneW * 0.118";
+			h = "safeZoneH * 0.029";
+			text = "$STR_INT_CLEAR_NOTIFICATIONS";
+		};
+		class CMUI_INTEL_BTNGRP_BG: MUI_BG_BLACKSOLID
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.070";
+			w = "safeZoneW * 0.233";
+			h = "safeZoneH * 0.028";
+		};
+		class CMUI_INTEL_BTNGRP: MUI_GROUP
+		{
+			IDC = 4011;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.070";
+			w = "safeZoneW * 0.233";
+			h = "safeZoneH * 0.028";
+			class VScrollbar{};
+			class HScrollbar{};
+		};
+		class CMUI_INTEL_DESCRIPTION_BG: MUI_BG_BLACKSOLID
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.760";
+			y = "safeZoneY + safeZoneH * 0.482";
+			w = "safeZoneW * 0.233";
+			h = "safeZoneH * 0.185";
+			colorBackground[] = {0,0,0,0.85};
+			text = "";
+		};
+		class CMUI_INTEL_DESCRIPTION_FRAME: MUI_GROUP
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.766";
+			y = "safeZoneY + safeZoneH * 0.488";
+			w = "safeZoneW * 0.220";
+			h = "safeZoneH * 0.170";
+			class Controls
+			{
+				class CMUI_INTEL_DESCRIPTION: MUI_STRUCT_TXT
+				{
+					IDC = -1;
+					x = 0;
+					y = 0;
+					w = "safeZoneW * 0.208";
+					h = 1;
+					colorBackground[] = {0,0,0,0};
+					text = "$STR_INT_DESC";
+					sizeEx = "safeZoneH*0.016";
+					style = 16;
+				};
+			};
+		};
+		class CMUI_BUTTON_RESPAWN: MUI_BUTTON_TXT
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.353";
+			y = "safeZoneY + safeZoneH * 0.822";
+			w = "safeZoneW * 0.3";
+			h = "safeZoneH * 0.065";
+			font = "PuristaLight";
+			text = "$STR_INT_RESPAWN";
+			sizeEx = 0.06;
+			shadow = 1;
+			colorBackground[] = {0.2,0.6,0,1};
+			colorBackgroundActive[] = {1,1,1,1};
+			colorBackgroundDisabled[] = {0.7,0.1,0,1};
+		};
+		class CMUI_STATIC_RESPAWN: MUI_BG_BLACKSOLID
+		{
+			IDC = -1;
+			x = "safeZoneX + safeZoneW * 0.353";
+			y = "safeZoneY + safeZoneH * 0.889";
+			w = "safeZoneW * 0.3";
+			h = "safeZoneH * 0.035";
+			text = "$STR_INT_RESPAWN_HINT";
+			font = "RobotoCondensed";
+		};
+	};
+};
+class CMUI_GCOM_ACTION_LISTBOX_BG: MUI_GROUP
+{
+	type = 15;
+	idc = 4006;
+	x = 0;
+	y = 0;
+	w = "0.2 + 0.01";
+	h = "5*0.04 + 0.01";
+	class Controls
+	{
+		class BUTTON_MOVE: MUI_BUTTON_TXT
+		{
+			idc = 7302;
+			x = 0;
+			y = "0*0.04";
+			w = "0.2 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_MOVE";
+		};
+		class BUTTON_ATTACK: MUI_BUTTON_TXT
+		{
+			idc = 7303;
+			x = 0;
+			y = "1*0.04";
+			w = "0.2 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_ATTACK";
+		};
+		class BUTTON_REINFORCE: MUI_BUTTON_TXT
+		{
+			idc = 7304;
+			x = 0;
+			y = "2*0.04";
+			w = "0.2 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_REINFORCE";
+		};
+		class BUTTON_PATROL: MUI_BUTTON_TXT
+		{
+			idc = 7305;
+			x = 0;
+			y = "3*0.04";
+			w = "0.2 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_PATROL";
+		};
+		class BUTTON_CLOSE: MUI_BUTTON_TXT
+		{
+			idc = 7306;
+			x = 0;
+			y = "4*0.04";
+			w = "0.2 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_CANCEL";
+		};
+	};
+};
+class CMUI_GSELECTED_MENU: MUI_GROUP
+{
+	type = 15;
+	idc = 7600;
+	x = 0;
+	y = 0;
+	w = "0.20 + 0.01";
+	h = "3*0.04 + 0.01";
+	class Controls
+	{
+		class BUTTON_SPLIT: MUI_BUTTON_TXT
+		{
+			idc = 7601;
+			x = 0;
+			y = "0*0.04";
+			w = "0.20 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_SPLIT";
+		};
+		class BUTTON_ORDER: MUI_BUTTON_TXT
+		{
+			idc = 7603;
+			x = 0;
+			y = "1*0.04";
+			w = "0.20 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_GIVE_ORDER";
+		};
+		class BUTTON_CANCEL_ORDER: MUI_BUTTON_TXT
+		{
+			idc = 7604;
+			x = 0;
+			y = "2*0.04";
+			w = "0.20 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_COMMAND_CANCEL_ORDER";
+		};
+	};
+};
+class CMUI_LSELECTED_MENU: MUI_GROUP
+{
+	type = 15;
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = "0.20 + 0.01";
+	h = "2*0.04 + 0.01";
+	class Controls
+	{
+		class LSELECTED_BUTTON_RECRUIT: MUI_BUTTON_TXT
+		{
+			idc = -1;
+			x = 0;
+			y = "0*0.04";
+			w = "0.20 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_UNIT_RECUIT";
+		};
+		class LSELECTED_BUTTON_DISBAND: MUI_BUTTON_TXT
+		{
+			idc = -1;
+			x = 0;
+			y = "1*0.04";
+			w = "0.20 + 0.002";
+			h = "0.04 + 0.002";
+			text = "$STR_UNIT_DISBAND";
+		};
+	};
+};
+class GSPLIT_DIALOG
+{
+	idd = 330;
+	class ControlsBackground{};
+	class Controls
+	{
+		class GSPLIT_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.15;
+			y = 0.0;
+			w = 0.7;
+			h = 1;
+			text = "";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class GSPLIT_LB_LEFT_BUTTON_LEFT: MUI_LISTNBOX_BUTTON_ABS
+		{
+			idc = 7550;
+			text = "<";
+			offsetPressedX = "-0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_LB_LEFT_BUTTON_RIGHT: MUI_LISTNBOX_BUTTON_ABS
+		{
+			idc = 7551;
+			text = ">";
+			offsetPressedX = "0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_LB_LEFT_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.16;
+			y = 0.17;
+			w = 0.31;
+			h = 0.72;
+		};
+		class GSPLIT_LB_LEFT: MUI_LISTNBOX_ABS
+		{
+			idc = 7500;
+			x = 0.16;
+			y = 0.17;
+			w = 0.31;
+			h = 0.72;
+			columns[] = {0.1,0.2};
+			idcLeft = 7550;
+			idcRight = 7551;
+		};
+		class GSPLIT_LB_RIGHT_BUTTON_LEFT: MUI_LISTNBOX_BUTTON_ABS
+		{
+			idc = 7552;
+			text = "<";
+			offsetPressedX = "-0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_LB_RIGHT_BUTTON_RIGHT: MUI_LISTNBOX_BUTTON_ABS
+		{
+			idc = 7553;
+			text = ">";
+			offsetPressedX = "0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_LB_RIGHT_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.53;
+			y = 0.17;
+			w = 0.31;
+			h = 0.72;
+		};
+		class GSPLIT_LB_RIGHT: MUI_LISTNBOX_ABS
+		{
+			idc = 7501;
+			x = 0.53;
+			y = 0.17;
+			w = 0.31;
+			h = 0.72;
+			columns[] = {0.1,0.2};
+			idcLeft = 7552;
+			idcRight = 7553;
+		};
+		class GSPLIT_MOVE_RIGHT: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7502;
+			x = 0.48;
+			y = 0.46;
+			w = 0.04;
+			h = 0.07;
+			style = "0+2";
+			text = ">";
+			borderSize = 0;
+			offsetPressedX = "0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_MOVE_RIGHT_ALL: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7503;
+			x = 0.48;
+			y = 0.38;
+			w = 0.04;
+			h = 0.07;
+			style = "0+2";
+			text = ">>";
+			borderSize = 0;
+			offsetPressedX = "0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_MOVE_LEFT: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7504;
+			x = 0.48;
+			y = 0.54;
+			w = 0.04;
+			h = 0.07;
+			style = "0+2";
+			text = "<";
+			borderSize = 0;
+			offsetPressedX = "-0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_MOVE_LEFT_ALL: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7505;
+			x = 0.48;
+			y = 0.62;
+			w = 0.04;
+			h = 0.07;
+			style = "0+2";
+			text = "<<";
+			borderSize = 0;
+			offsetPressedX = "-0.1*safeZoneH*0.018";
+			offsetPressedY = 0;
+		};
+		class GSPLIT_HEADLINE: MUI_HEADLINE_ABS
+		{
+			idc = -1;
+			x = 0.15;
+			y = 0.0;
+			w = 0.65;
+			h = 0.04;
+			text = "$STR_GAR_SPLIT";
+		};
+		class GSPLIT_HINTS: MUI_BG_BLACKSOLID_ABS
+		{
+			idc = 7506;
+			x = 0.15;
+			y = 0.95;
+			w = 0.7;
+			h = 0.05;
+			style = 0;
+			text = "$STR_GAR_SPLIT_DESC";
+		};
+		class GSPLIT_STATIC_NEW_GAR: MUI_BG_TRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.53;
+			y = 0.05;
+			w = 0.31;
+			h = 0.04;
+			style = 2;
+			text = "$STR_GAR_NEW";
+		};
+		class GSPLIT_STATIC_NEW_INF: MUI_BG_TRANSPARENT_ABS
+		{
+			idc = 7507;
+			x = 0.53;
+			y = 0.13;
+			w = 0.31;
+			h = 0.04;
+			style = 0;
+			text = "$STR_GAR_INFANTRY";
+		};
+		class GSPLIT_STATIC_CURRENT_GAR: MUI_BG_TRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.16;
+			y = 0.05;
+			w = 0.31;
+			h = 0.04;
+			style = 2;
+			text = "$STR_GAR_CURRENT";
+		};
+		class GSPLIT_STATIC_NEW_CARGO: MUI_BG_TRANSPARENT_ABS
+		{
+			idc = 7508;
+			x = 0.53;
+			y = 0.09;
+			w = 0.31;
+			h = 0.04;
+			style = 0;
+			text = "$STR_GAR_SEATS";
+		};
+		class GSPLIT_STATIC_CURRENT_CARGO: MUI_BG_TRANSPARENT_ABS
+		{
+			idc = 7510;
+			x = 0.16;
+			y = 0.09;
+			w = 0.31;
+			h = 0.04;
+			style = 0;
+			text = "$STR_GAR_SEATS";
+		};
+		class GSPLIT_STATIC_CURRENT_INF: MUI_BG_TRANSPARENT_ABS
+		{
+			idc = 7509;
+			x = 0.16;
+			y = 0.13;
+			w = 0.31;
+			h = 0.04;
+			style = 0;
+			text = "$STR_GAR_INFANTRY";
+		};
+		class GSPLIT_BUTTON_CLOSE: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7513;
+			x = 0.8;
+			y = 0.0;
+			w = 0.05;
+			h = 0.04;
+			text = "X";
+			borderSize = 0;
+			colorBackground[] = {0.6,0,0,1};
+		};
+		class GSPLIT_BUTTON_CANCEL: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7512;
+			x = 0.64;
+			y = 0.9;
+			w = 0.11;
+			h = 0.04;
+			text = "$STR_GAR_CANCEL";
+			borderSize = 0;
+		};
+		class GSPLIT_BUTTON_SPLIT: MUI_BUTTON_TXT_ABS
+		{
+			idc = 7511;
+			x = 0.25;
+			y = 0.9;
+			w = 0.11;
+			h = 0.04;
+			text = "$STR_GAR_SPLIT";
+			borderSize = 0;
+		};
+	};
+};
+class MUI_DIALOG_BASE
+{
+	idd = 423;
+	onLoad = "uiNamespace setVariable ['gDialogBaseNewDisplay', _this select 0];";
+	class ControlsBackground
+	{
+		class STATIC_BACKGROUND: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = 10;
+			x = 0;
+			y = 0;
+			w = 1;
+			h = 1;
+			style = 0;
+			text = "";
+		};
+		class STATIC_HEADLINE: MUI_HEADLINE_ABS
+		{
+			idc = 19;
+			x = 0;
+			y = 0;
+			w = 1;
+			h = 0.04;
+			style = 0;
+			text = "Headline";
+		};
+		class STATIC_TAB_BUTTONS_BACKGROUND: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = 28;
+			x = 0;
+			y = 0.04;
+			w = 0.22;
+			h = 0.96;
+		};
+	};
+	class Controls
+	{
+		class BUTTON_CLOSE: RscButton
+		{
+			idc = 16;
+			x = 0.95;
+			y = 0.0;
+			w = 0.05;
+			h = 0.04;
+			style = "0x30 + 0x800";
+			text = "\z\vindicta\addons\ui\pictures\close_ca.paa";
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {0,0,0,0};
+			colorFocused[] = {0,0,0,0};
+			colorBackgroundActive[] = {0,0,0,0};
+			onMouseEnter = "_this#0 ctrlSetTextColor [1, 1, 1, 1];";
+			onMouseExit = "_this#0 ctrlSetTextColor [0, 0, 0, 1];";
+			shadow = 0;
+		};
+		class BUTTON_QUESTION: RscButton
+		{
+			idc = 13;
+			x = 0.95;
+			y = 0.0;
+			w = 0.05;
+			h = 0.04;
+			style = "0x30 + 0x800";
+			text = "\z\vindicta\addons\ui\pictures\unknown_ca.paa";
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {0,0,0,0};
+			colorFocused[] = {0,0,0,0};
+			colorBackgroundActive[] = {0,0,0,0};
+			onMouseEnter = "_this#0 ctrlSetTextColor [1, 1, 1, 1];";
+			onMouseExit = "_this#0 ctrlSetTextColor [0, 0, 0, 1];";
+			shadow = 0;
+		};
+		class GROUP_TAB_BUTTONS: MUI_GROUP_ABS
+		{
+			idc = 25;
+			x = 0;
+			y = 0.04;
+			w = 0.22;
+			h = 0.96;
+		};
+		class STATIC_HINTS: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = 22;
+			x = 0.22;
+			y = 0.96;
+			w = 0.78;
+			h = 0.04;
+			text = "Hint";
+			font = "RobotoCondensedLight";
+			sizeEx = 0.036;
+			style = 0;
+		};
+	};
+};
+class TAB_CMDR: MUI_GROUP_ABS
+{
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 0.9;
+	text = "";
+	class TAB_CMDR_BUTTON: MUI_BUTTON_TXT_ABS
+	{
+		type = 1;
+		idc = -1;
+		font = "PuristaMedium";
+		colorText[] = {0.0,0.0,0.0,1};
+		colorBackground[] = {1,0.682,0,1};
+		colorBackgroundActive[] = {1,1,1,1};
+		colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+		colorBorder[] = {0,0,0,0};
+		colorDisabled[] = {1,1,1,1};
+		colorFocused[] = {1,0.682,0,1};
+		colorShadow[] = {0,0,0,0};
+	};
+	class Controls
+	{
+		class TAB_CMDR_STATIC_CREATE_A_LOCATION: MUI_BASE_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.03;
+			w = 0.659;
+			h = 0.038;
+			text = "$STR_CMDR_CREATE_LOC";
+			style = 0;
+			font = "PuristaBold";
+		};
+		class TAB_CMDR_COMBO_LOC_TYPE: MUI_COMBOBOX_ABS
+		{
+			idc = -1;
+			x = 0.183;
+			y = 0.124;
+			w = 0.305;
+			h = 0.038;
+			maxHistoryDelay = 0;
+		};
+		class TAB_CMDR_EDIT_LOC_NAME: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.183;
+			y = 0.08;
+			w = 0.305;
+			h = 0.038;
+			style = 0;
+			text = "$STR_CMDR_LOC_NAME";
+			autocomplete = "";
+		};
+		class TAB_CMDR_STATIC_0: MUI_DESCRIPTION_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.02;
+			y = 0.08;
+			w = 0.141;
+			h = 0.038;
+			text = "$STR_CMDR_NAME";
+		};
+		class TAB_CMDR_STATIC_1: MUI_DESCRIPTION_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.02;
+			y = 0.124;
+			w = 0.141;
+			h = 0.038;
+			text = "$STR_CMDR_TYPE";
+		};
+		class TAB_CMDR_BUTTON_CREATE_LOC: TAB_CMDR_BUTTON
+		{
+			x = 0.5;
+			y = 0.08;
+			w = 0.179;
+			h = 0.126;
+			text = "$STR_CMD_CREATE";
+		};
+		class TAB_CMDR_STATIC_2: MUI_DESCRIPTION_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.02;
+			y = 0.168;
+			w = 0.141;
+			h = 0.038;
+			text = "$STR_CMDR_COST";
+		};
+		class TAB_CMDR_STATIC_BUILD_RESOURCES: MUI_BASE_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.183;
+			y = 0.168;
+			w = 0.305;
+			h = 0.038;
+			style = 0;
+			font = "RobotoCondensed";
+			text = "$STR_CMDR_RESOURCE";
+		};
+		class TAB_CMDR_STATIC_HELP: MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.02;
+			y = 0.245;
+			w = 0.468;
+			h = 0.08;
+			style = "16+0+0x200";
+			text = "$STR_CMDR_RESOURCE_HINT";
+			lineSpacing = 1;
+		};
+		class TAB_CMDR_SKIP_TIME_LABEL: MUI_DESCRIPTION_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.02;
+			y = 0.335;
+			w = 0.141;
+			h = 0.038;
+			text = "$STR_CMDR_SKIP_TIME";
+		};
+		class TAB_CMDR_BUTTON_SKIP_TO_DUSK: TAB_CMDR_BUTTON
+		{
+			x = 0.183;
+			y = 0.335;
+			w = 0.146;
+			h = 0.038;
+			text = "$STR_CMDR_DUSK";
+		};
+		class TAB_CMDR_BUTTON_SKIP_TO_PREDAWN: TAB_CMDR_BUTTON
+		{
+			x = "0.183 + (0.156 * 1)";
+			y = 0.335;
+			w = 0.146;
+			h = 0.038;
+			text = "$STR_CMDR_PREDAWN";
+		};
+		class TAB_CMDR_BUTTON_SKIP_TO_DAWN: TAB_CMDR_BUTTON
+		{
+			x = "0.183 + (0.156 * 2)";
+			y = 0.335;
+			w = 0.146;
+			h = 0.038;
+			text = "$STR_CMDR_DAWN";
+		};
+	};
+};
+class TAB_NOTES: MUI_GROUP_ABS
+{
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 0.9;
+	text = "";
+	class Controls
+	{
+		class TAB_NOTES_EDIT: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.028;
+			w = 0.659;
+			h = 0.839;
+			sizeEx = 0.035;
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "EtelkaMonospacePro";
+			text = "$STR_NOTES_HINT";
+			maxChars = 99999999;
+		};
+	};
+};
+class TAB_GMINIT: MUI_GROUP_ABS
+{
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 0.9;
+	class Controls
+	{
+		class LISTBOX_DESCR: MUI_DESCRIPTION_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.414;
+			w = 0.659;
+			h = 0.038;
+			text = "$STR_GMINIT_CHOSEN_FACTIONS";
+		};
+		class TAB_GMINIT_LISTNBOX_SETTINGS_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.462;
+			w = 0.659;
+			h = 0.299;
+		};
+		class TAB_GMINIT_LISTNBOX_SETTINGS: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.462;
+			w = 0.659;
+			h = 0.299;
+			columns[] = {0,1};
+		};
+		class STATIC_GMINIT_HEADLINE: MUI_BASE_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.03;
+			w = 0.659;
+			h = 0.038;
+			text = "$STR_GMINIT_NEW_CAMPAIGN";
+			style = 0;
+			font = "PuristaBold";
+		};
+		class STATIC_GAME_MODE: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.138;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_GAMEMODE";
+		};
+		class STATIC_ENEMY_FORCE_PERCENTAGE: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.313;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_INITIAL_ENY";
+			hint = "Hint Hint";
+		};
+		class STATIC_ENEMY_OUTPOSTS_OCCUPIED: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.357;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_INITIAL_ENEMY_OUTPOSTS";
+			hint = "Hint Hint";
+		};
+		class STATIC_MILITARY_FACTION: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.182;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_MIL_FACTION";
+		};
+		class STATIC_CAMPAIGN_NAME: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.094;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_CAMPAIGN_NAME";
+		};
+		class STATIC_POLICE_FACTION: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.225;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_CIV_FACTION";
+		};
+		class STATIC_ENEMY_CIV_FACTION: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.269;
+			w = 0.266;
+			h = 0.038;
+			text = "$STR_GMINIT_POL_FACTION";
+		};
+		class TAB_GMINIT_EDIT_ENEMY_PERCENTAGE: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.313;
+			w = 0.371;
+			h = 0.038;
+			text = "100";
+			style = 0;
+		};
+		class TAB_GMINIT_EDIT_ENEMY_OUTPOSTS_OCCUPIED: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.357;
+			w = 0.371;
+			h = 0.038;
+			text = "35";
+			style = 0;
+		};
+		class TAB_GMINIT_EDIT_CAMPAIGN_NAME: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.094;
+			w = 0.333;
+			h = 0.038;
+			text = "$STR_GMINIT_NAME";
+			style = 0;
+		};
+		class TAB_GMINIT_BUTTON_RND: MUI_BUTTON_TXT_ABS
+		{
+			type = 1;
+			idc = -1;
+			x = 0.646;
+			y = 0.094;
+			w = 0.033;
+			h = 0.038;
+			text = "~";
+			font = "PuristaMedium";
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {1,0.682,0,1};
+			colorBackgroundActive[] = {1,1,1,1};
+			colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+			colorBorder[] = {0,0,0,0};
+			colorDisabled[] = {1,1,1,1};
+			colorFocused[] = {1,0.682,0,1};
+			colorShadow[] = {0,0,0,0};
+		};
+		class TAB_GMINIT_COMBO_GAME_MODE: MUI_COMBOBOX_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.138;
+			w = 0.371;
+			h = 0.038;
+			text = "$STR_GMINIT_CIV_WAR";
+		};
+		class TAB_GMINIT_COMBO_ENEMY_FACTION: MUI_COMBOBOX_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.182;
+			w = 0.371;
+			h = 0.038;
+			text = "AAF";
+		};
+		class TAB_GMINIT_COMBO_POLICE_FACTION: MUI_COMBOBOX_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.225;
+			w = 0.371;
+			h = 0.038;
+			text = "$STR_GMINIT_STD";
+		};
+		class TAB_GMINIT_COMBO_CIV_FACTION: MUI_COMBOBOX_ABS
+		{
+			idc = -1;
+			x = 0.308;
+			y = 0.269;
+			w = 0.371;
+			h = 0.038;
+			text = "$STR_GMINIT_STD";
+		};
+		class TAB_GMINIT_BUTTON_SETTINGS: MUI_BUTTON_TXT_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.78;
+			w = 0.404;
+			h = 0.087;
+			text = "$STR_GMINIT_ADV_SETTINGS";
+			font = "PuristaMedium";
+		};
+		class TAB_GMINIT_BUTTON_START: MUI_BUTTON_TXT_ABS
+		{
+			idc = -1;
+			x = 0.428;
+			y = 0.78;
+			w = 0.25;
+			h = 0.087;
+			text = "$STR_GMINIT_START";
+			font = "PuristaMedium";
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {1,0.682,0,1};
+			colorBackgroundActive[] = {1,1,1,1};
+			colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+			colorBorder[] = {0,0,0,0};
+			colorDisabled[] = {1,1,1,1};
+			colorFocused[] = {1,0.682,0,1};
+			colorShadow[] = {0,0,0,0};
+		};
+	};
+};
+class TAB_SAVE: MUI_GROUP
+{
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 0.9;
+	style = 0;
+	text = "";
+	class Controls
+	{
+		class TAB_SAVE_STATIC_LISTBOX_BACKGROUND: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.077;
+			w = 0.452;
+			h = 0.445;
+		};
+		class TAB_SAVE_LISTNBOX_SAVES: MUI_LISTNBOX_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.077;
+			w = 0.452;
+			h = 0.445;
+			columns[] = {0,1};
+		};
+		class TAB_SAVE_STATIC_STORAGE: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			idc = -1;
+			x = 0.49000016;
+			y = 0.03000024;
+			w = 0.20000005;
+			h = 0.04;
+			text = "$STR_SAVE_STORAGE";
+		};
+		class TAB_SAVE_COMBO_STORAGE: MUI_COMBOBOX_ABS
+		{
+			idc = -1;
+			x = 0.4900001;
+			y = 0.08000016;
+			w = 0.20000006;
+			h = 0.04000003;
+			text = "---";
+		};
+		class TAB_SAVE_BUTTON_NEW: MUI_BUTTON_TXT_ABS
+		{
+			idc = -1;
+			x = 0.49;
+			y = 0.18000019;
+			w = 0.20000003;
+			h = 0.07;
+			text = "$STR_SAVE_NEW";
+		};
+		class TAB_SAVE_BUTTON_OVERWRITE: MUI_BUTTON_TXT_ABS
+		{
+			idc = -1;
+			x = 0.49000016;
+			y = 0.27000043;
+			w = 0.20000006;
+			h = 0.07;
+			text = "$STR_SAVE_OVERWRITE";
+		};
+		class TAB_SAVE_BUTTON_LOAD: MUI_BUTTON_TXT_ABS
+		{
+			idc = -1;
+			x = 0.4900002;
+			y = 0.36000046;
+			w = 0.20000006;
+			h = 0.07;
+			text = "$STR_SAVE_LOAD";
+		};
+		class TAB_SAVE_BUTTON_DELETE: MUI_BUTTON_TXT_ABS
+		{
+			idc = -1;
+			x = 0.4900002;
+			y = 0.4500004;
+			w = 0.20000006;
+			h = 0.07;
+			text = "$STR_SAVE_DELETE";
+			colorBackground[] = {0.7,0.1,0,1};
+		};
+		class TAB_SAVE_STATIC_PREVIOUS_SAVES: MUI_BASE_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.028;
+			w = 0.452;
+			h = 0.04;
+			style = 0;
+			text = "$STR_SAVE_PREVIOUS";
+			colorBackground[] = {0.0,0.0,0.0,1};
+		};
+		class TAB_SAVE_STATIC_DESCRNAME: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.538;
+			w = 0.226;
+			h = 0.04;
+			text = "$STR_SAVE_NAME";
+		};
+		class TAB_SAVE_STATIC_DESCRMAP: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.584;
+			w = 0.226;
+			h = 0.04;
+			text = "$STR_SAVE_MAP";
+		};
+		class TAB_SAVE_STATIC_DESCRVER: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.629;
+			w = 0.226;
+			h = 0.04;
+			text = "$STR_SAVE_VERSION";
+		};
+		class TAB_SAVE_STATIC_DESCRCOUNT: MUI_DESCRIPTION_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.675;
+			w = 0.226;
+			h = 0.04;
+			text = "$STR_SAVE_COUNT";
+		};
+		class TAB_SAVE_STATIC_NAME: MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS
+		{
+			idc = -1;
+			x = 0.246;
+			y = 0.538;
+			w = 0.226;
+			h = 0.04;
+			text = "";
+			font = "RobotoCondensed";
+			style = "0x01+0x0C";
+		};
+		class TAB_SAVE_STATIC_MAP: MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS
+		{
+			idc = -1;
+			x = 0.246;
+			y = 0.584;
+			w = 0.226;
+			h = 0.04;
+			text = "";
+			font = "RobotoCondensed";
+			style = "0x01+0x0C";
+		};
+		class TAB_SAVE_STATIC_VER: MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS
+		{
+			idc = -1;
+			x = 0.246;
+			y = 0.629;
+			w = 0.226;
+			h = 0.04;
+			text = "";
+			font = "RobotoCondensed";
+			style = "0x01+0x0C";
+		};
+		class TAB_SAVE_STATIC_COUNT: MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS
+		{
+			idc = -1;
+			x = 0.246;
+			y = 0.675;
+			w = 0.226;
+			h = 0.04;
+			text = "";
+			font = "RobotoCondensed";
+			style = "0x01+0x0C";
+		};
+		class TAB_SAVE_STATIC_SAVE_DATA: MUI_BG_TRANSPARENT_MULTILINE_LEFT_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.733;
+			w = 0.659;
+			h = 0.112;
+			text = "";
+		};
+	};
+};
+class TAB_TUTORIAL: MUI_GROUP
+{
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 0.9;
+	style = 0;
+	text = "";
+	class Controls
+	{
+		class TAB_TUT_PICTURE: RscPicture
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.036;
+			w = 0.416;
+			h = 0.277;
+			text = "\z\vindicta\addons\ui\pictures\tut_image_default.paa";
+			style = 48;
+		};
+		class TAB_TUT_TEXT: MUI_BG_TRANSPARENT_MULTILINE_CENTER_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.402;
+			w = 0.659;
+			h = 0.471;
+			colorBackground[] = {0,0,0,0};
+			font = "RobotoCondensedLight";
+			sizeEx = 0.036;
+			style = "0x00 + 16+0+0x200";
+			text = "Int, ullamet ipis dolorat iistore prepre poraerc hicidenda aut ullabor aectam fugit apellatem aut odi tem. Molorumquia cus ad moluptur, et aut liquidem que eiunt fugit utemporrunt atibusdaecta prate dere poribus aut ullesed ut que cus nobis mil ipidi";
+		};
+		class TAB_TUT_HEADLINE: MUI_BASE_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.335;
+			w = 0.416;
+			h = 0.04;
+			colorBackground[] = {0,0,0,0};
+			font = "PuristaSemibold";
+			sizeEx = 0.045;
+			text = "Headline";
+			style = 0;
+		};
+		class TAB_TUT_LISTBOX: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = 0.439;
+			y = 0.036;
+			w = 0.239;
+			h = 0.277;
+			sizeEx = 0.032;
+		};
+	};
+};
+class TAB_TUTORIAL_TEMP: MUI_GROUP_ABS
+{
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 0.9;
+	text = "";
+	class Controls
+	{
+		class TAB_TOTORIAL_TEMP_EDIT: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.028;
+			w = 0.659;
+			h = 0.839;
+			sizeEx = 0.035;
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "EtelkaMonospacePro";
+			text = "";
+			canModify = "false";
+		};
+	};
+};
+class TACTICAL_TABLET
+{
+	idd = -1;
+	onLoad = "uiNamespace setVariable ['gTacticalTabletNewDisplay', _this select 0];";
+	class ControlsBackground{};
+	class Controls
+	{
+		class TABLET_BG_FRAME
+		{
+			type = 0;
+			idc = -1;
+			x = 0.02000006;
+			y = 0.02000011;
+			w = 0.96;
+			h = 0.96;
+			style = 0;
+			text = "";
+			colorBackground[] = {0.3024,0.5545,0.3141,1};
+			colorText[] = {0.3804,0.0314,0.7725,1};
+			font = "PuristaMedium";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class TABLET_BG
+		{
+			type = 0;
+			idc = -1;
+			x = 0.025;
+			y = 0.025;
+			w = 0.95;
+			h = 0.95;
+			style = 0;
+			text = "";
+			colorBackground[] = {0.2707,0.4196,0.2824,1};
+			colorText[] = {0.3804,0.0314,0.7725,1};
+			font = "PuristaMedium";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class TABLET_TITLE
+		{
+			type = 0;
+			idc = -1;
+			x = 0.0500002;
+			y = 0.90000015;
+			w = 0.3000001;
+			h = 0.05000004;
+			style = 0;
+			text = "$STR_TT_TITLE";
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {0.702,0.702,0.702,1};
+			font = "PuristaMedium";
+			sizeEx = 0.03;
+		};
+		class TABLET_DISPLAY_BG
+		{
+			type = 0;
+			idc = -1;
+			x = 0.0650001;
+			y = 0.0650001;
+			w = 0.87000006;
+			h = 0.82000005;
+			style = 0;
+			text = "";
+			colorBackground[] = {0.1595,0.2689,0.1792,1};
+			colorText[] = {0.949,0.949,0.949,1};
+			font = "EtelkaMonospacePro";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class TABLET_DISPLAY
+		{
+			type = 0;
+			idc = -1;
+			x = 0.07500004;
+			y = 0.07500002;
+			w = 0.85000014;
+			h = 0.8000001;
+			style = 0;
+			text = "";
+			colorBackground[] = {0.102,0.102,0.102,1};
+			colorText[] = {0.949,0.949,0.949,1};
+			font = "EtelkaMonospacePro";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+		};
+		class TABLET_DISPLAY_TEXT: MUI_EDIT_ABS
+		{
+			type = 2;
+			idc = -1;
+			x = 0.08500066;
+			y = 0.08500066;
+			w = 0.83000004;
+			h = 0.7800001;
+			style = "0+16+0x200";
+			text = "Line 1 Line 2 Line 3";
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {0.949,0.949,0.949,1};
+			colorSelection[] = {0.3024,0.5545,0.3141,1};
+			font = "EtelkaMonospacePro";
+			sizeEx = 0.04;
+			lineSpacing = 1;
+			canModify = "false";
+		};
+	};
+};
+class RadioKeyTab: MUI_GROUP_ABS
+{
+	x = 0;
+	y = 0;
+	w = 0.7;
+	h = 1;
+	text = "";
+	class Controls
+	{
+		class EDIT_ENTER_KEY: MUI_EDIT_ABS
+		{
+			idc = -1;
+			x = 0.02;
+			y = 0.94;
+			w = 0.5;
+			h = 0.04;
+			text = "";
+			colorBackground[] = {0,0,0,0.75};
+			sizeEx = 0.04;
+		};
+		class STATIC_KEYS: MUI_BASE_ABS
+		{
+			x = 0.02;
+			y = 0.07000008;
+			w = 0.66;
+			h = 0.81;
+			colorBackground[] = {0,0,0,0.75};
+			style = "0 + 16 + 0x200";
+			lineSpacing = 1;
+			text = "";
+			font = "EtelkaMonospacePro";
+			sizeEx = "0.75*0.035";
+		};
+		class BUTTON_ADD_KEY: MUI_BUTTON_TXT_ABS
+		{
+			x = 0.54;
+			y = 0.94;
+			w = 0.14000003;
+			h = 0.04;
+			text = "$STR_RKD_ADD";
+		};
+		class Control919808632: MUI_BASE_ABS
+		{
+			x = 0.0250001;
+			y = 0.01500006;
+			w = 0.65;
+			h = 0.05000004;
+			style = 0;
+			text = "$STR_RKD_ADDED";
+			sizeEx = 0.04;
+		};
+		class Control919808632_copy1: MUI_BASE_ABS
+		{
+			x = 0.02;
+			y = 0.9;
+			w = 0.5;
+			h = 0.04;
+			style = 0;
+			text = "$STR_RKD_ENTER";
+		};
+	};
+};
+class RecruitTab: MUI_GROUP
+{
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = 1.2;
+	h = 0.9;
+	style = 0;
+	text = "";
+	class Controls
+	{
+		class TAB_RECRUIT_BUTTON_RECRUIT: MUI_BUTTON_TXT_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = "(0.020 + 0.060 + 0.010) + (0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) + 0.020";
+			w = "(1.2 - 0.020 * 2)";
+			h = 0.112;
+			text = "$STR_RD_RECRUIT";
+			font = "PuristaMedium";
+			SizeEx = 0.05;
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {1,0.682,0,1};
+			colorBackgroundActive[] = {1,1,1,1};
+			colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+			colorBorder[] = {0,0,0,0};
+			colorDisabled[] = {1,1,1,1};
+			colorFocused[] = {1,0.682,0,1};
+			colorShadow[] = {0,0,0,0};
+		};
+		class TAB_RECRUIT_STATIC_N_RECRUITS: MUI_DESCRIPTION_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = 0.02;
+			w = "(1.2 - 0.020 * 2)";
+			h = 0.06;
+			style = 0;
+			SizeEx = 0.05;
+		};
+		class TAB_RECRUIT_AVAILABLE_LOADOUTS_LABEL: MUI_DESCRIPTION_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = "(0.020 + 0.060 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26)";
+			h = 0.04;
+			style = 0;
+			text = "$STR_RD_LOADOUTS";
+		};
+		class TAB_RECRUIT_WEAPONS_LABEL: MUI_DESCRIPTION_ABS
+		{
+			IDC = -1;
+			x = "(0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010)";
+			y = "(0.020 + 0.060 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = 0.04;
+			style = 0;
+			text = "$STR_RD_WEAPONS";
+		};
+		class TAB_RECRUIT_GEAR_LABEL: MUI_DESCRIPTION_ABS
+		{
+			IDC = -1;
+			x = "((0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010) + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37) + 0.010)";
+			y = "(0.020 + 0.060 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = 0.04;
+			style = 0;
+			text = "$STR_RD_GEAR";
+		};
+		class TAB_RECRUIT_LISTBOX_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26)";
+			h = "((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040)";
+			text = "";
+		};
+		class TAB_RECRUIT_LISTBOX: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = 0.02;
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26)";
+			h = "((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040)";
+			text = "";
+			columns[] = {0,1};
+		};
+		class TAB_RECRUIT_LISTBOX_PRIMARY_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			IDC = -1;
+			x = "(0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+		};
+		class TAB_RECRUIT_LISTBOX_PRIMARY: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = "(0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+			columns[] = {0,0.8,1};
+		};
+		class TAB_RECRUIT_LISTBOX_SECONDARY_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			IDC = -1;
+			x = "(0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010) + 0.010 + ((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+		};
+		class TAB_RECRUIT_LISTBOX_SECONDARY: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = "(0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010) + 0.010 + ((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+			columns[] = {0,0.8,1};
+		};
+		class TAB_RECRUIT_LISTBOX_HELMET_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			IDC = -1;
+			x = "((0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010) + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+		};
+		class TAB_RECRUIT_LISTBOX_HELMET: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = "((0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010) + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+			columns[] = {0,0.8,1};
+		};
+		class TAB_RECRUIT_LISTBOX_VEST_BG: MUI_BG_BLACKTRANSPARENT_ABS
+		{
+			IDC = -1;
+			x = "((0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010) + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010) + 0.010 + ((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+		};
+		class TAB_RECRUIT_LISTBOX_VEST: MUI_LISTNBOX_ABS
+		{
+			IDC = -1;
+			x = "((0.020 + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.26) + 0.010) + (((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37) + 0.010)";
+			y = "((0.020 + 0.060 + 0.010) + 0.040 + 0.010) + 0.010 + ((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			w = "(((1.2 - 0.020 * 2) - (3 - 1) * 0.010) * 0.37)";
+			h = "((((0.9 - (0.020 + 0.060 + 0.010) - 0.020 - 0.112 - 0.020) - 0.010 - 0.040) - 0.010) / 2)";
+			text = "";
+			columns[] = {0,0.8,1};
+		};
+	};
+};
+class LoadingScreenGroup: MUI_GROUP
+{
+	x = "safeZoneX + safeZoneW * 0";
+	y = "safeZoneY + safeZoneH * 0";
+	w = "safeZoneW + 0.1";
+	h = "safeZoneH + 0.1";
+	type = 15;
+	class ControlsBackground{};
+	class Controls
+	{
+		class LS_Background: MUI_BASE
+		{
+			IDC = -1;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 1";
+			colorBackground[] = {0.0,0.0,0.0,1};
+		};
+		class LS_Screenshot: RSCPICTURE
+		{
+			IDC = -1;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 1";
+			style = "0x30 + 0x800";
+			text = "\z\vindicta\addons\ui\Pictures\Screenshot.paa";
+		};
+		class LS_Topbar: MUI_BASE
+		{
+			IDC = -1;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.15";
+			colorBackground[] = {0.0,0.0,0.0,1};
+		};
+		class LS_TitleText: MUI_BASE
+		{
+			IDC = 666;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.09";
+			text = "";
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "PuristaMedium";
+			sizeEx = "safezoneH * 0.07";
+		};
+		class LS_SubtitleText: MUI_BASE
+		{
+			IDC = 667;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0.09";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.04";
+			text = "";
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "PuristaMedium";
+			sizeEx = "safezoneH * 0.03";
+		};
+		class LS_ProgressbarLoading: MUI_PROGRESSBAR
+		{
+			IDC = 103;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0.135";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.005";
+			colorFrame[] = {0,0,0,0};
+		};
+		class LS_ProgressbarLoading2: MUI_PROGRESSBAR
+		{
+			IDC = 668;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0.140";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.005";
+			colorFrame[] = {0,0,0,0};
+			colorBar[] = {0.663,0.153,0.149,1};
+		};
+		class LS_ProgressbarOther: MUI_PROGRESSBAR
+		{
+			IDC = 104;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0.145";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.005";
+			colorFrame[] = {0,0,0,0};
+		};
+		class LS_Bottombar: MUI_BASE
+		{
+			IDC = -1;
+			x = "safeZoneW * 0";
+			y = "safeZoneH * 0.85";
+			w = "safeZoneW * 1";
+			h = "safeZoneH * 0.15";
+			colorBackground[] = {0.0,0.0,0.0,1};
+		};
+		class LS_Logo: RSCPICTURE
+		{
+			IDC = -1;
+			x = "safeZoneW * 0.72";
+			y = "safeZoneH * 0.86";
+			w = "safeZoneW * 0.26";
+			h = "safeZoneH * 0.10";
+			style = "0x30 + 0x800";
+			text = "\z\vindicta\addons\ui\Pictures\VindictaLogo.paa";
+			colorText[] = {0.663,0.153,0.149,1};
+		};
+		class LS_Version: MUI_BASE
+		{
+			IDC = 64599;
+			x = "safeZoneW * 0.72";
+			y = "safeZoneH * 0.96";
+			w = "safeZoneW * 0.26";
+			h = "safeZoneH * 0.02";
+			text = "v0.0.0";
+			style = 1;
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "PuristaMedium";
+			sizeEx = "safezoneH * 0.02";
+		};
+	};
+};
+class NOTIFICATION_GROUP: MUI_GROUP_ABS
+{
+	idc = -1;
+	x = 0;
+	y = 0;
+	w = "0.5 + 0.005";
+	h = 0.175;
+	style = 0;
+	text = "";
+	colorText[] = {0.5412,0.5255,0.051,1};
+	font = "RobotoCondensed";
+	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	class Controls
+	{
+		class NOTIFICATION_BG: MUI_BASE
+		{
+			IDC = -1;
+			x = 0;
+			y = 0;
+			w = 0.427;
+			h = 0.158;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class NOTIFICATION_CATEGORYBG: RscPicture
+		{
+			IDC = -1;
+			x = 0;
+			y = 0;
+			w = 0.427;
+			h = 0.035;
+			text = "vindicta_missions\src\UI\Images\gradient_LtoR.paa";
+			colorText[] = {1,0.682,0,1};
+			onLoad = "uiNamespace setVariable ['vin_not_categorybg', _this#0]";
+		};
+		class NOTIFICATION_ICON
+		{
+			type = 0;
+			idc = -1;
+			x = 0;
+			y = 0;
+			w = 0.026;
+			h = 0.035;
+			style = "0x30 + 0x800";
+			text = "\A3\ui_f\data\GUI\Rsc\RscDisplayMain\notification_ca.paa";
+			colorBackground[] = {0,0,0,0};
+			colorText[] = {1,1,1,1};
+			font = "RobotoCondensedLight";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			onLoad = "uiNamespace setVariable ['vin_not_icon', _this#0]";
+		};
+		class NOTIFICATION_CATEGORY: MUI_HEADLINE_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0.029;
+			y = 0;
+			w = 0.397;
+			h = 0.035;
+			colorText[] = {0.0,0.0,0.0,1};
+			colorBackground[] = {0,0,0,0};
+			style = 0;
+			text = "$STR_INT_INTEL";
+			font = "PuristaSemibold";
+			sizeEx = 0.035;
+			onLoad = "uiNamespace setVariable ['vin_not_category', _this#0]";
+		};
+		class NOTIFICATION_TEXT: MUI_BASE_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0;
+			y = 0.041;
+			w = 0.41;
+			h = 0.081;
+			colorBackground[] = {0,0,0,0};
+			style = "0+16+512";
+			text = "$STR_NOTI_CRYPTOKEY_FOUND";
+			font = "RobotoCondensedLight";
+			sizeEx = 0.035;
+			lineSpacing = 1;
+			onLoad = "uiNamespace setVariable ['vin_not_text', _this#0]";
+		};
+		class NOTIFICATION_HINTBG: RscPicture
+		{
+			IDC = -1;
+			x = 0;
+			y = 0.123;
+			w = 0.427;
+			h = 0.035;
+			text = "vindicta_missions\src\UI\Images\gradient_LtoR.paa";
+			colorText[] = {0,0,0,0.6};
+			onLoad = "uiNamespace setVariable ['vin_not_hintbg', _this#0]";
+		};
+		class NOTIFICATION_HINT: MUI_BASE_ABS
+		{
+			type = 0;
+			idc = -1;
+			x = 0;
+			y = 0.123;
+			w = 0.427;
+			h = 0.035;
+			colorBackground[] = {0,0,0,0};
+			style = 0;
+			text = "$STR_NOTI_CRYPTOKEY_STORED";
+			colorText[] = {1,1,1,1};
+			font = "RobotoCondensedLight";
+			sizeEx = 0.035;
+			onLoad = "uiNamespace setVariable ['vin_not_hint', _this#0]";
+		};
+	};
+};
+class AI_DEBUG_GROUP: MUI_GROUP
+{
+	idc = -1;
+	x = "safeZoneX + safeZoneW * 0.29375";
+	y = "safeZoneY + safeZoneH * 0.225";
+	w = "safeZoneW * 0.2";
+	h = "safeZoneH * 0.3";
+	text = "";
+	onLoad = "uiNamespace setVariable ['vin_aidbg_group', _this#0]";
+	class Controls
+	{
+		class AI_DEBUG_STATIC_BACKGROUND: MUI_BG_BLACKTRANSPARENT
+		{
+			idc = -1;
+			x = 0;
+			y = 0;
+			w = "safeZoneW * 0.19791667";
+			h = "safeZoneH * 0.29722223";
+		};
+		class AI_DEBUG_TREE: MUI_TREE
+		{
+			idc = -1;
+			x = "safeZoneX + safeZoneW * 0.29791667 - (safeZoneX + safeZoneW * 0.29375)";
+			y = "safeZoneY + safeZoneH * 0.25833334 - (safeZoneY + safeZoneH * 0.225)";
+			w = "safeZoneW * 0.18958334";
+			h = "safeZoneH * 0.25833334";
+			style = 0;
+			onLoad = "uiNamespace setVariable ['vin_aidbg_tree', _this#0]";
+		};
+		class AI_DEBUG_BUTTON_HALT: MUI_BUTTON_TXT
+		{
+			idc = -1;
+			x = "safeZoneX + safeZoneW * 0.4546875 - (safeZoneX + safeZoneW * 0.29375)";
+			y = "safeZoneY + safeZoneH * 0.23055556 - (safeZoneY + safeZoneH * 0.225)";
+			w = "safeZoneW * 0.0328125";
+			h = "safeZoneH * 0.02222223";
+			text = "Halt";
+			borderSize = 0;
+			onLoad = "uiNamespace setVariable ['vin_aidbg_button_halt', _this#0]";
+		};
+		class AI_DEBUG_EDIT_AI_REF: MUI_EDIT
+		{
+			idc = -1;
+			x = "safeZoneX + safeZoneW * 0.29791667 - (safeZoneX + safeZoneW * 0.29375)";
+			y = "safeZoneY + safeZoneH * 0.23055556 - (safeZoneY + safeZoneH * 0.225)";
+			w = "safeZoneW * 0.15260417";
+			h = "safeZoneH * 0.02222223";
+			text = "AI Object Reference";
+			onLoad = "uiNamespace setVariable ['vin_aidbg_edit_ai_ref', _this#0]";
+			style = 0;
+			canModify = "false";
+		};
+	};
+};
+class CMUI_INTEL_LISTBOX_BG: MUI_BASE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.103";
+	w = "safeZoneW * 0.233";
+	h = "safeZoneH * 0.374";
+	colorBackground[] = {0,0,0,0.85};
+	colorText[] = {0,0,0,0};
+	text = "";
+};
+class CMUI_INTEL_LISTBOX: MUI_LISTNBOX
+{
+	IDC = 4007;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.111";
+	w = "safeZoneW * 0.233";
+	h = "safeZoneH * 0.366";
+	colorBackground[] = {0.0,0.0,0.0,1};
+	font = "EtelkaMonospacePro";
+	sizeEx = "safeZoneH*0.015";
+	style = 32;
+	rowHeight = 0.048;
+};
+class CMUI_INTEL_HEADLINE: MUI_HEADLINE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.043";
+	w = "safeZoneW * 0.233";
+	text = "$STR_INT_INTEL";
+	colorText[] = {0.0,0.0,0.0,1};
+	colorBackground[] = {1,0.682,0,1};
+};
+class CMUI_INTEL_ACTIVE_DESCR: MUI_DESCRIPTION
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.675";
+	w = "safeZoneW * 0.102";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_ACTIVE";
+	style = 1;
+};
+class CMUI_INTEL_INACTIVE_DESCR: MUI_DESCRIPTION
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.705";
+	w = "safeZoneW * 0.102";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_PLANNED";
+	style = 1;
+};
+class CMUI_INTEL_ENDED_DESCR: MUI_DESCRIPTION
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.735";
+	w = "safeZoneW * 0.102";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_ENDED";
+	style = 1;
+};
+class CMUI_INTEL_BTN_ACTIVE_MAP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.866";
+	y = "safeZoneY + safeZoneH * 0.675";
+	w = "safeZoneW * 0.061";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_MAP";
+};
+class CMUI_INTEL_BTN_ACTIVE_LIST: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.932";
+	y = "safeZoneY + safeZoneH * 0.675";
+	w = "safeZoneW * 0.061";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_LIST";
+};
+class CMUI_INTEL_BTN_INACTIVE_MAP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.866";
+	y = "safeZoneY + safeZoneH * 0.705";
+	w = "safeZoneW * 0.061";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_MAP";
+};
+class CMUI_INTEL_BTN_INACTIVE_LIST: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.932";
+	y = "safeZoneY + safeZoneH * 0.705";
+	w = "safeZoneW * 0.061";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_LIST";
+};
+class CMUI_INTEL_BTN_ENDED_MAP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.866";
+	y = "safeZoneY + safeZoneH * 0.735";
+	w = "safeZoneW * 0.061";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_MAP";
+};
+class CMUI_INTEL_BTN_ENDED_LIST: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.932";
+	y = "safeZoneY + safeZoneH * 0.735";
+	w = "safeZoneW * 0.061";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_LIST";
+};
+class CMUI_HINTS_BG: RscPicture
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.184";
+	y = "safeZoneY + safeZoneH * 0.043";
+	w = "safeZoneW * 0.58";
+	h = "safeZoneH * 0.026";
+	text = "vindicta_missions\src\UI\Images\gradient_2way.paa";
+	colorBackground[] = {0.2,0.2,0.2,0.6};
+	colorText[] = {0.1,0.1,0.1,1};
+};
+class CMUI_HINTS: MUI_BG_TRANSPARENT
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.184";
+	y = "safeZoneY + safeZoneH * 0.043";
+	w = "safeZoneW * 0.58";
+	h = "safeZoneH * 0.026";
+	text = "testestest";
+	font = "RobotoCondensed";
+};
+class CMUI_BUTTON_PLAYERS: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.116";
+	y = "safeZoneY + safeZoneH * 0.002";
+	w = "safeZoneW * 0.118";
+	h = "safeZoneH * 0.029";
+	text = "$STR_INT_PLAYERS";
+};
+class CMUI_BUTTON_LOC: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.236";
+	y = "safeZoneY + safeZoneH * 0.002";
+	w = "safeZoneW * 0.118";
+	h = "safeZoneH * 0.029";
+	text = "$STR_INT_LOC";
+};
+class CMUI_BUTTON_LOC_MINI_PANELS: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.599";
+	y = "safeZoneY + safeZoneH * 0.002";
+	w = "safeZoneW * 0.118";
+	h = "safeZoneH * 0.028";
+	text = "$STR_INT_OVERVIEW";
+};
+class CMUI_BUTTON_INTELP: MUI_BUTTON_TXT_CHECKBOX_LIKE
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.357";
+	y = "safeZoneY + safeZoneH * 0.002";
+	w = "safeZoneW * 0.118";
+	h = "safeZoneH * 0.029";
+	text = "$STR_INT_PANEL";
+};
+class CMUI_BUTTON_NOTIF: MUI_BUTTON_TXT
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.478";
+	y = "safeZoneY + safeZoneH * 0.002";
+	w = "safeZoneW * 0.118";
+	h = "safeZoneH * 0.029";
+	text = "$STR_INT_CLEAR_NOTIFICATIONS";
+};
+class CMUI_INTEL_BTNGRP_BG: MUI_BG_BLACKSOLID
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.070";
+	w = "safeZoneW * 0.233";
+	h = "safeZoneH * 0.028";
+};
+class CMUI_INTEL_BTNGRP: MUI_GROUP
+{
+	IDC = 4011;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.070";
+	w = "safeZoneW * 0.233";
+	h = "safeZoneH * 0.028";
+	class VScrollbar{};
+	class HScrollbar{};
+};
+class CMUI_INTEL_DESCRIPTION_BG: MUI_BG_BLACKSOLID
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.760";
+	y = "safeZoneY + safeZoneH * 0.482";
+	w = "safeZoneW * 0.233";
+	h = "safeZoneH * 0.185";
+	colorBackground[] = {0,0,0,0.85};
+	text = "";
+};
+class CMUI_INTEL_DESCRIPTION_FRAME: MUI_GROUP
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.766";
+	y = "safeZoneY + safeZoneH * 0.488";
+	w = "safeZoneW * 0.220";
+	h = "safeZoneH * 0.170";
+	class Controls
+	{
+		class CMUI_INTEL_DESCRIPTION: MUI_STRUCT_TXT
+		{
+			IDC = -1;
+			x = 0;
+			y = 0;
+			w = "safeZoneW * 0.208";
+			h = 1;
+			colorBackground[] = {0,0,0,0};
+			text = "$STR_INT_DESC";
+			sizeEx = "safeZoneH*0.016";
+			style = 16;
+		};
+	};
+};
+class CMUI_BUTTON_RESPAWN: MUI_BUTTON_TXT
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.353";
+	y = "safeZoneY + safeZoneH * 0.822";
+	w = "safeZoneW * 0.3";
+	h = "safeZoneH * 0.065";
+	font = "PuristaLight";
+	text = "$STR_INT_RESPAWN";
+	sizeEx = 0.06;
+	shadow = 1;
+	colorBackground[] = {0.2,0.6,0,1};
+	colorBackgroundActive[] = {1,1,1,1};
+	colorBackgroundDisabled[] = {0.7,0.1,0,1};
+};
+class CMUI_STATIC_RESPAWN: MUI_BG_BLACKSOLID
+{
+	IDC = -1;
+	x = "safeZoneX + safeZoneW * 0.353";
+	y = "safeZoneY + safeZoneH * 0.889";
+	w = "safeZoneW * 0.3";
+	h = "safeZoneH * 0.035";
+	text = "$STR_INT_RESPAWN_HINT";
+	font = "RobotoCondensed";
+};
+class CfgRemoteExec
+{
+	class Functions
+	{
+		mode = 2;
+		jip = 1;
+	};
+	class Commands
+	{
+		mode = 2;
+	};
+};
+class RscTitles
+{
+	class Default
+	{
+		idd = -1;
+		fadein = 0;
+		fadeout = 0;
+		duration = 2;
+	};
+	class UndercoverUIDebug
+	{
+		idd = 13999;
+		name = "UndercoverUIDebug";
+		onLoad = "uiNamespace setVariable ['undercoverUIDebug_display', _this select 0]";
+		onUnload = "uiNamespace setVariable ['undercoverUIDebug_display', displayNull]";
+		enableSimulation = "true";
+		duration = 10000000;
+		class ControlsBackground{};
+		class Controls
+		{
+			class TextCAPTIVE
+			{
+				type = 0;
+				idc = 13860;
+				x = 1.3583337;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.09545455;
+				style = "0+2";
+				text = "NOT CAPTIVE";
+				colorBackground[] = {0.754,0.1111,0.0952,1};
+				colorText[] = {1,1,1,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text1
+			{
+				type = 0;
+				idc = 13900;
+				x = -0.64166665;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text2
+			{
+				type = 0;
+				idc = 13901;
+				x = -0.3666666;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text3
+			{
+				type = 0;
+				idc = 13902;
+				x = -0.09166656;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text4
+			{
+				type = 0;
+				idc = 13903;
+				x = 0.1833335;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text5
+			{
+				type = 0;
+				idc = 13904;
+				x = 0.45833352;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text6
+			{
+				type = 0;
+				idc = 13905;
+				x = 0.7333336;
+				y = -0.38863635;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Text7
+			{
+				type = 0;
+				idc = 13906;
+				x = "safeZoneX + safeZoneW * 0.70989584";
+				y = "safeZoneY + safeZoneH * 0.01111112";
+				w = "safeZoneW * 0.1125";
+				h = "safeZoneH * 0.025";
+				style = 0;
+				text = "##################";
+				colorBackground[] = {0,0,0,0.7};
+				colorText[] = {0.302,1,0.2226,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool1
+			{
+				type = 0;
+				idc = 13907;
+				x = -0.64166635;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool2
+			{
+				type = 0;
+				idc = 13908;
+				x = -0.3666663;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool3
+			{
+				type = 0;
+				idc = 13909;
+				x = -0.09166627;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool4
+			{
+				type = 0;
+				idc = 13910;
+				x = 0.18333375;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool5
+			{
+				type = 0;
+				idc = 13911;
+				x = 0.45833385;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool6
+			{
+				type = 0;
+				idc = 13912;
+				x = 0.7333339;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class TextBool7
+			{
+				type = 0;
+				idc = 13913;
+				x = 1.0083339;
+				y = -0.3386363;
+				w = 0.27272728;
+				h = 0.04545455;
+				style = 0;
+				text = "##################";
+				colorBackground[] = {1,0,0,0.7};
+				colorText[] = {1,1,0.9686,1};
+				font = "PuristaMedium";
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+		};
+	};
+	class BuildUI
+	{
+		idd = 3981;
+		enableSimulation = "true";
+		name = "BuildUI";
+		onLoad = "uiNamespace setVariable ['buildUI_display', _this select 0]";
+		onUnload = "uiNamespace setVariable ['buildUI_display', displayNull]";
+		duration = 10000000;
+		class ControlsBackground{};
+		class Controls
+		{
+			class TooltipBG: RscPicture
+			{
+				idc = 8902;
+				x = "safeZoneX + safeZoneW * 0.29375";
+				y = "safeZoneY + safeZoneH * 0.78148149";
+				w = "safeZoneW * 0.4125";
+				h = "safeZoneH * 0.05370371";
+				text = "vindicta_missions\src\UI\Images\gradient_2way.paa";
+				colorText[] = {0.82,0.561,0.129,1.0};
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class CategoryBG: RscPicture
+			{
+				idc = 8901;
+				x = "safeZoneX + safeZoneW * 0.29375";
+				y = "safeZoneY + safeZoneH * 0.74537038";
+				w = "safeZoneW * 0.4125";
+				h = "safeZoneH * 0.03055556";
+				text = "vindicta_missions\src\UI\Images\gradient_2way.paa";
+				colorBackground[] = {0.2,0.2,0.2,0.6};
+				colorText[] = {0.1,0.1,0.1,1};
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class ItemCatBG: RscPicture
+			{
+				idc = 8586;
+				x = "safeZoneX + safeZoneW * 0.29375";
+				y = "safeZoneY + safeZoneH * 0.7212963";
+				w = "safeZoneW * 0.4125";
+				h = "safeZoneH * 0.01851852";
+				text = "vindicta_missions\src\UI\Images\gradient_2way.paa";
+				colorBackground[] = {0,0,0,0.6};
+				colorText[] = {0.1,0.1,0.1,1};
+				sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+			};
+			class Tooltip1
+			{
+				type = 13;
+				idc = 8903;
+				x = "safeZoneX + safeZoneW * 0.30989584";
+				y = "safeZoneY + safeZoneH * 0.78611112";
+				w = "safeZoneW * 0.38020834";
+				h = "safeZoneH * 0.0175926";
+				style = 2;
+				text = "$STR_BUI_TAB_TOOLTIP";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {0.0,0.0,0.0,1};
+				font = "RobotoCondensed";
+				size = "safeZoneH * 0.02";
+				shadow = 1;
+			};
+			class Tooltip2
+			{
+				type = 13;
+				idc = 8904;
+				x = "safeZoneX + safeZoneW * 0.30989584";
+				y = "safeZoneY + safeZoneH * 0.80925926";
+				w = "safeZoneW * 0.38020834";
+				h = "safeZoneH * 0.0175926";
+				style = 2;
+				text = "$STR_BUI_TAB_TOOLTIP";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {0.0,0.0,0.0,1};
+				font = "RobotoCondensed";
+				size = "safeZoneH * 0.02";
+				shadow = 1;
+			};
+			class CategoryText_Center
+			{
+				type = 0;
+				idc = 3202;
+				x = "safeZoneX + safeZoneW * 0.46041667";
+				y = "safeZoneY + safeZoneH * 0.749";
+				w = "safeZoneW * 0.07916667";
+				h = "safeZoneH * 0.02222223";
+				style = 2;
+				text = "$STR_BUI_DEFENSES";
+				colorBackground[] = {0.5873,0.7698,0.7302,0};
+				colorText[] = {1,1,1,1};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.025";
+			};
+			class CategoryText_L2
+			{
+				type = 0;
+				idc = 3200;
+				x = "safeZoneX + safeZoneW * 0.2953125";
+				y = "safeZoneY + safeZoneH * 0.749";
+				w = "safeZoneW * 0.07916667";
+				h = "safeZoneH * 0.02222223";
+				style = 2;
+				text = "$STR_BUI_RANGE";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.3};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.025";
+			};
+			class CategoryText_L1
+			{
+				type = 0;
+				idc = 3201;
+				x = "safeZoneX + safeZoneW * 0.378125";
+				y = "safeZoneY + safeZoneH * 0.749";
+				w = "safeZoneW * 0.07916667";
+				h = "safeZoneH * 0.02222223";
+				style = 2;
+				text = "$STR_BUI_DECOR";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.5};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.025";
+			};
+			class CategoryText_R1
+			{
+				type = 0;
+				idc = 3203;
+				x = "safeZoneX + safeZoneW * 0.54270834";
+				y = "safeZoneY + safeZoneH * 0.749";
+				w = "safeZoneW * 0.07916667";
+				h = "safeZoneH * 0.02222223";
+				style = 2;
+				text = "$STR_BUI_RANGE";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.5};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.025";
+			};
+			class CategoryText_R2
+			{
+				type = 0;
+				idc = 3204;
+				x = "safeZoneX + safeZoneW * 0.62552084";
+				y = "safeZoneY + safeZoneH * 0.749";
+				w = "safeZoneW * 0.07916667";
+				h = "safeZoneH * 0.02222223";
+				style = 2;
+				text = "$STR_BUI_RANGE";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.3};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.025";
+			};
+			class ItemText_Center
+			{
+				type = 0;
+				idc = 8581;
+				x = "safeZoneX + safeZoneW * 0.43";
+				y = "safeZoneY + safeZoneH * 0.72";
+				w = "safeZoneW * 0.13";
+				h = "safeZoneH * 0.02";
+				style = 2;
+				text = "$STR_BUI_DEFENSES";
+				colorBackground[] = {0.5873,0.7698,0.7302,0};
+				colorText[] = {1,1,1,1};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.017";
+			};
+			class ItemText_R1
+			{
+				type = 0;
+				idc = 8584;
+				x = "safeZoneX + safeZoneW * 0.56";
+				y = "safeZoneY + safeZoneH * 0.72";
+				w = "safeZoneW * 0.13";
+				h = "safeZoneH * 0.02";
+				style = 2;
+				text = "$STR_BUI_RANGE";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.5};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.017";
+			};
+			class ItemText_L1
+			{
+				type = 0;
+				idc = 8582;
+				x = "safeZoneX + safeZoneW * 0.3";
+				y = "safeZoneY + safeZoneH * 0.72";
+				w = "safeZoneW * 0.13";
+				h = "safeZoneH * 0.02";
+				style = 2;
+				text = "$STR_BUI_DECOR";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.5};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.017";
+			};
+			class ItemText_R2
+			{
+				type = 0;
+				idc = 8585;
+				x = "safeZoneX + safeZoneW * 0.69";
+				y = "safeZoneY + safeZoneH * 0.72";
+				w = "safeZoneW * 0.13";
+				h = "safeZoneH * 0.02";
+				style = 2;
+				text = "$STR_BUI_RANGE";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.3};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.017";
+			};
+			class ItemText_L2
+			{
+				type = 0;
+				idc = 8583;
+				x = "safeZoneX + safeZoneW * 0.17";
+				y = "safeZoneY + safeZoneH * 0.72";
+				w = "safeZoneW * 0.13";
+				h = "safeZoneH * 0.02";
+				style = 2;
+				text = "$STR_BUI_RANGE";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,0.3};
+				font = "RobotoCondensedBold";
+				sizeEx = "safeZoneH * 0.017";
+			};
+		};
+	};
+	class Vin_InGameUI
+	{
+		idd = -1;
+		name = "Vin_InGameUI";
+		onLoad = "uiNamespace setVariable ['p0_InGameUI_display', _this select 0]";
+		onUnload = "uiNamespace setVariable ['p0_InGameUI_display', displayNull]";
+		movingEnable = "false";
+		enableSimulation = "true";
+		duration = 10000000;
+		class Controls
+		{
+			class VIN_ResourceText: MUI_BASE
+			{
+				IDC = 20;
+				x = "safeZoneX + safeZoneW * 0.659";
+				y = "safeZoneY + safeZoneH * 0.023";
+				w = "safeZoneW * 0.094";
+				h = "safeZoneH * 0.020";
+				text = "9 999 999 999";
+				font = "PuristaMedium";
+				sizeEx = "safeZoneH*0.018";
+				style = 0;
+				shadow = 1;
+				colorText[] = {1,1,1,1};
+			};
+			class VIN_LocationText: MUI_BASE
+			{
+				IDC = 10;
+				x = "safeZoneX + safeZoneW * 0.221";
+				y = "safeZoneY + safeZoneH * 0.023";
+				w = "safeZoneW * 0.149";
+				h = "safeZoneH * 0.020";
+				text = "UI Not Initialized";
+				font = "PuristaMedium";
+				sizeEx = "safeZoneH*0.018";
+				style = 0;
+				shadow = 1;
+				colorText[] = {1,1,1,1};
+			};
+			class VIN_UndercoverBar
+			{
+				type = 8;
+				IDC = 9202;
+				x = "safeZoneX + safeZoneW * 0.432";
+				y = "safeZoneY + safeZoneH * 0.018";
+				w = "safeZoneW * 0.134";
+				h = "safeZoneH * 0.002";
+				style = 0;
+				colorBar[] = {1,1,1,1};
+				colorFrame[] = {0.2,0.2,0.2,0.2};
+				texture = "#(argb,8,8,3)color(1,1,1,1)";
+				access = 0;
+			};
+			class VIN_UndercoverHint: MUI_BASE
+			{
+				IDC = 9201;
+				x = "safeZoneX + safeZoneW * 0.378";
+				y = "safeZoneY + safeZoneH * 0.023";
+				w = "safeZoneW * 0.242";
+				h = "safeZoneH * 0.020";
+				text = "UNDERCOVER";
+				font = "PuristaSemibold";
+				sizeEx = "safeZoneH*0.018";
+				style = 2;
+				shadow = 1;
+				colorText[] = {1,1,1,1};
+			};
+			class VIN_ResourceDescr: MUI_BASE
+			{
+				IDC = 21;
+				x = "safeZoneX + safeZoneW * 0.659";
+				y = "safeZoneY + safeZoneH * 0.011";
+				w = "safeZoneW * 0.094";
+				h = "safeZoneH * 0.012";
+				text = "CONSTRUCTION RESOURCES";
+				sizeEx = "safeZoneH*0.014";
+				font = "PuristaSemibold";
+				style = 0;
+				shadow = 1;
+				colorText[] = {1,1,1,1};
+			};
+			class VIN_LocationDescr: MUI_BASE
+			{
+				IDC = 11;
+				x = "safeZoneX + safeZoneW * 0.221";
+				y = "safeZoneY + safeZoneH * 0.011";
+				w = "safeZoneW * 0.149";
+				h = "safeZoneH * 0.012";
+				text = "LOCATION";
+				sizeEx = "safeZoneH*0.014";
+				font = "PuristaSemibold";
+				style = 0;
+				shadow = 1;
+				colorText[] = {1,1,1,1};
+			};
+		};
+	};
+};
+corpseManagerMode = 1;
+corpseLimit = 50;
+corpseRemovalMinTime = 600;
+corpseRemovalMaxTime = 1200;
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 1800;
+wreckRemovalMaxTime = 7200;
+minPlayerDistance = 300;
+class Extended_DisplayLoad_EventHandlers
+{
+	class RscDisplayLoading
+	{
+		Mission_customLoadingScreen = "if (hasInterface) then {_this call compile preprocessFileLineNumbers 'vindicta_missions\src\loadDisplay.sqf';};";
+	};
+};
+class BuildObjects
+{
+	class BuildObjectBase
+	{
+		className = "CamoNet_OPFOR_F";
+		displayName = "";
+		description = "";
+		buildResource = 10;
+		templateCatID = -1;
+		templateSubcatID = -1;
+		isRadio = "false";
+		registerObject = "true";
+	};
+	class BuildObjectAceRepairBase
+	{
+		registerObject = "false";
+	};
+	class Categories
+	{
+		class CatTents
+		{
+			displayName = "$STR_BUIO_TENTS";
+			class CatTentsLand_TentA_F: BuildObjectBase
+			{
+				className = "Land_TentA_F";
+				buildResource = 10;
+			};
+			class CatTentsLand_TentDome_F: BuildObjectBase
+			{
+				className = "Land_TentDome_F";
+				buildResource = 20;
+			};
+			class CatTentsLand_MedicalTent_01_aaf_generic_open_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_aaf_generic_open_F";
+				buildResource = 80;
+			};
+			class CatTentsLand_MedicalTent_01_CSAT_brownhex_generic_open_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_CSAT_brownhex_generic_open_F";
+				buildResource = 80;
+			};
+			class CatTentsLand_MedicalTent_01_NATO_generic_open_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_NATO_generic_open_F";
+				buildResource = 80;
+			};
+			class CatTentsLand_MedicalTent_01_wdl_generic_open_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_wdl_generic_open_F";
+				buildResource = 80;
+			};
+		};
+		class CatMedical
+		{
+			displayName = "$STR_BUIO_MEDICAL";
+			class CatMedicalLand_MedicalTent_01_MTP_closed_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_MTP_closed_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_MedicalTent_01_digital_closed_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_digital_closed_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_MedicalTent_01_brownhex_closed_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_brownhex_closed_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_DeconTent_01_wdl_F: BuildObjectBase
+			{
+				className = "Land_DeconTent_01_wdl_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_MedicalTent_01_wdl_closed_F: BuildObjectBase
+			{
+				className = "Land_MedicalTent_01_wdl_closed_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_DeconTent_01_NATO_F: BuildObjectBase
+			{
+				className = "Land_DeconTent_01_NATO_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_DeconTent_01_NATO_tropic_F: BuildObjectBase
+			{
+				className = "Land_DeconTent_01_NATO_tropic_F";
+				buildResource = 60;
+			};
+			class CatMedicalLand_DeconTent_01_white_F: BuildObjectBase
+			{
+				className = "Land_DeconTent_01_white_F";
+				buildResource = 60;
+			};
+		};
+		class CatRepair
+		{
+			displayName = "Repair";
+			class CatRepairLand_Workshop_01_F: BuildObjectBase
+			{
+				className = "Land_Workshop_01_F";
+				buildResource = 100;
+			};
+			class CatRepair_ACE_Wheel: BuildObjectAceRepairBase
+			{
+				className = "ACE_Wheel";
+				buildResource = 10;
+			};
+			class CatRepair_ACE_Track: BuildObjectAceRepairBase
+			{
+				className = "ACE_Track";
+				buildResource = 10;
+			};
+		};
+		class CatStorage
+		{
+			displayName = "$STR_BUIO_STORAGE";
+			class CatStorageBox_FIA_Support_F: BuildObjectBase
+			{
+				className = "Box_FIA_Support_F";
+				buildResource = 20;
+				templateCatID = 3;
+				templateSubcatID = 2;
+			};
+			class CatStorageI_supplyCrate_F: BuildObjectBase
+			{
+				className = "I_supplyCrate_F";
+				buildResource = 20;
+				templateCatID = 3;
+				templateSubcatID = 2;
+			};
+			class CatStorageB_CargoNet_01_ammo_F: BuildObjectBase
+			{
+				className = "B_CargoNet_01_ammo_F";
+				buildResource = 20;
+				templateCatID = 3;
+				templateSubcatID = 3;
+			};
+		};
+		class CatCamo
+		{
+			displayName = "$STR_BUIO_CAMO";
+			class CatCamoCamoNet_OPFOR_F: BuildObjectBase
+			{
+				className = "CamoNet_OPFOR_F";
+				buildResource = 20;
+			};
+			class CatCamoCamoNet_OPFOR_open_F: BuildObjectBase
+			{
+				className = "CamoNet_OPFOR_open_F";
+				buildResource = 20;
+			};
+			class CatCamoCamoNet_OPFOR_big_F: BuildObjectBase
+			{
+				className = "CamoNet_OPFOR_big_F";
+				buildResource = 20;
+			};
+		};
+		class Lighting
+		{
+			displayName = "$STR_BUIO_LIGHT";
+			class LightingLand_TentLamp_01_standing_F: BuildObjectBase
+			{
+				className = "Land_TentLamp_01_standing_F";
+				buildResource = 10;
+			};
+			class LightingLand_LampShabby_F: BuildObjectBase
+			{
+				className = "Land_LampShabby_F";
+				buildResource = 10;
+			};
+			class LightingCampfire_burning_F: BuildObjectBase
+			{
+				className = "Campfire_burning_F";
+				buildResource = 10;
+			};
+			class LightingLand_PortableLight_double_F: BuildObjectBase
+			{
+				className = "Land_PortableLight_double_F";
+				buildResource = 10;
+			};
+			class LightingLand_PortableLight_single_F: BuildObjectBase
+			{
+				className = "Land_PortableLight_single_F";
+				buildResource = 10;
+			};
+		};
+		class Defense
+		{
+			displayName = "$STR_BUIO_DEFENSE";
+			class DefenseLand_SlumWall_01_s_2m_F: BuildObjectBase
+			{
+				className = "Land_SlumWall_01_s_2m_F";
+				buildResource = 10;
+			};
+			class DefenseLand_SlumWall_01_s_4m_F: BuildObjectBase
+			{
+				className = "Land_SlumWall_01_s_4m_F";
+				buildResource = 20;
+			};
+			class DefenseLand_SandbagBarricade_01_hole_F: BuildObjectBase
+			{
+				className = "Land_SandbagBarricade_01_hole_F";
+				buildResource = 20;
+			};
+			class DefenseLand_SandbagBarricade_01_F: BuildObjectBase
+			{
+				className = "Land_SandbagBarricade_01_F";
+				buildResource = 20;
+			};
+			class DefenseLand_SandbagBarricade_01_half_F: BuildObjectBase
+			{
+				className = "Land_SandbagBarricade_01_half_F";
+				buildResource = 20;
+			};
+			class DefenseLand_Barricade_01_10m_F: BuildObjectBase
+			{
+				className = "Land_Barricade_01_10m_F";
+				buildResource = 20;
+			};
+			class DefenseLand_Barricade_01_4m_F: BuildObjectBase
+			{
+				className = "Land_Barricade_01_4m_F";
+				buildResource = 20;
+			};
+			class DefenseLand_Rampart_F: BuildObjectBase
+			{
+				className = "Land_Rampart_F";
+				buildResource = 30;
+			};
+			class DefenseLand_Razorwire_F: BuildObjectBase
+			{
+				className = "Land_Razorwire_F";
+				buildResource = 10;
+			};
+			class DefenseLand_ConcretePipe_F: BuildObjectBase
+			{
+				className = "Land_ConcretePipe_F";
+				buildResource = 20;
+			};
+			class DefenseLand_Bricks_V4_F: BuildObjectBase
+			{
+				className = "Land_Bricks_V4_F";
+				buildResource = 10;
+			};
+			class DefenseLand_Timbers_F: BuildObjectBase
+			{
+				className = "Land_Timbers_F";
+				buildResource = 10;
+			};
+			class DefenseLand_CncBarrier_F: BuildObjectBase
+			{
+				className = "Land_CncBarrier_F";
+				buildResource = 20;
+			};
+			class DefenseLand_CncBarrierMedium_F: BuildObjectBase
+			{
+				className = "Land_CncBarrierMedium_F";
+				buildResource = 40;
+			};
+			class DefenseLand_CncBarrierMedium4_F: BuildObjectBase
+			{
+				className = "Land_CncBarrierMedium4_F";
+				buildResource = 60;
+			};
+			class DefenseLand_CncBarrier_stripes_F: BuildObjectBase
+			{
+				className = "Land_CncBarrier_stripes_F";
+				buildResource = 20;
+			};
+			class DefenseLand_HBarrier_Big_F: BuildObjectBase
+			{
+				className = "Land_HBarrier_Big_F";
+				buildResource = 40;
+			};
+			class DefenseLand_HBarrier_3_F: BuildObjectBase
+			{
+				className = "Land_HBarrier_3_F";
+				buildResource = 40;
+			};
+			class DefenseLand_HBarrierWall6_F: BuildObjectBase
+			{
+				className = "Land_HBarrierWall6_F";
+				buildResource = 60;
+			};
+			class DefenseLand_HBarrierTower_F: BuildObjectBase
+			{
+				className = "Land_HBarrierTower_F";
+				buildResource = 80;
+			};
+		};
+		class TargetRange
+		{
+			displayName = "$STR_BUIO_RANGE";
+			class TargetRangeLand_Target_Oval_F: BuildObjectBase
+			{
+				className = "Land_Target_Oval_F";
+				buildResource = 10;
+			};
+			class TargetRangeTargetP_Inf_F: BuildObjectBase
+			{
+				className = "TargetP_Inf_F";
+				buildResource = 20;
+			};
+			class TargetRangeTargetP_Inf_Acc2_F: BuildObjectBase
+			{
+				className = "TargetP_Inf_Acc2_F";
+				buildResource = 20;
+			};
+			class TargetRangeLand_Target_Concrete_01_v2_F: BuildObjectBase
+			{
+				className = "Land_Target_Concrete_01_v2_F";
+				buildResource = 60;
+			};
+			class TargetRangeLand_Target_Concrete_01_v1_F: BuildObjectBase
+			{
+				className = "Land_Target_Concrete_01_v1_F";
+				buildResource = 60;
+			};
+			class TargetRangeLand_Target_Concrete_Support_01_F: BuildObjectBase
+			{
+				className = "Land_Target_Concrete_Support_01_F";
+				buildResource = 20;
+			};
+			class TargetRangeLand_Wreck_Skodovka_F: BuildObjectBase
+			{
+				className = "Land_Wreck_Skodovka_F";
+				buildResource = 60;
+			};
+			class TargetRangeLand_Wreck_Van_F: BuildObjectBase
+			{
+				className = "Land_Wreck_Van_F";
+				buildResource = 60;
+			};
+			class TargetRangeLand_Wreck_Truck_dropside_F: BuildObjectBase
+			{
+				className = "Land_Wreck_Truck_dropside_F";
+				buildResource = 60;
+			};
+			class TargetRangeLand_Wreck_BMP2_F: BuildObjectBase
+			{
+				className = "Land_Wreck_BMP2_F";
+				buildResource = 80;
+			};
+			class TargetRangeLand_ShootingPos_Roof_01_F: BuildObjectBase
+			{
+				className = "Land_ShootingPos_Roof_01_F";
+				buildResource = 20;
+			};
+		};
+		class BuildingsA
+		{
+			displayName = "$STR_BUIO_BUILDINGS";
+			class BuildingsALand_GuardTower_01_F: BuildObjectBase
+			{
+				className = "Land_GuardTower_01_F";
+				buildResource = 160;
+			};
+			class BuildingsALand_BagBunker_Large_F: BuildObjectBase
+			{
+				className = "Land_BagBunker_Large_F";
+				buildResource = 160;
+			};
+			class BuildingsALand_BagBunker_Small_F: BuildObjectBase
+			{
+				className = "Land_BagBunker_Small_F";
+				buildResource = 80;
+			};
+			class BuildingsALand_BagBunker_Tower_F: BuildObjectBase
+			{
+				className = "Land_BagBunker_Tower_F";
+				buildResource = 160;
+			};
+			class BuildingsALand_Cargo_Patrol_V2_F: BuildObjectBase
+			{
+				className = "Land_Cargo_Patrol_V2_F";
+				buildResource = 120;
+			};
+		};
+		class Concealment
+		{
+			displayName = "$STR_BUIO_CONCEAL";
+			class ConcealmentLand_Wall_Tin_4_2: BuildObjectBase
+			{
+				className = "Land_Wall_Tin_4_2";
+				buildResource = 10;
+			};
+			class ConcealmentLand_Wall_Tin_4: BuildObjectBase
+			{
+				className = "Land_Wall_Tin_4";
+				buildResource = 10;
+			};
+			class ConcealmentLand_TinWall_02_l_4m_F: BuildObjectBase
+			{
+				className = "Land_TinWall_02_l_4m_F";
+				buildResource = 10;
+			};
+			class ConcealmentLand_TinWall_02_l_8m_F: BuildObjectBase
+			{
+				className = "Land_TinWall_02_l_8m_F";
+				buildResource = 20;
+			};
+		};
+		class Recreation
+		{
+			displayName = "$STR_BUIO_RECREATION";
+			class RecreationLand_WoodenTable_02_large_F: BuildObjectBase
+			{
+				className = "Land_WoodenTable_02_large_F";
+				buildResource = 10;
+			};
+			class RecreationLand_PicnicTable_01_F: BuildObjectBase
+			{
+				className = "Land_PicnicTable_01_F";
+				buildResource = 20;
+			};
+			class RecreationLand_Sun_chair_F: BuildObjectBase
+			{
+				className = "Land_Sun_chair_F";
+				buildResource = 10;
+			};
+			class RecreationLand_Sun_chair_green_F: BuildObjectBase
+			{
+				className = "Land_Sun_chair_green_F";
+				buildResource = 10;
+			};
+			class RecreationLand_CampingChair_V2_F: BuildObjectBase
+			{
+				className = "Land_CampingChair_V2_F";
+				buildResource = 10;
+			};
+			class RecreationLand_CampingChair_V2_white_F: BuildObjectBase
+			{
+				className = "Land_CampingChair_V2_white_F";
+				buildResource = 10;
+			};
+			class RecreationLand_ChairPlastic_F: BuildObjectBase
+			{
+				className = "Land_ChairPlastic_F";
+				buildResource = 10;
+			};
+			class RecreationLand_ArmChair_01_F: BuildObjectBase
+			{
+				className = "Land_ArmChair_01_F";
+				buildResource = 20;
+			};
+			class RecreationLand_Bench_05_F: BuildObjectBase
+			{
+				className = "Land_Bench_05_F";
+				buildResource = 10;
+			};
+			class RecreationLand_GymBench_01_F: BuildObjectBase
+			{
+				className = "Land_GymBench_01_F";
+				buildResource = 20;
+			};
+			class RecreationLand_Carousel_01_F: BuildObjectBase
+			{
+				className = "Land_Carousel_01_F";
+				buildResource = 150;
+			};
+		};
+		class Special
+		{
+			displayName = "$STR_BUIO_SPECIAL";
+			class RadioShack: BuildObjectBase
+			{
+				className = "Land_TBox_F";
+				displayName = "$STR_BUIO_RADIO";
+				buildResource = 100;
+				isRadio = "true";
+				description = "$STR_BUIO_RADIO_DESC";
+			};
+		};
+	};
+};
+class TutorialPages
+{
+	class TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_HEADLINE";
+		text = "$STR_TUTORP_HEADLINE_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_image_default.paa";
+	};
+	class TutPage_AddInfo: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_LINKS";
+		text = "$STR_TUTORP_LINKS_DESC";
+	};
+	class TutPage_Intro: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_INTRO";
+		text = "$STR_TUTORP_INTRO_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_scenario.paa";
+	};
+	class TutPage_StepByStep1: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_QUICK_I";
+		text = "$STR_TUTORP_QUICK_I_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_scenario.paa";
+	};
+	class TutPage_StepByStep2: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_QUICK_II";
+		text = "$STR_TUTORP_QUICK_II_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_scenario.paa";
+	};
+	class TutPage_StepByStep3: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_QUICK_III";
+		text = "$STR_TUTORP_QUICK_III_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_scenario.paa";
+	};
+	class TutPage_StepByStep4: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_QUICK_IV";
+		text = "$STR_TUTORP_QUICK_IV_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_scenario.paa";
+	};
+	class TutPage_StepByStep5: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_QUICK_V";
+		text = "STR_TUTORP_QUICK_V_DESC$";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_scenario.paa";
+	};
+	class TutPage_setup: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_SETUP";
+		text = "$STR_TUTORP_SETUP_DESC";
+	};
+	class TutPage0: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_RESPAWN";
+		text = "$STR_TUTORP_RESPAWN_DESC";
+	};
+	class TutPage_campaignProgress: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_PROGRESS";
+		text = "$STR_TUTORP_PROGRESS_DESC";
+	};
+	class TutPageUndercover_1: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_UNDERCOVER_I";
+		text = "$STR_TUTORP_UNDERCOVER_I_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_undercover.paa";
+	};
+	class TutPageUndercover_2: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_UNDERCOVER_II";
+		text = "$STR_TUTORP_UNDERCOVER_II_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_undercover.paa";
+	};
+	class TutPage2: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_INTEL_I";
+		text = "$STR_TUTORP_INTEL_I_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_policeStations.paa";
+	};
+	class TutPage3: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_INTEL_II";
+		text = "$STR_TUTORP_INTEL_II_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_civis.paa";
+	};
+	class TutPage4: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_CRYPTO";
+		text = "$STR_TUTORP_CRYPTO_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_radio.paa";
+	};
+	class TutPageClaiming: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_CLAIMING";
+		text = "$STR_TUTORP_CLAIMING_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_construction.paa";
+	};
+	class TutPage5: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_CAMPS";
+		text = "$STR_TUTORP_CAMPS_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_construction.paa";
+	};
+	class TutPage6: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_BUILD";
+		text = "$STR_TUTORP_BUILD_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_construction.paa";
+	};
+	class TutPage7: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_ARSENAL";
+		text = "$STR_TUTORP_ARSENAL_DESC";
+	};
+	class TutPage8: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_CAPACITY";
+		text = "$STR_TUTORP_CAPACITY_DESC";
+	};
+	class TutPage9: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_COMMAND";
+		text = "$STR_TUTORP_COMMAND_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_high_command.paa";
+	};
+	class TutPage10: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_SAVELOAD";
+		text = "$STR_TUTORP_SAVELOAD_DESC";
+	};
+	class TutPage11: TutBasePage
+	{
+		textHeadline = "$STR_TUTORP_ISSUES";
+		text = "$STR_TUTORP_ISSUES_DESC";
+		imagePath = "\z\vindicta\addons\ui\pictures\tut_limits.paa";
+	};
+};
