@@ -8,7 +8,7 @@ _officer_class = "O_G_officer_F";
 _officer_marker_class = "SignAd_SponsorS_Larkin_F";
 _patrol_marker_class = "SignAd_SponsorS_Quontrol_F";
 // Amounts
-_static_target_todo = floor random [0, 0, 1];
+//_static_target_todo = floor random [0, 0, 1];
 _sniper_target_todo = floor random [1, 2, 3];
 _inf_target_todo = floor random [4, 6, 8];
 _patrol_target_todo = floor random [1, 2, 3];
