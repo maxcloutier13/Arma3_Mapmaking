@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=17295;
+		nextID=17296;
 	};
 	class MarkerIDProvider
 	{
@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={18136.553,111.07382,13233.07};
-		dir[]={0.79131687,-0.50850004,0.3394891};
-		up[]={0.46731028,0.86106253,0.20048466};
-		aside[]={0.3942681,-8.9290552e-008,-0.9190008};
+		pos[]={17709.691,111.42725,13179.399};
+		dir[]={-0.80901796,-0.58780038,0.0011345595};
+		up[]={-0.58780116,0.80900586,0.00082449859};
+		aside[]={0.001402416,-9.8839791e-008,1.0000112};
 	};
 };
 binarizationWanted=0;
-sourceName="cgqc_Operation_Admonitio";
+sourceName="CGQC_Training_2022_Altis_v2%2e5";
 addons[]=
 {
 	"Desert",
