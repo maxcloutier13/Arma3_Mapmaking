@@ -69,7 +69,7 @@ if (_playerVeh isKindOf "Helicopter" or _playerVeh isKindOf "Plane") then {
 			sleep 5;
 			hintsilent "";
 		};
-	_unit engineOn true;
+	//_unit engineOn true;
 	} else {
 		hint "NOTHING TO DO HERE";
 		sleep 5;
