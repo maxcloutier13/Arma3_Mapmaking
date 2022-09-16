@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=17293;
+		nextID=17296;
 	};
 	class MarkerIDProvider
 	{
@@ -24,14 +24,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17612.012,49.602982,12917.393};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={17569.447,111.42725,13196.098};
+		dir[]={-0.90060484,-0.31904623,-0.29520491};
+		up[]={-0.30318177,0.94773763,-0.099378258};
+		aside[]={-0.31148469,1.5716068e-009,0.95026737};
 	};
 };
 binarizationWanted=0;
-sourceName="~cgqc_Operation_Admonitio";
+sourceName="CGQC_Training_2022_Altis_v2_5";
 addons[]=
 {
 	"Desert",
@@ -16190,7 +16190,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
 			dataType="Layer";
@@ -18022,6 +18022,7 @@ class Mission
 					{
 					};
 					id=17244;
+					atlOffset=185.97;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18042,7 +18043,7 @@ class Mission
 				};
 			};
 			id=15499;
-			atlOffset=-0.012872696;
+			atlOffset=45.675217;
 		};
 		class Item1
 		{
@@ -38327,6 +38328,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=15299;
+					atlOffset=185.97;
 				};
 				class Item38
 				{
@@ -38422,7 +38424,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=15324;
-					atlOffset=0.0050001144;
+					atlOffset=185.97;
 				};
 				class Item40
 				{
@@ -40541,7 +40543,7 @@ class Mission
 						speedMode="LIMITED";
 					};
 					id=17162;
-					atlOffset=0.12800026;
+					atlOffset=185.97;
 				};
 				class Item63
 				{
@@ -40557,10 +40559,11 @@ class Mission
 					};
 					id=17168;
 					type="cgqc_flag_black_black";
+					atlOffset=9.5367432e-007;
 				};
 			};
 			id=15513;
-			atlOffset=0.030474663;
+			atlOffset=25.411472;
 		};
 		class Item3
 		{
@@ -86353,7 +86356,7 @@ class Mission
 						};
 					};
 					id=15512;
-					atlOffset=0.0091314316;
+					atlOffset=0.018262863;
 				};
 				class Item3
 				{
@@ -117808,7 +117811,7 @@ class Mission
 						};
 					};
 					id=15504;
-					atlOffset=0.091461182;
+					atlOffset=0.15807724;
 				};
 				class Item4
 				{
@@ -120377,7 +120380,7 @@ class Mission
 						};
 					};
 					id=15503;
-					atlOffset=0.0027666092;
+					atlOffset=0.005566597;
 				};
 				class Item6
 				{
@@ -122167,7 +122170,7 @@ class Mission
 						};
 					};
 					id=15510;
-					atlOffset=-0.036962509;
+					atlOffset=-0.039978027;
 				};
 				class Item8
 				{
@@ -123676,7 +123679,7 @@ class Mission
 						};
 					};
 					id=15508;
-					atlOffset=53.5182;
+					atlOffset=53.599159;
 				};
 				class Item9
 				{
@@ -132781,7 +132784,7 @@ class Mission
 						};
 					};
 					id=15531;
-					atlOffset=-0.35887146;
+					atlOffset=-0.35903931;
 				};
 				class Item11
 				{
@@ -133442,11 +133445,11 @@ class Mission
 						};
 					};
 					id=16128;
-					atlOffset=1.97505;
+					atlOffset=3.6527729;
 				};
 			};
 			id=15515;
-			atlOffset=66.574249;
+			atlOffset=67.563095;
 		};
 		class Item4
 		{
@@ -172209,35 +172212,6 @@ class Mission
 			};
 			id=16484;
 			atlOffset=93.621902;
-		};
-		class Item6
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={17609.537,24.600925,12943.47};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayer=1;
-					};
-					id=17292;
-					type="B_Soldier_A_F";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=17291;
 		};
 	};
 	class Connections
