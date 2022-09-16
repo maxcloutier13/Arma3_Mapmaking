@@ -6,10 +6,6 @@ CHVD_allowNoGrass = true;
 	null = execVM "scripts\initialize_player.sqf";
 } ] call CBA_fnc_addEventHandler;
 
-["cgqc_changewind", {
-	setWind [random 5, random 5, false];
-}] call CBA_fnc_addEventHandler;
-
 // Only run on clients, excluding HCs
 [] spawn {
 	// Delay until the server time has sync'd
@@ -111,6 +107,17 @@ private _interval = 5;
 _trigger1 = [_var, _area, _condition, _activation, _desactivation, _interval] execVM "scripts\my_trigger.sqf";
 
 private _var = missionNamespace getVariable "rearm_heli_4";
+private _area = [6.8, 6.8, 0.00131226, true];
+private _condition = "this";
+private _activation = "{
+	[_x] execVM 'scripts\rearm.sqf'
+} forEach thislist;
+";
+private _desactivation = "";
+private _interval = 5;
+_trigger2 = [_var, _area, _condition, _activation, _desactivation, _interval] execVM "scripts\my_trigger.sqf";
+
+private _var = missionNamespace getVariable "rearm_heli_5";
 private _area = [6.8, 6.8, 0.00131226, true];
 private _condition = "this";
 private _activation = "{

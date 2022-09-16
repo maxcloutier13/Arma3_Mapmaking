@@ -16,7 +16,7 @@ if (_playerVeh isKindOf "Helicopter" or _playerVeh isKindOf "Plane") then {
 	if ((damage _unit > 0) or (fuel _unit < 0.95)) then {
 			_unit engineOn false;
 			titleText ["<t size='5' shadow='1' shadowOffset='0.05' color='#ff0000'>Le moteur sera éteint pour la maintenance...</t>", "PLAIN", 0, true, true];
-			_timeleft4 = 10;
+			_timeleft4 = 5;
 			while {true} do {
 				hintsilent parseText format ["<t size='2' color='#ff0000'>Waiting... %1</t>", [((_timeleft4)/60)+.01,"HH:MM"] call bis_fnc_timetostring];
 				_timeleft4 = _timeleft4 -1;
@@ -28,7 +28,7 @@ if (_playerVeh isKindOf "Helicopter" or _playerVeh isKindOf "Plane") then {
 		//---------------------------------------------------------------------------------------------------------------------
 		//Repair Timer
 		if (damage _unit > 0) then {
-			_timeleft1 = 5;
+			_timeleft1 = 2;
 			while {true} do {
 				hintsilent parseText format ["<t size='2' color='#ff0000'>Réparation... %1</t>", [((_timeleft1)/60)+.01,"HH:MM"] call bis_fnc_timetostring];
 				_timeleft1 = _timeleft1 -1;
@@ -50,7 +50,7 @@ if (_playerVeh isKindOf "Helicopter" or _playerVeh isKindOf "Plane") then {
 		//Refuel Timer
 		if (fuel _unit < 0.95) then {
 			_unit setFuel 0;
-			_timeleft3 = 5;
+			_timeleft3 = 2;
 			while {true} do {
 				hintSilent parseText format ["<t size='2' color='#ff0000'>Ravitaillement... %1</t>", [((_timeleft3)/60)+.01,"HH:MM"] call bis_fnc_timetostring];
 				_timeleft3 = _timeleft3 -1;

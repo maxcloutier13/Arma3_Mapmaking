@@ -107,3 +107,33 @@ this addAction ["Cible proche", "scripts\vest_test.sqf", [1]];
 this addAction ["Cible loin", "scripts\vest_test.sqf", [2]];
 
 
+// Shoothouse
+- Switch ->ON 
+- Pick random position in list 
+- Spawn target there 
+- 
+
+cqb_1_target_list = [];  
+this addAction ["CQB: Random targets", "null = execVM 'scripts\cqb_spawn_1.sqf'",[1]]; 
+SignAd_SponsorS_Vrana_F
+
+
+
+
+cqb_2_target_list = [];   
+this addAction ["CQB 2: Commencer la session", "null = execVM 'scripts\cqb_spawn_2.sqf'",[1]]; 
+this addAction ["Enlever les cibles", "{deleteVehicle _x} forEach cqb_2_target_list;"]; 
+
+// --- Ace actions ---------------------------------------------------------------------------------------------------------
+_action = [ "menu_cgqc_koth", "CGQC", "textures\cgqc_ace_icon", {""}, {true} ] call ace_interact_menu_fnc_createAction;
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_koth_1", "Spawn KOTH tour 1", "", {""}, {true} ] call ace_interact_menu_fnc_createAction;
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+
+_action = [ "menu_koth_1", "Spawn KOTH tour 1", "", {execVM "\cgqc\factions\koth_spawn_1.sqf"}, {true} ] call ace_interact_menu_fnc_createAction; 
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+
+
+// ------ Get heli
+_action = [ "max_getheli", "Get heli", "", {execVM "\cgqc\factions\get_heli.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;
+_adding = [ player, 1, ["ACE_SelfActions","menu_cloutier", "menu_spawn"], _action ] call ace_interact_menu_fnc_addActionToObject;	
