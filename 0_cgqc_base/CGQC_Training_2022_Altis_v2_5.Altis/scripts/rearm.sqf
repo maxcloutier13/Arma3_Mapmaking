@@ -14,8 +14,8 @@ if (_playerVeh isKindOf "Helicopter" or _playerVeh isKindOf "Plane") then {
 
 	//Start Message
 	if ((damage _unit > 0) or (fuel _unit < 0.95)) then {
-			_unit engineOn false;
-			titleText ["<t size='5' shadow='1' shadowOffset='0.05' color='#ff0000'>Le moteur sera éteint pour la maintenance...</t>", "PLAIN", 0, true, true];
+			//_unit engineOn false;
+			titleText ["<t size='5' shadow='1' shadowOffset='0.05' color='#ff0000'>Maintenance rapide</t>", "PLAIN", 0, true, true];
 			_timeleft4 = 5;
 			while {true} do {
 				hintsilent parseText format ["<t size='2' color='#ff0000'>Waiting... %1</t>", [((_timeleft4)/60)+.01,"HH:MM"] call bis_fnc_timetostring];

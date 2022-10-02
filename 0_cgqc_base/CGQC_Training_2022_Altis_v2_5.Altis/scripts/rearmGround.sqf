@@ -14,8 +14,8 @@ if (_playerVeh isKindOf "LandVehicle") then {
 
 	//Start Message
 	if ((damage _unit > 0) or (fuel _unit < 0.95)) then {
-			_unit engineOn false;
-			titleText ["<t size='5' shadow='1' shadowOffset='0.05' color='#ff0000'>We stop the engine for maintance...</t>", "PLAIN", 0, true, true];
+			//_unit engineOn false;
+			titleText ["<t size='5' shadow='1' shadowOffset='0.05' color='#ff0000'>Rapid maintenance</t>", "PLAIN", 0, true, true];
 		sleep 3;
 		//---------------------------------------------------------------------------------------------------------------------
 		//Repair Timer
