@@ -7,6 +7,12 @@ _inf_marker_class = "SignAd_SponsorS_Burstkoke_F";
 _officer_class = "O_G_officer_F";
 _officer_marker_class = "SignAd_SponsorS_Larkin_F";
 _patrol_marker_class = "SignAd_SponsorS_Quontrol_F";
+// Amounts
+_static_target_todo = floor random [0, 0, 1];
+_sniper_target_todo = floor random [1, 2, 3];
+_inf_target_todo = floor random [4, 6, 8];
+_patrol_target_todo = floor random [1, 2, 3];
+
 hint "KOTH tower 1: ON!";
 // sleep 2;
 // Add all the created units to a group
@@ -30,7 +36,7 @@ _positions = [];
 // find available positions  
 {
 	_positions pushBack _x;
-} forEach nearestObjects [koth_tower_1, [_officer_marker_class], 50];
+} forEach nearestObjects [koth_tower_1, [_officer_marker_class], 20];
 hintSilent format ["Adding officer to %1", count _positions];
 // sleep 5;
 // Pick random position
@@ -50,16 +56,15 @@ hintSilent "KOTH: Tower1: Finished Officers";
 
 // Statics -------------------------------------------------------------------------------------------------------
 koth_1_statics_count = 0;
-_target_count = floor random [1, 2, 4];
 _positions = [];
 // find available positions  
 {
 	_positions pushBack _x;
-} forEach nearestObjects [koth_tower_1, [_static_marker_class], 50];
-hintSilent format ["%1 statics/%2 positions possibles", _target_count, count _positions];
+} forEach nearestObjects [koth_tower_1, [_static_marker_class], 20];
+hintSilent format ["%1 statics/%2 positions possibles", _static_target_todo, count _positions];
 // sleep 3;
 // Pick random position ans spawn unit until count is done
-while { koth_1_statics_count <= _target_count } do {
+while { koth_1_statics_count <= _static_target_todo } do {
 	hintSilent format ["Adding static %1", koth_1_statics_count];
 	// sleep 2;
 	// Pick random position
@@ -88,16 +93,15 @@ hintSilent "KOTH: Tower1: Finished statics";
 
 // Snipers -------------------------------------------------------------------------------------------------------
 koth_1_snipers_count = 0;
-_target_count = floor random [2, 4, 6];
 _positions = [];
 // find available positions  
 {
 	_positions pushBack _x;
-} forEach nearestObjects [koth_tower_1, [_sniper_marker_class], 50];
-hintSilent format ["%1 snipers/%2 positions possibles", _target_count, count _positions];
+} forEach nearestObjects [koth_tower_1, [_sniper_marker_class], 20];
+hintSilent format ["%1 snipers/%2 positions possibles", _sniper_target_todo, count _positions];
 // sleep 3;
 // Pick random position and spawn unit until count is done
-while { koth_1_snipers_count <= _target_count } do {
+while { koth_1_snipers_count <= _sniper_target_todo } do {
 	hintSilent format ["Adding sniper %1", koth_1_snipers_count];
 	// sleep 2;
 	// Pick random position
@@ -121,16 +125,15 @@ hintSilent "KOTH: Tower1: Finished snipers";
 
 // Infantry -------------------------------------------------------------------------------------------------------
 koth_1_infantry_count = 0;
-_target_count = floor random [8, 10, 15];
 _positions = [];
 // find available positions  
 {
 	_positions pushBack _x;
-} forEach nearestObjects [koth_tower_1, [_inf_marker_class], 50];
-hintSilent format ["%1 infanterie/%2 positions possibles", _target_count, count _positions];
+} forEach nearestObjects [koth_tower_1, [_inf_marker_class], 20];
+hintSilent format ["%1 infanterie/%2 positions possibles", _inf_target_todo, count _positions];
 // sleep 3;
 // Pick random position and spawn unit until count is done
-while { koth_1_infantry_count <= _target_count } do {
+while { koth_1_infantry_count <= _inf_target_todo } do {
 	hintSilent format ["Adding infanterie %1", koth_1_infantry_count];
 	// sleep 2;
 	// Pick random position
@@ -159,15 +162,14 @@ hintSilent "KOTH: Tower1: Finished infantry";
 
 // Patrols -------------------------------------------------------------------------------------------------------
 koth_1_patrol_count = 0;
-_target_count = floor random [1, 2, 3];
-positions = [];
+_positions = [];
 
 // find available positions  
 {
 	_positions pushBack _x;
-} forEach nearestObjects [koth_tower_1, [_patrol_marker_class], 50];
-while { koth_1_patrol_count <= _target_count } do {
-	hintSilent format ["Adding patrol %1/%2", koth_1_patrol_count, _target_count];
+} forEach nearestObjects [koth_tower_1, [_patrol_marker_class], 20];
+while { koth_1_patrol_count <= _patrol_target_todo } do {
+	hintSilent format ["Adding patrol %1/%2", koth_1_patrol_count, _patrol_target_todo];
 	// sleep 2;
 	// Pick random position
 	_random_pos = selectRandom _positions;
@@ -223,7 +225,7 @@ hintSilent format ["KOTH: Tower1:Done - %1 units ready", count koth_1_target_lis
 		_ret
 	}];
 } forEach koth_1_target_list;
-sleep 10;
+sleep 4;
 
 // Trigger to notify tower complete
 koth_1_started = true;
