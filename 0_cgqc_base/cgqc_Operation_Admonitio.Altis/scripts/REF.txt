@@ -1,4 +1,0 @@
-this addAction ["Teleport to: Airport", "scripts\teleportation1.sqf"];
-this addAction ["Teleport to: Warehouse", "scripts\teleportation2.sqf"];
-this addAction ["Teleport to: Karting", "scripts\teleportation3.sqf"];
-this addAction ["Teleport to: Heliport", "scripts\teleportation4.sqf"];
