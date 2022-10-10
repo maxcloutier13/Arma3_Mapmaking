@@ -11,6 +11,7 @@ _player_vehicle = vehicle player;
 _spawn_now = "";
 _spawn_type = "";
 _positions = [];
+_infantry = 0;
 _skip = 0;
 _msg = "";
 // find available positions  
@@ -80,18 +81,28 @@ switch (_type) do {
 		_msg =  "Spawn patrol tank";
 	};
 	case "infantry":{
-		_msg =  "Spawn infantry";
+		_infantry = 1;
+		_spawn_type = "patrol";
+		_msg =  "Spawn patrol Infantry";
 	};
 	case "aa":{
+		_infantry = 2;
+		_spawn_type = "patrol";
 		_msg =  "Spawn AA infantry";
 	};
 	case "zu":{
+		_spawn_now = selectRandom _spawn_aa_zu;
+		_spawn_type = "static";
 		_msg =  "Spawn AA ZU-23";
 	};
 	case "shiilka":{
+		_spawn_now = selectRandom _spawn_aa_shiilka;
+		_spawn_type = "static";
 		_msg =  "Spawn AA Shiilka";
 	};
 	case "tunguska":{
+		_spawn_now = selectRandom _spawn_aa_tonguska;
+		_spawn_type = "static";
 		_msg =  "Spawn AA Tunguska";
 	};
 	default {
@@ -100,42 +111,64 @@ switch (_type) do {
 };
 
 if (_skip == 0) then {
+
 	// spawn whatever was chosen
 	_air_group = createGroup [east, true];
 	_air_group setBehaviour "CARELESS";
 	_unit = "";
 	_random_pos = selectRandom _positions;
-	_unit = createVehicle [ _spawn_now, getPosATL _random_pos, [], _vehicle_spawn_range, "NONE"];
-	createVehicleCrew _unit;
-	_unit engineOn true;
-	if (air_target_danger == true) then {
-		_unit setVehicleAmmo 1;
-		_msg = _msg + " - Danger";
-	}else{
-		_unit setVehicleAmmo 0;
-		_msg = _msg + " - Safe";
-	};
-	// Add to target list
-	air_target_list pushBack _unit;
-	{
-		air_target_list pushBack _x;
-		_x setBehaviour "CARELESS";
-		_x disableAI "AUTOCOMBAT";
-		_x disableAI "WEAPONAIM";
-	} forEach crew _unit;
-	switch (_spawn_type) do {
-		case "static": {
-			doStop _unit;
-			//hint "static";
+
+	switch (_infantry) do {
+		case 1:{
+			// Infantry
+			_inf_patrol_group = [ getPosATL _random_pos, east, ["rhs_vdv_flora_sergeant", "rhs_vdv_flora_junior_sergeant", "rhs_vdv_flora_rifleman", "rhs_vdv_flora_machinegunner", "rhs_vdv_flora_at", "rhs_vdv_flora_strelok_rpg_assist", "rhs_vdv_flora_medic"]] call BIS_fnc_spawnGroup;
+			[_inf_patrol_group, getPosATL _random_pos, 500] call BIS_fnc_taskPatrol;
+			{
+				air_target_list pushBack _x;
+			} forEach units _inf_patrol_group;
 		};
-		case "patrol": {
-			[group _unit, getPosATL air_training_zone, 1000] call BIS_fnc_taskPatrol;
-			//hint "patrol";
+		case 2:{
+			// AA Infantry
+			_inf_patrol_group = [ getPosATL _random_pos, east, ["rhs_vdv_flora_sergeant", "rhs_vdv_flora_junior_sergeant", "rhs_vdv_flora_rifleman", "rhs_vdv_flora_machinegunner", "rhs_vdv_flora_aa", "rhs_vdv_flora_aa", "rhs_vdv_flora_medic"]] call BIS_fnc_spawnGroup;
+			[_inf_patrol_group, getPosATL _random_pos, 500] call BIS_fnc_taskPatrol;
+			{
+				air_target_list pushBack _x;
+			} forEach units _inf_patrol_group;
 		};
 		default {
-			hint "woops";
+			// Not infantry 
+			_unit = createVehicle [ _spawn_now, getPosATL _random_pos, [], _vehicle_spawn_range, "NONE"];
+			createVehicleCrew _unit;
+			_unit engineOn true;
+			if (air_target_danger == true) then {
+				_unit setVehicleAmmo 1;
+				_msg = _msg + " - Danger";
+			}else{
+				_unit setVehicleAmmo 0;
+				_msg = _msg + " - Safe";
+			};
+				// Add to target list
+			air_target_list pushBack _unit;
+			{
+				air_target_list pushBack _x;
+			} forEach crew _unit;
+			// Starts patrol if needed
+			switch (_spawn_type) do {
+				//case "static": {
+					//hint "static";
+				//};
+				case "patrol": {
+					[group _unit, getPosATL air_training_zone, 1000] call BIS_fnc_taskPatrol;
+					//hint "patrol";
+				};
+				default {
+					hint "woops";
+				};
+			};
 		};
 	};
+
+	
 };
 //_msg = _msg + " -Targets:" + (count air_target_list);
 hintSilent _msg;
