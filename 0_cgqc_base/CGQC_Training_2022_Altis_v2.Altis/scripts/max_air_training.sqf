@@ -15,5 +15,5 @@ air_act12 = player addaction [("<t color=""#e30022"">" + "AA - Infanterie" + "</
 air_act13 = player addaction [("<t color=""#e30022"">" + "AA - ZU-23" + "</t>"), "scripts\air_training.sqf", ["zu"], 0, false, false];
 air_act14 = player addaction [("<t color=""#e30022"">" + "AA - Shiilka" + "</t>"), "scripts\air_training.sqf", ["shiilka"], 0, false, false];
 air_act15 = player addaction [("<t color=""#e30022"">" + "AA - Tunguska" + "</t>"), "scripts\air_training.sqf", ["tunguska"], 0, false, false];
-air_act2 = player addaction [("<t color=""#e30022"">" + "--- DangerMode: OFF" + "</t>"), "scripts\air_training.sqf", ["danger_on"], 0, false, false];
+air_act2 = player addaction [("<t color=""#cc0000"">" + "--- DangerMode: turn ON" + "</t>"), "scripts\air_training.sqf", ["danger_on"], 0, false, false];
 //
