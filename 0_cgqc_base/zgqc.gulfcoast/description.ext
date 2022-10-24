@@ -1,0 +1,47 @@
+// ---------------------------------------------------------------------------------------------------------
+// General Multiplayer Configuration.
+// ---------------------------------------------------------------------------------------------------------
+
+author = "[CGQC] Darkangel";                                             
+onLoadName = "[CGQC] ZGQC";                                                   	
+//onLoadMission = "Mission Zeus For CGQC Community";                                                             
+loadScreen = "textures\BG1.paa";
+
+onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : https://units.arma3.com/unit/CGQC<br/>Groupe Steam : https://steamcommunity.com/groups/CGQC<br/>Groupe Facebook : https://www.facebook.com/groups/CGQCP</t>";
+
+briefingName = "[CGQC] ZGQC";
+overviewPicture = "textures\BG1.paa";
+
+class Header { 
+	gameType  =   Coop ; 	// Type de jeu 
+	minPlayers  =   1 ; 	// nombre minimum de joueurs pris en charge par la mission 
+	maxPlayers  =  32 ; 	// nombre maximum de joueurs pris en charge par la mission 
+} ;
+
+respawn = 3;
+respawndelay = 10;
+respawnTemplates[] = { "MenuPosition" };
+respawnOnStart = -1;
+disabledAI = 1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+allowFunctionsLog = 1;
+
+//================ch view distance script===========
+
+#include "CHVD\dialog.hpp"
+class CfgFunctions
+{
+#include "CHVD\CfgFunctions.hpp"
+};
+//=================================================
+
+class ACEX_Fortify_Presets {
+    class myMissionObjects {
+        objects[] = {
+            {"Land_Sign_MinesDanger_English_F", 10},
+			{"Land_Sign_MinesTall_English_F", 5}
+
+		};
+	};
+};

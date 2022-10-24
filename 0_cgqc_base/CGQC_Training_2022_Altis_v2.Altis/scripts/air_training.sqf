@@ -24,16 +24,22 @@ switch (_type) do {
 		air_target_danger = true;
 		//Switch the actions
 		player removeAction air_act2;
-		air_act2 = player addaction [("<t color=""#e30022"">" + "--- DangerMode: ON" + "</t>"), "scripts\air_training.sqf", ["danger_off"], 0, false, false];
+		air_act2 = player addaction [("<t color=""#21abcd"">" + "--- Set DangerMode: OFF" + "</t>"), "scripts\air_training.sqf", ["danger_off"], 0, false, false];
 		_skip = 1;
+		{
+			_x setVehicleAmmo 1;
+		} forEach air_target_list;
 		_msg = "DangerMode: ON";
 	};
 	case "danger_off":{
 		air_target_danger = false;
 		//Switch the actions
 		player removeAction air_act2;
-		air_act2 = player addaction [("<t color=""#e30022"">" + "--- DangerMode: OFF" + "</t>"), "scripts\air_training.sqf", ["danger_on"], 0, false, false];
+		air_act2 = player addaction [("<t color=""#cc0000"">" + "--- Set DangerMode: ON" + "</t>"), "scripts\air_training.sqf", ["danger_on"], 0, false, false];
 		_skip = 1;
+		{
+			_x setVehicleAmmo 0;
+		} forEach air_target_list;
 		_msg =  "DangerMode: OFF";
 	};
 	case "delete_all":{
@@ -140,13 +146,6 @@ if (_skip == 0) then {
 			_unit = createVehicle [ _spawn_now, getPosATL _random_pos, [], _vehicle_spawn_range, "NONE"];
 			createVehicleCrew _unit;
 			_unit engineOn true;
-			if (air_target_danger == true) then {
-				_unit setVehicleAmmo 1;
-				_msg = _msg + " - Danger";
-			}else{
-				_unit setVehicleAmmo 0;
-				_msg = _msg + " - Safe";
-			};
 				// Add to target list
 			air_target_list pushBack _unit;
 			{
@@ -167,9 +166,8 @@ if (_skip == 0) then {
 			};
 		};
 	};
-
-	
 };
+
 //_msg = _msg + " -Targets:" + (count air_target_list);
 hintSilent _msg;
 sleep 5; 
