@@ -1,5 +1,8 @@
 CHVD_allowNoGrass = true;
 
+// Setup des channels de ACRE 
+[] spawn compile preprocessFile "scripts\fn_setRadios.sqf";
+
 // Popup d'introduction
 [ "CBA_loadingScreenDone", {
 	null = ["Votre nom de mission"] execVM "scripts\intro.sqf";
