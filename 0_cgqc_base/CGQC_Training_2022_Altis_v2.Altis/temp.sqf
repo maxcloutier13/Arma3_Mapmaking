@@ -34,6 +34,14 @@ _adding = [ _this, 0, ["ACE_MainActions", "menu_mk1_camo"], _action ] call  ace_
 
 
 
-
+// Time skipper
+_action = [ "menu_timeskip_1", "Skip: 1 heure", "", {["1"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_3", "Skip: 3 heures", "", {["3"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_6", "Skip: 6 heures", "", {["6"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_12", "Skip: 12 heures", "", {["12"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
 
 
