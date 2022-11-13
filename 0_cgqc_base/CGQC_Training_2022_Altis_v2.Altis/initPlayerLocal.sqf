@@ -1,4 +1,7 @@
-["InitializePlayer", [player]] call BIS_fnc_dynamicGroups; // Initializes the player/client side Dynamic Groups framework
+//Set training map variable 
+cgqc_flag_isTraining = true;
+
+//["InitializePlayer", [player]] call BIS_fnc_dynamicGroups; // Initializes the player/client side Dynamic Groups framework
 
 // Add briefing to mission begin and map menu ("<br/>") == retour à la ligne (+) == Continuation du texte dans la même variable
 _cgqc_info = (
