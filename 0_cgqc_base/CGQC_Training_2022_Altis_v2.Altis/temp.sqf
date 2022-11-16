@@ -35,13 +35,26 @@ _adding = [ _this, 0, ["ACE_MainActions", "menu_mk1_camo"], _action ] call  ace_
 
 
 // Time skipper
-_action = [ "menu_timeskip_1", "Skip: 1 heure", "", {["1"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
-_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
-_action = [ "menu_timeskip_3", "Skip: 3 heures", "", {["3"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
-_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
-_action = [ "menu_timeskip_6", "Skip: 6 heures", "", {["6"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
-_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
-_action = [ "menu_timeskip_12", "Skip: 12 heures", "", {["12"] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
-_adding = [ _this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_1", "Skip: 1 heure", "", {[1] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ timeskipper_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_3", "Skip: 3 heures", "", {[3] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ timeskipper_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_6", "Skip: 6 heures", "", {[6] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ timeskipper_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_timeskip_12", "Skip: 12 heures", "", {[12] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ timeskipper_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
 
 
+// KOTH laptop
+koth_1_target_list = [];  
+koth_2_target_list = []; 
+koth_3_target_list = []; 
+koth_4_target_list = []; 
+_action = [ "menu_koth_1", "Activer - Tour:1", "", {execVM "scripts\koth_spawn_1.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+_action = [ "menu_koth_1", "Désactiver - Tour:1", "", {execVM "scripts\koth_spawn_1_clr.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+_action = [ "menu_koth_1", "Activer - Toutes les tours", "", {execVM "scripts\koth_spawn_all.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+_action = [ "menu_koth_1", "Désactiver - Toutes les tours", "", {execVM "scripts\koth_spawn_all_clr.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
