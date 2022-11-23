@@ -1,0 +1,206 @@
+
+#ifndef MODULES_DIRECTORY
+    #define MODULES_DIRECTORY modules
+#endif
+
+class GRAD_persistence {
+    class common {
+        file = MODULES_DIRECTORY\grad-persistence\functions\common;
+
+        class blacklistClasses {};
+        class blacklistObjects {};
+        class clearMissionData {};
+        class generateCountArray {};
+        class getMarkerChannel {};
+        class getMissionTag {};
+        class getSaveData {};
+        class handleDisconnect {};
+        class handleJIP {};
+        class initModule {postInit = 1;};
+        class isBlacklisted {};
+        class showWarningMessage {};
+        class tagEditorObjects {};
+        class unblacklistClasses {};
+        class unblacklistObjects {};
+    };
+
+    class load {
+        file = MODULES_DIRECTORY\grad-persistence\functions\load;
+
+        class addBackpacks {};
+        class addItems {};
+        class addMagazines {};
+        class addWeaponItems {};
+        class createVehicleCrew {};
+        class loadAllPlayers {};
+        class loadContainers {};
+        class loadGradFortificationsStatics {};
+        class loadGroups {};
+        class loadMarkers {};
+        class loadMission {};
+        class loadObjectVars {};
+        class loadPlayer {};
+        class loadPlayerChatcommandServer {};
+        class loadStatics {};
+        class loadTasks {};
+        class loadTeamAccounts {};
+        class loadTimeAndDate {};
+        class loadTriggers {};
+        class loadTurretMagazines {};
+        class loadVariables {};
+        class loadVehicleHits {};
+        class loadVehicleInventory {};
+        class loadVehicles {};
+        class requestLoadPlayer {};
+    };
+
+    class save {
+        file = MODULES_DIRECTORY\grad-persistence\functions\save;
+
+        class deInstanceTFARRadios {};
+        class getApplicableMarkers {};
+        class getInventory {};
+        class saveAllPlayers {};
+        class saveContainers {};
+        class saveGradFortificationsStatics {};
+        class saveGroups {};
+        class saveMarkers {};
+        class saveMission {};
+        class saveObjectVars {};
+        class savePlayer {};
+        class saveStatics {};
+        class saveTasks {};
+        class saveTeamAccounts {};
+        class saveTimeAndDate {};
+        class saveTriggers {};
+        class saveVariables {};
+        class saveVehicles {};
+    };
+};
+
+#ifndef MODULES_DIRECTORY
+    #define MODULES_DIRECTORY modules
+#endif
+
+class GRAD_fortifications {
+    class collision {
+        file = MODULES_DIRECTORY\grad-fortifications\functions\collision;
+
+        class checkCollisionPFH {};
+        class getBoundingLines {};
+        class getGroundLines {};
+        class getVisualLines {};
+        class isColliding {};
+        class isOnGround {};
+        class linesToWorld {};
+        class shrinkLines {};
+    };
+
+    class common {
+        file = MODULES_DIRECTORY\grad-fortifications\functions\common;
+
+        class addFort {};
+        class addVehicleInteractions {};
+        class allowDemolition {};
+        class allowPackUp {};
+        class canTake {};
+        class doAnimation {};
+        class getDisplayName {};
+        class getModuleRoot {};
+        class getObjectSize {};
+        class getVehicleInventorySize {};
+        class initModule {postInit = 1;};
+        class initSettings {preInit = 1;};
+        class isOwner {};
+        class isVehicle {};
+        class removeFort {};
+        class setBuildTimeFactor {};
+        class setCollisionDebugMode {};
+        class setDemolishTimeFactor {};
+        class setPackUpTimeFactor {};
+        class stopAnimation {};
+        class storageAction {};
+    };
+
+    class drop {
+        file = MODULES_DIRECTORY\grad-fortifications\functions\drop;
+
+        class dropFort {};
+        class initDropCrate {};
+        class requestInteractionServer {};
+        class respondInteractionClient {};
+    };
+
+
+    class place {
+        file = MODULES_DIRECTORY\grad-fortifications\functions\place;
+
+        class addKeyEHs {};
+        class addMouseEHs {};
+        class addUpdatePFH {};
+        class cancelPlacement {};
+        class demolish {};
+        class initFort {};
+        class packUp {};
+        class placeFortification {};
+        class removeAllEHs {};
+        class setDirection {};
+        class setPosition {};
+        class setUp {};
+        class spawnFortification {};
+        class startPlacement {};
+    };
+
+    class ui {
+        file = MODULES_DIRECTORY\grad-fortifications\functions\ui;
+
+        class doBuild {};
+        class doDrop {};
+        class doTake {};
+        class loadFortDialog {};
+        class loadVehicleDialog {};
+        class onSelChanged {};
+        class openHint {};
+        class rotateModel {};
+        class updateButtons {};
+        class updateHint {};
+        class updateItemList {};
+        class updateListTitles {};
+        class updateModel {};
+    };
+
+    class vehicle {
+        file = MODULES_DIRECTORY\grad-fortifications\functions\vehicle;
+
+        class requestStoreTake {};
+        class respondStoreTake {};
+    };
+};
+
+class CHVD
+{
+	tag = "CHVD";
+	class script
+	{
+		file = "CHVD";
+		class onSliderChange {};
+		class onLBSelChanged {};
+		class onLBSelChanged_syncmode {};
+		class onEBinput {};
+		class onEBterrainInput {};
+		class onEBinput_syncmode {};
+		class selTerrainQuality {};
+		class updateTerrain {};
+		class updateSettings {};
+		class updateVehType {};
+		class fovViewDistance {};
+		class UAVstatus {};
+		class openDialog {};
+		class localize {};
+		class trueZoom {};
+		class keyBindings {};
+		class keyDown {};
+		class keyDownTerrain {};
+		class init {postInit = 1;};
+	};
+};
