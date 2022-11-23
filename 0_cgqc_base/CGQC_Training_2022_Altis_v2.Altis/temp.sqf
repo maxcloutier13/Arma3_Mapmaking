@@ -58,3 +58,49 @@ _action = [ "menu_koth_1", "Activer - Toutes les tours", "", {execVM "scripts\ko
 _adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
 _action = [ "menu_koth_1", "Désactiver - Toutes les tours", "", {execVM "scripts\koth_spawn_all_clr.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
 _adding = [ koth_laptop_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+
+
+
+
+
+
+
+ if (hasInterface) then { 
+	_action = [ "menu_CAS", "CAS Training -> On", "", {[1] execVM "scripts\max_air_training.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+	_action = [ "menu_CAS_off", "CAS Training -> Off", "", {[0] execVM "scripts\max_air_training.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+	_action = [ "menu_timeskip", "Skip Time", "", {}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+	_action = [ "menu_timeskip_1", "Skip: 1 heure", "", {[1] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions", "menu_timeskip"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+	_action = [ "menu_timeskip_3", "Skip: 3 heures", "", {[3] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions", "menu_timeskip"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+	_action = [ "menu_timeskip_6", "Skip: 6 heures", "", {[6] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions", "menu_timeskip"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+	_action = [ "menu_timeskip_12", "Skip: 12 heures", "", {[12] execVM "scripts\cgqc_skiptime.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;     
+	_adding = [ laptop_air, 0, ["ACE_MainActions", "menu_timeskip"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+};
+
+[_this] execVM "scripts\set_unlimited.sqf";
+
+
+cgqc_event_CAS = player addEventHandler ["GetInMan", { 
+ params ["_unit", "_role", "_vehicle", "_turret"];
+ execVM "scripts\set_unlimited.sqf"; 
+}];
+
+this addEventHandler [
+	"GetIn", { 
+		[] spawn {
+			while {true} do	{
+				(_this select 0) setVehicleAmmo 1;
+				(_this select 0) setFuel 1;
+			};
+			sleep 5;
+		};
+	}
+]; 
+
+
+
