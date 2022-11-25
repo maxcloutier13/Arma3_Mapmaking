@@ -152,3 +152,44 @@ _action = [ "menu_jump_3000", "Jump: 3000m", "", {[3000] execVM "scripts\parachu
 _adding = [ this, 0, ["ACE_MainActions", "menu_jump"], _action ] call  ace_interact_menu_fnc_addActionToObject;
 _action = [ "menu_jump_5000", "Jump: 800m", "", {[5000] execVM "scripts\parachute_training.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
 _adding = [ this, 0, ["ACE_MainActions", "menu_jump"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+
+
+
+_source = _this select 0;
+_source addAction ["Teleport: Base Principale", "scripts\teleport.sqf", [tp_spawn], 1, false, true, "", "_this distance _target < 3"]; 
+_source addAction ["Teleport: Aéroport",  "scripts\teleport.sqf", [tp_airport], 1, false, true, "", "_this distance _target < 3"]; 
+_source addAction ["Teleport: Heliport", "scripts\teleport.sqf", [tp_heli], 1, false, true, "", "_this distance _target < 3"]; 
+_source addAction ["Teleport: CAS Training", "scripts\teleport.sqf", [tp_cas], 1, false, true, "", "_this distance _target < 3"]; 
+_source addAction ["Teleport: Vehicle circuit", "scripts\teleport.sqf", [tp_vic], 1, false, true, "", "_this distance _target < 3"];
+_source addAction ["Teleport: Sniping range", "scripts\teleport.sqf", [tp_snipe], 1, false, true, "", "_this distance _target < 3"];
+_source addAction ["Teleport: Weapons Range", "scripts\teleport.sqf", [tp_range], 1, false, true, "", "_this distance _target < 3"];
+_source addAction ["Teleport: 9-hole Range", "scripts\teleport.sqf", [tp_9hole], 1, false, true, "", "_this distance _target < 3"];
+_source addAction ["Teleport: CQC Training", "scripts\teleport.sqf", [tp_cqc], 1, false, true, "", "_this distance _target < 3"];
+Dostop _source;
+
+_source = _this select 0;
+_action = [ "menu_tp", "Teleport", "", {}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_spawn", "Spawn Warehouse", "", {[tp_spawn] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_airport", "Aéroport", "", {[tp_airport] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_heliport", "Héliport", "", {[tp_heli] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_CAS", "Training: CAS", "", {[tp_cas] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_vic", "Training: Véhicules terrestres", "", {[tp_vic] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_snipe", "Tir: Sniping", "", {[tp_snipe] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_weapons", "Tir: Armes diverses", "", {[tp_range] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_9hole", "Tir: 9-hole", "", {[tp_9hole] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_cqc", "Training: CQC", "", {[tp_cqc] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_para", "Training: Parachute", "", {[tp_para] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_tp_med", "Training: Médical", "", {[tp_med] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+Dostop _source;
