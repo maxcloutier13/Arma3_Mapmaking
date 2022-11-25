@@ -40,6 +40,7 @@ if (backpack _caller1 isEqualTo "B_Parachute") then {
 	"dynamicBlur" ppEffectCommit 2;
 	waitUntil{isTouchingGround _caller1};
 	deleteVehicle jump_smoke;
+	hint "Good job! Drop ton parachute et remet ton backpack";
 } else {
 	hint "Sans parachute? T'es malade! Regarde dans la caisse blanche.";
 };
