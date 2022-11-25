@@ -104,3 +104,51 @@ this addEventHandler [
 
 
 
+
+_action = [ "menu_med_light", "Patient: Blessé Léger", "", {[1] execVM "scripts\createpatient.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ laptop_med_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_med_med", "Patient: Blessé Moyen", "", {[2] execVM "scripts\createpatient.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ laptop_med_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;  
+_action = [ "menu_med_heavy", "Patient: Blessé Grave", "", {[3] execVM "scripts\createpatient.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ laptop_med_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+
+_action = [ "menu_med_legs", "Patient: Membres Cassés", "", {[4] execVM "scripts\createpatient.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ laptop_med_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+
+
+_action = [ "menu_med_del", "Retirer tout les patients", "", {[0] execVM "scripts\createpatient.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ laptop_med_1, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject; 
+this attachTo[campTable_1];
+
+
+{
+	[] call ace_volume_fnc_lowerVolume;
+} forEach (allUnits inAreaArray thisTrigger);
+
+{ 
+ [] call ace_volume_fnc_lowerVolume; 
+} forEach thisList;
+
+
+null = [this] spawn { 
+ _unit = (_this select 0); 
+ sleep 1; 
+ _unit action ['SwitchWeapon', _unit, _unit, 100]; 
+};
+this addAction ["Training parachute: Saut 800m", "scripts\parachute_training.sqf", [800], 1, false, true, "", "_this distance _target < 3"]; 
+this addAction ["Training parachute: Saut 3000m", "scripts\parachute_training.sqf", [3000], 1, false, true, "", "_this distance _target < 3"]; 
+this addAction ["Training parachute: Saut 5000m", "scripts\parachute_training.sqf", [5000], 1, false, true, "", "_this distance _target < 3"];
+
+null = [this] spawn { 
+ _unit = (_this select 0); 
+ sleep 1; 
+ _unit action ['SwitchWeapon', _unit, _unit, 100]; 
+};
+_action = [ "menu_jump", "Training parachute", "", {}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_jump_800", "Jump: 800m", "", {[800] execVM "scripts\parachute_training.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_jump"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_jump_3000", "Jump: 3000m", "", {[3000] execVM "scripts\parachute_training.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_jump"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_jump_5000", "Jump: 800m", "", {[5000] execVM "scripts\parachute_training.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions", "menu_jump"], _action ] call  ace_interact_menu_fnc_addActionToObject;
