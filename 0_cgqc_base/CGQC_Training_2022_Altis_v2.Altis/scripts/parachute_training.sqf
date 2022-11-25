@@ -6,8 +6,12 @@ if (backpack _caller1 isEqualTo "B_Parachute") then {
 	// Fade to black  
 	cutText ["", "BLACK FADED", 999];
 	titleText ["Prêt?", "PLAIN"];
+	// Spawn smoke target + light
+	private _moduleGroup = createGroup sideLogic;
+	"ModuleSmokeBlue_F" createUnit [[14764.5,16656.6,0],_moduleGroup,
+		"this setVariable ['BIS_fnc_initModules_disableAutoActivation', false, true]; jump_smoke = this"
+	];
 	sleep 3;
-
 	switch (_height) do
 	{
 		case 800: {
@@ -34,6 +38,9 @@ if (backpack _caller1 isEqualTo "B_Parachute") then {
 	titleCut ["", "BLACK IN", 2];
 	"dynamicBlur" ppEffectAdjust [0.0];
 	"dynamicBlur" ppEffectCommit 2;
+	waitUntil{isTouchingGround _caller1};
+	deleteVehicle jump_smoke;
+	hint "Good job! Drop ton parachute et remet ton backpack";
 } else {
 	hint "Sans parachute? T'es malade! Regarde dans la caisse blanche.";
 };

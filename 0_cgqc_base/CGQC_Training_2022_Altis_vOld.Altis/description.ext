@@ -1,0 +1,58 @@
+respawn = 3;
+respawndelay = 10;
+respawnTemplates[] = { "MenuPosition" };
+respawnOnStart = -1;
+disabledAI = 1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+allowFunctionsLog = 1;
+
+author = "Fréchette & Audi & Cloutier";                                             
+onLoadName = "CGQC Training Map"; 
+briefingName = "CGQC Training Map";
+// Custom images
+loadScreen = "textures\loading_screen_1.paa";
+overviewPicture = "textures\BG1.paa";
+
+//================ch view distance script===========
+
+#include "CHVD\dialog.hpp"
+class CfgFunctions
+{
+#include "CHVD\CfgFunctions.hpp"
+};
+//=================================================
+
+class ACEX_Fortify_Presets {
+    class myMissionObjects {
+        objects[] = {
+            {"Land_Sign_MinesDanger_English_F", 10},
+			{"Land_Sign_MinesTall_English_F", 5}
+		};
+	};
+};
+
+// Sounds for sniper training
+class CfgSounds
+{
+	sounds[] = {Hint, Hit, Buzzer};
+
+	class Hint
+	{
+		name = "Hint";
+		sound[] = {"\Sound\Hint.ogg", 0.10, 1};
+		titles[] = {};
+	};
+	class Hit
+	{
+		name = "Hit";
+		sound[] = {"\Sound\Hit.ogg", 0.10, 1};
+		titles[] = {};
+	};
+	class Buzzer
+	{
+		name = "Buzzer";
+		sound[] = {"\Sound\Buzzer.ogg", 0.30, 1};
+		titles[] = {};
+	};
+};
