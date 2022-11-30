@@ -193,3 +193,23 @@ _adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interac
 _action = [ "menu_tp_med", "Training: Médical", "", {[tp_med] execVM "scripts\teleport.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
 _adding = [ this, 0, ["ACE_MainActions", "menu_tp"], _action ] call  ace_interact_menu_fnc_addActionToObject;
 Dostop _source;
+
+
+
+
+_action = [ "menu_seb_spawn", "Holo: Spawn Warehouse", "", {[1] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_heli", "Holo: Heliport", "", {[2] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_snipe", "Holo: Sniper Training", "", {[3] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_vic", "Holo: Vehicle Training", "", {[4] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_weap", "Holo: Weapon range", "", {[5] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_house", "Holo: House", "", {[6] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_island", "Holo: Island", "", {[7] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
+_action = [ "menu_seb_stop", "Holo: Stop", "", {[0] execVM "scripts\table.sqf"}, {true} ] call ace_interact_menu_fnc_createAction;    
+_adding = [ this, 0, ["ACE_MainActions"], _action ] call  ace_interact_menu_fnc_addActionToObject;
