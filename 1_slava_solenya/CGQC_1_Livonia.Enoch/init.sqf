@@ -48,7 +48,9 @@ phase_mission_started = false;
 	deleteMarker "cover_bottom";
 	deleteMarker "cover_all";
 	// move player to plane
-	player moveInCargo insertion_plane;
+	{
+		_x moveInCargo insertion_plane;
+	} forEach allPlayers;
 	// Insertion itself
 	[] execVM "scripts\cgqc_insertion_plane.sqf";
 }] call CBA_fnc_addEventHandler;

@@ -60,6 +60,7 @@ class CfgFunctions {
     #include "CHVD\CfgFunctions.hpp"
 };
 
+/*
 class RscTitles {
     //#include "modules\grad-fortifications\dialog\hint\title.hpp"
 };
@@ -236,7 +237,7 @@ class CfgGradFortifications {
     };
     
 
-};*/
+};
 
 
 // ---------------------------------------------------------------------------------------------------------

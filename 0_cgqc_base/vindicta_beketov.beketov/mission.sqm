@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3281;
+		nextID=3707;
 	};
 	class Camera
 	{
@@ -2817,7 +2817,7 @@ class Mission
 							flags=1;
 							id=1912;
 							type="Vindicta_LocationSector";
-							atlOffset=3.015419;
+							atlOffset=7.3359833;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -3552,7 +3552,7 @@ class Mission
 							flags=1;
 							id=1929;
 							type="Vindicta_LocationSector";
-							atlOffset=1.7280388;
+							atlOffset=2.0256042;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -4666,7 +4666,7 @@ class Mission
 							flags=1;
 							id=1957;
 							type="Vindicta_LocationSector";
-							atlOffset=2.5006123;
+							atlOffset=2.6144505;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -5147,7 +5147,7 @@ class Mission
 							flags=1;
 							id=1963;
 							type="Vindicta_LocationSector";
-							atlOffset=2.6342583;
+							atlOffset=8.4727135;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -6137,7 +6137,7 @@ class Mission
 							};
 							id=2165;
 							type="B_Slingload_01_Cargo_F";
-							atlOffset=0.08142662;
+							atlOffset=0.081424713;
 						};
 						class Item8
 						{
@@ -13607,7 +13607,6 @@ class Mission
 							};
 							id=2958;
 							type="B_Slingload_01_Cargo_F";
-							atlOffset=3.8146973e-006;
 						};
 						class Item5
 						{
@@ -13624,7 +13623,7 @@ class Mission
 							};
 							id=2959;
 							type="B_Slingload_01_Cargo_F";
-							atlOffset=1.1444092e-005;
+							atlOffset=3.8146973e-006;
 						};
 						class Item6
 						{
