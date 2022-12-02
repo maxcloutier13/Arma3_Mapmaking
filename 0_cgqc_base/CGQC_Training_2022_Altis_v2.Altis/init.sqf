@@ -1,7 +1,7 @@
 CHVD_allowNoGrass = true;
 
 // Load ACRE settings 
-[] spawn compile preprocessFile "scripts\set_radios.sqf";
+//[] spawn compile preprocessFile "scripts\set_radios.sqf";
 
 // Event to run when player is done loading
 // Shows intro screen with logo and stuff

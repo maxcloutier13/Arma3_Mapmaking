@@ -26,11 +26,23 @@ class CfgFunctions
 class ACEX_Fortify_Presets {
     class myMissionObjects {
         objects[] = {
-            {"Land_Sign_MinesDanger_English_F", 10},
-			{"Land_Sign_MinesTall_English_F", 5}
+            {"Land_BagFence_Short_F", 0},
+			{"Land_BagFence_Long_F", 0},
+			{"Land_BagFence_Round_F", 0},
+			{"Land_Plank_01_4m_F", 0},
+			{"Land_Plank_01_8m_F", 0},
+			{"Land_fortified_nest_small_EP1", 0},
+			{"Land_CamoNetVar_NATO", 0}
 		};
 	};
 };
+
+
+
+
+
+
+
 
 // Sounds for sniper training
 class CfgSounds
