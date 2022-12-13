@@ -1,3 +1,47 @@
+author = "Fréchette & Audi & Cloutier";                                             
+onLoadName = "CGQC Training Map"; 
+briefingName = "CGQC Training Map";
+
+// Custom images
+loadScreen = "textures\loading_screen_1.paa";
+overviewPicture = "textures\BG1.paa";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NO EDIT BELOW! ---------------------------------------------------------------------------------------------------------
+// Settings
 respawn = 3;
 respawndelay = 10;
 respawnTemplates[] = { "MenuPosition" };
@@ -6,43 +50,20 @@ disabledAI = 1;
 joinUnassigned = 0;
 enableDebugConsole = 1;
 allowFunctionsLog = 1;
-
-author = "Fréchette & Audi & Cloutier";                                             
-onLoadName = "CGQC Training Map"; 
-briefingName = "CGQC Training Map";
-// Custom images
-loadScreen = "textures\loading_screen_1.paa";
-overviewPicture = "textures\BG1.paa";
+onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : units.arma3.com/unit/CGQC<br/>Discord: cgqc.ca/<br/>Groupe Facebook : facebook.com/groups/CGQCP</t>";
+class Header { 
+	gameType  =   Zeus ; 	// Type de jeu 
+	minPlayers  =   1 ; 	// nombre minimum de joueurs pris en charge par la mission 
+	maxPlayers  =  40 ; 	// nombre maximum de joueurs pris en charge par la mission 
+} ;
 
 //================ch view distance script===========
-
 #include "CHVD\dialog.hpp"
 class CfgFunctions
 {
-#include "CHVD\CfgFunctions.hpp"
+	#include "CHVD\CfgFunctions.hpp"
 };
 //=================================================
-
-class ACEX_Fortify_Presets {
-    class myMissionObjects {
-        objects[] = {
-            {"Land_BagFence_Short_F", 0},
-			{"Land_BagFence_Long_F", 0},
-			{"Land_BagFence_Round_F", 0},
-			{"Land_Plank_01_4m_F", 0},
-			{"Land_Plank_01_8m_F", 0},
-			{"Land_fortified_nest_small_EP1", 0},
-			{"Land_CamoNetVar_NATO", 0}
-		};
-	};
-};
-
-
-
-
-
-
-
 
 // Sounds for sniper training
 class CfgSounds

@@ -1,8 +1,8 @@
 
 //--  Edit absolument cette information --------------------------------
-author = "Patate Nom";                                             
-onLoadName = "ton Mission pouel"; 
-briefingName = "nom debriefingon";
+author = "Nom du Zeus";                                             
+onLoadName = "ton nom de Mission"; 
+briefingName = "ton nom de Mission aussi";
 // ----------------------------------------------------------------------
 
 
@@ -11,7 +11,20 @@ briefingName = "nom debriefingon";
 loadScreen = "textures\loading_screen_1.paa";
 overviewPicture = "textures\BG1.paa";
 
-
+//Liste des objets pour Ace Fortify 
+class ACEX_Fortify_Presets {
+    class myMissionObjects {
+        objects[] = {
+            {"Land_BagFence_Short_F", 0},
+			{"Land_BagFence_Long_F", 0},
+			{"Land_BagFence_Round_F", 0},
+			{"Land_Plank_01_4m_F", 0},
+			{"Land_Plank_01_8m_F", 0},
+			{"Land_fortified_nest_small_EP1", 0},
+			{"Land_CamoNetVar_NATO", 0}
+		};
+	};
+};
 
 
 
