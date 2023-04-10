@@ -4,7 +4,7 @@ _tele = _arguments select 0;
 hint format ["Teleport: %1", _tele];
 
 switch (_tele) do {
-	case tp_nimitz: {
+	case tp_diving: {
 		player setPosASL (getPosASL (_tele));
 	};
 	default {
