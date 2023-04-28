@@ -1,8 +1,8 @@
 
 //--  Edit absolument cette information --------------------------------
 author = "Maj. Cloutier";                                             
-onLoadName = "Opération: Face de Pet"; 
-briefingName = "Opération: Face de Pet";
+onLoadName = "Opération: Guillotine"; 
+briefingName = "Opération: Guillotine";
 
 // ----------------------------------------------------------------------
 // Tu peux changer ceci si tu as des screenshots customs
