@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=21253;
+		nextID=21481;
 	};
 	class Camera
 	{
-		pos[]={20843.889,36.834122,7185.2012};
-		dir[]={0.51391047,-0.38054961,-0.76881611};
-		up[]={0.21148008,0.92476052,-0.31637669};
-		aside[]={-0.83136785,0,-0.55572277};
+		pos[]={20841.836,73.606346,7196.9287};
+		dir[]={0.56871772,-0.31811514,0.75852686};
+		up[]={0.19083099,0.94805205,0.25452068};
+		aside[]={0.80008984,-1.4901161e-008,-0.59988022};
 	};
 };
 binarizationWanted=0;
@@ -710,7 +710,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category2
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -739,7 +739,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category3
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -95626,14 +95626,14 @@ class Mission
 										};
 										class Attribute1
 										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
+											property="face";
+											expression="_this setface _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="BOOL";
-													value=0;
+													singleType="STRING";
+													value="LivonianHead_5";
 												};
 											};
 										};
@@ -95678,14 +95678,14 @@ class Mission
 										};
 										class Attribute5
 										{
-											property="face";
-											expression="_this setface _value;";
+											property="enableStamina";
+											expression="_this enablestamina _value;";
 											class Value
 											{
 												class data
 												{
-													singleType="STRING";
-													value="LivonianHead_5";
+													singleType="BOOL";
+													value=0;
 												};
 											};
 										};
