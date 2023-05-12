@@ -1,0 +1,72 @@
+
+//--  Edit absolument cette information --------------------------------
+author = "Maj.Cloutier";                                             
+onLoadName = "CGQC Training: Vanilla"; 
+briefingName = "CGQC Training: Vanilla";
+
+// ----------------------------------------------------------------------
+// Tu peux changer ceci si tu as des screenshots customs
+// Custom images
+loadScreen = "textures\loading_screen_1.paa";
+overviewPicture = "textures\BG1.paa";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NO EDIT BELOW! ---------------------------------------------------------------------------------------------------------
+// Settings
+respawn = 3;
+respawndelay = 10;
+respawnTemplates[] = { "MenuPosition" };
+respawnOnStart = -1;
+disabledAI = 1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+allowFunctionsLog = 1;
+onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : units.arma3.com/unit/CGQC<br/>Discord: cgqc.ca/<br/>Groupe Facebook : facebook.com/groups/CGQCP</t>";
+
+class Header { 
+	gameType  =   Zeus ; 	// Type de jeu 
+	minPlayers  =   1 ; 	// nombre minimum de joueurs pris en charge par la mission 
+	maxPlayers  =  40 ; 	// nombre maximum de joueurs pris en charge par la mission 
+} ;
+
+// Dialogs ---------------------------------------------------------------------------------------------------------
+
+#include "\cgqc\dialogs\Common.hpp"
+#include "\cgqc\dialogs\dia_vic_gui.hpp"
+
+class RscTitles
+{
+    #include "\cgqc\dialogs\dia_vic_gui.hpp"
+};

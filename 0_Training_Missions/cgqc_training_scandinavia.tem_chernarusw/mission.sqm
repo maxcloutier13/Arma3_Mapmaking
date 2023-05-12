@@ -1,0 +1,4170 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=236;
+	};
+	class MarkerIDProvider
+	{
+		nextID=3;
+	};
+	class LayerIndexProvider
+	{
+		nextID=21;
+	};
+	class Camera
+	{
+		pos[]={4663.5601,68.041405,2562.3962};
+		dir[]={0.35396376,-0.73020923,0.58438563};
+		up[]={0.37830544,0.68322301,0.62457395};
+		aside[]={0.85533494,-1.2794044e-007,-0.51807904};
+	};
+};
+binarizationWanted=0;
+sourceName="cgqc_training_scandinavia";
+addons[]=
+{
+	"CGQC",
+	"sup_vehiclespawn",
+	"A3_Ui_F",
+	"WW2_Core_c_IF_Gui_c",
+	"A3_Modules_F",
+	"NORTH_Misc_Objects",
+	"A3_Structures_F_Mil_Flags",
+	"CUP_New_Buildings_Bunker",
+	"A3_Modules_F_Curator_Curator",
+	"NF_FIN_Uniforms",
+	"NORTH_weapons_cfg",
+	"NORTH_opt_zoom_mod",
+	"A3_Weapons_F",
+	"WW2_Assets_c_Weapons_InfantryWeapons_c",
+	"NORTH_Misc_cfg",
+	"H_NORTH_FIN_helmets",
+	"NF_explosives_cfg",
+	"ace_medical_treatment",
+	"ace_hearing",
+	"ace_trenches",
+	"NORTH_Finnish_Gear",
+	"acre_sys_prc117f",
+	"NORTH_FIN_caps",
+	"WW2_Assets_c_Weapons_Mines_c",
+	"A3_Weapons_F_Items",
+	"ace_maptools",
+	"NORTH_molotov_cfg",
+	"ace_fortify",
+	"ace_explosives",
+	"NORTH_SOV_caps"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=29;
+		class Item0
+		{
+			className="CGQC";
+			name="CGQC Core";
+			author="silent1";
+			url="Insert Github";
+		};
+		class Item1
+		{
+			className="sup_vehiclespawn";
+			name="sup_vehiclespawn";
+			author="SpyderAddons";
+		};
+		class Item2
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="WW2_Core_c_IF_Gui_c";
+			name="WW2_Core_c_IF_Gui_c";
+		};
+		class Item4
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="NORTH_Misc_Objects";
+			name="Northern Fronts - Caps";
+			author="Northern Fronts Mod";
+		};
+		class Item6
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="CUP_New_Buildings_Bunker";
+			name="CUP_New_Buildings_Bunker";
+		};
+		class Item8
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item9
+		{
+			className="NF_FIN_Uniforms";
+			name="Northern Fronts - Uniforms";
+			author="Northern Fronts Mod";
+		};
+		class Item10
+		{
+			className="NORTH_weapons_cfg";
+			name="Northern Fronts - Weapons";
+			author="Northern Fronts Mod";
+		};
+		class Item11
+		{
+			className="NORTH_opt_zoom_mod";
+			name="";
+			author="Northern Fronts Mod";
+		};
+		class Item12
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item13
+		{
+			className="WW2_Assets_c_Weapons_InfantryWeapons_c";
+			name="WW2_Assets_c_Weapons_InfantryWeapons_c";
+		};
+		class Item14
+		{
+			className="NORTH_Misc_cfg";
+			name="Northern Fronts - Caps";
+			author="Northern Fronts Mod";
+		};
+		class Item15
+		{
+			className="H_NORTH_FIN_helmets";
+			name="Northern Fronts - Helmets";
+			author="Northern Fronts Mod";
+		};
+		class Item16
+		{
+			className="NF_explosives_cfg";
+			name="Northern Fronts - Explosives";
+			author="Northern Fronts Mod";
+		};
+		class Item17
+		{
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item18
+		{
+			className="ace_hearing";
+			name="ACE3 - Hearing";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item19
+		{
+			className="ace_trenches";
+			name="ACE3 - Trenches";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item20
+		{
+			className="NORTH_Finnish_Gear";
+			name="Northern Fronts - Gear";
+			author="Northern Fronts Mod";
+		};
+		class Item21
+		{
+			className="acre_sys_prc117f";
+			name="ACRE2 - AN/PRC-117F";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item22
+		{
+			className="NORTH_FIN_caps";
+			name="Northern Fronts - Caps";
+			author="Northern Fronts Mod";
+		};
+		class Item23
+		{
+			className="WW2_Assets_c_Weapons_Mines_c";
+			name="WW2_Assets_c_Weapons_Mines_c";
+		};
+		class Item24
+		{
+			className="ace_maptools";
+			name="ACE3 - Map Tools";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item25
+		{
+			className="NORTH_molotov_cfg";
+			name="Molotov Cocktail";
+			author="Northern Fronts Mod";
+		};
+		class Item26
+		{
+			className="ace_fortify";
+			name="ace_fortify";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item27
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item28
+		{
+			className="NORTH_SOV_caps";
+			name="Northern Fronts - Caps";
+			author="Northern Fronts Mod";
+		};
+	};
+};
+randomSeed=2107608;
+class ScenarioData
+{
+	author="silent1";
+};
+class CustomAttributes
+{
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="cba_settings_hash";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="#CBA_HASH#";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="STRING";
+											value="cgqc_setting_limitmags";
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="STRING";
+											value="cgqc_mk2_arsenal_locked";
+										};
+									};
+								};
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="ARRAY";
+								class value
+								{
+									items=2;
+									class Item0
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item1
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="BOOL";
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								nil=1;
+								singleType="ANY";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_SPR";
+			expression="if (!is3DEN && _value # 0 > 0 && !isMultiplayer) then      {        ENH_SPR_Ruleset = _value param [0, 0];        ENH_SPR_Delay = _value param [1, 20];        ENH_SPR_CanDie = _value param [2, false];        ENH_SPR_RestoreLoadout = _value param [3, false];        ENH_SPR_OnRespawnCode = compile (_value param [4, '']);        ENH_SPR_Positions =        [          allMapMarkers select {'respawn_east' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_west' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_guerilla' in toLower _x} apply {getMarkerPos _x},          allMapMarkers select {'respawn_civilian' in toLower _x} apply {getMarkerPos _x}        ];        {          _x setVariable ['ENH_SPR_OriginalSide', side group _x];          _x setVariable ['ENH_SPR_OriginalLoadout', getUnitLoadout _x];          _x addEventHandler ['handleDamage',          {            params ['_unit', '', '_damage', '', '', '_index'];            if (!alive _unit || lifeState _unit isEqualTo 'INCAPACITATED') exitWith {0};            if (_unit getVariable ['ENH_SPR_Tickets', 0] == 0) then            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              _damage;            };            if (ENH_SPR_CanDie && _index in [1, 2] && _damage >= 1) exitWith            {              _unit removeEventHandler ['handleDamage', _thisEventHandler];              1;            };            if (_index < 8 && (_damage min 0.95) == 0.95) then            {              setAccTime 1;              _unit allowDamage false;              _unit setCaptive true;              _unit setUnconscious true;              _unit setVariable ['ENH_SPR_Tickets', (_unit getVariable ['ENH_SPR_Tickets', 0]) - 1];              if (isPlayer _unit) then {enableTeamSwitch false} else {removeSwitchableUnit _unit};              moveOut _unit;              _unit spawn ENH_fnc_SPR_respawnTimer;            };            _damage min 0.95;          }];        } forEach (allUnits select {_x getVariable ['ENH_SPR_Tickets', 0] > 0});                ENH_fnc_SPR_respawn =        {          scriptName 'ENH_Attribute_SPR_Respawn';          params ['_unit'];          if (isPlayer _unit) then {enableTeamSwitch true} else {addSwitchableUnit _unit};          if (ENH_SPR_RestoreLoadout) then {_unit setUnitLoadout (_unit getVariable 'ENH_SPR_OriginalLoadout')};          private _sideID = (_unit getVariable 'ENH_SPR_OriginalSide') call BIS_fnc_sideID;          private _positions = ENH_SPR_Positions select _sideID;          if (_positions isNotEqualTo []) then          {            switch (ENH_SPR_Ruleset) do            {              case 3:              {                _unit setPos (([_positions, [], {_unit distance _x}, 'ASCEND'] call BIS_fnc_sortBy) select 0);              };              case 2:              {                _unit setPos selectRandom _positions;              };            };          };          _unit setUnconscious false;          _unit allowDamage true;          _unit setDamage 0;          _unit switchMove '';          _unit call ENH_SPR_OnRespawnCode;          _unit spawn          {            sleep 8;            _this setCaptive false;          };        };                ENH_fnc_SPR_respawnTimer =        {          scriptName 'ENH_Attribute_SPR_RespawnTimer';          params ['_unit'];          private _respawnTime = time + ENH_SPR_Delay;          if (isPlayer _unit) then          {            private _ctrlRespawnTimer = (call BIS_fnc_displayMission) ctrlCreate ['RscStructuredText',-1];            _ctrlRespawnTimer ctrlSetPosition [0.25, 0, 0.5, 0.06];            _ctrlRespawnTimer ctrlSetBackgroundColor [0, 0, 0, 0.1];            _ctrlRespawnTimer ctrlCommit 0;            ENH_SPR_OriginalVolume = [soundVolume, musicVolume, radioVolume, speechVolume, environmentVolume];            0 cutText ['', 'BLACK OUT', 0.3];            0.3 fadeSound 0;            0.3 fadeMusic 0;            0.3 fadeRadio 0;            0.3 fadeSpeech 0;            0.3 fadeEnvironment 0;            showChat false;            while {time < _respawnTime} do            {              _ctrlRespawnTimer ctrlSetStructuredText parseText format ['<t size=''1.25'' color=''#218a36'' align=''center''>%1</t>', [(_respawnTime - time), 'HH:MM'] call BIS_fnc_timeToString];              sleep 0.1;            };            ctrlDelete _ctrlRespawnTimer;            0 cutText ['', 'BLACK IN', 8];            8 fadeSound (ENH_SPR_OriginalVolume # 0);            8 fadeMusic (ENH_SPR_OriginalVolume # 1);            8 fadeRadio (ENH_SPR_OriginalVolume # 2);            8 fadeSpeech (ENH_SPR_OriginalVolume # 3);            8 fadeEnvironment (ENH_SPR_OriginalVolume # 4);            showChat true;            [              ['Respawned'],              [format ['GRID: %1', mapGridPosition _unit]],              [format ['Tickets left: %1', _unit getVariable 'ENH_SPR_Tickets']]            ] spawn BIS_fnc_EXP_camp_SITREP;          }          else          {            if ((side player getFriend (_unit getVariable 'ENH_SPR_OriginalSide')) >= 0.6) then            {              [                str _unit, 'onEachFrame',                {                  drawIcon3D ['\a3\Modules_f\data\portraitRespawn_ca.paa', [0.13, 0.54, 0.21, 0.8], ASLToAGL ((_this # 0) modelToWorldVisualWorld [0, 0, 1]), 1, 1, 0, str round ((_this # 1) - time), 2];                },                [_unit, _respawnTime]              ] call BIS_fnc_addStackedEventHandler;            };            sleep ENH_SPR_Delay;          };          [str _unit, 'onEachFrame'] call BIS_fnc_removeStackedEventHandler;          _unit call ENH_fnc_SPR_respawn;        };      }";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=5;
+						class Item0
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="SCALAR";
+								value=20;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=0;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								singleType="BOOL";
+								value=0;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								singleType="STRING";
+								value="";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=2;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="Training: Scandinavia v1.0";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0.1;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=1940;
+		month=2;
+		day=20;
+		hour=12;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=2;
+		class Item0
+		{
+			dataType="Layer";
+			name="Spawner and Recruitment";
+			state=1;
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Layer";
+					name="Spawner";
+					class Entities
+					{
+						items=11;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4676.4165,39.449718,2555.1467};
+								angles[]={0.0080009829,0.4792648,0.0053265258};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="spawn_point";
+							};
+							id=28;
+							type="cgqc_refuel_h";
+							atlOffset=3.8146973e-006;
+						};
+						class Item1
+						{
+							dataType="Trigger";
+							position[]={4676.2246,39.451515,2554.7935};
+							angle=2.0484552;
+							class Attributes
+							{
+								name="spawn_zone";
+								sizeA=8;
+								sizeB=8;
+								sizeC=5;
+								isRectangle=1;
+							};
+							id=32;
+							type="EmptyDetectorArea10x10";
+						};
+						class Item2
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4685.1001,39.490002,2565.2615};
+								angles[]={0,2.0535195,0};
+							};
+							id=37;
+							type="SpyderAddons_sup_vehiclespawn";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehicleFactions";
+									expression="_this setVariable ['VehicleFactions',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="LIB_UK_ARMY_w";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnCode";
+									expression="_this setVariable ['SpawnCode',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesTypeWhitelist";
+									expression="_this setVariable ['VehiclesTypeWhitelist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnPosition";
+									expression="_this setVariable ['SpawnPosition',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="spawn_marker";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesBlacklist";
+									expression="_this setVariable ['VehiclesBlacklist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnCondition";
+									expression="_this setVariable ['SpawnCondition',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="count (vehicles select { _x inArea spawn_zone }) < 1";
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="SpyderAddons_sup_vehiclespawn_Enable";
+									expression="_this setVariable ['Enable',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="true";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesWhitelist";
+									expression="_this setVariable ['VehiclesWhitelist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesTypeBlacklist";
+									expression="_this setVariable ['VehiclesTypeBlacklist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnHeight";
+									expression="_this setVariable ['SpawnHeight',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="0";
+										};
+									};
+								};
+								nAttributes=10;
+							};
+						};
+						class Item3
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4681.7319,39.484673,2566.9976};
+								angles[]={0.0026520467,2.050535,0};
+							};
+							id=38;
+							type="SpyderAddons_sup_vehiclespawn";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehicleFactions";
+									expression="_this setVariable ['VehicleFactions',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="LIB_US_ARMY_w";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnCode";
+									expression="_this setVariable ['SpawnCode',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesTypeWhitelist";
+									expression="_this setVariable ['VehiclesTypeWhitelist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnPosition";
+									expression="_this setVariable ['SpawnPosition',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="spawn_marker";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesBlacklist";
+									expression="_this setVariable ['VehiclesBlacklist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnCondition";
+									expression="_this setVariable ['SpawnCondition',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="count (vehicles select { _x inArea spawn_zone }) < 1";
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="SpyderAddons_sup_vehiclespawn_Enable";
+									expression="_this setVariable ['Enable',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="true";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesWhitelist";
+									expression="_this setVariable ['VehiclesWhitelist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesTypeBlacklist";
+									expression="_this setVariable ['VehiclesTypeBlacklist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnHeight";
+									expression="_this setVariable ['SpawnHeight',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="0";
+										};
+									};
+								};
+								nAttributes=10;
+							};
+						};
+						class Item4
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4677.75,39.466293,2568.9631};
+								angles[]={0.0080009829,2.0434837,0.0053265258};
+							};
+							id=40;
+							type="SpyderAddons_sup_vehiclespawn";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehicleFactions";
+									expression="_this setVariable ['VehicleFactions',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="NORTH_FIN";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnCode";
+									expression="_this setVariable ['SpawnCode',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesTypeWhitelist";
+									expression="_this setVariable ['VehiclesTypeWhitelist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnPosition";
+									expression="_this setVariable ['SpawnPosition',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="spawn_marker";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesBlacklist";
+									expression="_this setVariable ['VehiclesBlacklist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnCondition";
+									expression="_this setVariable ['SpawnCondition',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="count (vehicles select { _x inArea spawn_zone }) < 1";
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="SpyderAddons_sup_vehiclespawn_Enable";
+									expression="_this setVariable ['Enable',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="true";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesWhitelist";
+									expression="_this setVariable ['VehiclesWhitelist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="SpyderAddons_sup_vehiclespawn_VehiclesTypeBlacklist";
+									expression="_this setVariable ['VehiclesTypeBlacklist',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="SpyderAddons_sup_vehiclespawn_SpawnHeight";
+									expression="_this setVariable ['SpawnHeight',_value,true];";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="0";
+										};
+									};
+								};
+								nAttributes=10;
+							};
+						};
+						class Item5
+						{
+							dataType="Marker";
+							position[]={4676.3184,39.452324,2554.7556};
+							name="spawn_marker";
+							type="Empty";
+							angle=135.91805;
+							id=41;
+							atlOffset=3.8146973e-006;
+						};
+						class Item6
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4678.0898,39.453983,2555.8694};
+								angles[]={0.0026520467,0,0.010664274};
+							};
+							areaSize[]={15,0,15};
+							flags=1;
+							id=91;
+							type="ModuleHideTerrainObjects_F";
+							atlOffset=3.8146973e-006;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="#filter";
+									expression="_this setVariable [""#filter"",_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=15;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="#hideLocally";
+									expression="_this setVariable [""#hideLocally"",_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item7
+						{
+							dataType="Marker";
+							position[]={4679.0977,39.467648,2559.3242};
+							name="marker_2";
+							text="Spawners";
+							type="hd_start";
+							colorName="ColorWEST";
+							id=94;
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4678.3408,43.439453,2569.813};
+								angles[]={0,2.0484579,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addAction [""Finland"", {}];" \n "this addAction [""Delete Vehicles in Area"", { " \n "    { " \n "        deleteVehicle _x; " \n "    } forEach (vehicles select { _x inArea spawn_zone }); " \n "}];";
+							};
+							id=119;
+							type="NORTH_Flag_FIN";
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4682.3242,43.463005,2567.8479};
+								angles[]={0,2.0484579,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addAction [""US Winter"", {}];" \n "this addAction [""Delete Vehicles in Area"", { " \n "    { " \n "        deleteVehicle _x; " \n "    } forEach (vehicles select { _x inArea spawn_zone }); " \n "}];";
+							};
+							id=120;
+							type="Flag_US_F";
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4686.0879,43.466805,2566.313};
+								angles[]={0,2.0484579,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addAction [""UK Winter"", {}];" \n "this addAction [""Delete Vehicles in Area"", { " \n "    { " \n "        deleteVehicle _x; " \n "    } forEach (vehicles select { _x inArea spawn_zone }); " \n "}];";
+							};
+							id=121;
+							type="Flag_UK_F";
+							atlOffset=-3.8146973e-006;
+						};
+					};
+					id=0;
+					atlOffset=-0.0063972473;
+				};
+				class Item1
+				{
+					dataType="Layer";
+					name="Spawn Bunker";
+					class Entities
+					{
+						items=4;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4676.0146,39.490002,2589.1453};
+								angles[]={0,3.6254959,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+							};
+							id=42;
+							type="land_bunker_garage";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4671.8511,40.412422,2581.4592};
+								angles[]={0,2.062073,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=43;
+							type="cgqc_box_mk2_arsenal";
+						};
+						class Item2
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={4676.1489,39.52,2591.6113};
+							};
+							areaSize[]={20,0,20};
+							flags=1;
+							id=90;
+							type="ModuleHideTerrainObjects_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="#filter";
+									expression="_this setVariable [""#filter"",_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=15;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="#hideLocally";
+									expression="_this setVariable [""#hideLocally"",_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Marker";
+							position[]={4670.4702,39.469002,2579.197};
+							name="marker_1";
+							text="HQ";
+							type="hd_flag";
+							colorName="ColorWEST";
+							id=93;
+							atlOffset=-0.00029373169;
+						};
+					};
+					id=92;
+					atlOffset=0.00075149536;
+				};
+			};
+			id=16;
+			atlOffset=0.025836945;
+		};
+		class Item1
+		{
+			dataType="Layer";
+			name="Finland - Squad";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4675.3018,39.520485,2582.0569};
+					};
+					id=122;
+					type="ModuleCurator_F";
+					atlOffset=0.00048446655;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_1";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={4668.6338,39.52,2585.957};
+					};
+					id=123;
+					type="ModuleCurator_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ModuleCurator_F_Owner";
+							expression="_this setVariable ['Owner',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="zeus_2";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ModuleCurator_F_Forced";
+							expression="_this setVariable ['Forced',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ModuleCurator_F_Name";
+							expression="_this setVariable ['Name',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ModuleCurator_F_Addons";
+							expression="_this setVariable ['Addons',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=3;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item2
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4670.1421,39.521439,2585.979};
+								angles[]={0,3.557714,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								name="zeus_2";
+								description="TeamLeader@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_SVT38";
+										firemode="NORTH_SVT38:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_10rnd_SVT_mag";
+											ammoLeft=10;
+										};
+									};
+									class handgun
+									{
+										name="NORTH_l35";
+										class primaryMuzzleMag
+										{
+											name="NORTH_8Rnd_l35_mag";
+											ammoLeft=8;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_JGR_SGT_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=1;
+												ammoLeft=1;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_12";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_10rnd_SVT_mag";
+												count=10;
+												ammoLeft=10;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_MapBag";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=1;
+												ammoLeft=1;
+											};
+											class Item1
+											{
+												name="NORTH_8Rnd_l35_mag";
+												count=1;
+												ammoLeft=8;
+											};
+										};
+										class ItemCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="ACRE_PRC117F";
+												count=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M40_Helmet_Armoreddiv";
+								};
+							};
+							id=217;
+							type="I_NORTH_FIN_J_S_Submachinegunner_SGT";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4672.0479,39.521439,2587.554};
+								angles[]={0,3.5984676,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="SMG@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_kp31";
+										firemode="NORTH_kp31:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_71rnd_kp31_mag";
+											ammoLeft=71;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_Private_3";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=1;
+												ammoLeft=1;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Assault_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_71rnd_kp31_mag";
+												count=2;
+												ammoLeft=71;
+											};
+											class Item1
+											{
+												name="NORTH_50rnd_kp31_mag";
+												count=5;
+												ammoLeft=50;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_BreadBag_suomi";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_71rnd_kp31_mag";
+												count=2;
+												ammoLeft=71;
+											};
+											class Item1
+											{
+												name="NORTH_Kasapanos3kg_mag";
+												count=2;
+												ammoLeft=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M38_Helmet_4";
+								};
+							};
+							id=218;
+							type="I_NORTH_FIN_S_Submachinegunner";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4671.8979,39.521439,2591.825};
+								angles[]={0,3.6971657,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Medic@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_INF_Private_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=10;
+												ammoLeft=5;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=1;
+												ammoLeft=1;
+											};
+											class Item1
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=5;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item1
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_MedicNCOBag";
+										isBackpack=1;
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=50;
+											};
+											class Item1
+											{
+												name="ACE_splint";
+												count=10;
+											};
+											class Item2
+											{
+												name="ACE_tourniquet";
+												count=5;
+											};
+											class Item3
+											{
+												name="ACE_morphine";
+												count=10;
+											};
+											class Item4
+											{
+												name="ACE_epinephrine";
+												count=10;
+											};
+											class Item5
+											{
+												name="ACE_bloodIV";
+												count=5;
+											};
+											class Item6
+											{
+												name="ACE_bloodIV_500";
+												count=10;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Medicalarmband";
+									headgear="H_NORTH_FIN_M36_fieldcap_worn_4";
+								};
+							};
+							id=219;
+							type="I_NORTH_FIN_S_Medic";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4673.5928,39.521439,2590.9189};
+								angles[]={0,3.7444818,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="AT@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class secondaryWeapon
+									{
+										name="NORTH_fin_panzerschreck_camo";
+										class primaryMuzzleMag
+										{
+											name="NORTH_panzerschreck_mag";
+											ammoLeft=1;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_Private_5";
+										isBackpack=0;
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item1
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item4
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_1";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=16;
+												ammoLeft=5;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_Panzerschreck_frame";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_panzerschreck_mag";
+												count=5;
+												ammoLeft=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M18_Helmet_Winter_KevOs4_2";
+								};
+							};
+							id=220;
+							type="I_NORTH_FIN_J_S_Rifleman_AT_RPzB";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4672.874,39.521439,2589.2451};
+								angles[]={0,3.6245778,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Sniper@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39_PEM";
+										firemode="NORTH_fin_m39_PEM:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class handgun
+									{
+										name="NORTH_m1895";
+										class primaryMuzzleMag
+										{
+											name="NORTH_6Rnd_m1895_mag";
+											ammoLeft=7;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_Private_4";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_6Rnd_m1895_mag";
+												count=3;
+												ammoLeft=7;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_11";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=16;
+												ammoLeft=5;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M36_fieldcap_worn_nocockade";
+								};
+							};
+							id=221;
+							type="I_NORTH_FIN_J_S_Sniper";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4672.6768,39.521439,2593.896};
+								angles[]={0,3.589793,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="MG@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_dp27";
+										firemode="NORTH_dp27:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_47rnd_dp27_mag";
+											ammoLeft=47;
+										};
+									};
+									class handgun
+									{
+										name="NORTH_l35";
+										class primaryMuzzleMag
+										{
+											name="NORTH_8Rnd_l35_mag";
+											ammoLeft=8;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_Private_2";
+										isBackpack=0;
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Generic_3";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_47rnd_dp27_mag";
+												count=2;
+												ammoLeft=47;
+											};
+											class Item1
+											{
+												name="NORTH_8Rnd_l35_mag";
+												count=4;
+												ammoLeft=8;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_nor_Telemark";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_47rnd_dp27_mag";
+												count=10;
+												ammoLeft=47;
+											};
+											class Item1
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=1;
+												ammoLeft=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M38_Helmet";
+								};
+							};
+							id=222;
+							type="I_NORTH_FIN_J_S_Machinegunner_DP";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4669.958,39.521439,2588.418};
+								angles[]={0,3.6165316,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Rifleman@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_JGR_Private";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=3;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item4
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item5
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_7";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=11;
+												ammoLeft=5;
+											};
+											class Item1
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=2;
+												ammoLeft=1;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_GasmaskBag";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=5;
+												ammoLeft=5;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M36_fieldcap_worn_2";
+								};
+							};
+							id=223;
+							type="I_NORTH_FIN_J_S_Rifleman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.04;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4670.8018,39.521439,2590.363};
+								angles[]={0,3.6131806,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Engineer@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class secondaryWeapon
+									{
+										name="NORTH_fin_panzerfaust30";
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_JGR_Private";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=3;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item4
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_7";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=11;
+												ammoLeft=5;
+											};
+											class Item1
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=2;
+												ammoLeft=1;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_nor_Telemark";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=5;
+											class Item0
+											{
+												name="NORTH_KasapanosImpr3kg_mag";
+												count=2;
+												ammoLeft=1;
+											};
+											class Item1
+											{
+												name="LIB_US_TNT_4pound_mag";
+												count=1;
+												ammoLeft=1;
+											};
+											class Item2
+											{
+												name="LIB_Ladung_Big_MINE_mag";
+												count=1;
+												ammoLeft=1;
+											};
+											class Item3
+											{
+												name="LIB_Ladung_Small_MINE_mag";
+												count=2;
+												ammoLeft=1;
+											};
+											class Item4
+											{
+												name="LIB_TM44_MINE_mag";
+												count=1;
+												ammoLeft=1;
+											};
+										};
+										class ItemCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="LIB_ToolKit";
+												count=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_FIN_M36_fieldcap_worn_2";
+								};
+							};
+							id=224;
+							type="I_NORTH_FIN_J_S_Rifleman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4674.7661,39.521439,2592.8582};
+								angles[]={0,3.6452422,-0};
+							};
+							side="Independent";
+							flags=4;
+							class Attributes
+							{
+								description="Tank Crewman@Ryhmä-1";
+								isPlayable=1;
+								class Inventory
+								{
+									class handgun
+									{
+										name="NORTH_l35";
+										firemode="NORTH_l35:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_8Rnd_l35_mag";
+											ammoLeft=8;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Uniform_ARM_Private";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_8Rnd_l35_mag";
+												count=5;
+												ammoLeft=8;
+											};
+										};
+										class ItemCargo
+										{
+											items=6;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item5
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Generic_2";
+										isBackpack=0;
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_GasmaskBag";
+										isBackpack=1;
+										class ItemCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="ToolKit";
+												count=1;
+											};
+											class Item1
+											{
+												name="ACRE_PRC117F";
+												count=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M36_fieldcap_worn_2";
+								};
+							};
+							id=225;
+							type="I_NORTH_FIN_T_W_Crewman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.02;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=216;
+				};
+				class Item3
+				{
+					dataType="Group";
+					side="Independent";
+					class Entities
+					{
+						items=9;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4676.5278,39.521748,2581.7629};
+								angles[]={0,3.6702178,0};
+							};
+							side="Independent";
+							flags=7;
+							class Attributes
+							{
+								name="zeus_1";
+								description="TeamLeader (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_SVT40";
+										firemode="NORTH_SVT40:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_10rnd_SVT_mag";
+											ammoLeft=10;
+										};
+									};
+									class handgun
+									{
+										name="NORTH_l35";
+										class primaryMuzzleMag
+										{
+											name="NORTH_8Rnd_l35_mag";
+											ammoLeft=8;
+										};
+									};
+									class binocular
+									{
+										name="NORTH_Binocular_Zeiss";
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_3";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_8Rnd_l35_mag";
+												count=2;
+												ammoLeft=8;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+											class Item3
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item4
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item5
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item6
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Officer_5";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_10rnd_SVT_mag";
+												count=10;
+												ammoLeft=10;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_MapBag";
+										isBackpack=1;
+										class ItemCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="ACRE_PRC117F";
+												count=1;
+											};
+											class Item1
+											{
+												name="ACE_MapTools";
+												count=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									hmd="G_NORTH_FIN_Gloves_leather_2";
+									headgear="H_NORTH_FIN_M39_furhat_officer";
+								};
+							};
+							id=227;
+							type="I_NORTH_FIN_J_W_Officer_1stLt";
+							atlOffset=0.00030899048;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.95999998;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4679.3652,39.521439,2589.4331};
+								angles[]={0,3.7035365,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="MG (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_dp27";
+										firemode="NORTH_dp27:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_47rnd_dp27_mag";
+											ammoLeft=47;
+										};
+									};
+									class handgun
+									{
+										name="NORTH_M44";
+										class primaryMuzzleMag
+										{
+											name="NORTH_8Rnd_M44_mag";
+											ammoLeft=8;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_3";
+										isBackpack=0;
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+											class Item3
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item5
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Generic_3";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_8Rnd_M44_mag";
+												count=4;
+												ammoLeft=8;
+											};
+											class Item1
+											{
+												name="NORTH_47rnd_dp27_mag";
+												count=2;
+												ammoLeft=47;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_Sipuli";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_47rnd_dp27_mag";
+												count=7;
+												ammoLeft=47;
+											};
+											class Item1
+											{
+												name="NORTH_47rnd_dp27_mag_Tracer";
+												count=3;
+												ammoLeft=47;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Balaclava_5";
+									hmd="G_NORTH_FIN_Gloves_2";
+									headgear="H_NORTH_FIN_M38_Helmet_Winter";
+								};
+							};
+							id=228;
+							type="I_NORTH_FIN_J_W_Machinegunner_DP";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4680.4849,39.521439,2586.844};
+								angles[]={0,3.698056,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="AT (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class secondaryWeapon
+									{
+										name="NORTH_fin_panzerschreck";
+										class primaryMuzzleMag
+										{
+											name="NORTH_panzerschreck_mag";
+											ammoLeft=1;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=2;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_epinephrine";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_7";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=15;
+												ammoLeft=5;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_Panzerschreck_frame";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_panzerschreck_mag";
+												count=5;
+												ammoLeft=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Balaclava";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M18_Helmet_Winter_KevOs4_2";
+								};
+							};
+							id=229;
+							type="I_NORTH_FIN_J_W_Rifleman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4676.6162,39.521439,2584.8591};
+								angles[]={0,3.6109815,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Rifleman (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=2;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_epinephrine";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_7";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=15;
+												ammoLeft=5;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_GasmaskBag";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=4;
+												ammoLeft=1;
+											};
+											class Item1
+											{
+												name="NORTH_molotov_sokaisupullo";
+												count=2;
+												ammoLeft=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Balaclava";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M39_furhat_2";
+								};
+							};
+							id=230;
+							type="I_NORTH_FIN_J_W_Rifleman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4677.7769,39.521439,2586.752};
+								angles[]={0,3.6353812,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Engineer (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m27rv";
+										firemode="NORTH_fin_m27rv:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class secondaryWeapon
+									{
+										name="NORTH_fin_panzerfaust30";
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=2;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=8;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_epinephrine";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+											class Item7
+											{
+												name="ACE_Fortify";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_7";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=15;
+												ammoLeft=5;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_nor_Telemark";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=3;
+											class Item0
+											{
+												name="LIB_Ladung_Big_MINE_mag";
+												count=2;
+												ammoLeft=1;
+											};
+											class Item1
+											{
+												name="LIB_Ladung_Small_MINE_mag";
+												count=4;
+												ammoLeft=1;
+											};
+											class Item2
+											{
+												name="LIB_US_TNT_4pound_mag";
+												count=1;
+												ammoLeft=1;
+											};
+										};
+										class ItemCargo
+										{
+											items=4;
+											class Item0
+											{
+												name="ACE_DefusalKit";
+												count=1;
+											};
+											class Item1
+											{
+												name="LIB_ToolKit";
+												count=1;
+											};
+											class Item2
+											{
+												name="ToolKit";
+												count=1;
+											};
+											class Item3
+											{
+												name="ACE_M26_Clacker";
+												count=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Balaclava";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M37_Helmet_JR46";
+								};
+							};
+							id=231;
+							type="I_NORTH_FIN_J_W_Rifleman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isEngineer";
+									expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ace_isEOD";
+									expression="_this setVariable ['ACE_isEOD', _value, true]";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="unitName";
+									expression="_this setname _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Simo Haya";
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4679.8618,39.521439,2585.6899};
+								angles[]={0,3.6744766,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Sniper (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_sov_m9130_PU";
+										firemode="NORTH_sov_m9130_PU:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class handgun
+									{
+										name="NORTH_m1895";
+										class primaryMuzzleMag
+										{
+											name="NORTH_6Rnd_m1895_mag";
+											ammoLeft=7;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_Hooded_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_6Rnd_m1895_mag";
+												count=2;
+												ammoLeft=7;
+											};
+										};
+										class ItemCargo
+										{
+											items=6;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+											class Item3
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item5
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_11";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=3;
+											class Item0
+											{
+												name="NORTH_6Rnd_m1895_mag";
+												count=3;
+												ammoLeft=7;
+											};
+											class Item1
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=10;
+												ammoLeft=5;
+											};
+											class Item2
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=3;
+												ammoLeft=5;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_BreadBag";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_mag";
+												count=3;
+												ammoLeft=5;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Glasses_2";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M39_furhat_4";
+								};
+							};
+							id=232;
+							type="I_NORTH_FIN_J_W_Sniper";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="unitName";
+									expression="_this setname _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Simo Hayha";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4678.6431,39.521439,2587.7571};
+								angles[]={0,3.6712825,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="Medic(Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_fin_m39";
+										firemode="NORTH_fin_m39:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_5Rnd_m39_mag";
+											ammoLeft=5;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=2;
+												ammoLeft=5;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=20;
+											};
+											class Item1
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_epinephrine";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Rifleman_7";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_5Rnd_m39_tracer_mag";
+												count=15;
+												ammoLeft=5;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_MedicNCOBag";
+										isBackpack=1;
+										class ItemCargo
+										{
+											items=8;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=50;
+											};
+											class Item1
+											{
+												name="ACE_bloodIV";
+												count=6;
+											};
+											class Item2
+											{
+												name="ACE_bloodIV_500";
+												count=6;
+											};
+											class Item3
+											{
+												name="ACE_morphine";
+												count=15;
+											};
+											class Item4
+											{
+												name="ACE_splint";
+												count=10;
+											};
+											class Item5
+											{
+												name="ACE_tourniquet";
+												count=5;
+											};
+											class Item6
+											{
+												name="ACE_epinephrine";
+												count=15;
+											};
+											class Item7
+											{
+												name="ACE_adenosine";
+												count=5;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									goggles="G_NORTH_FIN_Balaclava";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M18_Helmet_Winter_Camo";
+								};
+							};
+							id=233;
+							type="I_NORTH_FIN_J_W_Rifleman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ace_isMedic";
+									expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=2;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4678.7368,39.521439,2583.8191};
+								angles[]={0,3.6606886,0};
+							};
+							side="Independent";
+							flags=5;
+							class Attributes
+							{
+								description="SMG (Winter)@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class primaryWeapon
+									{
+										name="NORTH_kp31";
+										firemode="NORTH_kp31:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_71rnd_kp31_mag";
+											ammoLeft=71;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M27_Snowsuit_3";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_M43SmokeGrenade_mag";
+												count=1;
+												ammoLeft=1;
+											};
+										};
+										class ItemCargo
+										{
+											items=7;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+											class Item6
+											{
+												name="ACE_EntrenchingTool";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Assault_1";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_71rnd_kp31_mag";
+												count=2;
+												ammoLeft=71;
+											};
+											class Item1
+											{
+												name="NORTH_50rnd_kp31_mag";
+												count=5;
+												ammoLeft=50;
+											};
+										};
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_BreadBag3";
+										isBackpack=1;
+										class MagazineCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="NORTH_71rnd_kp31_mag";
+												count=2;
+												ammoLeft=71;
+											};
+											class Item1
+											{
+												name="NORTH_Kasapanos3kg_mag";
+												count=2;
+												ammoLeft=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									hmd="G_NORTH_FIN_Gloves";
+									headgear="H_NORTH_FIN_M39_furhat_3";
+								};
+							};
+							id=234;
+							type="I_NORTH_FIN_J_W_Submachinegunner_1CL";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4681.501,39.521439,2588.27};
+								angles[]={0,3.6439681,-0};
+							};
+							side="Independent";
+							flags=4;
+							class Attributes
+							{
+								description="Tank Driver@Ryhmä-2";
+								isPlayable=1;
+								class Inventory
+								{
+									class handgun
+									{
+										name="NORTH_l35";
+										firemode="NORTH_l35:Single";
+										class primaryMuzzleMag
+										{
+											name="NORTH_8Rnd_l35_mag";
+											ammoLeft=8;
+										};
+									};
+									class uniform
+									{
+										typeName="U_NORTH_FIN_M36_Summertunic_AD_Private_2";
+										isBackpack=0;
+										class MagazineCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="NORTH_8Rnd_l35_mag";
+												count=5;
+												ammoLeft=8;
+											};
+										};
+										class ItemCargo
+										{
+											items=6;
+											class Item0
+											{
+												name="ACE_fieldDressing";
+												count=15;
+											};
+											class Item1
+											{
+												name="ACE_epinephrine";
+												count=2;
+											};
+											class Item2
+											{
+												name="ACE_morphine";
+												count=2;
+											};
+											class Item3
+											{
+												name="ACE_splint";
+												count=2;
+											};
+											class Item4
+											{
+												name="ACE_tourniquet";
+												count=1;
+											};
+											class Item5
+											{
+												name="ACE_EarPlugs";
+												count=1;
+											};
+										};
+									};
+									class vest
+									{
+										typeName="V_NORTH_FIN_Generic_2";
+										isBackpack=0;
+									};
+									class backpack
+									{
+										typeName="NORTH_fin_GasmaskBag";
+										isBackpack=1;
+										class ItemCargo
+										{
+											items=2;
+											class Item0
+											{
+												name="ACRE_PRC117F";
+												count=1;
+											};
+											class Item1
+											{
+												name="ToolKit";
+												count=1;
+											};
+										};
+									};
+									map="ItemMap";
+									compass="NORTH_FIN_Compass";
+									watch="NORTH_FIN_Watch";
+									headgear="H_NORTH_SOV_Tankerhelmet";
+								};
+							};
+							id=235;
+							type="I_NORTH_FIN_AD_T_S_Crewman";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.03;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=226;
+					atlOffset=0.00030899048;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="groupID";
+							expression=" if (isNil 'CBA_fnc_setCallsign') then { _this setGroupID [_value]; } else { [_this, _value] call CBA_fnc_setCallsign; }; ";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Alpha 1-2";
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			id=115;
+			atlOffset=-0.84980583;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=3;
+		};
+		class Links
+		{
+			items=3;
+			class Item0
+			{
+				linkID=0;
+				item0=37;
+				item1=121;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=38;
+				item1=120;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=40;
+				item1=119;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};
