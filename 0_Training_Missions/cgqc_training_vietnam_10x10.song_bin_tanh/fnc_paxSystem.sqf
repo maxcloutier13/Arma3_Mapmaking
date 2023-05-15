@@ -192,7 +192,7 @@ switch (_type) do {
 		// Delete markers
 		deleteMarker "cgqc_pax_hqPlayer_tgt";
 		deleteMarker "cgqc_pax_hqPlayer_zone";
-		deleteMarker "ccgqc_pax_hqOpfor_tgt";
+		deleteMarker "cgqc_pax_hqOpfor_tgt";
 		deleteMarker "ccgqc_pax_hqOpfor_zone";
 		//Delete all units 
 		{deleteVehicle _x;} forEach cgqc_pax_target_list;

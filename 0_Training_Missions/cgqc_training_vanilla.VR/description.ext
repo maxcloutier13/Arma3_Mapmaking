@@ -1,8 +1,8 @@
 
 //--  Edit absolument cette information --------------------------------
 author = "Maj. Cloutier";                                             
-onLoadName = "Test VR"; 
-briefingName = "Test VR";
+onLoadName = "CGQC Training: Vanilla VR"; 
+briefingName = "CGQC Training: Vanilla VR";
 
 // ----------------------------------------------------------------------
 // Tu peux changer ceci si tu as des screenshots customs
