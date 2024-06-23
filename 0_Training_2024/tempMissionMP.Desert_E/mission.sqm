@@ -1,0 +1,96 @@
+version=54;
+class EditorData
+{
+	moveGridStep=2;
+	angleGridStep=0.017453292;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=549;
+	class ItemIDProvider
+	{
+		nextID=2;
+	};
+	class Camera
+	{
+		pos[]={960,93.459999,1090};
+	};
+};
+binarizationWanted=0;
+sourceName="tempMissionMP";
+addons[]=
+{
+	"CGQC_2022"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=1;
+		class Item0
+		{
+			className="CGQC_2022";
+			name="CGQC 2022";
+			author="silent1";
+			url="Insert Github";
+		};
+	};
+};
+randomSeed=6182685;
+class ScenarioData
+{
+	author="silent1";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2012;
+		month=6;
+		day=24;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=1;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={955.91473,66.368279,1135.7096};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1;
+					type="CGQC_units_mk1_2_Sniper_ebr";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+	};
+};

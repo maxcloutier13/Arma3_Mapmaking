@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=21;
+		nextID=33;
 	};
 	class Camera
 	{
-		pos[]={4663.5601,68.041405,2562.3962};
-		dir[]={0.35396376,-0.73020923,0.58438563};
-		up[]={0.37830544,0.68322301,0.62457395};
-		aside[]={0.85533494,-1.2794044e-007,-0.51807904};
+		pos[]={4631.1069,75.500671,2546.0308};
+		dir[]={0.7165128,-0.59677517,0.36130002};
+		up[]={0.53287476,0.80239511,0.26869971};
+		aside[]={0.45025894,-1.9615982e-007,-0.89293718};
 	};
 };
 binarizationWanted=0;
@@ -306,7 +306,7 @@ class CustomAttributes
 										class data
 										{
 											singleType="STRING";
-											value="cgqc_mk2_arsenal_locked";
+											value="cgqc_flag_istraining";
 										};
 									};
 								};
@@ -360,7 +360,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="BOOL";
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -478,7 +478,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Spawner and Recruitment";
-			state=1;
 			class Entities
 			{
 				items=2;
@@ -2520,7 +2519,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4674.7661,39.521439,2592.8582};
-								angles[]={0,3.6452422,-0};
+								angles[]={0,3.6452422,0};
 							};
 							side="Independent";
 							flags=4;
@@ -3978,7 +3977,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={4681.501,39.521439,2588.27};
-								angles[]={0,3.6439681,-0};
+								angles[]={0,3.6439681,0};
 							};
 							side="Independent";
 							flags=4;
@@ -4123,7 +4122,7 @@ class Mission
 				};
 			};
 			id=115;
-			atlOffset=-0.84980583;
+			atlOffset=0.00021362305;
 		};
 	};
 	class Connections

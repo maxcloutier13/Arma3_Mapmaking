@@ -1,0 +1,263 @@
+// -- v1.9 -------------------------------------------------------------
+
+//--  Edit absolument cette information --------------------------------
+author = "Cpl. Quelquechose";    // Votre nom
+onLoadName = "CGQC Mission";     // Votre nom de mission
+onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : units.arma3.com/unit/CGQC<br/>Discord: cgqc.ca/<br/>Groupe Facebook : facebook.com/groups/CGQCP</t>";
+briefingName = "CGQC Mission";   // Nom aui apparaît dans la sélection de mission
+
+// ----------------------------------------------------------------------
+// Tu peux changer ceci si tu as des screenshots customs
+// Custom images
+loadScreen = "\cgqc\textures\loading_screen_1.paa";
+overviewPicture = "\cgqc\textures\BG1.paa";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NO EDIT BELOW! ---------------------------------------------------------------------------------------------------------
+
+// MP Settings
+respawn = 3;
+Saving=0;
+respawndelay = 10;
+respawnTemplates[] = { "MenuPosition" };
+respawnOnStart = -1;
+disabledAI = 1;
+joinUnassigned = 0;
+enableDebugConsole = 1;
+allowFunctionsLog = 1;
+allowProfileGlasses = 0; //Removes custom goggles
+
+class Header {
+	gameType  =   Zeus ; 	// Type de jeu
+	minPlayers  =   1 ; 	// nombre minimum de joueurs
+	maxPlayers  =  40 ; 	// nombre maximum
+} ;
+
+#include "\cgqc\modules\grad-fortifications\grad_fortifications.hpp"
+class CfgFunctions {
+    #include "\cgqc\modules\grad-fortifications\cfgFunctions.hpp"
+	#include "\cgqc\modules\grad-persistence\cfgFunctions.hpp"
+};
+
+// == Persistence ==============================================================================================================
+class CfgGradPersistence {
+    missionTag = missionName; //String - The tag that everything in this mission will be saved under. Two missions with the same tag will overwrite each other when saving, even on different terrains. One mission can load the data of a different mission, if they are both saved under the same tag.
+    loadOnMissionStart = 0;  //0/1 - Toggles automatic loading on start of mission.
+    missionWaitCondition = "true"; //Statement - Condition before data will be automatically loaded. Also applies to automatic loading of JIP players.
+    playerWaitCondition = "true"; // Statment - Condition before a player will be loaded. Passed parameters are [unit,side of unit,unit classname,unit roleDescription].
+
+	// == Objects ==========================================================================================================
+	// * 0-Disable * 1-editor-placed objects only * 2-AllObjects * 3-only objects that were created during the mission (either user placed or by script/module/Zeus)
+    saveUnits = 2; //AI units.
+    saveVehicles = 2; //Vehicles, static weapons, certain objects.
+    saveContainers = 2; //Containers such as ammo boxes.
+    saveStatics = 2; //Static objects such as houses, walls, trees, etc. excluding those created with grad-fortifications.
+    saveGradFortificationsStatics = 3; //Static objects that were created with grad-fortifications during mission runtime.
+
+	// == Players ==========================================================================================================
+    // * 0/1 = Off/On
+	// Every player is saved. Players who disconnect will be saved before his unit is deleted.
+	savePlayerInventory = 1; //Toggles saving of player inventories.
+    savePlayerDamage = 1; //Toggles saving of player health.
+    savePlayerPosition = 1; //Toggles saving of player position.
+    savePlayerMoney = 0; //Toggles saving of player money. Needs GRAD ListBuymenu or GRAD Moneymenu
+
+	// == Others ==========================================================================================================
+	saveMarkers = 2; // 0/1/2/3 - like units. Only global channel is saved
+    saveTasks = 1; // 0/1 - Only global tasks and tasks with a side as owner will be saved.
+    saveTriggers = 1; // 2 = re-execute.
+    saveTeamAccounts = 0; // Team money
+	saveTimeAndDate = 1; // Time and date
+
+    blacklist[] = {}; // Does what it says on the tin
+
+    class customVariables {
+        class gradFortificationsVehicleInventory {
+            varName = "grad_fortifications_myFortsHash";
+            varNamespace = "vehicle";
+            public = 1;
+        };
+        class gradFortificationsContainerInventory {
+            varName = "grad_fortifications_myFortsHash";
+            varNamespace = "container";
+            public = 1;
+        };
+        class gradFortificationsPlayerInventory {
+            varName = "grad_fortifications_myFortsHash";
+            varNamespace = "player";
+            public = 1;
+        };
+        class gradFortificationsUnitInventory {
+            varName = "grad_fortifications_myFortsHash";
+            varNamespace = "unit";
+            public = 1;
+        };
+    };
+};
+
+/*
+Chat commands
+#gradPersistenceLoad
+Loads the mission manually, excluding players (which are typically loaded on connect).
+
+#gradPersistenceLoadPlayers
+Loads all connected players. Reloads players that were already loaded.
+
+#gradPersistenceLoadPlayer
+Load a single player by their name. Do not use quotes. Name is not case sensitive. Example: #gradPersistenceLoadPlayer mcdiod
+
+#gradPersistenceLoadPlayer
+Load a single player by their UID. Do not use quotes. Example: #gradPersistenceLoadPlayer 76564218044320063
+
+#gradPersistenceSave
+Manually saves the entire mission, including players, according to configuration.
+*/
+
+
+// --- Fortification - GRAD Fortification ----------------------------------------------------------
+// Settings for Grad fortif... yeah you know.
+// ==  ==============================================================================================================
+class CfgGradFortifications {
+    canDemolishDefault = 1;
+    demolitionTimeFactor = 1;
+    playerInventorySize = 20;
+    vehicleInventorySizeFactor = 2;
+
+    class Fortifications {
+        // Engineer required to install
+        class Land_BagBunker_Large_F {
+            condition = "player getUnitTrait 'engineer'";
+            conditionHint = "T'es pas ingénieur!";
+        };
+        class Land_Cargo20_military_green_F {
+            condition = "player getUnitTrait 'engineer'";
+            conditionHint = "T'es pas ingénieur!";
+        };
+        class Land_Cargo_Patrol_V1_F {
+            condition = "player getUnitTrait 'engineer'";
+            conditionHint = "T'es pas ingénieur!";
+        };
+        class Land_HBarrierBig_F {
+            condition = "player getUnitTrait 'engineer'";
+            conditionHint = "T'es pas ingénieur!";
+        };
+        class Land_HBarrier_5_F {
+            condition = "player getUnitTrait 'engineer'";
+            conditionHint = "T'es pas ingénieur!";
+        };
+        // Simple stuff
+        class Land_BagFence_Long_F {
+            condition = "true";
+        };
+        class Land_PortableLight_double_F {
+            condition = "true";
+        };
+        class Land_ToiletBox_F {
+            condition = "true";
+        };
+        class Land_Pallets_F {
+            condition = "true";
+        };
+        class Land_PaperBox_closed_F {
+            condition = "true";
+        };
+        class Land_WaterBarrel_F {
+            condition = "true";
+        };
+        class Land_MetalBarrel_F {
+            condition = "true";
+        };
+        class Land_BarrelTrash_grey_F {
+            condition = "true";
+        };
+        class Land_Pallets_stack_F {
+            condition = "true";
+        };
+        class Land_WaterTank_F {
+            condition = "true";
+        };
+    };
+};
+
+
+// == General Settings ==============================================================================================================
+// Attribute	Default Value	Explanation
+//boundingBoxSizeFactor	1	Number - Global size factor of bounding box - smaller means collision detection is less strict
+//buildTimeFactor	1	Number - Higher means building takes longer.
+//demolishTimeFactor	1	Number - Higher means demolitions take longer.
+//packUpTimeFactor	1	Number - Higher means packing up takes longer.
+//playerInventorySize	70	Number - Size of the virtual inventory of units.
+//vehicleInventorySizeFactor	1	Number - Size factor for vehicle inventories.
+//canDemolishDefault	1	(1/0) - Can anyone demolish fortifications by default?
+//canPackUpDefault	1	(1/0) - Can fortification owners pack up fortifications by default?
+//canStoreInLandVehicles	1	(1/0) - Can fortifications be stored in land vehicles?
+//canStoreInShips	1	(1/0) - Can fortifications be stored in ships?
+//canStoreInHelicopters	1	(1/0) - Can fortifications be stored in helicopters?
+//canStoreInPlanes	1	(1/0) - Can fortifications be stored in planes?
+//canStoreInContainers	1	(1/0) - Can fortifications be stored in containers (anything with an inventory that's not one of the above)?
+//fortificationOwnerType	"BUILDER"	String - Who owns a fortification? Owner demolishes more quickly and can pack up the fortification. ("BUILDER"/"GROUP"/"SIDE")
+//onPlaceStart	""	String - Code that is executed when unit starts placement. Local to unit. Passed: [unit,fort class name,local fort object]
+//onPlaceCancel	""	String - Code that is executed when unit cancels placement. Local to unit. Passed: [unit,fort class name,local fort object]
+//onBuildStart	""	String - Code that is executed when unit starts building. Local to unit. Passed: [unit,fort class name,local fort object]
+//onBuildComplete	""	String - Code that is executed when unit completes building and server spawns the actual object. Local to server. Passed: [unit,fort object]
+
+
+// == Fortifications ==============================================================================================================
+//Create the class Fortifications inside CfgGradFortifications. Inside that class, create classes for all fortifications that you want to configure. This is entirely optional. Any object will work as a fortification out of the box. However you can configure fortifications if they don't work the way you like. These attributes are available:
+
+// Attribute	Default Value	Explanation
+// canCollide	0	(1/0) - Can this fortification be placed while colliding with other objects?
+// canDemolish	1	(1/0) - Can this fortification be demolished?
+// canPackUp	1	(1/0) - Can this fortification be packed up and reused?
+// canFloat	0	(1/0) - Can this fortification be placed while floating?
+// canPlaceOnRoad	1	(1/0) - Can this fortification be placed on roads?
+// surfaceNormal	1	(1/0) - Default setting for surface normal up-vector.
+// surfaceNormalForced	0	(1/0) - If forced, user will be unable to change from default setting.
+// boundingBoxSizeFactor	1	Number - Size factor of bounding box for this fortification - smaller means collision detection is less strict - is factored into global boundingBoxSize
+// boundingBoxOffset	[0,0,0]	Array - Offset for bounding box, vector [x,y,z].
+// buildTime	dependent on actual object size	Number - Sets building time in seconds for this type of fortification. Is affected by buildTimeFactor.
+// demolitionTime	dependent on actual object size	Number - Sets demolishing time in seconds for this type of fortification. Is affected by demolishTimeFactor.
+// packUpTime	dependent on actual object size	Number - Sets pack up time in seconds for this type of fortification. Is affected by packUpTimeFactor.
+// size	dependent on actual object size	Number - The size that this fortification takes up in the virtual inventory.
+// condition	"true"	String - Custom condition that will be evaluated during placement. Arguments passed are [fortification object, unit that is placing].
+// conditionHint	"CAN'T PLACE!"	String - Status that will be displayed in GUI when fotification can not be placed because of custom condition.
+// onPlaceStart	""	String - Code that is executed when unit starts placement. Local to unit. Passed: [unit,fort class name,local fort object]. Overwrites general code.
+// onPlaceCancel	""	String - Code that is executed when unit cancels placement. Local to unit. Passed: [unit,fort class name,local fort object]. Overwrites general code.
+// onBuildStart	""	String - Code that is executed when unit starts building. Local to unit. Passed: [unit,fort class name,local fort object]. Overwrites general code.
+// onBuildComplete	""	String - Code that is executed when unit completes building and server spawns the actual object. Local to server. Passed: [unit,fort object]. Overwrites general code.
+
+// == Vehicles ==============================================================================================================
+// Create the class Vehicles inside CfgGradFortifications. Inside that class, create classes for all vehicles that you want to configure. Just like the Fortifications configuration, this is entirely optional. These attributes are available:
+
+// Attribute	Default Value	Explanation
+// isStorage	1	(1/0) - Can this type of vehicle store fortifications?
+// vehicleInventorySize	-1	Number - Sets inventory size of this type of vehicle. If this is set to -1, inventory size is dependent on ace_cargo_space value of vehicle.

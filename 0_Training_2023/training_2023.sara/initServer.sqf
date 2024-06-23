@@ -1,0 +1,1 @@
+execVM "CGQC\functions\fnc_trainingTime.sqf";
