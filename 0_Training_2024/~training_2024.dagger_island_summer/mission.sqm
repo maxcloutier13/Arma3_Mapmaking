@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4187.5264,16.040697,10452.077};
-		dir[]={-0.22247367,-0.60592836,-0.76377761};
-		up[]={-0.16945298,0.79551917,-0.58175153};
-		aside[]={-0.96009946,0,0.27965844};
+		pos[]={4193.394,16.040697,10448.6};
+		dir[]={-0.68055481,-0.68236369,-0.26688254};
+		up[]={-0.63526839,0.7309857,-0.24912368};
+		aside[]={-0.36508715,-5.0175004e-08,0.93097669};
 	};
 };
 binarizationWanted=0;
@@ -41714,7 +41714,7 @@ class Mission
 			class Attributes
 			{
 				condition="player in thisList && this";
-				onActivation="if !(cgqc_penetration_trigger) then { " \n "   _eventHandle = player addEventHandler [""fired"", { " \n "        [] spawn { " \n "            sleep 0.5; " \n "            _breached = count cgqc_penetration_breached - 1; " \n "            _title = format [""%1 walls breached<br/>"", _breached]; " \n "            _txt = """"; " \n "            { " \n "                _textVel = format[""%1m/s"", _x select 1]; " \n "                _tgt = _x select 0; " \n "                _no = toLower (_tgt select[5, 6]); " \n "                _txt = _txt + format[""%1/%2<br/>"", _no, _textVel]; " \n "            } forEach cgqc_penetration_breached; " \n "            [[_title, 1.5, [0.161,0.502,0.725,1]], [_txt, 1], true] call CBA_fnc_notify; " \n "            cgqc_penetration_breached = []; " \n "        }; " \n "    }]; " \n "    player setVariable [""cgqc_penetration_event"", _eventHandle]; " \n "    cgqc_penetration_trigger = true; " \n "};";
+				onActivation="if !(cgqc_penetration_trigger) then { " \n "   _eventHandle = player addEventHandler [""fired"", { " \n "        [] spawn { " \n "            sleep 0.5; " \n "            _breached = count cgqc_penetration_breached - 1; " \n "            _title = format [""%1 walls breached<br/>"", _breached]; " \n "            _txt = """"; " \n "            { " \n "                _textVel = format[""%1 m/s"", _x select 1]; " \n "                _tgt = _x select 0; " \n "                _no = toLower (_tgt select[5, 6]); " \n "                _txt = _txt + format[""%1 - %2<br/>"", _no, _textVel]; " \n "            } forEach cgqc_penetration_breached; " \n "            [[_title, 1.5, [0.161,0.502,0.725,1]], [_txt, 1], true] call CBA_fnc_notify; " \n "            cgqc_penetration_breached = []; " \n "        }; " \n "    }]; " \n "    player setVariable [""cgqc_penetration_event"", _eventHandle]; " \n "    cgqc_penetration_trigger = true; " \n "};";
 				onDeactivation="cgqc_penetration_trigger = false; " \n "_id = player getVariable ""cgqc_penetration_event""; " \n "player removeEventHandler [""fired"", _id];";
 				sizeA=0.97299999;
 				sizeB=1.174;
