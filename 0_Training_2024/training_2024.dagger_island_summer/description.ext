@@ -57,7 +57,7 @@ onLoadMission = "<t color='#0080ff' align='left'>Unit A3 : units.arma3.com/unit/
 class Header {
 	gameType  =   Zeus ; 	// Type de jeu
 	minPlayers  =   1 ; 	// nombre minimum de joueurs pris en charge par la mission
-	maxPlayers  =  40 ; 	// nombre maximum de joueurs pris en charge par la mission
+	maxPlayers  =  60 ; 	// nombre maximum de joueurs pris en charge par la mission
 } ;
 
 class CfgDebriefing {
