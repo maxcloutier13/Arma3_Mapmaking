@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7394;
+		nextID=7464;
 	};
 	class Camera
 	{
-		pos[]={3937.0986,34.989998,9872.79};
-		dir[]={0,-0.70710677,0.70710683};
-		up[]={0,0.70710677,0.70710671};
-		aside[]={0.99999994,0,-0};
+		pos[]={4206.5518,13.951891,10450.234};
+		dir[]={0.70336807,-0.4789806,-0.52521515};
+		up[]={0.38378891,0.8778255,-0.28658074};
+		aside[]={-0.59831387,0,-0.8012619};
 	};
 };
 binarizationWanted=0;
@@ -1610,13 +1610,12 @@ class Mission
 						angles[]={0,1.5707967,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=1273;
 					type="B_UAV_AI";
-					atlOffset=2.0893402;
 				};
 			};
 			class Attributes
@@ -14017,14 +14016,13 @@ class Mission
 										angles[]={0,3.152576,0};
 									};
 									side="West";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2068;
 									type="CGQC_units_mk2_Pilot_heli_ai";
-									atlOffset=44.997791;
 								};
 								class Item1
 								{
@@ -14035,13 +14033,13 @@ class Mission
 										angles[]={0,3.152576,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2069;
 									type="CGQC_units_mk2_Pilot_heli_ai";
-									atlOffset=47.715157;
 								};
 								class Item2
 								{
@@ -14052,13 +14050,13 @@ class Mission
 										angles[]={0,3.152576,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2070;
 									type="CGQC_units_mk2_crew_heli_ai";
-									atlOffset=47.715157;
 								};
 								class Item3
 								{
@@ -14069,13 +14067,13 @@ class Mission
 										angles[]={0,3.152576,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2071;
 									type="CGQC_units_mk2_crew_heli_ai";
-									atlOffset=47.715157;
 								};
 							};
 							class Attributes
@@ -15426,14 +15424,13 @@ class Mission
 										angles[]={0,3.1326571,0};
 									};
 									side="West";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2079;
 									type="CGQC_units_mk2_Pilot_heli_ai";
-									atlOffset=12.573001;
 								};
 								class Item1
 								{
@@ -15444,13 +15441,13 @@ class Mission
 										angles[]={0,3.1326571,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2080;
 									type="CGQC_units_mk2_Pilot_heli_ai";
-									atlOffset=12.573001;
 								};
 								class Item2
 								{
@@ -15461,13 +15458,13 @@ class Mission
 										angles[]={0,3.1326571,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2081;
 									type="CGQC_units_mk2_crew_heli_ai";
-									atlOffset=12.584601;
 								};
 								class Item3
 								{
@@ -15478,13 +15475,13 @@ class Mission
 										angles[]={0,3.1326571,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2082;
 									type="CGQC_units_mk2_crew_heli_ai";
-									atlOffset=12.584601;
 								};
 							};
 							class Attributes
@@ -15596,14 +15593,13 @@ class Mission
 										angles[]={0,3.1329174,0};
 									};
 									side="West";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2085;
 									type="CGQC_units_mk2_Pilot_heli_ai";
-									atlOffset=12.555232;
 								};
 								class Item1
 								{
@@ -15614,13 +15610,13 @@ class Mission
 										angles[]={0,3.1329174,0};
 									};
 									side="West";
+									flags=4;
 									class Attributes
 									{
 										skill=1;
 									};
 									id=2086;
 									type="CGQC_units_mk2_Pilot_heli_ai";
-									atlOffset=12.550731;
 								};
 							};
 							class Attributes
@@ -16680,12 +16676,13 @@ class Mission
 												angles[]={6.2802968,2.4245365,6.2799101};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=439;
 											type="B_T_Crew_F";
-											atlOffset=43.966698;
+											atlOffset=-0.01410675;
 										};
 										class Item1
 										{
@@ -16696,12 +16693,13 @@ class Mission
 												angles[]={6.2802968,2.4245365,6.2799101};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=440;
 											type="B_T_Crew_F";
-											atlOffset=47.050011;
+											atlOffset=-0.01410675;
 										};
 										class Item2
 										{
@@ -16712,13 +16710,13 @@ class Mission
 												angles[]={6.2802968,2.4245365,6.2799101};
 											};
 											side="West";
-											flags=2;
+											flags=6;
 											class Attributes
 											{
 											};
 											id=441;
 											type="B_T_Crew_F";
-											atlOffset=47.050011;
+											atlOffset=-0.01410675;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -16759,12 +16757,13 @@ class Mission
 												angles[]={0,2.4240673,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=442;
 											type="B_T_Crew_F";
-											atlOffset=43.422253;
+											atlOffset=-0.00831604;
 										};
 										class Item4
 										{
@@ -16775,12 +16774,13 @@ class Mission
 												angles[]={0,2.4240673,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=443;
 											type="B_T_Crew_F";
-											atlOffset=46.505566;
+											atlOffset=-0.00831604;
 										};
 										class Item5
 										{
@@ -16791,12 +16791,13 @@ class Mission
 												angles[]={0,2.4240673,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=444;
 											type="B_T_Crew_F";
-											atlOffset=46.505566;
+											atlOffset=-0.00831604;
 										};
 										class Item6
 										{
@@ -16813,6 +16814,7 @@ class Mission
 											};
 											id=445;
 											type="B_T_Crew_F";
+											atlOffset=-0.010726929;
 										};
 										class Item7
 										{
@@ -16823,12 +16825,13 @@ class Mission
 												angles[]={0,2.423558,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=446;
 											type="B_T_Crew_F";
-											atlOffset=45.456005;
+											atlOffset=-0.010726929;
 										};
 										class Item8
 										{
@@ -16839,12 +16842,13 @@ class Mission
 												angles[]={0,2.423558,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=447;
 											type="B_T_Crew_F";
-											atlOffset=45.456005;
+											atlOffset=-0.010726929;
 										};
 										class Item9
 										{
@@ -16855,12 +16859,13 @@ class Mission
 												angles[]={6.2809215,2.4240673,6.2813587};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1804;
 											type="B_T_Crew_F";
-											atlOffset=34.645329;
+											atlOffset=-0.028266907;
 										};
 										class Item10
 										{
@@ -16871,12 +16876,13 @@ class Mission
 												angles[]={6.2809215,2.4240673,6.2813587};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1805;
 											type="B_T_Crew_F";
-											atlOffset=37.728642;
+											atlOffset=-0.028266907;
 										};
 										class Item11
 										{
@@ -16887,12 +16893,13 @@ class Mission
 												angles[]={6.2809215,2.4240673,6.2813587};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1806;
 											type="B_T_Crew_F";
-											atlOffset=37.728642;
+											atlOffset=-0.028266907;
 										};
 										class Item12
 										{
@@ -16903,12 +16910,13 @@ class Mission
 												angles[]={0,2.4245365,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1801;
 											type="B_T_Crew_F";
-											atlOffset=35.166187;
+											atlOffset=-0.015289307;
 										};
 										class Item13
 										{
@@ -16919,12 +16927,13 @@ class Mission
 												angles[]={0,2.4245365,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1802;
 											type="B_T_Crew_F";
-											atlOffset=38.2495;
+											atlOffset=-0.015289307;
 										};
 										class Item14
 										{
@@ -16935,12 +16944,13 @@ class Mission
 												angles[]={0,2.4245365,0};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1803;
 											type="B_T_Crew_F";
-											atlOffset=38.2495;
+											atlOffset=-0.015289307;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -17404,13 +17414,12 @@ class Mission
 												angles[]={6.2589741,2.2363534,6.2689872};
 											};
 											side="West";
-											flags=2;
+											flags=6;
 											class Attributes
 											{
 											};
 											id=1815;
 											type="B_Soldier_F";
-											atlOffset=29.928326;
 										};
 										class Item1
 										{
@@ -17421,12 +17430,13 @@ class Mission
 												angles[]={6.2535801,2.2367203,6.2708087};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1816;
 											type="B_Soldier_F";
-											atlOffset=34.160603;
+											atlOffset=-1.5258789e-05;
 										};
 										class Item2
 										{
@@ -17437,12 +17447,13 @@ class Mission
 												angles[]={6.2474203,2.2370424,6.2654114};
 											};
 											side="West";
+											flags=4;
 											class Attributes
 											{
 											};
 											id=1817;
 											type="B_Soldier_F";
-											atlOffset=34.283325;
+											atlOffset=-1.5258789e-05;
 										};
 										class Item3
 										{
@@ -38944,7 +38955,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Lane 5  - Damage";
-					state=1;
 					class Entities
 					{
 						items=2;
@@ -39038,7 +39048,7 @@ class Mission
 							flags=4;
 							class Attributes
 							{
-								init="cgqc_damage_text = []; " \n "cgqc_damage_units = []; " \n "cgqc_damage_positions = [damage_pos_1, damage_pos_2, damage_pos_3, damage_pos_4, damage_pos_5]; " \n " " \n "cgqc_damage_spawn_unit = { " \n "    params [""_pos"", ""_dir""]; " \n " " \n "    _stuff = getUnitLoadout damage_dummy; " \n "    _class = ""rhs_vdv_rifleman""; " \n " " \n "    _group = createGroup east; " \n "    _newUnit = _group createUnit [_class, _pos, [], 0, ""CAN_COLLIDE""]; " \n "    _newUnit setDir _dir; " \n "    _newUnit setVehicleVarName format [""damage_%1"", random 1000]; " \n "    removeAllItems _newUnit; " \n "    removeAllAssignedItems _newUnit; " \n "    removeAllWeapons _newUnit; " \n "    removeAllContainers _newUnit; " \n "    removeGoggles _newUnit; " \n "    removeHeadgear _newUnit; " \n "    _newUnit setUnitLoadout _stuff; " \n "    _newUnit disableAI ""AIMINGERROR""; " \n "    _newUnit disableAI ""AUTOCOMBAT""; " \n "    _newUnit disableAI ""AUTOTARGET""; " \n "    _newUnit disableAI ""FSM""; " \n "    _newUnit disableAI ""MOVE""; " \n "    _newUnit disableAI ""PATH""; " \n "    _newUnit disableAI ""SUPPRESSION""; " \n "    _newUnit disableAI ""TARGET""; " \n "    _newUnit setunitpos ""UP""; " \n "    _group setBehaviour ""SAFE""; " \n "    cgqc_damage_units pushBack _newUnit; " \n "    _newUnit addEventHandler [""HitPart"", { " \n "        (_this select 0) params [""_target"", ""_shooter"", ""_projectile"", ""_position"", ""_velocity"", ""_selection"", ""_ammo"", ""_vector"", ""_radius"", ""_surfaceType"", ""_isDirect"", ""_instigator""]; " \n "        tgt_hi_5 = _this select 0 select 3; " \n " " \n "        [_target, _shooter, _position, _velocity] spawn { " \n "            params [""_target"", ""_shooter"", ""_position"", ""_velocity""]; " \n "            _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "            _spr setPosASL tgt_hi_5; " \n "            sleep 0.5; " \n "            _target call ACE_medical_treatment_fnc_fullHealLocal; " \n "            _txt = """"; " \n "            { " \n "                _txt = _txt + _x; " \n "            } forEach cgqc_damage_text; " \n "            cgqc_damage_text = []; " \n "            _currentGun = currentWeapon player; " \n "            _currentMag =  currentMagazine player; " \n "            _gunName = (getText (configFile >> 'CfgWeapons' >> _currentGun >> 'displayName')); " \n "            _txtInfo = format [""<br/>%1/%2"", _gunName, _currentMag]; " \n "            _vectorToTarget = (getPosASL _shooter) vectorDiff _position; " \n "            _distance = vectorMagnitude _vectorToTarget; " \n "            _textDist = format[""Distance: %1m"", floor (round(_distance * 10) / 10)]; " \n "            _textVel = format[""Velocité: %1m/s"", floor (round(_velocity call BIS_fnc_magnitude))]; " \n "            [[""Target hit"", 1.5, [0.161, 0.502, 0.725, 1]], [_textDist, 1], [_textVel, 1], [_txt, 1], [_txtInfo, 1], true] remoteExec [""CBA_fnc_notify"", owner _shooter]; " \n "            sleep 2; " \n "            deleteVehicle _spr; " \n "        }; " \n "    }]; " \n " " \n "    _newUnit addMPEventHandler [""MPKilled"", { " \n "        params [""_unit"", ""_killer"", ""_instigator"", ""_useEffects""]; " \n "        cgqc_damage_text pushBack ""Fatal Damage<br/>""; " \n "        if (local _unit) then { " \n "            [getPos _unit, getDir _unit] call cgqc_damage_spawn_unit; " \n "            deleteVehicle _unit; " \n "        }; " \n " " \n "    }]; " \n "}; " \n " " \n "[""ace_medical_woundReceived"", { " \n "        params [""_unit"", ""_allDamages"", ""_shooter"", ""_ammo""]; " \n "        if (""damage"" in (vehicleVarName _unit)) then { " \n "            { " \n "                _dmg = _x select 0; " \n "                if (_dmg > 0.06) then { " \n "                    _dmg = _dmg * 10; " \n "                    _dmg = round _dmg; " \n "                    _tgt = _x select 1; " \n "                    _txt = format[""Dmg:%1 to %2<br/>"", _dmg, _tgt]; " \n "                    cgqc_damage_text pushBack _txt; " \n "                }; " \n "            } forEach _allDamages; " \n "        }; " \n "    }] call CBA_fnc_addEventHandler; " \n " " \n "_action = [ ""menu_create"", ""Create Targets"", """", { " \n "    { " \n "        [getPos _x, getDir _x] call cgqc_damage_spawn_unit; " \n "    } forEach cgqc_damage_positions; " \n "}, {true} ] call ace_interact_menu_fnc_createAction; " \n "_adding = [ laptop_lane_5, 0, [""ACE_MainActions""], _action ] call ace_interact_menu_fnc_addActionToObject; " \n "_action = [ ""menu_delete"", ""Delete Targets"", """", { " \n "    { " \n "        deleteVehicle _x; " \n "    } forEach cgqc_damage_units; " \n "    cgqc_damage_units = []; " \n "}, {true} ] call ace_interact_menu_fnc_createAction; " \n "_adding = [ laptop_lane_5, 0, [""ACE_MainActions""], _action ] call ace_interact_menu_fnc_addActionToObject; " \n "";
+								init="cgqc_damage_text = [];" \n "cgqc_damage_units = []; " \n "cgqc_damage_positions = [damage_pos_1, damage_pos_2, damage_pos_3, damage_pos_4, damage_pos_5]; " \n " " \n "cgqc_damage_spawn_unit = { " \n "    params [""_pos"", ""_dir""]; " \n " " \n "    _stuff = getUnitLoadout damage_dummy; " \n "    _class = ""rhs_vdv_rifleman""; " \n " " \n "    _group = createGroup east; " \n "    _newUnit = _group createUnit [_class, _pos, [], 0, ""CAN_COLLIDE""]; " \n "    _newUnit setDir _dir; " \n "    _newUnit setVehicleVarName format [""damage_%1"", random 10000]; " \n "    removeAllItems _newUnit; " \n "    removeAllAssignedItems _newUnit; " \n "    removeAllWeapons _newUnit; " \n "    removeAllContainers _newUnit; " \n "    removeGoggles _newUnit; " \n "    removeHeadgear _newUnit; " \n "    _newUnit setUnitLoadout _stuff; " \n "    _newUnit disableAI ""AIMINGERROR""; " \n "    _newUnit disableAI ""AUTOCOMBAT""; " \n "    _newUnit disableAI ""AUTOTARGET""; " \n "    _newUnit disableAI ""FSM""; " \n "    _newUnit disableAI ""MOVE""; " \n "    _newUnit disableAI ""PATH""; " \n "    _newUnit disableAI ""SUPPRESSION""; " \n "    _newUnit disableAI ""TARGET""; " \n "    _newUnit setunitpos ""UP""; " \n "    _group setBehaviour ""SAFE""; " \n "    cgqc_damage_units pushBack _newUnit; " \n "    _newUnit addEventHandler [""HitPart"", { " \n "        (_this select 0) params [""_target"", ""_shooter"", ""_projectile"", ""_position"", ""_velocity"", ""_selection"", ""_ammo"", ""_vector"", ""_radius"", ""_surfaceType"", ""_isDirect"", ""_instigator""]; " \n "        tgt_hi_5 = _this select 0 select 3; " \n " " \n "        [_target, _shooter, _position, _velocity, _ammo] spawn { " \n "            params [""_target"", ""_shooter"", ""_position"", ""_velocity"", ""_ammo""]; " \n "            _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "            _spr setPosASL tgt_hi_5; " \n "            sleep 0.5; " \n "            _target call ACE_medical_treatment_fnc_fullHealLocal; " \n "            _txtDamage = """"; " \n "            { " \n "                _txtDamage = _txtDamage + _x; " \n "            } forEach cgqc_damage_text; " \n "            cgqc_damage_text = []; " \n "            _currentGun = currentWeapon player; " \n "            _currentMag =  currentMagazine player; " \n "            _gunName = (getText (configFile >> 'CfgWeapons' >> _currentGun >> 'displayName')); " \n "            _txtInfo = format [""<br/>%1/%2"", _gunName, _currentMag]; " \n "            _vectorToTarget = (getPosASL _shooter) vectorDiff _position; " \n "            _distance = vectorMagnitude _vectorToTarget; " \n "            _textDist = format[""Dist: %1m"", floor (round(_distance * 10) / 10)]; " \n "            _textVel = format[""Vel: %1m/s"", floor (round(_velocity call BIS_fnc_magnitude))]; " \n "            _weight = getNumber(configFile >> ""CfgAmmo"" >> _ammo select 4 >> ""ACE_bulletMass""); " \n "            _weightKg = _weight / 1000; " \n "            _vel = _velocity call BIS_fnc_magnitude; " \n "            _velSquare = _vel * _vel; " \n "            _energy = floor (round(0.5 * _velSquare * _weightKg)); " \n "            _textEnergy = format[""Engergy: %1joules"", _energy]; " \n "            if (_vel <= 343) then { " \n "                _textVel = format[""%1 - Subsonic"", _textVel]; " \n "            }; " \n "            [[""Target hit"", 1.5, [0.161, 0.502, 0.725, 1]], " \n "                [_textDist, 1], " \n "                [_textVel, 1], " \n "                [_textEnergy, 1], " \n "                [_txtDamage, 1], " \n "                [_txtInfo, 1], " \n "            true] remoteExec [""CBA_fnc_notify"", owner _shooter]; " \n "            sleep 2; " \n "            deleteVehicle _spr; " \n "        }; " \n "    }]; " \n " " \n "    _newUnit addMPEventHandler [""MPKilled"", { " \n "        params [""_unit"", ""_killer"", ""_instigator"", ""_useEffects""]; " \n "        cgqc_damage_text pushBack ""Fatal Damage<br/>""; " \n "        if (local _unit) then { " \n "            [getPos _unit, getDir _unit] call cgqc_damage_spawn_unit; " \n "            deleteVehicle _unit; " \n "        }; " \n "    }]; " \n "}; " \n " " \n "_action = [ ""menu_create"", ""Create Targets"", """", { " \n "    { " \n "        [getPos _x, getDir _x] call cgqc_damage_spawn_unit; " \n "    } forEach cgqc_damage_positions; " \n "}, {true} ] call ace_interact_menu_fnc_createAction; " \n "_adding = [ laptop_lane_5, 0, [""ACE_MainActions""], _action ] call ace_interact_menu_fnc_addActionToObject; " \n "_action = [ ""menu_delete"", ""Delete Targets"", """", { " \n "    { " \n "        deleteVehicle _x; " \n "    } forEach cgqc_damage_units; " \n "    cgqc_damage_units = []; " \n "}, {true} ] call ace_interact_menu_fnc_createAction; " \n "_adding = [ laptop_lane_5, 0, [""ACE_MainActions""], _action ] call ace_interact_menu_fnc_addActionToObject; " \n "";
 								name="laptop_lane_5";
 							};
 							id=4488;
