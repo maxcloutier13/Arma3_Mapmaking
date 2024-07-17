@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=4851;
+		nextID=5395;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7674;
+		nextID=8374;
 	};
 	class Camera
 	{
-		pos[]={4206.5518,13.951891,10450.234};
-		dir[]={0.70336807,-0.4789806,-0.52521515};
-		up[]={0.38378891,0.8778255,-0.28658074};
-		aside[]={-0.59831387,0,-0.8012619};
+		pos[]={4201.9888,16.240519,10451.051};
+		dir[]={0.72336346,-0.54836553,-0.41957197};
+		up[]={0.47434729,0.83623874,-0.27513531};
+		aside[]={-0.50173706,0,-0.86502028};
 	};
 };
 binarizationWanted=0;
@@ -123,10 +123,11 @@ addons[]=
 	"575_Object",
 	"cnd_propspack",
 	"A3_Supplies_F_Exp_Ammoboxes",
+	"DEVGRU_RedSquadron_CQB_Objects",
 	"FM_Targets",
+	"A3_Structures_F_Kart_Signs_Companies",
 	"A3_Structures_F_Argo_Military_Fortifications",
 	"A3_Structures_F_Walls",
-	"A3_Structures_F_Kart_Signs_Companies",
 	"rhs_c_troops",
 	"re_rhsafrf_factions",
 	"PA_Mod_Config",
@@ -136,7 +137,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=78;
+		items=79;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -611,15 +612,13 @@ class AddonsMetaData
 		};
 		class Item72
 		{
-			className="FM_Targets";
-			name="FM_Targets";
+			className="DEVGRU_RedSquadron_CQB_Objects";
+			name="DEVGRU_RedSquadron_CQB_Objects";
 		};
 		class Item73
 		{
-			className="A3_Structures_F_Argo";
-			name="Arma 3 Malden - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
+			className="FM_Targets";
+			name="FM_Targets";
 		};
 		class Item74
 		{
@@ -630,18 +629,25 @@ class AddonsMetaData
 		};
 		class Item75
 		{
+			className="A3_Structures_F_Argo";
+			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item76
+		{
 			className="rhs_c_troops";
 			name="AFRF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item76
+		class Item77
 		{
 			className="re_rhsafrf_factions";
 			name="RE: RHS AFRF Factions Fix";
 			author="amartyn";
 		};
-		class Item77
+		class Item78
 		{
 			className="PA_Mod_Config";
 			name="Project America - Factions";
@@ -670,8 +676,8 @@ dlcs[]=
 	"Tank",
 	"Tacops",
 	"Mark",
-	"Argo",
 	"Kart",
+	"Argo",
 	"RHS_AFRF"
 };
 randomSeed=1271766;
@@ -29997,7 +30003,7 @@ class Mission
 			name="Indoor Range";
 			class Entities
 			{
-				items=20;
+				items=15;
 				class Item0
 				{
 					dataType="Layer";
@@ -30546,6 +30552,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Positions";
+					state=1;
 					class Entities
 					{
 						items=35;
@@ -37991,181 +37998,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4189.875,9.9799995,10420};
-								angles[]={0,3.1415927,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_1 = tgt_ary_1+[_mkr];" \n " tgt_hi_1 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_1;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4004;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4189.75,9.9799995,10395};
-								angles[]={0,3.141593,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_1 = tgt_ary_1+[_mkr];" \n " tgt_hi_1 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_1;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4317;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4189.25,9.9799995,10345};
-								angles[]={0,3.141593,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_1 = tgt_ary_1+[_mkr];" \n " tgt_hi_1 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_1;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4318;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4188,9.9799995,10245};
-								angles[]={0,3.141593,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_1 = tgt_ary_1+[_mkr];" \n " tgt_hi_1 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_1;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4343;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item4
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4190.1851,9.9799995,10435};
-								angles[]={0,3.1415927,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_1 = tgt_ary_1+[_mkr];" \n " tgt_hi_1 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_1;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4378;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={4188.5269,10.361528,10447.14};
 							};
 							side="Empty";
@@ -38207,7 +38039,7 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item6
+						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
@@ -38243,105 +38075,23 @@ class Mission
 								nAttributes=1;
 							};
 						};
-					};
-					id=4383;
-					atlOffset=0.38049984;
-				};
-				class Item9
-				{
-					dataType="Layer";
-					name="Lane 2 - Precision";
-					state=1;
-					class Entities
-					{
-						items=7;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4195.375,9.9799995,10420.125};
-								angles[]={0,3.141593,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_2 = tgt_ary_2+[_mkr];" \n " tgt_hi_2 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_2;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4362;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={4195.25,9.9799995,10395.125};
-								angles[]={0,3.141593,0};
-							};
-							side="Empty";
-							flags=4;
-							class Attributes
-							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_2 = tgt_ary_2+[_mkr];" \n " tgt_hi_2 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_2;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
-								dynamicSimulation=1;
-							};
-							id=4363;
-							type="Target_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
 						class Item2
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4194.75,9.9799995,10345.125};
-								angles[]={0,3.141593,0};
+								position[]={4189.875,9.9799995,10420};
+								angles[]={0,3.1415927,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_2 = tgt_ary_2+[_mkr];" \n " tgt_hi_2 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_2;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
+								init=" " \n "this addEventHandler [""HitPart"", {   " \n "    params [""_event""];   " \n "   " \n "    _shooter = _event select 1;   " \n "    _pos = _event select 3;   " \n "   " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false];  " \n "    _rgb = [0,0,0,1];   " \n "    _lastDigit = (count tgt_ary_1) % 10;   " \n "    _caseIndex = (_lastDigit % 5) + 1;   " \n "    switch (_caseIndex) do {   " \n "        case 1: {_rgb = [255,0,0,1]};   " \n "        case 2: {_rgb = [255,255,0,1]};   " \n "        case 3: {_rgb = [0,255,0,1]};   " \n "        case 4: {_rgb = [0,0,255,1]};   " \n "        case 5: {_rgb = [255,255,255,1]};   " \n "    };   " \n "   " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture;   " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0];   " \n "    _mkr setObjectScale 0.2;   " \n "    _mkr setPosASL _pos;   " \n "   " \n "    tgt_ary_1 = tgt_ary_1+[_mkr];   " \n "    tgt_hi_1 = _this select 0 select 3;   " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0];    " \n "    _spr setPosASL tgt_hi_1;   " \n "    [_spr] spawn {   " \n "        params [""_spr""];   " \n "        sleep 2;   " \n "        deleteVehicle _spr;   " \n "    };   " \n "    if (local _shooter) then {   " \n "        [_this select 0, tgt_ary_1] spawn CGQC_fnc_onHitRange;   " \n "    };   " \n "}];";
 								dynamicSimulation=1;
 							};
-							id=4364;
-							type="Target_F";
+							id=4856;
+							type="TargetStatic_ACR";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38365,18 +38115,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4193.5,9.9799995,10245.125};
+								position[]={4189.75,9.9799995,10395};
 								angles[]={0,3.141593,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_2 = tgt_ary_2+[_mkr];" \n " tgt_hi_2 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_2;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
+								init=" " \n "this addEventHandler [""HitPart"", {   " \n "    params [""_event""];   " \n "   " \n "    _shooter = _event select 1;   " \n "    _pos = _event select 3;   " \n "   " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false];  " \n "    _rgb = [0,0,0,1];   " \n "    _lastDigit = (count tgt_ary_1) % 10;   " \n "    _caseIndex = (_lastDigit % 5) + 1;   " \n "    switch (_caseIndex) do {   " \n "        case 1: {_rgb = [255,0,0,1]};   " \n "        case 2: {_rgb = [255,255,0,1]};   " \n "        case 3: {_rgb = [0,255,0,1]};   " \n "        case 4: {_rgb = [0,0,255,1]};   " \n "        case 5: {_rgb = [255,255,255,1]};   " \n "    };   " \n "   " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture;   " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0];   " \n "    _mkr setObjectScale 0.2;   " \n "    _mkr setPosASL _pos;   " \n "   " \n "    tgt_ary_1 = tgt_ary_1+[_mkr];   " \n "    tgt_hi_1 = _this select 0 select 3;   " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0];    " \n "    _spr setPosASL tgt_hi_1;   " \n "    [_spr] spawn {   " \n "        params [""_spr""];   " \n "        sleep 2;   " \n "        deleteVehicle _spr;   " \n "    };   " \n "    if (local _shooter) then {   " \n "        [_this select 0, tgt_ary_1] spawn CGQC_fnc_onHitRange;   " \n "    };   " \n "}];";
 								dynamicSimulation=1;
 							};
-							id=4365;
-							type="Target_F";
+							id=4857;
+							type="TargetStatic_ACR";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38400,18 +38150,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={4195.375,9.9799995,10435.125};
-								angles[]={0,3.1415927,0};
+								position[]={4189.25,9.9799995,10345};
+								angles[]={0,3.141593,0};
 							};
 							side="Empty";
 							flags=4;
 							class Attributes
 							{
-								init="this addEventHandler [""HitPart"", { " \n " _mkr = ""Land_PencilRed_F"" createVehicle [0,0,0]; " \n " _mkr setDir 0; " \n " _mkr enableSimulation false;  " \n " _mkr setPosASL (_this select 0 select 3);   " \n " tgt_ary_2 = tgt_ary_2+[_mkr];" \n " tgt_hi_2 = _this select 0 select 3;" \n " [] spawn {" \n "   _spr = ""Sign_Sphere10cm_F"" createVehicle [0,0,0]; " \n "   _spr setPosASL tgt_hi_2;" \n "   sleep 2;" \n "   deleteVehicle _spr;" \n " };  " \n " [_this select 0] spawn CGQC_fnc_onHitRange;" \n "}];";
+								init=" " \n "this addEventHandler [""HitPart"", {   " \n "    params [""_event""];   " \n "   " \n "    _shooter = _event select 1;   " \n "    _pos = _event select 3;   " \n "   " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false];  " \n "    _rgb = [0,0,0,1];   " \n "    _lastDigit = (count tgt_ary_1) % 10;   " \n "    _caseIndex = (_lastDigit % 5) + 1;   " \n "    switch (_caseIndex) do {   " \n "        case 1: {_rgb = [255,0,0,1]};   " \n "        case 2: {_rgb = [255,255,0,1]};   " \n "        case 3: {_rgb = [0,255,0,1]};   " \n "        case 4: {_rgb = [0,0,255,1]};   " \n "        case 5: {_rgb = [255,255,255,1]};   " \n "    };   " \n "   " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture;   " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0];   " \n "    _mkr setObjectScale 0.2;   " \n "    _mkr setPosASL _pos;   " \n "   " \n "    tgt_ary_1 = tgt_ary_1+[_mkr];   " \n "    tgt_hi_1 = _this select 0 select 3;   " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0];    " \n "    _spr setPosASL tgt_hi_1;   " \n "    [_spr] spawn {   " \n "        params [""_spr""];   " \n "        sleep 2;   " \n "        deleteVehicle _spr;   " \n "    };   " \n "    if (local _shooter) then {   " \n "        [_this select 0, tgt_ary_1] spawn CGQC_fnc_onHitRange;   " \n "    };   " \n "}];";
 								dynamicSimulation=1;
 							};
-							id=4381;
-							type="Target_F";
+							id=4858;
+							type="TargetStatic_ACR";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -38431,6 +38181,88 @@ class Mission
 							};
 						};
 						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4188,9.9799995,10245};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init=" " \n "this addEventHandler [""HitPart"", {   " \n "    params [""_event""];   " \n "   " \n "    _shooter = _event select 1;   " \n "    _pos = _event select 3;   " \n "   " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false];  " \n "    _rgb = [0,0,0,1];   " \n "    _lastDigit = (count tgt_ary_1) % 10;   " \n "    _caseIndex = (_lastDigit % 5) + 1;   " \n "    switch (_caseIndex) do {   " \n "        case 1: {_rgb = [255,0,0,1]};   " \n "        case 2: {_rgb = [255,255,0,1]};   " \n "        case 3: {_rgb = [0,255,0,1]};   " \n "        case 4: {_rgb = [0,0,255,1]};   " \n "        case 5: {_rgb = [255,255,255,1]};   " \n "    };   " \n "   " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture;   " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0];   " \n "    _mkr setObjectScale 0.2;   " \n "    _mkr setPosASL _pos;   " \n "   " \n "    tgt_ary_1 = tgt_ary_1+[_mkr];   " \n "    tgt_hi_1 = _this select 0 select 3;   " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0];    " \n "    _spr setPosASL tgt_hi_1;   " \n "    [_spr] spawn {   " \n "        params [""_spr""];   " \n "        sleep 2;   " \n "        deleteVehicle _spr;   " \n "    };   " \n "    if (local _shooter) then {   " \n "        [_this select 0, tgt_ary_1] spawn CGQC_fnc_onHitRange;   " \n "    };   " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4859;
+							type="TargetStatic_ACR";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4190.1851,9.9799995,10435};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init=" " \n "this addEventHandler [""HitPart"", {   " \n "    params [""_event""];   " \n "   " \n "    _shooter = _event select 1;   " \n "    _pos = _event select 3;   " \n "   " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false];  " \n "    _rgb = [0,0,0,1];   " \n "    _lastDigit = (count tgt_ary_1) % 10;   " \n "    _caseIndex = (_lastDigit % 5) + 1;   " \n "    switch (_caseIndex) do {   " \n "        case 1: {_rgb = [255,0,0,1]};   " \n "        case 2: {_rgb = [255,255,0,1]};   " \n "        case 3: {_rgb = [0,255,0,1]};   " \n "        case 4: {_rgb = [0,0,255,1]};   " \n "        case 5: {_rgb = [255,255,255,1]};   " \n "    };   " \n "   " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture;   " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0];   " \n "    _mkr setObjectScale 0.2;   " \n "    _mkr setPosASL _pos;   " \n "   " \n "    tgt_ary_1 = tgt_ary_1+[_mkr];   " \n "    tgt_hi_1 = _this select 0 select 3;   " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0];    " \n "    _spr setPosASL tgt_hi_1;   " \n "    [_spr] spawn {   " \n "        params [""_spr""];   " \n "        sleep 2;   " \n "        deleteVehicle _spr;   " \n "    };   " \n "    if (local _shooter) then {   " \n "        [_this select 0, tgt_ary_1] spawn CGQC_fnc_onHitRange;   " \n "    };   " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4860;
+							type="TargetStatic_ACR";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+					};
+					id=4383;
+					atlOffset=0.011890411;
+				};
+				class Item9
+				{
+					dataType="Layer";
+					name="Lane 2 - Mozambique";
+					state=1;
+					class Entities
+					{
+						items=7;
+						class Item0
 						{
 							dataType="Object";
 							class PositionInfo
@@ -38476,7 +38308,7 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item6
+						class Item1
 						{
 							dataType="Object";
 							class PositionInfo
@@ -38512,9 +38344,184 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4195.25,10.788484,10395.125};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addEventHandler [""HitPart"", { " \n "    params [""_event""]; " \n " " \n "    _shooter = _event select 1; " \n "    _pos = _event select 3; " \n " " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    _rgb = [0,0,0,1]; " \n "    _lastDigit = (count tgt_ary_2) % 10; " \n "    _caseIndex = (_lastDigit % 5) + 1; " \n "    switch (_caseIndex) do { " \n "        case 1: {_rgb = [255,0,0,1]}; " \n "        case 2: {_rgb = [255,255,0,1]}; " \n "        case 3: {_rgb = [0,255,0,1]}; " \n "        case 4: {_rgb = [0,0,255,1]}; " \n "        case 5: {_rgb = [255,255,255,1]}; " \n "    }; " \n " " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture; " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _mkr setObjectScale 0.2; " \n "    _mkr setPosASL _pos; " \n " " \n "    tgt_ary_2 = tgt_ary_2+[_mkr]; " \n "    tgt_hi_2 = _this select 0 select 3; " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _spr setPosASL tgt_hi_2; " \n "    [_spr] spawn { " \n "        params [""_spr""]; " \n "        sleep 2; " \n "        deleteVehicle _spr; " \n "    }; " \n "    if (local _shooter) then { " \n "        [_this select 0, tgt_ary_2] spawn CGQC_fnc_onHitRange; " \n "    }; " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4851;
+							type="metalTarget_Stand_Mozam";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4194.75,10.788484,10345.125};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addEventHandler [""HitPart"", { " \n "    params [""_event""]; " \n " " \n "    _shooter = _event select 1; " \n "    _pos = _event select 3; " \n " " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    _rgb = [0,0,0,1]; " \n "    _lastDigit = (count tgt_ary_2) % 10; " \n "    _caseIndex = (_lastDigit % 5) + 1; " \n "    switch (_caseIndex) do { " \n "        case 1: {_rgb = [255,0,0,1]}; " \n "        case 2: {_rgb = [255,255,0,1]}; " \n "        case 3: {_rgb = [0,255,0,1]}; " \n "        case 4: {_rgb = [0,0,255,1]}; " \n "        case 5: {_rgb = [255,255,255,1]}; " \n "    }; " \n " " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture; " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _mkr setObjectScale 0.2; " \n "    _mkr setPosASL _pos; " \n " " \n "    tgt_ary_2 = tgt_ary_2+[_mkr]; " \n "    tgt_hi_2 = _this select 0 select 3; " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _spr setPosASL tgt_hi_2; " \n "    [_spr] spawn { " \n "        params [""_spr""]; " \n "        sleep 2; " \n "        deleteVehicle _spr; " \n "    }; " \n "    if (local _shooter) then { " \n "        [_this select 0, tgt_ary_2] spawn CGQC_fnc_onHitRange; " \n "    }; " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4852;
+							type="metalTarget_Stand_Mozam";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4193.5,10.788484,10245.125};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addEventHandler [""HitPart"", { " \n "    params [""_event""]; " \n " " \n "    _shooter = _event select 1; " \n "    _pos = _event select 3; " \n " " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    _rgb = [0,0,0,1]; " \n "    _lastDigit = (count tgt_ary_2) % 10; " \n "    _caseIndex = (_lastDigit % 5) + 1; " \n "    switch (_caseIndex) do { " \n "        case 1: {_rgb = [255,0,0,1]}; " \n "        case 2: {_rgb = [255,255,0,1]}; " \n "        case 3: {_rgb = [0,255,0,1]}; " \n "        case 4: {_rgb = [0,0,255,1]}; " \n "        case 5: {_rgb = [255,255,255,1]}; " \n "    }; " \n " " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture; " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _mkr setObjectScale 0.2; " \n "    _mkr setPosASL _pos; " \n " " \n "    tgt_ary_2 = tgt_ary_2+[_mkr]; " \n "    tgt_hi_2 = _this select 0 select 3; " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _spr setPosASL tgt_hi_2; " \n "    [_spr] spawn { " \n "        params [""_spr""]; " \n "        sleep 2; " \n "        deleteVehicle _spr; " \n "    }; " \n "    if (local _shooter) then { " \n "        [_this select 0, tgt_ary_2] spawn CGQC_fnc_onHitRange; " \n "    }; " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4853;
+							type="metalTarget_Stand_Mozam";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4195.375,10.788484,10435.125};
+								angles[]={0,3.1415927,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addEventHandler [""HitPart"", { " \n "    params [""_event""]; " \n " " \n "    _shooter = _event select 1; " \n "    _pos = _event select 3; " \n " " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    _rgb = [0,0,0,1]; " \n "    _lastDigit = (count tgt_ary_2) % 10; " \n "    _caseIndex = (_lastDigit % 5) + 1; " \n "    switch (_caseIndex) do { " \n "        case 1: {_rgb = [255,0,0,1]}; " \n "        case 2: {_rgb = [255,255,0,1]}; " \n "        case 3: {_rgb = [0,255,0,1]}; " \n "        case 4: {_rgb = [0,0,255,1]}; " \n "        case 5: {_rgb = [255,255,255,1]}; " \n "    }; " \n " " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture; " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _mkr setObjectScale 0.2; " \n "    _mkr setPosASL _pos; " \n " " \n "    tgt_ary_2 = tgt_ary_2+[_mkr]; " \n "    tgt_hi_2 = _this select 0 select 3; " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _spr setPosASL tgt_hi_2; " \n "    [_spr] spawn { " \n "        params [""_spr""]; " \n "        sleep 2; " \n "        deleteVehicle _spr; " \n "    }; " \n "    if (local _shooter) then { " \n "        [_this select 0, tgt_ary_2] spawn CGQC_fnc_onHitRange; " \n "    }; " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4854;
+							type="metalTarget_Stand_Mozam";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4195.375,10.788484,10420.125};
+								angles[]={0,3.141593,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this addEventHandler [""HitPart"", { " \n "    params [""_event""]; " \n " " \n "    _shooter = _event select 1; " \n "    _pos = _event select 3; " \n " " \n "    _mkr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    _rgb = [0,0,0,1]; " \n "    _lastDigit = (count tgt_ary_2) % 10; " \n "    _caseIndex = (_lastDigit % 5) + 1; " \n "    switch (_caseIndex) do { " \n "        case 1: {_rgb = [255,0,0,1]}; " \n "        case 2: {_rgb = [255,255,0,1]}; " \n "        case 3: {_rgb = [0,255,0,1]}; " \n "        case 4: {_rgb = [0,0,255,1]}; " \n "        case 5: {_rgb = [255,255,255,1]}; " \n "    }; " \n " " \n "    _texture = _rgb call BIS_fnc_colorRGBAtoTexture; " \n "    [_mkr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _mkr setObjectScale 0.2; " \n "    _mkr setPosASL _pos; " \n " " \n "    tgt_ary_2 = tgt_ary_2+[_mkr]; " \n "    tgt_hi_2 = _this select 0 select 3; " \n "    _spr = createSimpleObject [""Sign_Sphere10cm_F"", [0,0,0], false]; " \n "    [_spr, [0, _texture]] remoteExec [""setObjectTexture"", 0]; " \n "    _spr setPosASL tgt_hi_2; " \n "    [_spr] spawn { " \n "        params [""_spr""]; " \n "        sleep 2; " \n "        deleteVehicle _spr; " \n "    }; " \n "    if (local _shooter) then { " \n "        [_this select 0, tgt_ary_2] spawn CGQC_fnc_onHitRange; " \n "    }; " \n "}];";
+								dynamicSimulation=1;
+							};
+							id=4855;
+							type="metalTarget_Stand_Mozam";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
 					};
 					id=4384;
-					atlOffset=0.38049984;
+					atlOffset=0.011890411;
 				};
 				class Item10
 				{
@@ -38946,9 +38953,10 @@ class Mission
 				{
 					dataType="Layer";
 					name="Lane 5  - Damage";
+					state=1;
 					class Entities
 					{
-						items=2;
+						items=7;
 						class Item0
 						{
 							dataType="Object";
@@ -39063,9 +39071,244 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4210.375,11.121468,10435.5};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="damage_pos_1";
+								disableSimulation=1;
+							};
+							id=4830;
+							type="SignAd_SponsorS_Burstkoke_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4210.25,11.121468,10420.5};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="damage_pos_2";
+								disableSimulation=1;
+							};
+							id=4831;
+							type="SignAd_SponsorS_Burstkoke_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4210,11.121468,10395.625};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="damage_pos_3";
+								disableSimulation=1;
+							};
+							id=4832;
+							type="SignAd_SponsorS_Burstkoke_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4209.75,11.121468,10345.75};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="damage_pos_4";
+								disableSimulation=1;
+							};
+							id=4833;
+							type="SignAd_SponsorS_Burstkoke_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={4208.375,11.121468,10245.625};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+								name="damage_pos_5";
+								disableSimulation=1;
+							};
+							id=4834;
+							type="SignAd_SponsorS_Burstkoke_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
 					};
 					id=4387;
-					atlOffset=0.38049984;
+					atlOffset=0.011890411;
 				};
 				class Item13
 				{
@@ -39344,241 +39587,6 @@ class Mission
 				};
 				class Item14
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4210.375,11.121468,10435.5};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="damage_pos_1";
-						disableSimulation=1;
-					};
-					id=4830;
-					type="SignAd_SponsorS_Burstkoke_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item15
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4210.25,11.121468,10420.5};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="damage_pos_2";
-						disableSimulation=1;
-					};
-					id=4831;
-					type="SignAd_SponsorS_Burstkoke_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item16
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4210,11.121468,10395.625};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="damage_pos_3";
-						disableSimulation=1;
-					};
-					id=4832;
-					type="SignAd_SponsorS_Burstkoke_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4209.75,11.121468,10345.75};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="damage_pos_4";
-						disableSimulation=1;
-					};
-					id=4833;
-					type="SignAd_SponsorS_Burstkoke_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item18
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4208.375,11.121468,10245.625};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="damage_pos_5";
-						disableSimulation=1;
-					};
-					id=4834;
-					type="SignAd_SponsorS_Burstkoke_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="hideObject";
-							expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item19
-				{
 					dataType="Group";
 					side="East";
 					class Entities
@@ -39596,7 +39604,9 @@ class Mission
 							flags=7;
 							class Attributes
 							{
+								init="this disableAI ""PATH""; " \n "this disableAI ""AUTOCOMBAT""; ";
 								name="damage_dummy";
+								ignoreByDynSimulGrid=1;
 								class Inventory
 								{
 									class uniform
@@ -39618,71 +39628,6 @@ class Mission
 							{
 								class Attribute0
 								{
-									property="ENH_doStop";
-									expression="if (!is3DEN && _value && !isMultiplayer) then {doStop _this}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="cgqc_var_startingColorTeam";
-									expression="_this setVariable ['cgqc_var_startingColorTeam',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="ENH_setCaptive";
-									expression="[_this, _value] remoteExec ['setCaptive', _this]";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="cgqc_var_startingPerks";
-									expression="_this setVariable ['cgqc_var_startingPerks',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute4
-								{
-									property="ENH_disableAI_target";
-									expression="if (_value) then {[_this, 'TARGET'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="allowDamage";
 									expression="_this allowdamage _value;";
 									class Value
@@ -39694,46 +39639,7 @@ class Mission
 										};
 									};
 								};
-								class Attribute6
-								{
-									property="ENH_disableAI_suppression";
-									expression="if (_value) then {[_this, 'SUPPRESSION'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute7
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute8
-								{
-									property="ENH_disableAI_teamswitch";
-									expression="if (_value) then {[_this, 'TEAMSWITCH'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute9
+								class Attribute1
 								{
 									property="face";
 									expression="_this setface _value;";
@@ -39746,72 +39652,20 @@ class Mission
 										};
 									};
 								};
-								class Attribute10
+								class Attribute2
 								{
-									property="speaker";
-									expression="_this setspeaker _value;";
+									property="cgqc_var_startingColorTeam";
+									expression="_this setVariable ['cgqc_var_startingColorTeam',_value, true];";
 									class Value
 									{
 										class data
 										{
 											singleType="STRING";
-											value="Male03RUS";
+											value="";
 										};
 									};
 								};
-								class Attribute11
-								{
-									property="ENH_disableAI_autotarget";
-									expression="if (_value) then {[_this, 'AUTOTARGET'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute12
-								{
-									property="ENH_disableAI_path";
-									expression="if (_value) then {[_this, 'PATH'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute13
-								{
-									property="ENH_disableAI_FSM";
-									expression="if (_value) then {[_this, 'FSM'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute14
-								{
-									property="ENH_disableAI_mineDetection";
-									expression="if (_value) then {[_this, 'MINEDETECTION'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute15
+								class Attribute3
 								{
 									property="pitch";
 									expression="_this setpitch _value;";
@@ -39824,75 +39678,23 @@ class Mission
 										};
 									};
 								};
-								class Attribute16
+								class Attribute4
 								{
-									property="ENH_disableAI_aimingError";
-									expression="if (_value) then {[_this, 'AIMINGERROR'] remoteExec ['disableAI', _this]}";
+									property="speaker";
+									expression="_this setspeaker _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="Male03RUS";
 										};
 									};
 								};
-								class Attribute17
+								class Attribute5
 								{
-									property="ENH_disableAI_weaponAim";
-									expression="if (_value) then {[_this, 'WEAPONAIM'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute18
-								{
-									property="ENH_disableAI_NVG";
-									expression="if (_value) then {[_this, 'NVG'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute19
-								{
-									property="ENH_disableAI_autocombat";
-									expression="if (_value) then {[_this, 'AUTOCOMBAT'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute20
-								{
-									property="ENH_disableAI_cover";
-									expression="if (_value) then {[_this, 'COVER'] remoteExec ['disableAI', _this]}";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute21
-								{
-									property="ENH_allowSprint";
-									expression="_this allowSprint _value";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
@@ -39902,20 +39704,20 @@ class Mission
 										};
 									};
 								};
-								class Attribute22
+								class Attribute6
 								{
-									property="ENH_disableAI_move";
-									expression="if (_value) then {[_this, 'MOVE'] remoteExec ['disableAI', _this]}";
+									property="cgqc_var_startingPerks";
+									expression="_this setVariable ['cgqc_var_startingPerks',_value, true];";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="";
 										};
 									};
 								};
-								nAttributes=23;
+								nAttributes=7;
 							};
 						};
 					};
@@ -39926,7 +39728,7 @@ class Mission
 				};
 			};
 			id=4049;
-			atlOffset=0.0017795563;
+			atlOffset=0.0022373199;
 		};
 		class Item8
 		{
@@ -40160,7 +39962,7 @@ class Mission
 								description="Soldat@Classroom";
 								isPlayable=1;
 							};
-							id=4749;
+							id=5332;
 							type="CGQC_Soldat_Base";
 							class CustomAttributes
 							{
@@ -40234,7 +40036,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4750;
+							id=5333;
 							type="CGQC_Soldat_Base";
 						};
 						class Item2
@@ -40252,7 +40054,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4751;
+							id=5334;
 							type="CGQC_Soldat_Base";
 						};
 						class Item3
@@ -40270,7 +40072,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4752;
+							id=5335;
 							type="CGQC_Soldat_Base";
 						};
 						class Item4
@@ -40288,7 +40090,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4753;
+							id=5336;
 							type="CGQC_Soldat_Base";
 						};
 						class Item5
@@ -40306,7 +40108,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4754;
+							id=5337;
 							type="CGQC_Soldat_Base";
 						};
 						class Item6
@@ -40324,7 +40126,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4755;
+							id=5338;
 							type="CGQC_Soldat_Base";
 						};
 						class Item7
@@ -40342,7 +40144,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4756;
+							id=5339;
 							type="CGQC_Soldat_Base";
 						};
 						class Item8
@@ -40360,7 +40162,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4757;
+							id=5340;
 							type="CGQC_Soldat_Base";
 						};
 						class Item9
@@ -40378,7 +40180,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4758;
+							id=5341;
 							type="CGQC_Soldat_Base";
 						};
 						class Item10
@@ -40396,7 +40198,7 @@ class Mission
 								description="Soldat@Classroom";
 								isPlayable=1;
 							};
-							id=4759;
+							id=5342;
 							type="CGQC_Soldat_Base";
 							class CustomAttributes
 							{
@@ -40470,7 +40272,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4760;
+							id=5343;
 							type="CGQC_Soldat_Base";
 						};
 						class Item12
@@ -40488,7 +40290,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4761;
+							id=5344;
 							type="CGQC_Soldat_Base";
 						};
 						class Item13
@@ -40506,7 +40308,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4762;
+							id=5345;
 							type="CGQC_Soldat_Base";
 						};
 						class Item14
@@ -40524,7 +40326,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4763;
+							id=5346;
 							type="CGQC_Soldat_Base";
 						};
 						class Item15
@@ -40542,7 +40344,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4764;
+							id=5347;
 							type="CGQC_Soldat_Base";
 						};
 						class Item16
@@ -40560,7 +40362,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4765;
+							id=5348;
 							type="CGQC_Soldat_Base";
 						};
 						class Item17
@@ -40578,7 +40380,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4766;
+							id=5349;
 							type="CGQC_Soldat_Base";
 						};
 						class Item18
@@ -40596,7 +40398,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4767;
+							id=5350;
 							type="CGQC_Soldat_Base";
 						};
 						class Item19
@@ -40614,7 +40416,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4768;
+							id=5351;
 							type="CGQC_Soldat_Base";
 						};
 					};
@@ -40622,7 +40424,7 @@ class Mission
 					{
 						dynamicSimulation=1;
 					};
-					id=4748;
+					id=5331;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -40664,7 +40466,7 @@ class Mission
 								description="Instructeur 1@Zeus";
 								isPlayable=1;
 							};
-							id=4770;
+							id=5353;
 							type="CGQC_Officer_Base";
 							atlOffset=0.020000458;
 							class CustomAttributes
@@ -40727,7 +40529,7 @@ class Mission
 								description="Instructeur 4";
 								isPlayable=1;
 							};
-							id=4771;
+							id=5354;
 							type="CGQC_Officer_Base";
 							atlOffset=0.020000458;
 							class CustomAttributes
@@ -40790,7 +40592,7 @@ class Mission
 								description="Instructeur 3";
 								isPlayable=1;
 							};
-							id=4772;
+							id=5355;
 							type="CGQC_Officer_Base";
 							atlOffset=0.020000458;
 							class CustomAttributes
@@ -40853,7 +40655,7 @@ class Mission
 								description="Instructeur 2";
 								isPlayable=1;
 							};
-							id=4773;
+							id=5356;
 							type="CGQC_Officer_Base";
 							atlOffset=0.020000458;
 							class CustomAttributes
@@ -40905,7 +40707,7 @@ class Mission
 					{
 						dynamicSimulation=1;
 					};
-					id=4769;
+					id=5352;
 					atlOffset=0.020000458;
 					class CustomAttributes
 					{
@@ -40948,7 +40750,7 @@ class Mission
 								isPlayer=1;
 								isPlayable=1;
 							};
-							id=4775;
+							id=5358;
 							type="CGQC_Soldat_Base";
 							class CustomAttributes
 							{
@@ -41022,7 +40824,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4776;
+							id=5359;
 							type="CGQC_Soldat_Base";
 						};
 						class Item2
@@ -41040,7 +40842,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4777;
+							id=5360;
 							type="CGQC_Soldat_Base";
 						};
 						class Item3
@@ -41058,7 +40860,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4778;
+							id=5361;
 							type="CGQC_Soldat_Base";
 						};
 						class Item4
@@ -41076,7 +40878,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4779;
+							id=5362;
 							type="CGQC_Soldat_Base";
 						};
 						class Item5
@@ -41094,7 +40896,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4780;
+							id=5363;
 							type="CGQC_Soldat_Base";
 						};
 						class Item6
@@ -41112,7 +40914,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4781;
+							id=5364;
 							type="CGQC_Soldat_Base";
 						};
 						class Item7
@@ -41130,7 +40932,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4782;
+							id=5365;
 							type="CGQC_Soldat_Base";
 						};
 					};
@@ -41138,7 +40940,7 @@ class Mission
 					{
 						dynamicSimulation=1;
 					};
-					id=4774;
+					id=5357;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -41180,7 +40982,7 @@ class Mission
 								description="Heli Pilot@Pégase";
 								isPlayable=1;
 							};
-							id=4791;
+							id=5367;
 							type="CGQC_units_mk1_4_Pilot_heli";
 							class CustomAttributes
 							{
@@ -41255,7 +41057,7 @@ class Mission
 								description="Heli Gunner";
 								isPlayable=1;
 							};
-							id=4792;
+							id=5368;
 							type="CGQC_units_mk1_4_crew_heli";
 							class CustomAttributes
 							{
@@ -41318,7 +41120,7 @@ class Mission
 					class Attributes
 					{
 					};
-					id=4790;
+					id=5366;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -41360,7 +41162,7 @@ class Mission
 								description="Commander 1@Centaure";
 								isPlayable=1;
 							};
-							id=4794;
+							id=5370;
 							type="CGQC_units_mk1_4_Tank_Driver";
 							class CustomAttributes
 							{
@@ -41435,7 +41237,7 @@ class Mission
 								description="Driver 1";
 								isPlayable=1;
 							};
-							id=4795;
+							id=5371;
 							type="CGQC_units_mk1_4_Tank_Crew";
 							class CustomAttributes
 							{
@@ -41510,7 +41312,7 @@ class Mission
 								description="Gunner 1";
 								isPlayable=1;
 							};
-							id=4796;
+							id=5372;
 							type="CGQC_units_mk1_4_Tank_Crew";
 							class CustomAttributes
 							{
@@ -41585,7 +41387,7 @@ class Mission
 								description="Commander 2@Centaure";
 								isPlayable=1;
 							};
-							id=4797;
+							id=5373;
 							type="CGQC_units_mk1_4_Tank_Driver";
 							class CustomAttributes
 							{
@@ -41660,7 +41462,7 @@ class Mission
 								description="Driver 2";
 								isPlayable=1;
 							};
-							id=4798;
+							id=5374;
 							type="CGQC_units_mk1_4_Tank_Crew";
 							class CustomAttributes
 							{
@@ -41735,7 +41537,7 @@ class Mission
 								description="Gunner 2";
 								isPlayable=1;
 							};
-							id=4799;
+							id=5375;
 							type="CGQC_units_mk1_4_Tank_Crew";
 							class CustomAttributes
 							{
@@ -41810,7 +41612,7 @@ class Mission
 								description="Commander 3@Centaure";
 								isPlayable=1;
 							};
-							id=4800;
+							id=5376;
 							type="CGQC_units_mk1_4_Tank_Driver";
 							class CustomAttributes
 							{
@@ -41885,7 +41687,7 @@ class Mission
 								description="Driver 3";
 								isPlayable=1;
 							};
-							id=4801;
+							id=5377;
 							type="CGQC_units_mk1_4_Tank_Crew";
 							class CustomAttributes
 							{
@@ -41960,7 +41762,7 @@ class Mission
 								description="Gunner 3";
 								isPlayable=1;
 							};
-							id=4802;
+							id=5378;
 							type="CGQC_units_mk1_4_Tank_Crew";
 							class CustomAttributes
 							{
@@ -42023,7 +41825,7 @@ class Mission
 					class Attributes
 					{
 					};
-					id=4793;
+					id=5369;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -42064,7 +41866,7 @@ class Mission
 								description="Soldat@Indoor CQB";
 								isPlayable=1;
 							};
-							id=4804;
+							id=5380;
 							type="CGQC_Soldat_Base";
 							atlOffset=0.047000885;
 							class CustomAttributes
@@ -42139,7 +41941,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4805;
+							id=5381;
 							type="CGQC_Soldat_Base";
 						};
 						class Item2
@@ -42157,7 +41959,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4806;
+							id=5382;
 							type="CGQC_Soldat_Base";
 						};
 						class Item3
@@ -42175,7 +41977,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4807;
+							id=5383;
 							type="CGQC_Soldat_Base";
 						};
 						class Item4
@@ -42193,7 +41995,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4808;
+							id=5384;
 							type="CGQC_Soldat_Base";
 						};
 						class Item5
@@ -42211,7 +42013,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4809;
+							id=5385;
 							type="CGQC_Soldat_Base";
 						};
 						class Item6
@@ -42229,7 +42031,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4810;
+							id=5386;
 							type="CGQC_Soldat_Base";
 						};
 						class Item7
@@ -42247,7 +42049,7 @@ class Mission
 								description="Soldat@Spartan";
 								isPlayable=1;
 							};
-							id=4811;
+							id=5387;
 							type="CGQC_Soldat_Base";
 						};
 					};
@@ -42255,7 +42057,7 @@ class Mission
 					{
 						dynamicSimulation=1;
 					};
-					id=4803;
+					id=5379;
 					atlOffset=0.047000885;
 					class CustomAttributes
 					{
@@ -42297,7 +42099,7 @@ class Mission
 								description="Heli Pilot 1@Griffon";
 								isPlayable=1;
 							};
-							id=4788;
+							id=5389;
 							type="CGQC_units_mk1_4_Pilot_heli";
 							class CustomAttributes
 							{
@@ -42371,7 +42173,7 @@ class Mission
 								description="Heli Crew";
 								isPlayable=1;
 							};
-							id=4784;
+							id=5390;
 							type="CGQC_units_mk1_4_crew_heli";
 						};
 						class Item2
@@ -42389,7 +42191,7 @@ class Mission
 								description="Heli Pilot 2@Griffon";
 								isPlayable=1;
 							};
-							id=4785;
+							id=5391;
 							type="CGQC_units_mk1_4_Pilot_heli";
 							class CustomAttributes
 							{
@@ -42463,7 +42265,7 @@ class Mission
 								description="Heli Crew";
 								isPlayable=1;
 							};
-							id=4786;
+							id=5392;
 							type="CGQC_units_mk1_4_crew_heli";
 						};
 						class Item4
@@ -42481,7 +42283,7 @@ class Mission
 								description="Heli Crew";
 								isPlayable=1;
 							};
-							id=4787;
+							id=5393;
 							type="CGQC_units_mk1_4_crew_heli";
 						};
 						class Item5
@@ -42499,14 +42301,14 @@ class Mission
 								description="Heli Crew";
 								isPlayable=1;
 							};
-							id=4789;
+							id=5394;
 							type="CGQC_units_mk1_4_crew_heli";
 						};
 					};
 					class Attributes
 					{
 					};
-					id=4849;
+					id=5388;
 					class CustomAttributes
 					{
 						class Attribute0
