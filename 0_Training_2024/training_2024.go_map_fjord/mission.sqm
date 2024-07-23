@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=150;
+		nextID=180;
 	};
 	class Camera
 	{
 		pos[]={7504.0869,26.250206,1835.4012};
-		dir[]={-0.34547353,-0.63415962,-0.69174433};
-		up[]={-0.28334379,0.77319944,-0.56734121};
-		aside[]={-0.89464283,4.2468309e-07,0.44680685};
+		dir[]={-0.34547028,-0.63415307,-0.69173706};
+		up[]={-0.28334066,0.7732076,-0.56733435};
+		aside[]={-0.89463317,-7.4505806e-08,0.4468016};
 	};
 };
 binarizationWanted=0;
@@ -521,14 +521,15 @@ class Mission
 															dataType="Object";
 															class PositionInfo
 															{
-																position[]={7499.0483,3.151439,1811.6937};
-																angles[]={0,3.3070159,0};
+																position[]={7499.0479,3.151439,1811.6941};
+																angles[]={0,3.3070149,0};
 															};
 															side="West";
 															flags=7;
 															class Attributes
 															{
 																description="Soldat@Spartan";
+																isPlayer=1;
 																isPlayable=1;
 															};
 															id=10;
@@ -536,6 +537,19 @@ class Mission
 															class CustomAttributes
 															{
 																class Attribute0
+																{
+																	property="cgqc_var_startingPerks";
+																	expression="_this setVariable ['cgqc_var_startingPerks',_value, true];";
+																	class Value
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="";
+																		};
+																	};
+																};
+																class Attribute1
 																{
 																	property="speaker";
 																	expression="_this setspeaker _value;";
@@ -548,7 +562,7 @@ class Mission
 																		};
 																	};
 																};
-																class Attribute1
+																class Attribute2
 																{
 																	property="pitch";
 																	expression="_this setpitch _value;";
@@ -561,7 +575,20 @@ class Mission
 																		};
 																	};
 																};
-																nAttributes=2;
+																class Attribute3
+																{
+																	property="cgqc_var_startingColorTeam";
+																	expression="_this setVariable ['cgqc_var_startingColorTeam',_value, true];";
+																	class Value
+																	{
+																		class data
+																		{
+																			singleType="STRING";
+																			value="";
+																		};
+																	};
+																};
+																nAttributes=4;
 															};
 														};
 														class Item1
