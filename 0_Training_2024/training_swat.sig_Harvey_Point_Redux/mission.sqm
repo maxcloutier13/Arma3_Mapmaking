@@ -6,24 +6,20 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=545;
-	mods[]=
-	{
-		"3denEnhanced"
-	};
 	class ItemIDProvider
 	{
-		nextID=1985;
+		nextID=1989;
 	};
 	class LayerIndexProvider
 	{
-		nextID=596;
+		nextID=1040;
 	};
 	class Camera
 	{
-		pos[]={2978.3657,15.917329,5286.9614};
-		dir[]={-0.73523945,-0.39237574,0.55272371};
-		up[]={-0.31365585,0.91979378,0.23579465};
-		aside[]={0.60090876,2.955785e-07,0.79933667};
+		pos[]={2960.3977,12.889336,5257.0884};
+		dir[]={-0.48330602,-0.78584015,-0.38585049};
+		up[]={-0.61413169,0.61842495,-0.49029619};
+		aside[]={-0.62391406,-1.1781231e-07,0.78149831};
 	};
 };
 binarizationWanted=0;
@@ -5065,7 +5061,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Indoor CQB";
-			state=1;
 			class Entities
 			{
 				items=16;
@@ -9756,14 +9751,15 @@ class Mission
 						class Item12
 						{
 							dataType="Trigger";
-							position[]={2361.936,7.7647967,4762.6323};
-							angle=2.6354456;
+							position[]={2361.936,7.7649999,4762.6318};
+							angle=2.6354473;
 							class Attributes
 							{
-								condition="cgqc_int_cqb_started && player in thisList && cgqc_int_cqb_targets_left isEqualTo 0; ";
+								name="cgqc_trigger_cqb";
+								condition="missionNamespace getVariable [""cgqc_int_cqb_started"", false] &&  " \n "player in thisList &&  " \n "missionNamespace getVariable [""cgqc_int_cqb_targets_left"", 0] isEqualTo 0; ";
 								onActivation="[] spawn cgqc_int_stopCqb;";
-								sizeA=32.104687;
-								sizeB=28.232676;
+								sizeA=32.105;
+								sizeB=28.233;
 								sizeC=0;
 								repeatable=1;
 								activationBy="WEST";
@@ -9772,19 +9768,19 @@ class Mission
 							};
 							id=1095;
 							type="EmptyDetectorAreaR250";
-							atlOffset=0.10479689;
+							atlOffset=0.10500002;
 						};
 						class Item13
 						{
 							dataType="Logic";
 							class PositionInfo
 							{
-								position[]={2366.2048,7.7647967,4767.688};
-								angles[]={0,2.6354461,0};
+								position[]={2366.2051,7.7649999,4767.688};
+								angles[]={0,2.6354473,0};
 							};
 							id=1096;
 							type="ModuleDoorOpen_F";
-							atlOffset=0.10479689;
+							atlOffset=0.10500002;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -9885,7 +9881,7 @@ class Mission
 						};
 					};
 					id=1082;
-					atlOffset=0.25695515;
+					atlOffset=0.25703144;
 				};
 				class Item3
 				{
@@ -24156,7 +24152,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Units";
-			state=1;
 			class Entities
 			{
 				items=5;
@@ -25254,7 +25249,6 @@ class Mission
 					{
 					};
 					id=1956;
-					atlOffset=100;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25537,7 +25531,6 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1970;
-					atlOffset=100;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25717,7 +25710,6 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1973;
-					atlOffset=100;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25972,7 +25964,6 @@ class Mission
 					{
 					};
 					id=1976;
-					atlOffset=100;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25997,213 +25988,17 @@ class Mission
 					side="West";
 					class Entities
 					{
-						items=4;
+						items=1;
 						class Item0
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={2959.2524,8.786437,5254.894};
+								position[]={2959.187,8.786437,5254.8818};
 								angles[]={0,0.33161256,0};
 							};
 							side="West";
 							flags=7;
-							class Attributes
-							{
-								name="zeus_1";
-								description="Field Training Officer@Zeus";
-								isPlayable=1;
-								class Inventory
-								{
-									class handgun
-									{
-										name="hlc_pistol_Mk25";
-										firemode="hlc_pistol_Mk25:Single";
-										class primaryMuzzleMag
-										{
-											name="hlc_15Rnd_9x19_B_P226";
-											ammoLeft=15;
-										};
-									};
-									class uniform
-									{
-										typeName="fto_uni";
-										isBackpack=0;
-										class MagazineCargo
-										{
-											items=5;
-											class Item0
-											{
-												name="hlc_15Rnd_9x19_B_P226";
-												count=2;
-												ammoLeft=15;
-											};
-											class Item1
-											{
-												name="acex_intelitems_notepad";
-												count=1;
-												ammoLeft=1;
-											};
-											class Item2
-											{
-												name="murshun_cigs_lighter";
-												count=1;
-												ammoLeft=100;
-											};
-											class Item3
-											{
-												name="murshun_cigs_cigpack";
-												count=1;
-												ammoLeft=20;
-											};
-											class Item4
-											{
-												name="ACE_Chemlight_UltraHiOrange";
-												count=3;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=5;
-											class Item0
-											{
-												name="cgqc_items_ifak";
-												count=1;
-											};
-											class Item1
-											{
-												name="WBK_HeadLampItem";
-												count=1;
-											};
-											class Item2
-											{
-												name="ItemMicroDAGR";
-												count=1;
-											};
-											class Item3
-											{
-												name="ACE_key_west";
-												count=1;
-											};
-											class Item4
-											{
-												name="ACRE_PRC152";
-												count=2;
-											};
-										};
-									};
-									class vest
-									{
-										typeName="CDF_plateframe_sapi_light";
-										isBackpack=0;
-									};
-									class backpack
-									{
-										typeName="MrCat_TacticalBelt";
-										isBackpack=1;
-										class MagazineCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="SmokeShell";
-												count=2;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=2;
-											class Item0
-											{
-												name="ACE_EntrenchingTool";
-												count=1;
-											};
-											class Item1
-											{
-												name="ACE_Canteen";
-												count=1;
-											};
-										};
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									gps="ItemGPS";
-									goggles="G_Aviator";
-									headgear="cgqc_beanie_black";
-								};
-							};
-							id=1980;
-							type="CGQC_units_swat_fto";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="cgqc_var_startingPerks";
-									expression="_this setVariable ['cgqc_var_startingPerks',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="cgqc_var_startingColorTeam";
-									expression="_this setVariable ['cgqc_var_startingColorTeam',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2958.4795,8.7886238,5255.2402};
-								angles[]={0,0.33161256,0};
-							};
-							side="West";
-							flags=5;
 							class Attributes
 							{
 								name="zeus";
@@ -26333,401 +26128,6 @@ class Mission
 							};
 							id=1981;
 							type="CGQC_units_swat_fto";
-							atlOffset=0.0021867752;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="cgqc_var_startingPerks";
-									expression="_this setVariable ['cgqc_var_startingPerks',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="cgqc_var_startingColorTeam";
-									expression="_this setVariable ['cgqc_var_startingColorTeam',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2957.7043,8.7909937,5255.5522};
-								angles[]={0,0.33161256,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="zeus_2";
-								description="Field Training Officer@Zeus";
-								isPlayable=1;
-								class Inventory
-								{
-									class handgun
-									{
-										name="hlc_pistol_Mk25";
-										firemode="hlc_pistol_Mk25:Single";
-										class primaryMuzzleMag
-										{
-											name="hlc_15Rnd_9x19_B_P226";
-											ammoLeft=15;
-										};
-									};
-									class uniform
-									{
-										typeName="fto_uni";
-										isBackpack=0;
-										class MagazineCargo
-										{
-											items=5;
-											class Item0
-											{
-												name="hlc_15Rnd_9x19_B_P226";
-												count=2;
-												ammoLeft=15;
-											};
-											class Item1
-											{
-												name="acex_intelitems_notepad";
-												count=1;
-												ammoLeft=1;
-											};
-											class Item2
-											{
-												name="murshun_cigs_lighter";
-												count=1;
-												ammoLeft=100;
-											};
-											class Item3
-											{
-												name="murshun_cigs_cigpack";
-												count=1;
-												ammoLeft=20;
-											};
-											class Item4
-											{
-												name="ACE_Chemlight_UltraHiOrange";
-												count=3;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=5;
-											class Item0
-											{
-												name="cgqc_items_ifak";
-												count=1;
-											};
-											class Item1
-											{
-												name="WBK_HeadLampItem";
-												count=1;
-											};
-											class Item2
-											{
-												name="ItemMicroDAGR";
-												count=1;
-											};
-											class Item3
-											{
-												name="ACE_key_west";
-												count=1;
-											};
-											class Item4
-											{
-												name="ACRE_PRC152";
-												count=2;
-											};
-										};
-									};
-									class vest
-									{
-										typeName="CDF_plateframe_sapi_light";
-										isBackpack=0;
-									};
-									class backpack
-									{
-										typeName="MrCat_TacticalBelt";
-										isBackpack=1;
-										class MagazineCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="SmokeShell";
-												count=2;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=2;
-											class Item0
-											{
-												name="ACE_EntrenchingTool";
-												count=1;
-											};
-											class Item1
-											{
-												name="ACE_Canteen";
-												count=1;
-											};
-										};
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									gps="ItemGPS";
-									goggles="G_Aviator";
-									headgear="cgqc_beanie_black";
-								};
-							};
-							id=1982;
-							type="CGQC_units_swat_fto";
-							atlOffset=0.0045566559;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="cgqc_var_startingPerks";
-									expression="_this setVariable ['cgqc_var_startingPerks',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male07ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="cgqc_var_startingColorTeam";
-									expression="_this setVariable ['cgqc_var_startingColorTeam',_value, true];";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=1.05;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item3
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={2956.9202,8.7947054,5255.9189};
-								angles[]={0,0.33161256,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="zeus_3";
-								description="Field Training Officer@Zeus";
-								isPlayable=1;
-								class Inventory
-								{
-									class handgun
-									{
-										name="hlc_pistol_Mk25";
-										firemode="hlc_pistol_Mk25:Single";
-										class primaryMuzzleMag
-										{
-											name="hlc_15Rnd_9x19_B_P226";
-											ammoLeft=15;
-										};
-									};
-									class uniform
-									{
-										typeName="fto_uni";
-										isBackpack=0;
-										class MagazineCargo
-										{
-											items=5;
-											class Item0
-											{
-												name="hlc_15Rnd_9x19_B_P226";
-												count=2;
-												ammoLeft=15;
-											};
-											class Item1
-											{
-												name="acex_intelitems_notepad";
-												count=1;
-												ammoLeft=1;
-											};
-											class Item2
-											{
-												name="murshun_cigs_lighter";
-												count=1;
-												ammoLeft=100;
-											};
-											class Item3
-											{
-												name="murshun_cigs_cigpack";
-												count=1;
-												ammoLeft=20;
-											};
-											class Item4
-											{
-												name="ACE_Chemlight_UltraHiOrange";
-												count=3;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=5;
-											class Item0
-											{
-												name="cgqc_items_ifak";
-												count=1;
-											};
-											class Item1
-											{
-												name="WBK_HeadLampItem";
-												count=1;
-											};
-											class Item2
-											{
-												name="ItemMicroDAGR";
-												count=1;
-											};
-											class Item3
-											{
-												name="ACE_key_west";
-												count=1;
-											};
-											class Item4
-											{
-												name="ACRE_PRC152";
-												count=2;
-											};
-										};
-									};
-									class vest
-									{
-										typeName="CDF_plateframe_sapi_light";
-										isBackpack=0;
-									};
-									class backpack
-									{
-										typeName="MrCat_TacticalBelt";
-										isBackpack=1;
-										class MagazineCargo
-										{
-											items=1;
-											class Item0
-											{
-												name="SmokeShell";
-												count=2;
-												ammoLeft=1;
-											};
-										};
-										class ItemCargo
-										{
-											items=2;
-											class Item0
-											{
-												name="ACE_EntrenchingTool";
-												count=1;
-											};
-											class Item1
-											{
-												name="ACE_Canteen";
-												count=1;
-											};
-										};
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									watch="ItemWatch";
-									gps="ItemGPS";
-									goggles="G_Aviator";
-									headgear="cgqc_beanie_black";
-								};
-							};
-							id=1983;
-							type="CGQC_units_swat_fto";
-							atlOffset=0.0082683563;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -26791,7 +26191,6 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=1979;
-					atlOffset=100;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -26812,7 +26211,6 @@ class Mission
 				};
 			};
 			id=1877;
-			atlOffset=100;
 		};
 		class Item6
 		{
