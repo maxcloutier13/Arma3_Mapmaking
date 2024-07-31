@@ -6,20 +6,24 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=545;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
 		nextID=1989;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1040;
+		nextID=1114;
 	};
 	class Camera
 	{
 		pos[]={2960.3977,12.889336,5257.0884};
-		dir[]={-0.48330602,-0.78584015,-0.38585049};
-		up[]={-0.61413169,0.61842495,-0.49029619};
-		aside[]={-0.62391406,-1.1781231e-07,0.78149831};
+		dir[]={-0.48330379,-0.7858361,-0.38584846};
+		up[]={-0.61412704,0.61843479,-0.49029204};
+		aside[]={-0.62391132,1.4901161e-08,0.78149509};
 	};
 };
 binarizationWanted=0;

@@ -1,18 +1,25 @@
 version=54;
 class EditorData
 {
-	moveGridStep=2;
+	moveGridStep=0.125;
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=549;
+	toggles=545;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
-		nextID=2;
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={960,93.459999,1090};
+		pos[]={1037.3105,79.371872,1058.0372};
+		dir[]={0.7104513,-0.11199538,0.69477767};
+		up[]={0.08007101,0.99370873,0.078304522};
+		aside[]={0.69917637,0,-0.71494925};
 	};
 };
 binarizationWanted=0;
@@ -35,10 +42,13 @@ class AddonsMetaData
 		};
 	};
 };
-randomSeed=6182685;
+randomSeed=13056699;
 class ScenarioData
 {
 	author="silent1";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -75,7 +85,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={955.91473,66.368279,1135.7096};
+						position[]={1041.7804,76.225136,1063.8931};
 					};
 					side="West";
 					flags=7;
@@ -83,14 +93,16 @@ class Mission
 					{
 						isPlayer=1;
 					};
-					id=1;
-					type="CGQC_units_mk1_2_Sniper_ebr";
+					id=3;
+					type="CGQC_units_mk1_3_AT_MAAWS";
+					atlOffset=-7.6293945e-06;
 				};
 			};
 			class Attributes
 			{
 			};
-			id=0;
+			id=2;
+			atlOffset=-7.6293945e-06;
 		};
 	};
 };

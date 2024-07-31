@@ -134,8 +134,9 @@ cgqc_int_startCqb = {
    // }];
     _nbrEvil = missionNamespace getVariable ["cgqc_int_cqb_targets_total_evil", 0];
     _nbrCivil = missionNamespace getVariable ["cgqc_int_cqb_targets_total_civil", 0];
-    _txt = format ["<br/><br/><br/><br/><br/><br/><t size='6'>CQB Started! </t><br/><t size='3'> %1 targets with %2 hostages</t>", _nbrEvil, _nbrCivil];
-	cutText [_txt,"PLAIN", 1, false, true];
+    _txt = format ["<t size='1'> %1 targets with %2 hostages</t>", _nbrEvil, _nbrCivil];
+	["cgqc_event_notify", ["CQB", _txt, "", true, false]] call CBA_fnc_GlobalEvent;
+    //cutText [_txt,"PLAIN", 1, false, true];
     missionNamespace setVariable ["cgqc_int_cqb_timeStart", floor time, true];
     ["cqb_int_playSound", [cqb_loudspeaker, "cgqc_sound_roundNew", 300]] call CBA_fnc_GlobalEvent;
 };
@@ -168,8 +169,9 @@ cgqc_int_stopCqb = {
     //_accuracy = floor _accuracy;
     if !(_cancel) then {
         //_txt = format ["<t size='6'>%1</t><br/><t size='4'>%2</t><br/><t size='3'>%3</t><br/><t size='3'>Accuracy: %4 percent</t>", _title, _msg, _timeFormatted, _accuracy];
-	    _txt = format ["<t size='6'>%1</t><br/><t size='4'>%2</t><br/><t size='3'>%3</t>", _title, _msg, _timeFormatted];
-        cutText [_txt,"PLAIN", 2.5, false, true];
+	    _txt = format ["<t size='1'>%2</t><br/><t size='1'>%2</t>", _msg, _timeFormatted];
+        //cutText [_txt,"PLAIN", 2.5, false, true];
+        ["cgqc_event_notify", ["CQB", _txt, "", true, false]] call CBA_fnc_GlobalEvent;
     };
 
     ["cqb_int_playSound", [cqb_loudspeaker, "cgqc_sound_roundEnd", 300]] call CBA_fnc_GlobalEvent;
