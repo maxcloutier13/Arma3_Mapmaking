@@ -1,0 +1,321 @@
+version=54;
+class EditorData
+{
+	moveGridStep=0.25;
+	angleGridStep=0.78539819;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=10178;
+	};
+	class MarkerIDProvider
+	{
+		nextID=52;
+	};
+	class LayerIndexProvider
+	{
+		nextID=854;
+	};
+	class Camera
+	{
+		pos[]={2885.7107,29.903721,6067.0391};
+		dir[]={0.51314211,-0.83484995,-0.19937952};
+		up[]={0.77817261,0.55048013,-0.30235595};
+		aside[]={-0.36217692,3.7322752e-007,-0.93213189};
+	};
+};
+binarizationWanted=0;
+sourceName="scp_halloween";
+addons[]=
+{
+	"A3_Characters_F",
+	"real_uniform_unlock",
+	"ace_nouniformrestrictions",
+	"A3_Soft_F_Offroad_01"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="real_uniform_unlock";
+			name="Real Uniform Unlock";
+			author="amartyn";
+		};
+		class Item2
+		{
+			className="ace_nouniformrestrictions";
+			name="ACE3 - No Uniform Restrictions";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
+		class Item3
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=4815855;
+class ScenarioData
+{
+	author="silent1";
+};
+class Intro
+{
+	class Intel
+	{
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		forecastWindDir=4.3055673e+034;
+		wavesForced=1;
+		windForced=1;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+	class Entities
+	{
+		items=5;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2896.2871,3.3896506,6053.729};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=10165;
+					type="B_Soldier_A_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=10164;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2903.4558,3.526998,6063.3608};
+						angles[]={6.278194,2.1238642,6.2806959};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=10168;
+					type="B_G_Soldier_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2893.5161,3.458945,6064.6255};
+						angles[]={6.270689,2.0943882,0.0049914722};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=10171;
+					type="B_G_Soldier_F";
+					atlOffset=2.3841858e-007;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2887.8279,3.4578698,6061.4731};
+						angles[]={-0,2.0833287,0.022495884};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=10174;
+					type="B_G_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=10168;
+						item1=10167;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=10171;
+						item1=10170;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=10174;
+						item1=10173;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+				};
+			};
+			id=10166;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2918.6345,4.9751453,6052.0664};
+				angles[]={6.278194,2.1238642,6.2806959};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=10167;
+			type="B_G_Offroad_01_repair_F";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2905.73,5.127121,6058.9692};
+				angles[]={6.270689,2.0943882,0.0049914722};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=10170;
+			type="B_G_Offroad_01_repair_F";
+			atlOffset=2.3841858e-007;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2895.6794,5.084341,6064.5674};
+				angles[]={-0,2.0833287,0.022495884};
+			};
+			side="West";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=10173;
+			type="B_G_Offroad_01_repair_F";
+		};
+	};
+};
+class OutroLoose
+{
+	class Intel
+	{
+		startWind=0.1;
+		startWindDir=4.5905136e-041;
+		startWaves=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	class Intel
+	{
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
