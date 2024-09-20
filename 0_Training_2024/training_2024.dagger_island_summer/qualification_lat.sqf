@@ -75,7 +75,7 @@ CGQC_int_qualificationSave = {
     };
 
     // Do this on the _target computer!!!
-    _previousResult = profileNamespace getVariable [_type, []];
+    _previousResult = MissionProfileNamespace getVariable [_type, []];
     // Prep current result
     cgqc_qualif_newResult = [name cgqc_qualif_service_student, systemTime, _qualifyTxt, cgqc_qualif_service_points, cgqc_qualif_service_maxPoints];
     LOG_1("[trainingQualification] saveQualification New Result:%1", cgqc_qualif_newResult);
@@ -86,8 +86,8 @@ CGQC_int_qualificationSave = {
         LOG("[trainingQualification] saveQualification - First attempt? Saving.");
         cgqc_qualif_newResult pushBack 1;
         //[["Qualification", 1.5], [_txt_score, 1], [_qualifyTxt, 1], [_qualifyTxtFlavor, 1], ["Saving Score", 1], false] call CBA_fnc_notify;
-        profileNamespace setVariable [_type, cgqc_qualif_newResult];
-        saveProfileNamespace;
+        MissionProfileNamespace setVariable [_type, cgqc_qualif_newResult];
+        saveMissionProfileNamespace;
     } else {
         // Check if current result is better
         _oldPoints = _previousResult select 3;
@@ -98,14 +98,14 @@ CGQC_int_qualificationSave = {
         LOG_2("[trainingQualification] saveQualification - Comparing attempt %1/%2", cgqc_qualif_service_points, _oldPoints);
         if (cgqc_qualif_service_points > _oldPoints) then {
             LOG("[trainingQualification] New Highscore! Saving");
-            profileNamespace setVariable [_type, cgqc_qualif_newResult];
-            saveProfileNamespace;
+            MissionProfileNamespace setVariable [_type, cgqc_qualif_newResult];
+            saveMissionProfileNamespace;
             //[["Qualification", 1.5], ["New Highscore!", 1], [_txt_score, 1], [_qualifyTxt, 1], [_qualifyTxtFlavor], ["Saving Score", 1], false] call CBA_fnc_notify;
         } else {
             LOG("[trainingQualification] Lower score. Not saving.");
             _txt_saving = "You did not beat your best!";
-            profileNamespace setVariable [_type, _previousResult];
-            saveProfileNamespace;
+            MissionProfileNamespace setVariable [_type, _previousResult];
+            saveMissionProfileNamespace;
             //[["Qualification", 1.5], ["Score lower than previous", 1], [_txt_score, 1], ["Not saving.", 1], false] call CBA_fnc_notify;
         };
     };

@@ -6,10 +6,6 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=549;
-	mods[]=
-	{
-		"3denEnhanced"
-	};
 	class ItemIDProvider
 	{
 		nextID=5397;
@@ -20,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8514;
+		nextID=8584;
 	};
 	class Camera
 	{
-		pos[]={4175.3691,28.403582,10369.155};
-		dir[]={-0.66733676,-0.32117009,0.67196381};
-		up[]={-0.22631855,0.94701642,0.22788769};
-		aside[]={0.70955378,1.9744039e-07,0.70466727};
+		pos[]={4102.5273,28.403582,10406.913};
+		dir[]={0.58915722,-0.38625664,-0.7097401};
+		up[]={0.24671094,0.92238528,-0.29720515};
+		aside[]={-0.7694546,1.671724e-07,-0.63872653};
 	};
 };
 binarizationWanted=0;
-sourceName="premission_2024";
+sourceName="pre_mission";
 addons[]=
 {
 	"A3_Characters_F_Common",
